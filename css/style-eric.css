@@ -1,0 +1,25 @@
+.language-switcher-locale-url {
+	float: right;
+	padding-top: 10px;
+}
+
+.language-switcher-locale-url a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+}
+
+.language-switcher-locale-url li {
+	float: left;
+	list-style: none;
+	list-style-image: none;
+}
+
+.language-switcher-locale-url li.first {
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+
+.language-switcher-locale-url li.last {
+	margin-left: 5px;
+}
