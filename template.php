@@ -24,30 +24,9 @@ function bootstrap_iseek3_menu_tree(&$vars) {
 
 }
 
-/*
-function bootstrap_iseek3_form_alter( &$form, &$form_state, $form_id ) {
-
-        if ($form_id == "user_login") {
-
-                $form['name']['#description'] = t('Enter your full name (e.g. Jane Doe)');
-		$form['name']['#title'] = '';
-                $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
-		$form['name']['#required'] = 0;
-
-                $form['pass']['#description'] = t('Enter your Webmail password');
-		$form['pass']['#title'] = '';
-                $form['pass']['#attributes']['placeholder'] = t('Enter your Webmail password');
-		$form['pass']['#required'] = 0;
-
-        }
-}
-*/
-
 function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $form_id) {
 
 // print_r($form); //added meaningless comment
-
-print "hello world";
 
 	$form['name']['#description'] = ''; 
         $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
@@ -61,6 +40,7 @@ print "hello world";
 
 	unset($form['links']);
 }
+
 
 
 /**

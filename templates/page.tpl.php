@@ -86,13 +86,26 @@
 				<a class="top-nav-item" href="#">Low bandwidth | High contrast</a>
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-6">
+				<?php
+					$login_block = module_invoke('user', 'block_view', 'login');
+					print render($login_block['content']);
+                                        $user_menu_block = module_invoke('system', 'block_view', 'user-menu');
+                                        print render($user_menu_block['content']);
+				?>
+
+<!--
 				<span class="top-nav-item">Login</span>
 				<input type="text" id="login-name" name="login-name" placeholder="Name">
 				<input type="password" id="login-password" name="login-password" placeholder="Password">
 				<button name="login-go" class="btn" id="go-button">GO <i class="fa fa-angle-double-right"></i></button>
+-->
 			</div>
 			<div class="col-lg-2 col-md-6 col-sm-6">
-				<?php print render($page['header']); ?>
+                                <?php
+                                        $block = module_invoke('locale', 'block_view', 'language');
+                                        print render($block['content']);
+                                ?>				
+				<?php // print render($page['header']); ?>
 			</div>
 		</div>
 	</div>
