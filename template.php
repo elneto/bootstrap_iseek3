@@ -47,6 +47,8 @@ function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $for
 
 // print_r($form);
 
+print "hello world";
+
 	$form['name']['#description'] = ''; 
         $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
 	$form['name']['#required'] = 0;
