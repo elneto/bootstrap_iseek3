@@ -45,7 +45,7 @@ function bootstrap_iseek3_form_alter( &$form, &$form_state, $form_id ) {
 
 function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $form_id) {
 
-// print_r($form);
+// print_r($form); //added meaningless comment
 
 print "hello world";
 
