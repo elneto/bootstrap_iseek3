@@ -62,6 +62,7 @@ stylesheets[all][] = bootstrap-datepicker/css/datepicker3.css
 ; scripts[] = sites/iseek.un.org/themes/bootstrap/js/bootstrap.js
 ; scripts[] = ../bootstrap/js/bootstrap.js
 scripts[] = bootstrap/js/bootstrap.js
+scripts[] = js/custom.js
 ;scripts[] = js/dropdown-doubletap.js
 ;scripts[] = js/app.js
 scripts[] = bootstrap-datepicker/js/bootstrap-datepicker.js
