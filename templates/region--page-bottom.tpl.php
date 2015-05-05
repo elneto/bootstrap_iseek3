@@ -15,20 +15,6 @@
                 <h5 class="content-large-text">Quicklinks - New York</h5>
                 <?php echo $menu_quicklinksNY; ?>
               </div>
-            <!-- <ul class="partners content-large-text">
-              
-              <li><a href="">Emergency</a></li>
-              <li><a href="">Dag Hammarskjöld Library</a></li>
-              <li><a href="">Ask Dag (FAQ)</a></li>
-              <li><a href="">Journal </a></li>
-              <li><a href="">Learning UNHQ</a></li>
-              <li><a href="">OICT Services</a></li>
-              <li><a href="">Facilities iService Request (FMS)</a></li>
-              <li><a href="">Telephone Service Request (Unite)</a></li>
-              <li><a href="">Pass and ID </a></li>
-              <li><a href="">Wifi password</a></li>
-              
-            </ul> -->
           </div>
           <div class="about-us">
                <img src="images/iseek-logo-white.png" class="img-responsive" id="logo-footer" alt="iseek logo"/>
@@ -40,13 +26,9 @@
           <div class="col-md-3">
            <div class="footer-menu-items"> 
             <h5 class="content-large-text underline">Key tools</h5>
-            <ul class="content-large-text" id="key-tools">
-              <li><a href="">Forms </a></li>
-              <li><a href="">Inspira </a></li>
-              <li><a href="">Umoja </a></li>
-              <li><a href="">Internal Webcasts </a></li>
-              <li><a href="">un.org </a></li>
-            </ul>
+            <div class="content-large-text" id="key-tools">
+              <?php echo $menu_ktt; ?>
+            </div>
             <ul class="medium-text">
               <li><a href="">ARMS transfer eForm</a></li>
               <li><a href="">Ask Dag</a></li>

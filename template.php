@@ -197,4 +197,9 @@ function bootstrap_iseek_js_alter(&$js) {
 function bootstrap_iseek3_preprocess_region(&$vars) {
   $menu_quicklinksNY = menu_navigation_links('menu-quick-links---ny');
   $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => $menu_quicklinksNY));
+
+  $menu = menu_navigation_links('menu-key-tools-top');
+  $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => $menu));
+
+
 }
