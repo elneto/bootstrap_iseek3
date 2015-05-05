@@ -263,12 +263,7 @@
 					</div>
 
 				<!-- /left -->
+		</div> <!-- row -->
+	</div> <!-- container -->
+  </div> <!-- row -->
 
-
-		</div>
-	</div>
-  </div>
-</div>
-<footer class="footer container">
-  <?php print render($page['footer']); ?>
-</footer>
