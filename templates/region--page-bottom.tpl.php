@@ -11,9 +11,13 @@
         <div class="footer-background toolkit-row">
         <div class="col-md-3 left-menu">
            <div class="row underline left-menu-top">
-            <ul class="partners content-large-text">
-              <h5 class="content-large-text">Quicklinks - New York</h5>
-              <!-- <li><a href="">Emergency</a></li>
+              <div  class="partners content-large-text">
+                <h5 class="content-large-text">Quicklinks - New York</h5>
+                <?php echo $menu_quicklinksNY; ?>
+              </div>
+            <!-- <ul class="partners content-large-text">
+              
+              <li><a href="">Emergency</a></li>
               <li><a href="">Dag Hammarskjöld Library</a></li>
               <li><a href="">Ask Dag (FAQ)</a></li>
               <li><a href="">Journal </a></li>
@@ -22,9 +26,9 @@
               <li><a href="">Facilities iService Request (FMS)</a></li>
               <li><a href="">Telephone Service Request (Unite)</a></li>
               <li><a href="">Pass and ID </a></li>
-              <li><a href="">Wifi password</a></li> -->
-              <?php echo $menu_quicklinksNY; ?>
-            </ul>
+              <li><a href="">Wifi password</a></li>
+              
+            </ul> -->
           </div>
           <div class="about-us">
                <img src="images/iseek-logo-white.png" class="img-responsive" id="logo-footer" alt="iseek logo"/>
@@ -172,4 +176,4 @@
       </p>
 
     </footer>
-  </div> <!-- main container -->
+  </div> <!-- main container
