@@ -189,3 +189,12 @@ function bootstrap_iseek_js_alter(&$js) {
   $js = array_diff_key($js, $excludes);
 }
 */
+
+/**
+ * Provides menus for region--page-bottom.tpl.php
+ */
+
+function bootstrap_iseek3_preprocess_region(&$vars) {
+  $menu_quicklinksNY = menu_navigation_links('menu-quick-links---ny');
+  $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => $menu_quicklinksNY));
+}
