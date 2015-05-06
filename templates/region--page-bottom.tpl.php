@@ -2,7 +2,7 @@
       
       <div class="row">
         <div class="col-lg-12">
-          <div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-briefcase fa-lg"></i> Toolkit</div>
+          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase fa-lg"></i>&nbsp;&nbsp;Toolkit</div>
         </div>
       </div>
 
@@ -19,16 +19,16 @@
           <div class="about-us">
                <img src="images/iseek-logo-white.png" class="img-responsive" id="logo-footer" alt="iseek logo"/>
                 <p class="content-large-text"><a href="">About us <i class="fa fa-angle-double-right"></i></a></p>
-                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One intranet for one UN worldwide. </p></div>
+                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide. </p></div>
                 <p class="content-large-text"><a href="">Contact us <i class="fa fa-angle-double-right"></i></a></p>
         </div>
         </div>
           <div class="col-md-3">
-           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline">Key tools</h5>
+           <div class="footer-menu-items">
             <div class="content-large-text" id="key-tools">
               <?php echo $menu_ktt; ?>
             </div>
+            <h5 class="content-large-text underline">Key tools</h5>
             <ul class="medium-text">
               <li><a href="">ARMS transfer eForm</a></li>
               <li><a href="">Ask Dag</a></li>
@@ -59,7 +59,7 @@
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline">Staff Development &amp; Learning</h5>
+            <h5 class="content-large-text underline">Staff development</h5>
             <ul class="medium-text">
                 <li><a href="">Career Portal</a></li>
                 <li><a href="">Examinations and tests</a></li>
@@ -67,7 +67,7 @@
                 <li><a href="">Mandatory learning</a></li>
                 <li><a href="">YPP exam</a></li>
             </ul>
-            <h5 class="content-large-text underline">Pay, benefits, Insurance</h5>
+            <h5 class="content-large-text underline">Pay, benefits, insurance</h5>
             <ul class="medium-text">
                 <li><a href="">Benefits</a></li>
                 <li><a href="">Health Insurance</a></li>
@@ -88,7 +88,7 @@
                 <li><a href="">Travel policy</a></li>
                 <li><a href="">US and other Visas</a></li>
             </ul>
-            <h5 class="content-large-text underline">Health and Wellbeing</h5>
+            <h5 class="content-large-text underline">Health and wellbeing</h5>
             <ul class="medium-text">
                 <li><a href="">Health Insurance</a></li>
                 <li><a href="">Medical alerts</a></li>
@@ -102,7 +102,7 @@
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline">Rules and Regulations</h5>
+            <h5 class="content-large-text underline">Rules and regulations</h5>
             <ul class="medium-text">
                 <li><a href="">Financial regulations</a></li>
                 <li><a href="">Flexible working arrangements</a></li>
@@ -111,7 +111,7 @@
                 <li><a href="">SGBs, AIs, ICs and more</a></li>
                 <li><a href="">The Charter of the United Nations</a></li>
             </ul>
-            <h5 class="content-large-text underline">Reference and Manuals</h5>
+            <h5 class="content-large-text underline">Reference and manuals</h5>
             <ul class="medium-text">
                 <li><a href="">Finance and Budget Manual</a></li>
                 <li><a href="">HR Manual</a></li>
@@ -121,7 +121,7 @@
                 <li><a href="">UN Libraries around the World</a></li>
             </ul>
 
-            <h5 class="content-large-text underline">Ethics, Internal Justice</h5>
+            <h5 class="content-large-text underline">Ethics, internal justice</h5>
             <ul class="medium-text">
                 <li><a href="">Accountability A to Z</a></li>
                 <li><a href="">Administration of Justice</a></li>
@@ -141,7 +141,7 @@
               <div class="about-us-xs visible-xs visible-sm">
                 <img src="images/iseek-logo-white.png" class="img-responsive" id="logo-footer" alt="iseek logo"/>
                 <p class="content-large-text"><a href="">About us <i class="fa fa-angle-double-right"></i></a></p>
-                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One intranet for one UN worldwide. </p></div>
+                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide. </p></div>
                 <p class="content-large-text"><a href="">Contact us <i class="fa fa-angle-double-right"></i></a></p>
             </div>
         </div>
