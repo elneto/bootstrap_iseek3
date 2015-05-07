@@ -13,7 +13,7 @@
            <div class="row underline left-menu-top">
               <div  class="partners content-large-text">
                 <h5 class="content-large-text">Quicklinks - New York</h5>
-                <?php echo $menu_quicklinksNY; ?>
+                <?php print $menu_quicklinksNY;?>
               </div>
           </div>
           <div class="about-us">
@@ -26,114 +26,59 @@
           <div class="col-md-3">
            <div class="footer-menu-items">
             <div class="content-large-text" id="key-tools">
-              <?php echo $menu_ktt; ?>
+              <?php print $menu_ktt; ?>
             </div>
             <h5 class="content-large-text underline">Key tools</h5>
-            <ul class="medium-text">
-              <li><a href="">ARMS transfer eForm</a></li>
-              <li><a href="">Ask Dag</a></li>
-              <li><a href="">Business card generator</a></li>
-              <li><a href="">eMeets2.0</a></li>
-              <li><a href="">ePortfolio</a></li>
-              <li><a href="">eSubscription</a></li>
-              <li><a href="">Funds Monitoring Tool</a></li>
-              <li><a href="">gDoc</a></li>
-              <li><a href="">HR Portal</a></li>
-              <li><a href="">IMDIS</a></li>
-              <li><a href="">IMIS</a></li>
-              <li><a href="">iNeed</a></li>
-              <li><a href="">iTrack</a></li>
-              <li><a href="">ODS</a></li>
-              <li><a href="">Requisition Tracking</a></li>
-              <li><a href="">Travel Claim Portal</a></li>
-              <li><a href="">TRIP</a></li>
-              <li><a href="">UNBISnet</a></li>
-              <li><a href="">Unite Connections</a></li>
-              <li><a href="">Unite Docs</a></li>
-              <li><a href="">UNTERM</a></li>
-              <li><a href="">WIRe</a></li>          
-            </ul>
-            
+            <div class="medium-text">
+              <?php print $menu_ktb; ?>
+            </div>             
           </div>
 
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
             <h5 class="content-large-text underline">Staff development</h5>
-            <ul class="medium-text">
-                <li><a href="">Career Portal</a></li>
-                <li><a href="">Examinations and tests</a></li>
-                <li><a href="">Language exams</a></li>
-                <li><a href="">Mandatory learning</a></li>
-                <li><a href="">YPP exam</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_staff; ?>
+            </div> 
             <h5 class="content-large-text underline">Pay, benefits, insurance</h5>
-            <ul class="medium-text">
-                <li><a href="">Benefits</a></li>
-                <li><a href="">Health Insurance</a></li>
-                <li><a href="">Local insurance offices</a></li>
-                <li><a href="">Salaries</a></li>
-                <li><a href="">Your Pay &amp; Benefits</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_pay; ?>
+            </div> 
             <h5 class="content-large-text underline">Security</h5>
-            <ul class="medium-text">
-                <li><a href="">Emergency Management</a></li>
-                <li><a href="">Security and Safety Services around the world</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_security; ?>
+            </div> 
             <h5 class="content-large-text underline">Travel and Visas</h5>
-            <ul  class="medium-text">
-                <li><a href="">General Visa information</a></li>
-                <li><a href="">Official travel</a></li>
-                <li><a href="">Online travel booking</a></li>
-                <li><a href="">Travel policy</a></li>
-                <li><a href="">US and other Visas</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_travel; ?>
+            </div> 
             <h5 class="content-large-text underline">Health and wellbeing</h5>
-            <ul class="medium-text">
-                <li><a href="">Health Insurance</a></li>
-                <li><a href="">Medical alerts</a></li>
-                <li><a href="">Medical Services around the globe</a></li>
-                <li><a href="">Staff counsellor’s office</a></li>
-                <li><a href="">Travel medicine</a></li>
-                <li><a href="">UN Examining Physicians</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_health; ?>
+            </div> 
 
           </div>
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
             <h5 class="content-large-text underline">Rules and regulations</h5>
-            <ul class="medium-text">
-                <li><a href="">Financial regulations</a></li>
-                <li><a href="">Flexible working arrangements</a></li>
-                <li><a href="">Generic Job Profiles</a></li>
-                <li><a href="">HR policies and Services</a></li>
-                <li><a href="">SGBs, AIs, ICs and more</a></li>
-                <li><a href="">The Charter of the United Nations</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_rules; ?>
+            </div> 
             <h5 class="content-large-text underline">Reference and manuals</h5>
-            <ul class="medium-text">
-                <li><a href="">Finance and Budget Manual</a></li>
-                <li><a href="">HR Manual</a></li>
-                <li><a href="">UN Correspondence Manual</a></li>
-                <li>UN Editorial Manual (<a href="">English</a> - <a href="">French</a>)</li>
-                <li><a href="">UN Journal</a></li>
-                <li><a href="">UN Libraries around the World</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_reference; ?>
+            </div> 
 
             <h5 class="content-large-text underline">Ethics, internal justice</h5>
-            <ul class="medium-text">
-                <li><a href="">Accountability A to Z</a></li>
-                <li><a href="">Administration of Justice</a></li>
-                <li><a href="">Ethics Office</a></li>
-                <li><a href="">Ombudsman &amp; Mediation</a></li>
-                <li><a href="">Reporting Wrongdoing</a></li>
-            </ul>
+            <div class="medium-text">
+              <?php print $menu_ethics; ?>
+            </div> 
               <h5 class="content-large-text underline">Finance and budget</h5>
-            <ul class="medium-text">
-                <li><a href="">Financial regulations</a></li>
-                <li><a href="">Procurement</a></li>
-            </ul>
+              <div class="medium-text">
+                <?php print $menu_finance; ?>
+            </div> 
           </div>
         
         

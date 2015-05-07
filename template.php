@@ -191,15 +191,20 @@ function bootstrap_iseek_js_alter(&$js) {
 */
 
 /**
- * Provides menus for region--page-bottom.tpl.php
+ * Provides menu links for the footer: region--page-bottom.tpl.php
  */
 
 function bootstrap_iseek3_preprocess_region(&$vars) {
-  $menu_quicklinksNY = menu_navigation_links('menu-quick-links---ny');
-  $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => $menu_quicklinksNY));
-
-  $menu = menu_navigation_links('menu-key-tools-top');
-  $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => $menu));
-
-
+  $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+  $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
+  $vars['menu_ktb'] = theme('links__menu-key-tools-bottom', array('links' => menu_navigation_links('menu-key-tools-bottom')));
+  $vars['menu_staff'] = theme('links__menu-staff-development', array('links' => menu_navigation_links('menu-staff-development')));
+  $vars['menu_pay'] = theme('links__menu-pay-benefits-insurance', array('links' => menu_navigation_links('menu-pay-benefits-insurance')));
+  $vars['menu_security'] = theme('links__menu-security', array('links' => menu_navigation_links('menu-security')));
+  $vars['menu_travel'] = theme('links__menu-travel', array('links' => menu_navigation_links('menu-travel')));
+  $vars['menu_health'] = theme('links__menu-health-and-wellbeing', array('links' => menu_navigation_links('menu-health-and-wellbeing')));
+  $vars['menu_rules'] = theme('links__menu-rules-and-regulations', array('links' => menu_navigation_links('menu-rules-and-regulations')));
+  $vars['menu_reference'] = theme('links__menu-reference-and-manuals', array('links' => menu_navigation_links('menu-reference-and-manuals')));
+  $vars['menu_ethics'] = theme('links__menu-ethics-internal-justice', array('links' => menu_navigation_links('menu-ethics-internal-justice')));
+  $vars['menu_finance'] = theme('links__menu-finance-and-budget', array('links' => menu_navigation_links('menu-finance-and-budget')));
 }
