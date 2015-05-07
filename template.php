@@ -195,6 +195,7 @@ function bootstrap_iseek_js_alter(&$js) {
  */
 
 function bootstrap_iseek3_preprocess_region(&$vars) {
+  //put the menu links in vars
   $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
   $vars['menu_ktb'] = theme('links__menu-key-tools-bottom', array('links' => menu_navigation_links('menu-key-tools-bottom')));
@@ -207,4 +208,8 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   $vars['menu_reference'] = theme('links__menu-reference-and-manuals', array('links' => menu_navigation_links('menu-reference-and-manuals')));
   $vars['menu_ethics'] = theme('links__menu-ethics-internal-justice', array('links' => menu_navigation_links('menu-ethics-internal-justice')));
   $vars['menu_finance'] = theme('links__menu-finance-and-budget', array('links' => menu_navigation_links('menu-finance-and-budget')));
+
+  //put the path to needed images
+  $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
+
 }
