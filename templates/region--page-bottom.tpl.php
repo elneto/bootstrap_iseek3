@@ -1,3 +1,8 @@
+<?php
+
+//dpm($variables);
+
+?>
 <!-- Staff Toolkit -->
       
       <div class="row">
@@ -17,10 +22,8 @@
               </div>
           </div>
           <div class="about-us">
-               <img src=<?php print $path_logo_footer;?> class="img-responsive" id="logo-footer" alt="iseek logo"/>
-                <p class="content-large-text"><a href="">About us <i class="fa fa-angle-double-right"></i></a></p>
-                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide. </p></div>
-                <p class="content-large-text"><a href="">Contact us <i class="fa fa-angle-double-right"></i></a></p>
+              <img src=<?php print $path_logo_footer;?>  class="img-responsive" id="logo-footer" alt="iseek logo"/>
+              <?php print render($about_us_block); ?>
         </div>
         </div>
           <div class="col-md-3">
@@ -85,9 +88,7 @@
         </div>
               <div class="about-us-xs visible-xs visible-sm">
                 <img src=<?php print $path_logo_footer;?> class="img-responsive" id="logo-footer" alt="iseek logo"/>
-                <p class="content-large-text"><a href="">About us <i class="fa fa-angle-double-right"></i></a></p>
-                <div class="medium-text"><p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide. </p></div>
-                <p class="content-large-text"><a href="">Contact us <i class="fa fa-angle-double-right"></i></a></p>
+                <?php print render($about_us_block); ?>
             </div>
         </div>
       </div>

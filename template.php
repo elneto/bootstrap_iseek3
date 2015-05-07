@@ -212,4 +212,8 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   //put the path to needed images
   $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
 
+  //blocks
+  $block = module_invoke('views', 'block_view', 'about_us_footer-block');
+  $vars['about_us_block'] = $block['content'];
 }
+
