@@ -72,6 +72,9 @@
  *
  * @ingroup themeable
  */
+
+kpr($variables);
+
 ?>
 
 
@@ -267,6 +270,7 @@
 	</div> <!-- container -->
   </div> <!-- row -->
 
+
 <!-- Time zone and weather -->
    <div class="row">
         <div class="col-lg-12">
@@ -275,6 +279,9 @@
 
       <div class="row">
           <div class="col-md-12 col-lg-6 timezone-pad-r0">
+
+			<?php echo $weather; ?>
+
             <div class="dutystaion-container ">
             
               <div class="col-md-3 col-xs-6 dutystaion">

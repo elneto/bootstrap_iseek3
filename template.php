@@ -215,5 +215,12 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   //blocks
   $block = module_invoke('views', 'block_view', 'about_us_footer-block');
   $vars['about_us_block'] = $block['content'];
+
+}
+
+function bootstrap_iseek3_preprocess_page(&$variables){
+  //blocks
+  $block = module_invoke('weather', 'block_view', 'system_1');
+  $variables['weather'] = $block['content'];
 }
 
