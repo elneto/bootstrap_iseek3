@@ -73,7 +73,7 @@
  * @ingroup themeable
  */
 
-kpr($variables);
+//kpr($variables);
 
 ?>
 
@@ -272,15 +272,16 @@ kpr($variables);
 
 
 <!-- Time zone and weather -->
-   <div class="row">
+<!-- We override weather.tpl.php in the templates folder -->
+<?php echo $weather; ?>
+
+   <!-- <div class="row">
         <div class="col-lg-12">
         <div class="timezone">&nbsp;&nbsp;&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;&nbsp;<span class="large-text">Time zone and weather</span></div></div>
       </div>
 
       <div class="row">
           <div class="col-md-12 col-lg-6 timezone-pad-r0">
-
-			<?php echo $weather; ?>
 
             <div class="dutystaion-container ">
             
@@ -444,5 +445,5 @@ kpr($variables);
           </div>
       </div>
       </div></div>
-           </div>
+           </div> -->
 <!-- Ends: Time zone and weather -->

@@ -983,9 +983,8 @@ button#go-button{
   margin-right: 0;
   margin-left: 0;
 }
-.duty-padding{
-  padding-left:0.5em;
-  padding-right:0.5em;
+.duty-padding {
+  padding-left: 6em;
 }
 .duty-margin{
   margin-left:0.02em;
@@ -1191,6 +1190,18 @@ div#key-tools ul {
 }
 
 /*
+* Drupal Modules
+*/
+
+img.weather-image{
+  width:58px;
+}
+
+.dutystaion-container a {
+  color: @statement-grey;
+}
+
+/*
 * Media queries not huge screens
 */
 
@@ -1332,6 +1343,9 @@ div#key-tools ul {
     padding-left: 15px;
   }
 
+  .duty-padding {
+    padding-left: 0.5em;
+  }
 
 }
 
@@ -1416,6 +1430,10 @@ and (orientation : landscape) {
   div.spotlight-thumbnail>img{
     width:100%;
   }
+
+  .duty-padding {
+    padding-left: 0.5em;
+  }
 }
 
 /*
@@ -1471,6 +1489,10 @@ and (orientation : landscape) {
 
   .search-button, .search-input {
     -webkit-appearance: none;
+  }
+
+  .duty-padding {
+    padding-left: 2em;
   }
 
 }
@@ -1578,6 +1600,10 @@ and (orientation : landscape) {
     padding-bottom: 0;
     border: none;
     margin-top: 0;
+  }
+
+  .duty-padding {
+    padding-left: 2em;
   }
   
 }
