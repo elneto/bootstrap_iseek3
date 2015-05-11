@@ -403,14 +403,7 @@
             <div class="col-md-6 bpad15 wborr">
                 <h4 class="tjo"><a href="">Temporary Job Openings <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="tjo-content content-large-text">
-                      <ul>
-                        <li><a href="">DFS/LSD, D-1, Logistics, Chief Supply Chain Management, Expires 23 April 2015 COB.</a></li>
-                        <li><a href="">DPKO/OO/AD II/West Africa IOT, D-1, Political Affairs, Team Leader, Expires 15 May 2015 COB.</a></li>
-                        <li><a href="">UNISFA, MSD, CAS, HR, FS-6, Management and Operational Support, Administration, Human Resources Officer, Expires: 21 April 2015</a></li>
-                        <li><a href="">DM/OCSS/FCSD/FMS/PDCS, G-6, Management and Operations Support, Programme Management, Administrative Assistant, Expires 17 April 2015</a></li>
-                        <li><a href="">DSS/DHSSS/Senior Staff Assistant, G-6, Expires 24 April 2015</a></li>
-                        
-                      </ul>
+                      <?php print render($recent_tjos); ?>
                 </div>
 
             </div>
@@ -428,18 +421,11 @@
             </div>
           </div>
 
-          <!-- stadd union and comm -->
+          <!-- staff union and comm -->
           <div class="row">
             <div class="col-md-6 wborr">
                 <h4 class="staffunion"><a href="">Staff Union <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="staffunion-content content-large-text">
-                    <!-- <ul>
-                      <li><a href="">The situation of the pension fund</a></li>
-                      <li><a href="">Joint position on GA proposals to make Yom Kippur, Vesak, Diwali and Gurpurb UN holidays</a></li>
-                      <li><a href="">Statement to GA on budget cuts, performance management, continuing appointments, whistleblowers</a></li>
-                      <li><a href="">Briefing note to GA on salaries and retirement age</a></li>
-                      <li><a href="">Briefing note to GA on problems at the pension fund</a></li>
-                    </ul> -->
                     <?php print render($staff_union_block); ?>
                 </div>
             </div>
