@@ -225,5 +225,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 
   $block = module_invoke('views', 'block_view', 'staff_union_block-block');
   $variables['staff_union_block'] = $block['content'];
+
+  //menus
+  $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
 }
 

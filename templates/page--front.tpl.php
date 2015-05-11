@@ -446,13 +446,7 @@
             <div class="col-md-6">
               <h4 class="community"><a href="">Community <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="community-content content-large-text">
-                    <ul>
-                      <li><a href="">Clubs</a></li>
-                      <li><a href="">Greening the Blue</a></li>
-                      <li><a href="">List of Services</a></li>
-                      <li><a href="">New to the UN?</a></li>
-                      <li><a href="">Leaving the UN?</a></li>
-                    </ul>
+                    <?php print $menu_community; ?>
                 </div>
             </div>
           </div>
