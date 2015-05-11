@@ -222,5 +222,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   //blocks
   $block = module_invoke('weather', 'block_view', 'system_1');
   $variables['weather'] = $block['content'];
+
+  $block = module_invoke('views', 'block_view', 'staff_union_block-block');
+  $variables['staff_union_block'] = $block['content'];
 }
 

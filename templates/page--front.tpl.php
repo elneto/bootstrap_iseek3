@@ -433,13 +433,14 @@
             <div class="col-md-6 wborr">
                 <h4 class="staffunion"><a href="">Staff Union <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="staffunion-content content-large-text">
-                    <ul>
+                    <!-- <ul>
                       <li><a href="">The situation of the pension fund</a></li>
                       <li><a href="">Joint position on GA proposals to make Yom Kippur, Vesak, Diwali and Gurpurb UN holidays</a></li>
                       <li><a href="">Statement to GA on budget cuts, performance management, continuing appointments, whistleblowers</a></li>
                       <li><a href="">Briefing note to GA on salaries and retirement age</a></li>
                       <li><a href="">Briefing note to GA on problems at the pension fund</a></li>
-                    </ul>
+                    </ul> -->
+                    <?php print render($staff_union_block); ?>
                 </div>
             </div>
             <div class="col-md-6">
