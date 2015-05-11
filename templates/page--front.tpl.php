@@ -162,10 +162,9 @@
 </div>
 <!-- /Main container -->
 
-
 <div class="main-container container">
 
-  <div class="row">
+	<div class="row">
 
 	<div class="col-sm-10">
 
@@ -188,262 +187,288 @@
 	</div>
 
 	
-	<div class="col-sm-2 col-xs-12">
-		<?php print render($page['header']); ?>
-	</div>
+	<!-- <div class="col-sm-2 col-xs-12">
+		<?php //print render($page['header']); //do we need this region? ?>
+	</div> -->
 
   </div>
+<!-- Urgent message -->
+  	<div class="row">
+		<div class="col-md-12">
+		  <div class="alert alert-danger urgent-message" role="alert">
+		    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		    <span class="sr-only">Urgent message:</span>
+		    Urgent Message
+		  </div>
+		</div>
+    </div>
+<!-- Stories, search, events, announcements -->
+      <div class="row">
+        <div class="col-md-5 col-md-push-7">
+            <h3 class="top-side-box nohoverfx top-boxes-margin">&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;Search</h3>
+            <div id="search-box">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="input-find-colleague">Find a colleague<span class="hidden-xs">... by name, department and more</span></label> <!--placeholder="Find a colleague"!--> 
+                </div>
+                <div class="col-lg-10 col-xs-9 search-rpad0">
+                  <input type="text" name="find-colleague" class="search-input" id="input-find-colleague">
+                </div>
+                <div class="col-lg-2 col-xs-3 search-lpad0">
+                  <button name="Search" class="search-button">Search</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="input-search-iseek">Search iSeek or ODS</label> <!-- placeholder="Search the UN Intranet or ODS"  !-->
+                </div>
+                <div class="col-lg-8 col-md-7 col-xs-6 search-rpad0">
+                  <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0">
+                  <select id="select-search" class="search-input">
+                    <option>iSeek</option>
+                    <option>ODS</option>
+                  </select>
+                </div>
+                <div class="col-lg-2 col-md-3 col-xs-3 search-lpad0">
+                  <button name="Search" class="search-button">Search</button>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-md-12">
+                  <div id="search-links">
+                  <a href="#">Update my Information</a>  |
+                  <a href="#">Advanced Search</a>  |
+                  <a href="#">Additional Resources</a></div>
+                </div>
+              </div>
+              
+            </form>
+          </div>
+          
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="#">Calendar of events <i class="fa fa-angle-double-right"></i></a></h3>
+          <div id="calendar-box">
+            <ul id="calendar-list">
+              <li><span class="calendar-date">08 MAR</span><a href="#">International Women's Day UN observances</a></li>
+              <li><span class="calendar-date">17 MAR</span><a href="#">St. Patrick's Day Holiday</a></li>
+              <li><span class="calendar-date">20 MAR</span><a href="#">International Day of Happiness</a></li>
+              <li><span class="calendar-date">24 OCT</span><a href="#">UN Day Celebration</a></li>
+              <li><span class="calendar-date">08 MAR</span><a href="#">International Women's Day UN observances</a></li>
+              <li><span class="calendar-date">17 MAR</span><a href="#">St. Patrick's Day Holiday</a></li>
+              <li><span class="calendar-date">20 MAR</span><a href="#">International Day of Happiness</a></li>
+              <li><span class="calendar-date">24 OCT</span><a href="#">UN Day Celebration</a></li>
+            </ul>
+          </div>
+          
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<img src="images/announcements.png" border="0" alt="announcements icon" class="icon-top-bar"/>&nbsp;&nbsp;<a href="#">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
+          <div id="announcements-box">
+            <ul id="announcements-list">
+              <li><a href="#">Client Service at the Health &amp; Life Insurance Section</a></li>
+              <li><a href="#">Commemoration of Human Rights Day, 9 December</a></li>
+              <li><a href="#">Edward Elgar Ebooks online! Should the Library buy them?</a></li>
+              <li><a href="#">Seasonal Flu Vaccine Campaign starts Friday, 21 November</a></li>
+              <li><a href="#">Special Event of the GA Second Committee: ICT and E-Gov</a></li>
+              <li><a href="#">Gym memberships at all time low</a></li>
+            </ul>
+            </div>
+        </div>
+        <!-- Stories -->
+        <div class="col-md-7 col-md-pull-5">
+          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="#">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
+          <div id="container-main-image">
+            <img src="images/img16x9.jpg" border="0" id="image-main-story" class="img-responsive" alt="alternate text for main image"/>
+            <div id="caption-mi">
+              <a href="#">
+                <div id="caption-mi-title">Secretary-General Holds UN Town Hall Meeting in Panama City</div>
+                <div id="caption-mi-date">Friday, 24 April 2015</div>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 rpad5">
+              <div class="main-thumbnail">
+                <img src="images/thumb1.jpg" border="0" alt="alternate text"/>
+                <a href="#">Secretary-General meets staff at ECLAC’s headquarters</a>
+              </div>
+            </div>
+            <div class="col-md-4 lpad5 rpad5">
+              <div class="main-thumbnail lpad0 rpad0">
+                <img src="images/thumb2.jpg" border="0" alt="alternate text"/>
+                <a href="#">DPKO-DFS Field Occupational Safety Risk Management: Workplace Safety Training Video</a>
+              </div>
+            </div>
+            <div class="col-md-4 lpad5">
+              <div id="thumbnail-most-popular" class="main-thumbnail">
+                <div id="most-popular-title">Most popular</div>
+                <img src="images/thumb3.jpg" border="0" alt="alternate text"/>
+                <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="col-md-12">
+              <div id="low-statement"><div class="arrow-right"></div><a href="#">SG travels to Mali</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="bottom-staff-stories"><a href="#">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+            </div>
+          </div>
+        </div> <!-- END Stories -->
+        
+      </div> <!-- END Stories, search, events, announcements -->
 
-  <div class="row">
+      <!-- Spotlight -->
+      
+      <div class="row">
+        <div class="col-md-12 zindex99">
+          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight</h3>
+          <div class="row">
+            <div class="col-md-4 rpad0">
+              <div class="spotlight-thumbnail">
+                <img src="images/spot1.png" border="0" alt="alternate text" class="img-responsive" width="375" height="211">
+                <a href="#">Title</a>
+              </div>
+            </div>
+            <div class="col-md-4 lpad75 rpad75">
+              <div class="spotlight-thumbnail">
+                <img src="images/spot2.jpg" border="0" alt="alternate text" class="img-responsive" width="375" height="211">
+                <a href="#">Title</a>
+              </div>
+            </div>
+            <div class="col-md-4 lpad0">
+             <div class="spotlight-thumbnail">
+                <!--<img src="images/spot3.jpg" border="0" alt="alternate text" class="img-responsive">-->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <video controls width="375" height="211"> 
+                    <source src="videos/small.ogv" type="video/ogg"> 
+                    <source src="videos/small.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <a href="#">Title</a>
+              </div>
+            </div>
+          </div>
 
-	<div class="container">
-		<div class="row">
+          <!-- <div class="col-md-4"><h3 class="bb">Pic 1</h3>title</div>
+          <div class="col-md-4"><h3 class="bb">Pic 2</h3>title</div>
+          <div class="col-md-4"><h3 class="bb">Pic 3</h3>title</div> -->
+        </div>
+      </div>
+      <!-- END Spotlight -->
+     
+      <!-- Submit -->
+      <div class="row">
+        <div class="col-lg-12 margin-submit">
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#">Submit content <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
+        </div>
+      </div>
+      <!-- END Submit -->
+     <!-- ******************************************************************************************************
+        * From here down is for Husain and up for Ernesto
+        *********************************************************************************************************
+      !-->
+      <!-- News, Tips, Social Media -->
+      <div class="row">      
 
-		
-				
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
+             <div class="un-news">
+              <ul class="content-large-text">
+                <li><a href="">'41 missing' in new Mediterranean migrant boat tragedy</a></li>
+                <li><a href="">Over 30 reported killed in Saudi-led air raids in Yemen</a></li>
+                <li><a href="">Guinea finds nine new Ebola cases near border with Sierra Leone</a></li>
+                <li><a href="">Fresh anti-immigrant clashes in South Africa as Zuma condemns violence</a></li>
+              </ul>
+            </div>
+              <div class="bottom-side-box content-large-text"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="">Useful tips <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="tip-content"><img src="images/tweet-tip.png" class="img-responsive">
+              <!--h5 class="bottom-side-box medium-text">More <i class="fa fa-caret-down"></i></h5-->
+              <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div>
+              </div>
+              <div class="bottom-side-box content-large-text"></div>
+            </div>
+          </div>
+          <!-- temp and classified -->
+          <div class="staff-box">
+          <div class="row">
+            <div class="col-md-6 bpad15 wborr">
+                <h4 class="tjo"><a href="">Temporary Job Openings <i class="fa fa-angle-double-right"></i></a></h4>
+                <div class="tjo-content content-large-text">
+                      <ul>
+                        <li><a href="">DFS/LSD, D-1, Logistics, Chief Supply Chain Management, Expires 23 April 2015 COB.</a></li>
+                        <li><a href="">DPKO/OO/AD II/West Africa IOT, D-1, Political Affairs, Team Leader, Expires 15 May 2015 COB.</a></li>
+                        <li><a href="">UNISFA, MSD, CAS, HR, FS-6, Management and Operational Support, Administration, Human Resources Officer, Expires: 21 April 2015</a></li>
+                        <li><a href="">DM/OCSS/FCSD/FMS/PDCS, G-6, Management and Operations Support, Programme Management, Administrative Assistant, Expires 17 April 2015</a></li>
+                        <li><a href="">DSS/DHSSS/Senior Staff Assistant, G-6, Expires 24 April 2015</a></li>
+                        
+                      </ul>
+                </div>
 
-			<!-- center1 -->
-		
-			<div class="col-xs-12 col-sm-6 col-sm-push-3">
-				<section<?php //print $content_column_class; ?>>
+            </div>
+            <div class="col-md-6 bpad15">
+              <h4 class="classifieds"><a href="">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
+                <div class="classifieds-content content-large-text">
+                    <ul>
+                      <li><a href="">Designer Decorated Lakeside Cottage - New Milford</a></li>
+                      <li><a href="">Stunning Classic Home</a></li>
+                      <li><a href="">Cuisinart DLC-2007N Prep 7 7-Cup Food Processor, White</a></li>
+                      <li><a href="">YMCA, U.N. EMPLOYEES WILL RECEIVE 20% OFF THE MONTHLY MEMBERSHIP DUES &amp; 1/2 OFF THE ONE-TIME JOINER'S FEE!</a></li>
+                      <li><a href="">BROADWAY DISCOUNTS</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
 
-
-				  <?php if (!empty($page['highlighted'])): ?>
-					<div class="highlighted"><?php print render($page['highlighted']); ?></div>
-				  <?php endif; ?>
-				  <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-				  <a id="main-content"></a>
-				  <?php print render($title_prefix); ?>
-				  <?php if (!empty($title)): ?>
-					<h1 class="page-header"><?php print $title; ?></h1>
-				  <?php endif; ?>
-				  <?php print render($title_suffix); ?>
-				  <?php print $messages; ?>
-				  <?php if (!empty($tabs)): ?>
-					<?php print render($tabs); ?>
-				  <?php endif; ?>
-				  <?php if (!empty($page['help'])): ?>
-					<?php print render($page['help']); ?>
-				  <?php endif; ?>
-				  <?php if (!empty($action_links)): ?>
-					<ul class="action-links"><?php print render($action_links); ?></ul>
-				  <?php endif; ?>
-				  <?php print render($page['content']); ?>
-
-				</section>
-			</div>
-
-				<!-- /center1 -->
-
-				<!-- right -->
-
-
-					<div class="col-xs-12 col-sm-3 col-sm-push-3">
-						<?php if (!empty($page['sidebar_second'])): ?>
-						  <!-- <aside class="col-sm-3" role="complementary"> -->
-						  <aside role="complementary">
-							<?php print render($page['sidebar_second']); ?>
-						  </aside>  <!-- /#sidebar-second -->
-						<?php endif; ?>
-					</div>
-
-
-				<!-- /right -->
-				
-				<!-- left -->
-
-
-					<div class="col-xs-12 col-sm-3 col-sm-pull-9">
-
-						<?php if (!empty($page['sidebar_first'])): ?>
-						  <!-- <aside class="col-sm-3" role="complementary"> -->
-						  <aside role="complementary">
-							<?php print render($page['sidebar_first']); ?>
-						  </aside>  <!-- /#sidebar-first -->
-						<?php endif; ?>
-
-					</div>
-
-				<!-- /left -->
-		</div> <!-- row -->
-	</div> <!-- container -->
-  </div> <!-- row -->
-
+          <!-- stadd union and comm -->
+          <div class="row">
+            <div class="col-md-6 wborr">
+                <h4 class="staffunion"><a href="">Staff Union <i class="fa fa-angle-double-right"></i></a></h4>
+                <div class="staffunion-content content-large-text">
+                    <ul>
+                      <li><a href="">The situation of the pension fund</a></li>
+                      <li><a href="">Joint position on GA proposals to make Yom Kippur, Vesak, Diwali and Gurpurb UN holidays</a></li>
+                      <li><a href="">Statement to GA on budget cuts, performance management, continuing appointments, whistleblowers</a></li>
+                      <li><a href="">Briefing note to GA on salaries and retirement age</a></li>
+                      <li><a href="">Briefing note to GA on problems at the pension fund</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="community"><a href="">Community <i class="fa fa-angle-double-right"></i></a></h4>
+                <div class="community-content content-large-text">
+                    <ul>
+                      <li><a href="">Clubs</a></li>
+                      <li><a href="">Greening the Blue</a></li>
+                      <li><a href="">List of Services</a></li>
+                      <li><a href="">New to the UN?</a></li>
+                      <li><a href="">Leaving the UN?</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-4">
+          <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;Social media corner</h3>
+          <div class="twitter-border fluid">
+              <a class="twitter-timeline" href="https://twitter.com/UN" width="100%" height="700" data-widget-id="590192526923063296" data-chrome="nofooter noborders">Tweets by @UN</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        <div class="large-text social"> <a href=""><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href=""><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href=""><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href=""><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href=""><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
+        </div>
+  
+      </div>
 
 <!-- Time zone and weather -->
 <!-- We override weather.tpl.php in the templates folder -->
 <?php echo $weather; ?>
-
-   <!-- <div class="row">
-        <div class="col-lg-12">
-        <div class="timezone">&nbsp;&nbsp;&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;&nbsp;<span class="large-text">Time zone and weather</span></div></div>
-      </div>
-
-      <div class="row">
-          <div class="col-md-12 col-lg-6 timezone-pad-r0">
-
-            <div class="dutystaion-container ">
-            
-              <div class="col-md-3 col-xs-6 dutystaion">
-
-                
-                  <div class="large-text duty-margin">Addis Ababa</div>
-                  <div class=" medium-text duty-margin">27 February</div>
-                  <div class=" medium-text duty-margin time">21:37</div>
-                
-                <div class="row duty-padding temp">
-                  <div class="col-lg-3 weather-icon moon">      
-                    <i class="fa fa-moon-o  fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32 &#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding ">
-                      32 &#8451; / 83  &#8457;
-                    </div>
-                    
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-md-3 col-xs-6 dutystaion">
-                
-                <div class="row large-text duty-margin">Bangkok</div>
-                <div class="row medium-text duty-margin">28 February</div>
-                <div class="row medium-text duty-margin time">01:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon moon">      
-                    <i class="fa fa-moon-o  fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        30&#8451; / 80  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      23&#8451; / 83  &#8457;
-                </div>
-
-              </div>
-             </div>
-           </div>
-              <div class="col-md-3 col-xs-6 dutystaion">                
-                <div class="row large-text duty-margin">Beirut</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">20:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon moon">      
-                    <i class="fa fa-moon-o  fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        28&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-</div>
-           </div>
-             
-              <div class="col-md-3 col-xs-6 dutystaion">                
-                <div class="row duty-margin large-text">Geneva</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">19:37</div>
-                
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon sun">      
-                    <i class="fa fa-sun-o fa-3x sun"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-</div>
-           </div>
-            
-          </div></div>
-          <div class="col-md-12 col-lg-6 timezone-pad-l0">
-          <div class="dutystaion-container ">
-              <div class="col-md-3 col-xs-6 dutystaion">                
-                <div class="row large-text duty-margin">Nairobi</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">18:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon moon">      
-                    <i class="fa fa-moon-o  fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-</div>
-           </div>
-              <div class="col-md-3 col-xs-6 dutystaion">
-                <div class="row large-text duty-margin">New York</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">13:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon rain">      
-                    <i class="fa fa-tint fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-</div>
-                
-           </div>
-              <div class="col-md-3 col-xs-6 dutystaion">                
-                <div class="row large-text duty-margin">Santiago</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">15:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon sun">      
-                    <i class="fa fa-sun-o fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-</div>
-           </div>
-              <div class="col-md-3 col-xs-6 dutystaion-last">                
-                <div class="row large-text duty-margin">Vienna</div>
-                <div class="row medium-text duty-margin">27 February</div>
-                <div class="row medium-text duty-margin time">21:37</div>
-                <div class="row duty-padding">
-                  <div class="col-lg-3 weather-icon cloud">      
-                    <i class="fa fa-cloud fa-3x"></i>
-                  </div>
-                  <div class="col-lg-9">      
-                    <div class="row medium-text duty-padding">
-                        32&#8451; / 83  &#8457;
-                    </div>
-                    <div class="row medium-text duty-padding temp">
-                      32&#8451; / 83  &#8457;
-                    </div>
-</div>
-            
-          </div>
-      </div>
-      </div></div>
-           </div> -->
 <!-- Ends: Time zone and weather -->
