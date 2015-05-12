@@ -232,8 +232,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
-  $block = module_invoke('block', 'block_view', '131'); //131 local, change to block name in production
-  $variables['social_media_corner'] = $block['content'];
+  $block = module_invoke('block', 'block_view', '131'); //131 local, change to 137 in PRODUCTION
+  $variables['social_media_corner'] = $block['content']; //147 in DEV
 
   //menus
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
