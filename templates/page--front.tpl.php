@@ -410,13 +410,7 @@
             <div class="col-md-6 bpad15">
               <h4 class="classifieds"><a href="">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="classifieds-content content-large-text">
-                    <ul>
-                      <li><a href="">Designer Decorated Lakeside Cottage - New Milford</a></li>
-                      <li><a href="">Stunning Classic Home</a></li>
-                      <li><a href="">Cuisinart DLC-2007N Prep 7 7-Cup Food Processor, White</a></li>
-                      <li><a href="">YMCA, U.N. EMPLOYEES WILL RECEIVE 20% OFF THE MONTHLY MEMBERSHIP DUES &amp; 1/2 OFF THE ONE-TIME JOINER'S FEE!</a></li>
-                      <li><a href="">BROADWAY DISCOUNTS</a></li>
-                    </ul>
+                    <?php print render($latest_zeekoslist); ?>
                 </div>
             </div>
           </div>
