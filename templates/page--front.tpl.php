@@ -435,8 +435,7 @@
         <div class="col-lg-4">
           <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;Social media corner</h3>
           <div class="twitter-border fluid">
-              <a class="twitter-timeline" href="https://twitter.com/UN" width="100%" height="700" data-widget-id="590192526923063296" data-chrome="nofooter noborders">Tweets by @UN</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              <?php print render($social_media_corner); ?>
           </div>
         <div class="large-text social"> <a href=""><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href=""><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href=""><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href=""><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href=""><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
         </div>
