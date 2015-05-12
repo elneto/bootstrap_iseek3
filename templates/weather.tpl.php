@@ -29,14 +29,14 @@
         "Geneva" => "Europe/Berlin",
         "Nairobi" => "Africa/Nairobi",
         "New York" => "America/New_York",
-        "Santiago" => "America/Santiago",
+        "Santiago" => "America/Mendoza",
         "Vienna" => "Europe/Vienna",
       ];
 
       $i = 0;
       foreach($weather as $place): 
         $date = date_create(null, timezone_open($city[$place['name']]));
-        $iSeekDate = date_format($date, 'l, j M');
+        $iSeekDate = date_format($date, 'D, j M');
         $iSeekTime = date_format($date, 'H:i'); 
           if ($i == 4): //2nd row?>
             </div></div>
