@@ -262,6 +262,10 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 
   $variables['social_media_corner'] = iseek_custom_block_content('social_media_corner_block');
 
+  //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
+  $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
+  $variables['useful_tips'] = $block['content'];
+
   //menus
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
 }

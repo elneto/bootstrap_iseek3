@@ -390,9 +390,10 @@
             </div>
             <div class="col-md-6">
               <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="">Useful tips <i class="fa fa-angle-double-right"></i></a></div>
-              <div class="tip-content"><img src="images/tweet-tip.png" class="img-responsive">
-              <!--h5 class="bottom-side-box medium-text">More <i class="fa fa-caret-down"></i></h5-->
-              <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div>
+              <div class="tip-content">
+              <!-- <img src="images/tweet-tip.png" class="img-responsive">
+              <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div> -->
+              <?php print render($useful_tips); ?>
               </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>

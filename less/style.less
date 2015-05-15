@@ -1,4 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
+@import (reference) "../bootstrap/less/mixins.less";
 /*
  * Variables
  */
@@ -756,6 +757,13 @@ span.less-large{
   text-align: center;
   height: @un-news-height;
   padding:1em;
+  .content-large-text;
+  .left;
+  overflow: auto;
+
+  & img{
+    .img-responsive();
+  }
 }
 /*.tip-content img{
   width: 80%;
