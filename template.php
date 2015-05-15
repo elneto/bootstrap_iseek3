@@ -190,6 +190,30 @@ function bootstrap_iseek_js_alter(&$js) {
 }
 */
 
+/*
+Gets the content of a block given its machine_name, this name can be set in the custom user block thanks to the module 
+Block Machine Name https://www.drupal.org/project/block_machine_name 
+now block_delta is independent of local, dev or PROD
+*/
+function iseek_custom_block_content($machine_name){
+
+  $result = db_query("SELECT bid FROM {block_machine_name_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
+
+  if ($result) {
+    $row = $result->fetchAssoc();
+    if ($row['bid']){//this returns false if non was fetched
+      $block = module_invoke('block', 'block_view', $row['bid']); 
+      return $block['content']; 
+    }
+    else{
+      return 'Block not found, please add its machine name';
+    }
+  }
+
+  return 'No result from query'; //this point should never be reached
+  
+}
+
 /**
  * Provides menu links for the footer: region--page-bottom.tpl.php
  */
@@ -213,23 +237,14 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
 
   //blocks
-  $block = module_invoke('views', 'block_view', 'about_us_footer-block');
-  $vars['about_us_block'] = $block['content'];
-
-}
-
-/*gets the delta of a block given its machine_name, this name can be set in the custom user block thanks to the module 
-Block Machine Name https://www.drupal.org/project/block_machine_name */
-function iseek_block_delta($machine_name){
-
-  $result = db_query("SELECT bid FROM {block_machine_name_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
-
-  if ($result) {
-    $row = $result->fetchAssoc();
-    return $row['bid']; //this returns false if non was fetched
-  }
+  $vars['about_us_block'] = iseek_custom_block_content('about_us_footer_block'); 
   
+
 }
+
+/**
+ * Provides menu links for the front page: page--front.tpl.php
+ */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
   //blocks
@@ -245,16 +260,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
-  $block_delta = iseek_block_delta('social_media_corner_block');
-  if ($block_delta){
-    $block = module_invoke('block', 'block_view', $block_delta); //131 local, change to 137 in PRODUCTION
-    $variables['social_media_corner'] = $block['content']; //147 in DEV
-  }
-  else{
-    $variables['social_media_corner'] = 'Block not found, please add its machine name';
-  }
-  
- 
+  $variables['social_media_corner'] = iseek_custom_block_content('social_media_corner_block');
 
   //menus
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
