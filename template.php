@@ -269,6 +269,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
 
   $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
+  //$variables['submit_content_link'] = iseek_custom_block('submit_content_link_block', 'content');
   $variables['submit_content_title'] = iseek_custom_block('submit_content_block', 'title');
 
   //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
