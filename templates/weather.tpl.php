@@ -12,7 +12,6 @@
   <div class="col-md-12 col-lg-6 timezone-pad-r0">
     <div class="dutystaion-container ">
       <?php 
-/*
       function ctof($temperature) {
         $matches = 0;
         $pattern = "/\d+/";
@@ -20,7 +19,6 @@
         $tempF = round($matches[0] *9/5+32);
         return ( $tempF . '&thinsp;°F');
       }
-*/
       //to get the time now:
       $city = [
         "Addis Ababa" => "Africa/Addis_Ababa",
@@ -68,7 +66,7 @@
                       <?php print $data['condition']; ?>
                     </div>
                     <div class="row medium-text temp">
-                      <?php // print $data['temperature'] . ' / ' . ctof($data['temperature']); ?>
+                      <?php print $data['temperature'] . ' / ' . ctof($data['temperature']); ?>
                     </div>
                 </div>
               </div>
