@@ -253,7 +253,7 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
  */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
-  //blocks
+  //block views
   $block = module_invoke('weather', 'block_view', 'system_1');
   $variables['weather'] = $block['content'];
 
@@ -266,6 +266,10 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
+  $block = module_invoke('views', 'block_view', 'spotlight-block_1');
+  $variables['spotlight'] = $block['content'];
+
+  //blocks
   $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
 
   $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
@@ -279,4 +283,5 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   //menus
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
 }
+
 

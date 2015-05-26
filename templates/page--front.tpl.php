@@ -328,35 +328,8 @@
         <div class="col-md-12 zindex99">
           <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight</h3>
           <div class="row">
-            <div class="col-md-4 rpad0">
-              <div class="spotlight-thumbnail">
-                <img src="images/spot1.png" border="0" alt="alternate text" class="img-responsive" width="375" height="211">
-                <a href="#">Title</a>
-              </div>
-            </div>
-            <div class="col-md-4 lpad75 rpad75">
-              <div class="spotlight-thumbnail">
-                <img src="images/spot2.jpg" border="0" alt="alternate text" class="img-responsive" width="375" height="211">
-                <a href="#">Title</a>
-              </div>
-            </div>
-            <div class="col-md-4 lpad0">
-             <div class="spotlight-thumbnail">
-                <!--<img src="images/spot3.jpg" border="0" alt="alternate text" class="img-responsive">-->
-                <div class="embed-responsive embed-responsive-16by9">
-                  <video controls width="375" height="211"> 
-                    <source src="videos/small.ogv" type="video/ogg"> 
-                    <source src="videos/small.mp4" type="video/mp4">
-                  </video>
-                </div>
-                <a href="#">Title</a>
-              </div>
-            </div>
+          	<?php print render($spotlight); ?>
           </div>
-
-          <!-- <div class="col-md-4"><h3 class="bb">Pic 1</h3>title</div>
-          <div class="col-md-4"><h3 class="bb">Pic 2</h3>title</div>
-          <div class="col-md-4"><h3 class="bb">Pic 3</h3>title</div> -->
         </div>
       </div>
       <!-- END Spotlight -->
