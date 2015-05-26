@@ -70,6 +70,11 @@
   <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
   <?php print render($title_suffix); */ ?>
 
+  <div class="submitted">
+    <?php // print $permalink; ?>
+    <?php print $submitted; ?>
+  </div>
+
   <div class="content"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
@@ -81,11 +86,6 @@
       <?php print $signature ?>
     </div>
     <?php endif; ?>
-  </div>
-
-  <div class="submitted">
-    <?php // print $permalink; ?>
-    <?php print $submitted; ?>
   </div>
 
   <?php print render($content['links']) ?>
