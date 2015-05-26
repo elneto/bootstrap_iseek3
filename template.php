@@ -205,22 +205,24 @@ Gets the content of a block given its machine_name, this name can be set in the 
 Block Machine Name https://www.drupal.org/project/block_machine_name 
 now block_delta is independent of local, dev or PROD
 */
-/*
-
-ERIC - commented out 20 may
-
-function iseek_custom_block_content($machine_name){
+function iseek_custom_block($machine_name, $retrieve){
 
   $result = db_query("SELECT bid FROM {block_machine_name_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
 
   if ($result) {
     $row = $result->fetchAssoc();
-    if ($row['bid']){//this returns false if non was fetched
+    if ($row['bid']){//this returns false if nothing was fetched
+
+      if($retrieve == 'title'){
+        $block = block_load('block', $row['bid']);
+        return t($block->title);
+      }
+      //else it returns the content
       $block = module_invoke('block', 'block_view', $row['bid']); 
-      return $block['content']; 
+      return t($block[$retrieve]); 
     }
     else{
-      return 'Block not found, please add its machine name';
+      return t('Block not found, please add its machine name');
     }
   }
 
@@ -251,11 +253,9 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   //put the path to needed images
   $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
 
-/* 
-ERIC - commented out 20 may
   //blocks
-  $vars['about_us_block'] = iseek_custom_block_content('about_us_footer_block'); 
-*/  
+  $vars['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
+  
 
 }
 
@@ -264,7 +264,7 @@ ERIC - commented out 20 may
  */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
-  //blocks
+  //block views
   $block = module_invoke('weather', 'block_view', 'system_1');
   $variables['weather'] = $block['content'];
 
@@ -277,11 +277,16 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
-/* 
-ERIC - commented out 20 may
+  $block = module_invoke('views', 'block_view', 'spotlight-block_1');
+  $variables['spotlight'] = $block['content'];
 
-  $variables['social_media_corner'] = iseek_custom_block_content('social_media_corner_block');
-*/
+  //blocks
+  $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
+
+  $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
+  //$variables['submit_content_link'] = iseek_custom_block('submit_content_link_block', 'content');
+  $variables['submit_content_title'] = iseek_custom_block('submit_content_block', 'title');
+
   //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
   $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
   $variables['useful_tips'] = $block['content'];
@@ -289,4 +294,5 @@ ERIC - commented out 20 may
   //menus
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
 }
+
 
