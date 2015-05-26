@@ -99,7 +99,8 @@
 					} else {
 						echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value'])));
 					}
-				?>,
+				?>
+				|
 				<?php 
 					if (isset($node->field_location['und'][0]['tid'])) {
 					  $term_field_location = taxonomy_term_load($node->field_location['und'][0]['tid']);
@@ -120,14 +121,14 @@
 					}	
 				?> 
 				<?php if (isset($node->field_author_name['und'][0]['safe_value'])) { 
-					echo " / "; 
+					echo " | "; 
 					echo $node->field_author_name['und'][0]['safe_value'];
 				} ?> 
 			</div>
 
 			  <?php print render($title_prefix); ?>
-			    <h2<?php print $title_attributes; ?>>
-			      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+			    <h2 id="headline">
+			      <?php print $title; ?>
 			    </h2>
 			  <?php print render($title_suffix); ?>
 
@@ -137,6 +138,18 @@
 			      <?php print $submitted; ?>
 			    </div>
 			  <?php endif; ?>
+
+		</div>	
+	</div>	
+
+	<div class="row">
+		<div class="col-lg-12">
+			<?php print render($content['field_images']); ?>
+		</div>
+	</div>	
+
+        <div class="row">
+                <div class="col-lg-10 col-md-12">
 
 			  <div class="content clearfix"<?php print $content_attributes; ?>>
 			    <?php
@@ -149,7 +162,7 @@
 
 
 				<div class="content-body">
-					<?php print render($content['field_image']); ?>
+					<?php // print render($content['field_image']); ?>
 					
 
 					<!-------------------HS added below------------------------>
@@ -195,7 +208,8 @@
 						 	
 						 } 
 						 else { // ((!(isset($content['field_video']))) and (!(isset($content['field_bright_cove_video_id'])))) { 
-							print render($content['field_images']);
+							// commented out by eric 26 may due to vertically-placed pager
+							// print render($content['field_images']);
 						}
 						
 					?>
@@ -215,15 +229,36 @@
 						}
 					?>		
 					<!---------------------------->
-					<?php if (flag_create_link('iseek_like', $node->nid)): ?>
-					<span id="iseek-likes"></span>
-					<div class="iseek-like">
-						<span>
-							<i class="fa fa-thumbs-up"></i> 
-							<?php print flag_create_link('iseek_like', $node->nid); ?>
-						</span>
-					</div>
-					<?php endif; ?>
+
+
+					<hr/>
+			
+
+					<?php if (flag_create_link('iseek_like', $node->nid)) { ?>
+						<span id="iseek-likes"></span>
+						<div class="iseek-like">
+							<span>
+								<i class="fa fa-2x fa-thumbs-up"></i> 
+								<?php print flag_create_link('iseek_like', $node->nid); ?>
+							</span>
+						</div>
+					<?php } else { ?>
+                                                  <?php
+                                                        if (!(user_is_logged_in()) && !($teaser)) {
+                                                                $login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+                                                                $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
+                                                  ?>
+                                                	<span id="iseek-likes"></span>
+                                                	<div class="iseek-like">
+                                                	        <span>
+                                                	               	<a href="<?php print $login_path[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label[$node->language]; ?></a> 
+                                                	        </span>
+                                                	</div>
+                                                  <?php
+                                                        }
+                                                  ?>
+						
+					<?php } ?>
 
 				  <?php
 					// Remove the "Add new comment" link on the teaser page or if the comment
@@ -236,7 +271,7 @@
 					}
 
 					// remove translation links
-				    unset($content['links']['translation']);
+				    	unset($content['links']['translation']);
 
 					// Only display the wrapper div if there are links.
 					$links = render($content['links']);
@@ -245,6 +280,7 @@
 				  ?>
 					<div class="link-wrapper">
 						<ul class="links inline">
+<!--
 							<li class="comment-comments first">
 								<a href="<?php print $node_url; ?>#comments"><?php if (isset($content['links']['#links']['comment-comments']['title'])) { print $content['links']['#links']['comment-comments']['title']; } ?></a>
 							</li>
@@ -254,7 +290,6 @@
 							<li>
 								<div class="iseek-like-teaser">
 									<span><i class="fa fa-thumbs-up"></i>
-									<!-- <span class="glyphicon glyphicon-thumbs-up"></span> -->
 									<span class="flag-wrapper flag-iseek-like">
 											<?php print $flag->get_count($nid); ?>
 									</span>
@@ -265,17 +300,7 @@
 						  <?php
 							if (!(user_is_logged_in()) && !($teaser)) {
 								$login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
-								// $login_label = array('en' => 'Log in to post comments & <span class="glyphicon glyphicon-thumbs-up"></span>', 'fr' => 'Identifiez-vous pour poster des commentaires & <span class="glyphicon glyphicon-thumbs-up"></span>');
 								$login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
-			/*
-								$destination_request_uri = $_SERVER["REQUEST_URI"];
-
-								if ($node->language == "fr") {
-									$destination_request_uri = substr($destination_request_uri, 4);
-								} elseif ($node->language == "en") {
-									$destination_request_uri = substr($destination_request_uri, 1);
-								}
-			*/
 						  ?>
 							<li class="comment-add last">
 								<a href="<?php print $login_path[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label[$node->language]; ?></a>
@@ -283,37 +308,24 @@
 						  <?php
 							}
 						  ?>
-
+-->
 						  <?php // Login prompt
 						  if (!(user_is_logged_in()) && ($teaser)): ?>
 							<li>
-								<!-- <span>/&nbsp;</span> -->
 								<?php
 									$login_label_teaser = array('en' => 'Log in to post comments or like', 'fr' => 'Connectez-vous pour poster un commentaire ou "J\'aime"');
 									$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
-			/*
-									$destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
-
-									if ($node->language == "fr"):
-										$destination_request_uri_teaser = substr($destination_request_uri_teaser, 4);
-									elseif ($node->language == "en"):
-										$destination_request_uri_teaser = substr($destination_request_uri_teaser, 1);
-									endif;
-			*/
-									?>
+								?>
 
 									<a href="<?php print $login_path_teaser[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label_teaser[$node->language]; ?></a>
 
 							</li>
 							<?php elseif ((user_is_logged_in()) && ($teaser)): ?>
 							<li>
-								<!-- <span>/&nbsp;</span> -->
 								<?php
 									$login_label_teaser = array('en' => 'Add a comment or like', 'fr' => 'Ajouter un commentaire ou "J\'aime"');
 									$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
-									// $destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
-
-									?>
+								?>
 									<a href="<?php print $node_url; ?>#iseek-likes"><?php print $login_label_teaser[$node->language]; ?></a>
 							</li>
 							<?php endif; ?>
@@ -327,6 +339,9 @@
 				</div><!-- slug -->
 
 			  </div><!-- content -->
-		</div>	  	
+		</div>	  
+		<div class="col-lg-2 col-md-12">
+
+		</div>	
 	</div>		  
 </div><!-- node -->
