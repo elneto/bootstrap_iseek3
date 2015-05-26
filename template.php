@@ -28,10 +28,16 @@ function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $for
 
 // print_r($form); //added meaningless comment
 
+	// print "PRE";
+
+	// print_r($form);
+
+	$form['name']['#title'] = t('Login');
 	$form['name']['#description'] = ''; 
         $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
 	$form['name']['#required'] = 0;
 
+	$form['pass']['#title'] = '';
         $form['pass']['#description'] = '';
         $form['pass']['#attributes']['placeholder'] = t('Enter your Webmail password');	
 	$form['pass']['#required'] = 0;
@@ -39,6 +45,10 @@ function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $for
 	$form['actions']['submit']['#value'] = 'GO <i class="fa fa-angle-double-right"></i>';
 
 	unset($form['links']);
+
+	// print "POST";
+
+	// print_r($form);
 }
 
 
@@ -195,6 +205,10 @@ Gets the content of a block given its machine_name, this name can be set in the 
 Block Machine Name https://www.drupal.org/project/block_machine_name 
 now block_delta is independent of local, dev or PROD
 */
+/*
+
+ERIC - commented out 20 may
+
 function iseek_custom_block_content($machine_name){
 
   $result = db_query("SELECT bid FROM {block_machine_name_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
@@ -213,6 +227,7 @@ function iseek_custom_block_content($machine_name){
   return 'No result from query'; //this point should never be reached
   
 }
+*/
 
 /**
  * Provides menu links for the footer: region--page-bottom.tpl.php
@@ -236,9 +251,11 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
   //put the path to needed images
   $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
 
+/* 
+ERIC - commented out 20 may
   //blocks
   $vars['about_us_block'] = iseek_custom_block_content('about_us_footer_block'); 
-  
+*/  
 
 }
 
@@ -260,8 +277,11 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
-  $variables['social_media_corner'] = iseek_custom_block_content('social_media_corner_block');
+/* 
+ERIC - commented out 20 may
 
+  $variables['social_media_corner'] = iseek_custom_block_content('social_media_corner_block');
+*/
   //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
   $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
   $variables['useful_tips'] = $block['content'];

@@ -77,240 +77,89 @@
 
 ?>
 
+<!-- begin common header -->
 
-<div id="top-bar">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-6 hidden-xs">
-				<!-- eric: base_url needs to be i18n and domain aware: is not currently -->
-				<img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>">Welcome to the United Nations Intranet</a>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<a class="top-nav-item" href="#">Low bandwidth | High contrast</a>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<?php
-					$login_block = module_invoke('user', 'block_view', 'login');
-					print render($login_block['content']);
-                                        $user_menu_block = module_invoke('system', 'block_view', 'user-menu');
-                                        print render($user_menu_block['content']);
-				?>
+<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-header.tpl.php'); ?>
 
-<!--
-				<span class="top-nav-item">Login</span>
-				<input type="text" id="login-name" name="login-name" placeholder="Name">
-				<input type="password" id="login-password" name="login-password" placeholder="Password">
-				<button name="login-go" class="btn" id="go-button">GO <i class="fa fa-angle-double-right"></i></button>
--->
-			</div>
-			<div class="col-lg-2 col-md-6 col-sm-6">
-                                <?php
-                                        $block = module_invoke('locale', 'block_view', 'language');
-                                        print render($block['content']);
-                                ?>				
-				<?php // print render($page['header']); ?>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Main container -->
-<div class="container">
-
-	<div class="row">
-		<div class="col-md-3 col-xs-6">
-			<div class="row">
-				<div class="col-md-10 col-xs-12">
-					<a href="#">
-						<img src="<?php print $logo; ?>" onerror="this.onerror=null; this.src='images/iseek-logo.png'" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
-					</a>
-				</div>
-				<div class="col-md-2 hidden-xs">
-					<div id="banner-separation"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-7 col-xs-6">
-			<div class="navbar-default" id="location-navbar">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="location-display">New York</span> <span class="caret"></span></a>
-						<ul id="ul-location" class="dropdown-menu" role="menu">
-							<li><a href="#">Addis Ababa</a></li>
-							<li><a href="#">Bangkok</a></li>
-							<li><a href="#">Beirut</a></li>
-							<li><a href="#">Geneva</a></li>
-							<li><a href="#">Nairobi</a></li>
-							<li><a href="#">New York</a></li>
-							<li><a href="#">Santiago</a></li>
-							<li><a href="#">Vienna</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div>
-		<div class="col-md-2 visible-md visible-lg">
-			<img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-70.svg" onerror="this.onerror=null; this.src='/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-70.png'" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo" width="145">
-		</div>
-	</div>
+<!-- end common header -->
 
 
-
-
-
-
-</div>
-<!-- /Main container -->
-
-<div class="main-container container">
-
-	<div class="row">
-
-	<div class="col-sm-10">
-
-		<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-		  <div class="navbar-collapse collapse">
-			<nav role="navigation">
-			  <?php if (!empty($primary_nav)): ?>
-				<?php print render($primary_nav); ?>
-			  <?php endif; ?>
-			  <?php if (!empty($secondary_nav)): ?>
-				<?php print render($secondary_nav); ?>
-			  <?php endif; ?>
-			  <?php if (!empty($page['navigation'])): ?>
-				<?php print render($page['navigation']); ?>
-			  <?php endif; ?>
-			</nav>
-		  </div>
-		<?php endif; ?>
-
-	</div>
-
-	
-	<!-- <div class="col-sm-2 col-xs-12">
-		<?php //print render($page['header']); //do we need this region? ?>
-	</div> -->
-
-  </div>
-<!-- Urgent message -->
-  	<div class="row">
-		<div class="col-md-12">
-		  <div class="alert alert-danger urgent-message" role="alert">
-		    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-		    <span class="sr-only">Urgent message:</span>
-		    Urgent Message
-		  </div>
-		</div>
-    </div>
 <!-- Stories, search, events, announcements -->
       <div class="row">
         <div class="col-md-5 col-md-push-7">
-            <h3 class="top-side-box nohoverfx top-boxes-margin">&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;Search</h3>
-            <div id="search-box">
-            <form id="search-form">
-              <div class="row">
-                <div class="col-xs-12">
-                  <label for="input-find-colleague">Find a colleague<span class="hidden-xs">... by name, department and more</span></label> <!--placeholder="Find a colleague"!--> 
-                </div>
-                <div class="col-lg-10 col-xs-9 search-rpad0">
-                  <input type="text" name="find-colleague" class="search-input" id="input-find-colleague">
-                </div>
-                <div class="col-lg-2 col-xs-3 search-lpad0">
-                  <button name="Search" class="search-button">Search</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <label for="input-search-iseek">Search iSeek or ODS</label> <!-- placeholder="Search the UN Intranet or ODS"  !-->
-                </div>
-                <div class="col-lg-8 col-md-7 col-xs-6 search-rpad0">
-                  <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
-                </div>
-                <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0">
-                  <select id="select-search" class="search-input">
-                    <option>iSeek</option>
-                    <option>ODS</option>
-                  </select>
-                </div>
-                <div class="col-lg-2 col-md-3 col-xs-3 search-lpad0">
-                  <button name="Search" class="search-button">Search</button>
-                </div>
-              </div>
-              <div class="row ">
-                <div class="col-md-12">
-                  <div id="search-links">
-                  <a href="#">Update my Information</a>  |
-                  <a href="#">Advanced Search</a>  |
-                  <a href="#">Additional Resources</a></div>
-                </div>
-              </div>
-              
-            </form>
-          </div>
-          
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="#">Calendar of events <i class="fa fa-angle-double-right"></i></a></h3>
+
+		<!-- gcd overlay -->
+		<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/homepage_search.tpl.php'); ?>
+		<!-- /gcd overlay -->	
+
+ 
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="calendar">Calendar of events <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="calendar-box">
-            <ul id="calendar-list">
-              <li><span class="calendar-date">08 MAR</span><a href="#">International Women's Day UN observances</a></li>
-              <li><span class="calendar-date">17 MAR</span><a href="#">St. Patrick's Day Holiday</a></li>
-              <li><span class="calendar-date">20 MAR</span><a href="#">International Day of Happiness</a></li>
-              <li><span class="calendar-date">24 OCT</span><a href="#">UN Day Celebration</a></li>
-              <li><span class="calendar-date">08 MAR</span><a href="#">International Women's Day UN observances</a></li>
-              <li><span class="calendar-date">17 MAR</span><a href="#">St. Patrick's Day Holiday</a></li>
-              <li><span class="calendar-date">20 MAR</span><a href="#">International Day of Happiness</a></li>
-              <li><span class="calendar-date">24 OCT</span><a href="#">UN Day Celebration</a></li>
-            </ul>
+		<?php echo views_embed_view('events_block_for_home_page','block'); ?>	
           </div>
-          
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<img src="images/announcements.png" border="0" alt="announcements icon" class="icon-top-bar"/>&nbsp;&nbsp;<a href="#">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
+ 
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="#">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="announcements-box">
-            <ul id="announcements-list">
-              <li><a href="#">Client Service at the Health &amp; Life Insurance Section</a></li>
-              <li><a href="#">Commemoration of Human Rights Day, 9 December</a></li>
-              <li><a href="#">Edward Elgar Ebooks online! Should the Library buy them?</a></li>
-              <li><a href="#">Seasonal Flu Vaccine Campaign starts Friday, 21 November</a></li>
-              <li><a href="#">Special Event of the GA Second Committee: ICT and E-Gov</a></li>
-              <li><a href="#">Gym memberships at all time low</a></li>
-            </ul>
+		<?php 
+			// eric: need to built out view to have all of these displays with groupIds
+			// 555 
+			if (require_login_display_local('newyork')) {
+			// 131 	
+			} elseif (require_login_display_local('geneva')) {
+			// 60
+			} elseif (require_login_display_local('addisababa')) {
+			// 61
+                        } elseif (require_login_display_local('bangkok')) {
+			// 62
+                        } elseif (require_login_display_local('beirut')) { 
+			// 63
+                        } elseif (require_login_display_local('nairobi')) {
+			// 64 
+                        } elseif (require_login_display_local('santiago')) {
+			// 65 
+                        } elseif (require_login_display_local('vienna')) { 
+			// external?
+			} else {
+				echo views_embed_view('announcements_block_for_home_page','block');
+			}
+		?>
             </div>
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
           <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="#">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="container-main-image">
-            <img src="images/img16x9.jpg" border="0" id="image-main-story" class="img-responsive" alt="alternate text for main image"/>
-            <div id="caption-mi">
-              <a href="#">
-                <div id="caption-mi-title">Secretary-General Holds UN Town Hall Meeting in Panama City</div>
-                <div id="caption-mi-date">Friday, 24 April 2015</div>
-              </a>
-            </div>
+
+		<?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
+
           </div>
           <div class="row">
-            <div class="col-md-4 rpad5">
-              <div class="main-thumbnail">
-                <img src="images/thumb1.jpg" border="0" alt="alternate text"/>
-                <a href="#">Secretary-General meets staff at ECLAC’s headquarters</a>
-              </div>
-            </div>
-            <div class="col-md-4 lpad5 rpad5">
-              <div class="main-thumbnail lpad0 rpad0">
-                <img src="images/thumb2.jpg" border="0" alt="alternate text"/>
-                <a href="#">DPKO-DFS Field Occupational Safety Risk Management: Workplace Safety Training Video</a>
-              </div>
-            </div>
+
+	    <?php echo views_embed_view('staff_stories_and_news_submain','block'); ?>		
+
             <div class="col-md-4 lpad5">
-              <div id="thumbnail-most-popular" class="main-thumbnail">
+          
+	      <div id="thumbnail-most-popular" class="main-thumbnail">
                 <div id="most-popular-title">Most popular</div>
-                <img src="images/thumb3.jpg" border="0" alt="alternate text"/>
+
+
+                <?php
+                        // uses nodequeue module
+                        echo views_embed_view('nodequeue_4','block'); 
+                ?>
+<!--
+                <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
                 <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
+-->
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12">
-              <div id="low-statement"><div class="arrow-right"></div><a href="#">SG travels to Mali</a></div>
+              	<div id="low-statement"><div class="arrow-right"></div>
+			<?php echo views_embed_view('staff_stories_and_news_miniarticles','block'); ?>
+		</div>
             </div>
           </div>
           <div class="row">

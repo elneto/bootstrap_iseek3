@@ -79,247 +79,254 @@
  */
 
 ?>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="toolkit large-text" id="toolkit-anchor">Staff stories and news <i class="fa fa-angle-double-right"></i></div>
+	</div>
+</div>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page) { ?>
-    <h2<?php print $title_attributes; ?>>
-      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-    </h2>
-  <?php } ?>
-  <?php print render($title_suffix); ?>
+	<div class="row">
+		<div class="col-lg-10 col-md-12">
 
-  <?php if ($display_submitted): ?>
-    <div class="meta submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
+			<div class="slug">
+				<?php
+					if ($node->language == "fr") {
+						setlocale(LC_TIME, "fr_FR");
+						echo ucfirst(utf8_encode(strftime('%A %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value']))));
+					} else {
+						echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value'])));
+					}
+				?>,
+				<?php 
+					if (isset($node->field_location['und'][0]['tid'])) {
+					  $term_field_location = taxonomy_term_load($node->field_location['und'][0]['tid']);
+					  
+					  if (isset($term_field_location->name)) {
+						echo $term_field_location->name; 
+					  } 
+					}
+				?> 
+				|
+				<?php 
+					if (isset($node->field_office['und'][0]['tid'])) {
+						$term_field_office = taxonomy_term_load($node->field_office['und'][0]['tid']);
 
-  <div class="content clearfix"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      // print render($content);
-    ?>
-
-	<div class="slug">
-<?php
-		
-		
-?>
-		<?php
-			if ($node->language == "fr") {
-				setlocale(LC_TIME, "fr_FR");
-				echo ucfirst(utf8_encode(strftime('%A %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value']))));
-			} else {
-				echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value'])));
-			}
-		?>,
-		<?php 
-			if (isset($node->field_location['und'][0]['tid'])) {
-			  $term_field_location = taxonomy_term_load($node->field_location['und'][0]['tid']);
-			  
-			  if (isset($term_field_location->name)) {
-				echo $term_field_location->name; 
-			  } 
-			}
-		?> 
-		|
-		<?php 
-			if (isset($node->field_office['und'][0]['tid'])) {
-				$term_field_office = taxonomy_term_load($node->field_office['und'][0]['tid']);
-
-				if (isset($term_field_office->name)) {
-					echo $term_field_office->name; 
-				} 
-			}	
-		?> 
-		<?php if (isset($node->field_author_name['und'][0]['safe_value'])) { 
-			echo " / "; 
-			echo $node->field_author_name['und'][0]['safe_value'];
-		} ?> 
-	</div>
-
-	<div class="content-body">
-		<?php print render($content['field_image']); ?>
-		
-
-		<!-------------------HS added below------------------------>
-		<?php if (isset($content['field_video'])) { ?>
-			<div class="flex-video widescreen">
-				<?php print render($content['field_video']); ?>
+						if (isset($term_field_office->name)) {
+							echo $term_field_office->name; 
+						} 
+					}	
+				?> 
+				<?php if (isset($node->field_author_name['und'][0]['safe_value'])) { 
+					echo " / "; 
+					echo $node->field_author_name['und'][0]['safe_value'];
+				} ?> 
 			</div>
-			<div class="video-caption">
-				<?php print($node->field_video_description['und'][0]['safe_value']); ?>
-			</div>
-		<?php 
-			}
-			
-			elseif (isset($content['field_bright_cove_video_id'])) { 
-				
-				?>
-				<div class="flex-video widescreen">
-				<div style="display:none">
-				</div>
-				<script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
-				<object id="myExperience" class="BrightcoveExperience">
-					<param name="bgcolor" value="#FFFFFF" />
-					<param name="secureConnections" value="true" />
-					<param name="secureHTMLConnections" value="true" />
-					<param name="width" value="100%" />
-					<param name="height" value="100%" />
-					<param name="playerID" value="4005339337001" />
-					<param name="playerKey" value="AQ~~,AAABPSuWdxE~,UHaNXUUB06VgvRTiG_GhQXXPhev1OX58" />
-					<param name="isVid" value="true" />
-					<param name="isUI" value="true" />
-					<param name="dynamicStreaming" value="true" />
-					<param name="wmode" value="transparent">
-					<param name="@videoPlayer" value="<?php print($node->field_bright_cove_video_id['und'][0]['safe_value']); ?>">
-					<param name="captionLang" value="en" />
-				</object>
 
-				<script type="text/javascript">brightcove.createExperiences();</script>
-				</div>
-				<div class="video-caption">
-					<?php print($node->field_video_description['und'][0]['safe_value']); ?>
-				</div>
-		<?php  
-			 	
-			 } 
-			 else { // ((!(isset($content['field_video']))) and (!(isset($content['field_bright_cove_video_id'])))) { 
-				print render($content['field_images']);
-			}
-			
-		?>
-		<!---------------------------->
-		
+			  <?php print render($title_prefix); ?>
+			    <h2<?php print $title_attributes; ?>>
+			      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+			    </h2>
+			  <?php print render($title_suffix); ?>
 
-		<?php print render($content['body']); ?>
-		
-		
-		<!-------------------HS added below------------------------>
-		<?php 
-			if ((isset($content['field_video'])) or (isset($content['field_bright_cove_video_id']))) {
-				print render($content['field_images']);
-			}
-			if (isset($content['field_files'])){
-				print render($content['field_files']); 
-			}
-		?>		
-		<!---------------------------->
-		<?php if (flag_create_link('iseek_like', $node->nid)): ?>
-		<span id="iseek-likes"></span>
-		<div class="iseek-like">
-			<span>
-				<i class="fa fa-thumbs-up"></i> 
-				<?php print flag_create_link('iseek_like', $node->nid); ?>
-			</span>
-		</div>
-		<?php endif; ?>
+			  <?php if ($display_submitted): ?>
+			    <div class="meta submitted">
+			      <?php print $user_picture; ?>
+			      <?php print $submitted; ?>
+			    </div>
+			  <?php endif; ?>
 
-	  <?php
-		// Remove the "Add new comment" link on the teaser page or if the comment
-		// form is being displayed on the same page.
+			  <div class="content clearfix"<?php print $content_attributes; ?>>
+			    <?php
+			      // We hide the comments and links now so that we can render them later.
+			      hide($content['comments']);
+			      hide($content['links']);
+			      // print render($content);
+			    ?>
 
-		if ($teaser || !empty($content['comments']['comment_form'])) {
-		  // unset($content['links']['comment']['#links']['comment-add']);
-		  unset($content['links']['#links']['node-readmore']);
-		  unset($content['links']['node']['#links']['node-readmore']);
-		}
 
-		// remove translation links
-	    unset($content['links']['translation']);
 
-		// Only display the wrapper div if there are links.
-		$links = render($content['links']);
+				<div class="content-body">
+					<?php print render($content['field_image']); ?>
+					
 
-		if ($links):
-	  ?>
-		<div class="link-wrapper">
-			<ul class="links inline">
-				<li class="comment-comments first">
-					<a href="<?php print $node_url; ?>#comments"><?php if (isset($content['links']['#links']['comment-comments']['title'])) { print $content['links']['#links']['comment-comments']['title']; } ?></a>
-				</li>
+					<!-------------------HS added below------------------------>
+					<?php if (isset($content['field_video'])) { ?>
+						<div class="flex-video widescreen">
+							<?php print render($content['field_video']); ?>
+						</div>
+						<div class="video-caption">
+							<?php print($node->field_video_description['und'][0]['safe_value']); ?>
+						</div>
+					<?php 
+						}
+						
+						elseif (isset($content['field_bright_cove_video_id'])) { 
+							
+							?>
+							<div class="flex-video widescreen">
+							<div style="display:none">
+							</div>
+							<script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+							<object id="myExperience" class="BrightcoveExperience">
+								<param name="bgcolor" value="#FFFFFF" />
+								<param name="secureConnections" value="true" />
+								<param name="secureHTMLConnections" value="true" />
+								<param name="width" value="100%" />
+								<param name="height" value="100%" />
+								<param name="playerID" value="4005339337001" />
+								<param name="playerKey" value="AQ~~,AAABPSuWdxE~,UHaNXUUB06VgvRTiG_GhQXXPhev1OX58" />
+								<param name="isVid" value="true" />
+								<param name="isUI" value="true" />
+								<param name="dynamicStreaming" value="true" />
+								<param name="wmode" value="transparent">
+								<param name="@videoPlayer" value="<?php print($node->field_bright_cove_video_id['und'][0]['safe_value']); ?>">
+								<param name="captionLang" value="en" />
+							</object>
 
-				<?php $flag = flag_get_flag('iseek_like');
-					if (($flag->get_count($nid)) > 0): ?>
-				<li>
-					<div class="iseek-like-teaser">
-						<span><i class="fa fa-thumbs-up"></i>
-						<!-- <span class="glyphicon glyphicon-thumbs-up"></span> -->
-						<span class="flag-wrapper flag-iseek-like">
-								<?php print $flag->get_count($nid); ?>
+							<script type="text/javascript">brightcove.createExperiences();</script>
+							</div>
+							<div class="video-caption">
+								<?php print($node->field_video_description['und'][0]['safe_value']); ?>
+							</div>
+					<?php  
+						 	
+						 } 
+						 else { // ((!(isset($content['field_video']))) and (!(isset($content['field_bright_cove_video_id'])))) { 
+							print render($content['field_images']);
+						}
+						
+					?>
+					<!---------------------------->
+					
+
+					<?php print render($content['body']); ?>
+					
+					
+					<!-------------------HS added below------------------------>
+					<?php 
+						if ((isset($content['field_video'])) or (isset($content['field_bright_cove_video_id']))) {
+							print render($content['field_images']);
+						}
+						if (isset($content['field_files'])){
+							print render($content['field_files']); 
+						}
+					?>		
+					<!---------------------------->
+					<?php if (flag_create_link('iseek_like', $node->nid)): ?>
+					<span id="iseek-likes"></span>
+					<div class="iseek-like">
+						<span>
+							<i class="fa fa-thumbs-up"></i> 
+							<?php print flag_create_link('iseek_like', $node->nid); ?>
 						</span>
 					</div>
-				</li>
-				<?php endif; ?>
+					<?php endif; ?>
 
-			  <?php
-				if (!(user_is_logged_in()) && !($teaser)) {
-					$login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
-					// $login_label = array('en' => 'Log in to post comments & <span class="glyphicon glyphicon-thumbs-up"></span>', 'fr' => 'Identifiez-vous pour poster des commentaires & <span class="glyphicon glyphicon-thumbs-up"></span>');
-					$login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
-/*
-					$destination_request_uri = $_SERVER["REQUEST_URI"];
+				  <?php
+					// Remove the "Add new comment" link on the teaser page or if the comment
+					// form is being displayed on the same page.
 
-					if ($node->language == "fr") {
-						$destination_request_uri = substr($destination_request_uri, 4);
-					} elseif ($node->language == "en") {
-						$destination_request_uri = substr($destination_request_uri, 1);
+					if ($teaser || !empty($content['comments']['comment_form'])) {
+					  // unset($content['links']['comment']['#links']['comment-add']);
+					  unset($content['links']['#links']['node-readmore']);
+					  unset($content['links']['node']['#links']['node-readmore']);
 					}
-*/
-			  ?>
-				<li class="comment-add last">
-					<a href="<?php print $login_path[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label[$node->language]; ?></a>
-				</li>
-			  <?php
-				}
-			  ?>
 
-			  <?php // Login prompt
-			  if (!(user_is_logged_in()) && ($teaser)): ?>
-				<li>
-					<!-- <span>/&nbsp;</span> -->
-					<?php
-						$login_label_teaser = array('en' => 'Log in to post comments or like', 'fr' => 'Connectez-vous pour poster un commentaire ou "J\'aime"');
-						$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
-/*
-						$destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
+					// remove translation links
+				    unset($content['links']['translation']);
 
-						if ($node->language == "fr"):
-							$destination_request_uri_teaser = substr($destination_request_uri_teaser, 4);
-						elseif ($node->language == "en"):
-							$destination_request_uri_teaser = substr($destination_request_uri_teaser, 1);
-						endif;
-*/
-						?>
+					// Only display the wrapper div if there are links.
+					$links = render($content['links']);
 
-						<a href="<?php print $login_path_teaser[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label_teaser[$node->language]; ?></a>
+					if ($links):
+				  ?>
+					<div class="link-wrapper">
+						<ul class="links inline">
+							<li class="comment-comments first">
+								<a href="<?php print $node_url; ?>#comments"><?php if (isset($content['links']['#links']['comment-comments']['title'])) { print $content['links']['#links']['comment-comments']['title']; } ?></a>
+							</li>
 
-				</li>
-				<?php elseif ((user_is_logged_in()) && ($teaser)): ?>
-				<li>
-					<!-- <span>/&nbsp;</span> -->
-					<?php
-						$login_label_teaser = array('en' => 'Add a comment or like', 'fr' => 'Ajouter un commentaire ou "J\'aime"');
-						$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
-						// $destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
+							<?php $flag = flag_get_flag('iseek_like');
+								if (($flag->get_count($nid)) > 0): ?>
+							<li>
+								<div class="iseek-like-teaser">
+									<span><i class="fa fa-thumbs-up"></i>
+									<!-- <span class="glyphicon glyphicon-thumbs-up"></span> -->
+									<span class="flag-wrapper flag-iseek-like">
+											<?php print $flag->get_count($nid); ?>
+									</span>
+								</div>
+							</li>
+							<?php endif; ?>
 
-						?>
-						<a href="<?php print $node_url; ?>#iseek-likes"><?php print $login_label_teaser[$node->language]; ?></a>
-				</li>
-				<?php endif; ?>
-			</ul>
+						  <?php
+							if (!(user_is_logged_in()) && !($teaser)) {
+								$login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+								// $login_label = array('en' => 'Log in to post comments & <span class="glyphicon glyphicon-thumbs-up"></span>', 'fr' => 'Identifiez-vous pour poster des commentaires & <span class="glyphicon glyphicon-thumbs-up"></span>');
+								$login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
+			/*
+								$destination_request_uri = $_SERVER["REQUEST_URI"];
 
-		</div>
-	  <?php endif; ?>
+								if ($node->language == "fr") {
+									$destination_request_uri = substr($destination_request_uri, 4);
+								} elseif ($node->language == "en") {
+									$destination_request_uri = substr($destination_request_uri, 1);
+								}
+			*/
+						  ?>
+							<li class="comment-add last">
+								<a href="<?php print $login_path[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label[$node->language]; ?></a>
+							</li>
+						  <?php
+							}
+						  ?>
 
-	  <?php print render($content['comments']); ?>
+						  <?php // Login prompt
+						  if (!(user_is_logged_in()) && ($teaser)): ?>
+							<li>
+								<!-- <span>/&nbsp;</span> -->
+								<?php
+									$login_label_teaser = array('en' => 'Log in to post comments or like', 'fr' => 'Connectez-vous pour poster un commentaire ou "J\'aime"');
+									$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
+			/*
+									$destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
 
-	</div>
+									if ($node->language == "fr"):
+										$destination_request_uri_teaser = substr($destination_request_uri_teaser, 4);
+									elseif ($node->language == "en"):
+										$destination_request_uri_teaser = substr($destination_request_uri_teaser, 1);
+									endif;
+			*/
+									?>
 
-  </div>
+									<a href="<?php print $login_path_teaser[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label_teaser[$node->language]; ?></a>
 
-</div>
+							</li>
+							<?php elseif ((user_is_logged_in()) && ($teaser)): ?>
+							<li>
+								<!-- <span>/&nbsp;</span> -->
+								<?php
+									$login_label_teaser = array('en' => 'Add a comment or like', 'fr' => 'Ajouter un commentaire ou "J\'aime"');
+									$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
+									// $destination_request_uri_teaser = $_SERVER["REQUEST_URI"];
+
+									?>
+									<a href="<?php print $node_url; ?>#iseek-likes"><?php print $login_label_teaser[$node->language]; ?></a>
+							</li>
+							<?php endif; ?>
+						</ul>
+
+					</div>
+				  <?php endif; ?>
+
+				  <?php print render($content['comments']); ?>
+
+				</div><!-- slug -->
+
+			  </div><!-- content -->
+		</div>	  	
+	</div>		  
+</div><!-- node -->

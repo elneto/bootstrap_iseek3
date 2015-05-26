@@ -100,12 +100,14 @@ $iseekAdvSearchFields = array(
 $iseekAdvSearchFieldsHelpText = array(
      'lastName' => 'For names with accents, you may enter the letter with or without the accent',
      'firstName' => 'For names with accents, you may enter the letter with or without the accent',
-     'phoneDisplay1' => 'The phone number must be entered exactly as it is in the directory. Some duty stations, such as Geneva, list only the extension number, while others, like New York, list the full number (212-963-1234)');
+     'phoneDisplay1' => 'The phone number must be entered exactly as it is in the directory. Some duty stations, such as Geneva, list only the extension number, while others, like New York, list the full number (212-963-1234)',
+	 'dutyStation' => 'Duty stations are case-sensitive; for example, please enter "Santiago" instead of "santiago" or "SANTIAGO"'
+);
 	 
 ?>
 
 
-<?php include('sites/iseek.un.org/themes/bootstrap_iseek/js/gcd.js'); ?>
+<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/js/gcd.js'); ?>
 
 	<section id="block-block-136" class="block block-block clearfix">
 
@@ -220,6 +222,20 @@ $iseekAdvSearchFieldsHelpText = array(
 					</label>
 					<div class="col-sm-3">
 						<input class="form-control" type="text" id="advFieldphoneDisplay1" name="phoneDisplay1"  placeholder="Phone" />
+					</div>	
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">
+						Org unit
+					</label>
+					<div class="col-sm-3">
+						<input class="form-control" type="text" id="advFieldorganizationalUnit" name="organizationalUnit"  placeholder="Org unit" />
+					</div>	
+					<label class="col-sm-2 control-label">
+						Room
+					</label>
+					<div class="col-sm-3">
+						<input class="form-control" type="text" id="advFieldroom" name="room"  placeholder="Room" />
 					</div>	
 					<div class="col-sm-2">
 						<button id="searchTriggerAdvancedInModal" type="button" class="btn btn-primary">Go</button> 
