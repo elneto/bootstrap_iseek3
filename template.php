@@ -229,7 +229,6 @@ function iseek_custom_block($machine_name, $retrieve){
   return 'No result from query'; //this point should never be reached
   
 }
-*/
 
 /**
  * Provides menu links for the footer: region--page-bottom.tpl.php
