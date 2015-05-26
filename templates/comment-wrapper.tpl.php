@@ -33,6 +33,10 @@
  *
  * @see template_preprocess_comment_wrapper()
  */
+
+ // unset pager for comments
+ unset($content['comments']['pager']); 	
+
 ?>
 <div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
@@ -43,10 +47,11 @@
 
   <?php print render($content['comments']); ?>
 
+
   <?php if ($content['comment_form']): ?>
     <h2 class="title comment-form"><?php print t('Add new comment'); ?></h2>
 	<?php
-	    $login_form_desc = array('en' => 'iSeek welcomes your comments, which will appear in your name.',
+	    $login_form_desc = array('en' => 'iSeek welcomes your comments, which will appear in your name. All comments are moderated by the UN Intranet, iSeek, prior to publication.',
     						'fr' => 'Vos commentaires sur la dépêche ci-dessus sont les bienvenus. ');
 	?>
     <p>
