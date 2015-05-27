@@ -59,7 +59,7 @@
                       <?php print $data['condition']; ?>
                     </div>
                     <div class="row medium-text temp">
-                      <?php print $data['temperature'] ; ?>
+                      <?php print $data['temperature']; ?>
                     </div>
                 </div>
               </div>
