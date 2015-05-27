@@ -256,22 +256,29 @@ select#select-search {
 
 /* node-type-article */
 
-.node-type-article #toolkit-anchor {
+.not-front #toolkit-anchor {
         margin-top: 10px;        
 }
 
-.node-type-article #toolkit-anchor {
+.not-front #toolkit-anchor {
 	background-color: #1C90CE;
 	font-size: 20px; 
 }
 
-.node-type-article .slug {
+.not-front #event_toolkit {
+	background-color: #5AABD7;	
+	border-top-right-radius: 0;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.not-front .slug {
 	font-size: 14px;
 	color: #666666;	
 	margin-top: 10px;
 }
 
-.node-type-article h2#headline {
+.not-front h2#headline {
 	font-size: 30px;
 	margin-top: 15px;
 }
@@ -288,13 +295,13 @@ select#select-search {
         content: "\f030";	
 }
 
-.node-type-article .field-name-body {	
+.not-front .field-name-body {	
 	margin-top: 20px;
 	font-size: 20px;
 	color: #333333;
 }
 
-.node-type-article #comments {
+.not-front #comments {
 	font-size: 20px;
 }
 
