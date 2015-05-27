@@ -200,13 +200,8 @@
         <div class="col-lg-8">
           <div class="row">
             <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
-             <div class="un-news">
-              <ul class="content-large-text">
-                <li><a href="">'41 missing' in new Mediterranean migrant boat tragedy</a></li>
-                <li><a href="">Over 30 reported killed in Saudi-led air raids in Yemen</a></li>
-                <li><a href="">Guinea finds nine new Ebola cases near border with Sierra Leone</a></li>
-                <li><a href="">Fresh anti-immigrant clashes in South Africa as Zuma condemns violence</a></li>
-              </ul>
+             <div class="un-news content-large-text">
+                <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>

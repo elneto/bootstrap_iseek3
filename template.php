@@ -276,6 +276,9 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
   $variables['latest_zeekoslist'] = $block['content'];
 
+  $block = module_invoke('views', 'block_view', 'latest_news-block');
+  $variables['latest_news'] = $block['content'];
+
   $block = module_invoke('views', 'block_view', 'spotlight-block_1');
   $variables['spotlight'] = $block['content'];
 
