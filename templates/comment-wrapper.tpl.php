@@ -41,7 +41,7 @@
 <div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
-    <h2 class="title"><?php print t('Comments'); ?></h2>
+    <h2 class="title"><i class="fa fa-comment-o"></i>&nbsp;<?php print t('Comments'); ?></h2>
     <?php print render($title_suffix); ?>
   <?php endif; ?>
 

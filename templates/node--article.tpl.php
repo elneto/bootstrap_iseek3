@@ -82,7 +82,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text" id="toolkit-anchor">Staff stories and news <i class="fa fa-angle-double-right"></i></div>
+		<div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> Staff stories and news <i class="fa fa-angle-double-right"></i></div>
 	</div>
 </div>
 
@@ -238,14 +238,14 @@
 						<span id="iseek-likes"></span>
 						<div class="iseek-like">
 							<span>
-								<i class="fa fa-2x fa-thumbs-up"></i> 
+								<i class="fa fa-2x fa-thumbs-o-up"></i> 
 								<?php print flag_create_link('iseek_like', $node->nid); ?>
 							</span>
 						</div>
 					<?php } else { ?>
                                                   <?php
                                                         if (!(user_is_logged_in()) && !($teaser)) {
-                                                                $login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+                                                                $login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
                                                                 $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
                                                   ?>
                                                 	<span id="iseek-likes"></span>

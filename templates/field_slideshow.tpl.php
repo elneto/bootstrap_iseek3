@@ -43,6 +43,14 @@ if (!isset($pager_position)) {
 	  </div>
 </div>
 <div class="col-lg-2 col-md-12">	
+
+	<div class="row" id="mail_print_icon_row">
+		<div class="col-lg-12">
+	 		<i class="fa fa-2x fa-envelope-o"></i>	
+	 		<i class="fa fa-2x fa-print"></i>	 
+		</div>
+	</div>
+
 	  <?php if ($controls_position != "before") print(render($controls)); ?>
 
 	  <?php if ($pager_position != "before") print(render($pager)); ?>
