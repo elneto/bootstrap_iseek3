@@ -207,7 +207,7 @@ now block_delta is independent of local, dev or PROD
 */
 function iseek_custom_block($machine_name, $retrieve){
 
-  $result = db_query("SELECT bid FROM {block_machine_name_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
+  $result = db_query("SELECT bid FROM {fe_block_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
 
   if ($result) {
     $row = $result->fetchAssoc();
