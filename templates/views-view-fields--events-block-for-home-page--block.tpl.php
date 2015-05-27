@@ -24,4 +24,21 @@
  * @ingroup views_templates
  */
 ?>
-<li><span class="calendar-date"><?php print $fields['field_date_with_end']->content; ?><?php print $fields['field_announcement_event_date']->content; ?></span><?php print $fields['title']->content; ?></li>
+<li>
+	<span class="calendar-date"><?php print $fields['field_date_with_end']->content; ?><?php print $fields['field_announcement_event_date']->content; ?></span>
+	<?php
+		$title_link = "";
+		if ($row->node_type == "un_observances") {
+			$title_link = $row->field_field_link[0]['raw']['safe_value'];	
+                } elseif ($row->node_type == "announcements") {
+			$title_link = drupal_get_path_alias("node/" . $row->nid);
+		} elseif ($row->node_type == "holiday") {
+		}
+
+		if (strlen($title_link)) {
+			echo "<a href=\"" . $title_link . "\">" . $fields['title']->content . "</a>";
+		} else {
+			echo $fields['title']->content ;
+		}
+	?>
+</li>
