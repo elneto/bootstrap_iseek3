@@ -17,42 +17,43 @@ if (!isset($pager_position)) {
 ?>
 
 	<div id="field-slideshow-<?php print $slideshow_id; ?>-wrapper" class="field-slideshow-wrapper">
-<div class="row">
-<div class="col-lg-10 col-md-12">
-	  <?php if ($controls_position == "before")  print(render($controls)); ?>
+		<div class="row">
+			<div class="col-lg-10 col-md-12">
+				  <?php if ($controls_position == "before")  print(render($controls)); ?>
 
-	  <?php if ($pager_position == "before")  print(render($pager)); ?>
+				  <?php if ($pager_position == "before")  print(render($pager)); ?>
 
-	  <?php if (isset($breakpoints) && isset($breakpoints['mapping']) && !empty($breakpoints['mapping'])) {
-	    $style = 'height:' . $slides_max_height . 'px';
-	  } else {
-	    $style = 'width:' . $slides_max_width . 'px; height:' . $slides_max_height . 'px';
-	  } ?>
+				  <?php if (isset($breakpoints) && isset($breakpoints['mapping']) && !empty($breakpoints['mapping'])) {
+				    $style = 'height:' . $slides_max_height . 'px';
+				  } else {
+				    $style = 'width:' . $slides_max_width . 'px; height:' . $slides_max_height . 'px';
+				  } ?>
 
-	  <div class="<?php print $classes; ?>" style="<?php print $style; ?>">
-	    <?php foreach ($items as $num => $item) : ?>
-	      <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
-	        <?php print $item['image']; ?>
-	        <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
-	          <div class="field-slideshow-caption">
-	            <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
-	          </div>
-	        <?php endif; ?>
-	      </div>
-	    <?php endforeach; ?>
-	  </div>
-</div>
-<div class="col-lg-2 col-md-12">	
+				  <div class="<?php print $classes; ?>" style="<?php print $style; ?>">
+				    <?php foreach ($items as $num => $item) : ?>
+				      <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
+				        <?php print $item['image']; ?>
+				        <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
+				          <div class="field-slideshow-caption">
+				            <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
+				          </div>
+				        <?php endif; ?>
+				      </div>
+				    <?php endforeach; ?>
+				  </div>
+			</div>
+			<div class="col-lg-2 col-md-12">	
 
-	<div class="row" id="mail_print_icon_row">
-		<div class="col-lg-12">
-	 		<i class="fa fa-2x fa-envelope-o"></i>	
-	 		<i class="fa fa-2x fa-print"></i>	 
+				<div class="row" id="mail_print_icon_row">
+					<div class="col-lg-12">
+				 		<i class="fa fa-2x fa-envelope-o"></i>	
+				 		<i class="fa fa-2x fa-print"></i>	 
+					</div>
+				</div>
+
+				  <?php if ($controls_position != "before") print(render($controls)); ?>
+
+				  <?php if ($pager_position != "before") print(render($pager)); ?>
+			</div>
 		</div>
-	</div>
-
-	  <?php if ($controls_position != "before") print(render($controls)); ?>
-
-	  <?php if ($pager_position != "before") print(render($pager)); ?>
-</div>
 	</div>
