@@ -233,10 +233,11 @@ function iseek_custom_block($machine_name, $retrieve){
 }
 
 /**
- * Provides menu links for the footer: region--page-bottom.tpl.php
+ * Provides menu links for the front page: page--front.tpl.php
  */
 
-function bootstrap_iseek3_preprocess_region(&$vars) {
+function bootstrap_iseek3_preprocess_page(&$variables){
+
   //put the menu links in vars
   $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
@@ -253,18 +254,7 @@ function bootstrap_iseek3_preprocess_region(&$vars) {
 
   //put the path to needed images
   $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
-
-  //blocks
-  $vars['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
   
-
-}
-
-/**
- * Provides menu links for the front page: page--front.tpl.php
- */
-
-function bootstrap_iseek3_preprocess_page(&$variables){
   //block views
   $block = module_invoke('weather', 'block_view', 'system_1');
   $variables['weather'] = $block['content'];
@@ -285,6 +275,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['spotlight'] = $block['content'];
 
   //blocks
+  $vars['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
+
   $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
 
   $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
