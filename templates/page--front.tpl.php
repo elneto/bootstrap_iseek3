@@ -267,6 +267,6 @@
 
 <!-- begin common footer -->
 
-<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/region--page-bottom.tpl.php'); ?>
+<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php'); ?>
 
 <!-- end common footer -->
