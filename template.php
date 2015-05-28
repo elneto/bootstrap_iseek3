@@ -34,12 +34,14 @@ function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $for
 
 	$form['name']['#title'] = t('Login');
 	$form['name']['#description'] = ''; 
-        $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
+        // $form['name']['#attributes']['placeholder'] = t('Enter your full name (e.g. Jane Doe)');
+	$form['name']['#attributes']['placeholder'] = t('Webmail user name');
 	$form['name']['#required'] = 0;
 
 	$form['pass']['#title'] = '';
         $form['pass']['#description'] = '';
-        $form['pass']['#attributes']['placeholder'] = t('Enter your Webmail password');	
+        // $form['pass']['#attributes']['placeholder'] = t('Enter your Webmail password');
+	$form['pass']['#attributes']['placeholder'] = t('Webmail password');	
 	$form['pass']['#required'] = 0;
 
 	$form['actions']['submit']['#value'] = 'GO <i class="fa fa-angle-double-right"></i>';

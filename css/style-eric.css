@@ -30,6 +30,7 @@ form#user-login-form {
 
 .top-nav-item {
 	font-size: 1.25em;
+	padding-left: 3px;
 }
 
 #user-login-form #edit-name, #user-login-form #edit-pass {
@@ -354,8 +355,8 @@ select#select-search {
 } 
 
 #mail_print_icon_row {
-	text-align: center;
-	padding: 0 20px;
+	/* text-align: center; */
+	padding: 0 5px;
 	margin-bottom: 30px;
 }
 

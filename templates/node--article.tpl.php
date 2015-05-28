@@ -89,7 +89,7 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 	<div class="row">
-		<div class="col-lg-10 col-md-12">
+		<div class="col-lg-8 col-md-12">
 
 			<div class="slug">
 				<?php
@@ -149,7 +149,7 @@
 	</div>	
 
         <div class="row">
-                <div class="col-lg-10 col-md-12">
+                <div class="col-lg-8 col-md-12">
 
 			  <div class="content clearfix"<?php print $content_attributes; ?>>
 			    <?php

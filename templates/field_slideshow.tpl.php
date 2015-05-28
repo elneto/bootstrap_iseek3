@@ -18,7 +18,7 @@ if (!isset($pager_position)) {
 
 	<div id="field-slideshow-<?php print $slideshow_id; ?>-wrapper" class="field-slideshow-wrapper">
 		<div class="row">
-			<div class="col-lg-10 col-md-12">
+			<div class="col-lg-8 col-md-12">
 				  <?php if ($controls_position == "before")  print(render($controls)); ?>
 
 				  <?php if ($pager_position == "before")  print(render($pager)); ?>
@@ -42,7 +42,7 @@ if (!isset($pager_position)) {
 				    <?php endforeach; ?>
 				  </div>
 			</div>
-			<div class="col-lg-2 col-md-12">	
+			<div class="col-lg-4 col-md-12">	
 
 				<div class="row" id="mail_print_icon_row">
 					<div class="col-lg-12">
