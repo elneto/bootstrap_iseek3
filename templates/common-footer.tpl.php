@@ -1,6 +1,6 @@
 <?php
 
-//dpm($variables);
+//dpm($menu_quicklinksNY);
 
 ?>
 <!-- Staff Toolkit -->
