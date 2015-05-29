@@ -133,9 +133,6 @@ $iseekAdvSearchFieldsHelpText = array(
 		<div id="search-form">
                 <!-- <form id="search-form"> -->
                         <div class="row">
-                                <div class="col-xs-12">
-                                  <label for="input-find-colleague">Find a colleague<span class="hidden-xs">... by name, department and more</span></label> <!--placeholder="Find a colleague"!-->
-                                </div>
                                 <div class="col-lg-10 col-xs-9 search-rpad0">
                                   <!-- <input type="text" name="find-colleague" class="search-input" id="input-find-colleague"> -->
 					<input class="search-input" name="query" type="text" id="searchSimpleInput">
@@ -189,11 +186,6 @@ $iseekAdvSearchFieldsHelpText = array(
 		  <div class="modal-post-header">
 			<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">&times;</span></button>
 			<h2 class="modal-title" id="myModalLabel">United Nations Global Contact Directory</h2>
-			<div class="row">
-				<div class="col-sm-12" id="find_a_colleague_text">
-					Find a colleague... by name, department and more
-				</div>
-			</div>	
 			<div class="row">
 				<div class="col-sm-7"> 
 					<div class="input-group">

@@ -409,7 +409,7 @@ button#searchTriggerSimpleInModal {
 
 #searchTriggerAdvancedInSimple {
 	color: #4D4D4D;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 #searchTriggerAdvancedInSimpleModal:focus, #searchTriggerAdvancedInSimpleModal:hover {
@@ -419,7 +419,7 @@ button#searchTriggerSimpleInModal {
 
 .modal-footer {
   color: #0071B9;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   border-top: 0;
 }
@@ -449,7 +449,7 @@ button#searchTriggerSimpleInModal {
 	border-top: 0;
 }
 
-#myModal .table>tbody>tr>th {
+#myModal .table>thead>tr>th {
         border-bottom: 0;
 }
 
@@ -470,7 +470,6 @@ button#searchTriggerSimpleInModal {
 	background-color: #808080;
 }
 
-#myModal .dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus {
+#myModal .dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active {
         outline: 0;
-	background-color: orange;
 }
