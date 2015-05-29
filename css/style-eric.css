@@ -473,3 +473,11 @@ button#searchTriggerSimpleInModal {
 #myModal .dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active {
         outline: 0;
 }
+
+#myModal .pagination>li>a {
+	font-size: 12px;
+}
+
+#myModal ul.pagination {
+	margin: 0;
+}

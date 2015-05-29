@@ -163,7 +163,7 @@ $iseekAdvSearchFieldsHelpText = array(
                                 <div class="col-md-12">
                                         <div id="search-links">
                                                 <a href="#">Update my Information</a>  |
-                                                <a href="#">Advanced Search</a>  |
+						<span id="searchTriggerAdvanced">Advanced search</span> | 
                                                 <a href="#">Additional Resources</a>
                                         </div>
                                 </div>  
