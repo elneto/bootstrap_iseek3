@@ -23,7 +23,7 @@ h3.gcd_results {
 }
 .modal-title {
 	font-size: 26px;
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 .wildcard input#wildcard {
 	position: relative;
@@ -118,7 +118,7 @@ $iseekAdvSearchFieldsHelpText = array(
 			<div class="input-group">
 				<input class="form-control" name="query" type="text" id="searchSimpleInput">
 				<span class="input-group-btn">
-					<button id="searchTriggerSimple" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Go</button> 
+					<button id="searchTriggerSimple" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Search</button> 
 				</span>
 			</div>
 			<div id="searchTriggerAdvanced">Advanced search</div>
@@ -184,18 +184,27 @@ $iseekAdvSearchFieldsHelpText = array(
 	  <div class="modal-dialog modal-lg">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<i class="fa fa-search"></i> Search
+		  </div>
+		  <div class="modal-post-header">
+			<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">&times;</span></button>
 			<h2 class="modal-title" id="myModalLabel">United Nations Global Contact Directory</h2>
 			<div class="row">
-				<div class="col-sm-4"> 
+				<div class="col-sm-12" id="find_a_colleague_text">
+					Find a colleague... by name, department and more
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-sm-7"> 
 					<div class="input-group">
 						<input class="form-control" name="query" type="text" id="searchSimpleInputInModal">
 						<span class="input-group-btn">
-							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary">Go</button> 
+							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary">Search</button> 
 						</span>
 					</div>
 				</div>
-				<div class="col-sm-8"> 
+				<div class="col-sm-5"> 
+					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal">Advanced search</span> <i class="fa fa-info-circle"></i> <i class="fa fa-angle-double-right"></i></div>
 					<div class="wildcard checkbox"></div>
 				</div>
 			</div>	
@@ -224,10 +233,10 @@ $iseekAdvSearchFieldsHelpText = array(
 
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" id="searchTriggerAdvancedInSimpleModal">Advanced search</button>
+			<!-- <button type="button" class="btn btn-default" id="searchTriggerAdvancedInSimpleModal">Advanced search</button> -->
 			<button type="button" class="btn btn-default"><a href="/content/update-information-global-contact-directory">Update my information</a></button>
 			<button type="button" class="btn btn-default"><a href="/content/additional-phone-resources">Additional resources</a></button>
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
 		  </div>
 		</div>
 	  </div>
