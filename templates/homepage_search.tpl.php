@@ -202,10 +202,10 @@ $iseekAdvSearchFieldsHelpText = array(
 							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary">Search</button> 
 						</span>
 					</div>
+					<div class="wildcard checkbox"></div>
 				</div>
 				<div class="col-sm-5"> 
 					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal">Advanced search</span> <i class="fa fa-info-circle"></i> <i class="fa fa-angle-double-right"></i></div>
-					<div class="wildcard checkbox"></div>
 				</div>
 			</div>	
 			<h5 class="narrow_by_duty_station_text"></h5>
