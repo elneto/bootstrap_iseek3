@@ -1,6 +1,6 @@
 <?php
 
-//dpm($variables);
+//dpm($menu_quicklinksNY);
 
 ?>
 <!-- Staff Toolkit -->
@@ -22,7 +22,7 @@
               </div>
           </div>
           <div class="about-us">
-              <img src=<?php // print $path_logo_footer;?>  class="img-responsive" id="logo-footer" alt="iseek logo"/>
+              <img src=<?php print $path_logo_footer;?>  class="img-responsive" id="logo-footer" alt="iseek logo"/>
               <?php print render($about_us_block); ?>
         </div>
         </div>

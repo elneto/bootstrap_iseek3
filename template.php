@@ -233,38 +233,28 @@ function iseek_custom_block($machine_name, $retrieve){
 }
 
 /**
- * Provides menu links for the footer: region--page-bottom.tpl.php
- */
-
-function bootstrap_iseek3_preprocess_region(&$vars) {
-  //put the menu links in vars
-  $vars['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
-  $vars['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
-  $vars['menu_ktb'] = theme('links__menu-key-tools-bottom', array('links' => menu_navigation_links('menu-key-tools-bottom')));
-  $vars['menu_staff'] = theme('links__menu-staff-development', array('links' => menu_navigation_links('menu-staff-development')));
-  $vars['menu_pay'] = theme('links__menu-pay-benefits-insurance', array('links' => menu_navigation_links('menu-pay-benefits-insurance')));
-  $vars['menu_security'] = theme('links__menu-security', array('links' => menu_navigation_links('menu-security')));
-  $vars['menu_travel'] = theme('links__menu-travel', array('links' => menu_navigation_links('menu-travel')));
-  $vars['menu_health'] = theme('links__menu-health-and-wellbeing', array('links' => menu_navigation_links('menu-health-and-wellbeing')));
-  $vars['menu_rules'] = theme('links__menu-rules-and-regulations', array('links' => menu_navigation_links('menu-rules-and-regulations')));
-  $vars['menu_reference'] = theme('links__menu-reference-and-manuals', array('links' => menu_navigation_links('menu-reference-and-manuals')));
-  $vars['menu_ethics'] = theme('links__menu-ethics-internal-justice', array('links' => menu_navigation_links('menu-ethics-internal-justice')));
-  $vars['menu_finance'] = theme('links__menu-finance-and-budget', array('links' => menu_navigation_links('menu-finance-and-budget')));
-
-  //put the path to needed images
-  $vars['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
-
-  //blocks
-  $vars['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
-  
-
-}
-
-/**
  * Provides menu links for the front page: page--front.tpl.php
  */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
+
+  //put the menu links in vars
+  $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+  $variables['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
+  $variables['menu_ktb'] = theme('links__menu-key-tools-bottom', array('links' => menu_navigation_links('menu-key-tools-bottom')));
+  $variables['menu_staff'] = theme('links__menu-staff-development', array('links' => menu_navigation_links('menu-staff-development')));
+  $variables['menu_pay'] = theme('links__menu-pay-benefits-insurance', array('links' => menu_navigation_links('menu-pay-benefits-insurance')));
+  $variables['menu_security'] = theme('links__menu-security', array('links' => menu_navigation_links('menu-security')));
+  $variables['menu_travel'] = theme('links__menu-travel', array('links' => menu_navigation_links('menu-travel')));
+  $variables['menu_health'] = theme('links__menu-health-and-wellbeing', array('links' => menu_navigation_links('menu-health-and-wellbeing')));
+  $variables['menu_rules'] = theme('links__menu-rules-and-regulations', array('links' => menu_navigation_links('menu-rules-and-regulations')));
+  $variables['menu_reference'] = theme('links__menu-reference-and-manuals', array('links' => menu_navigation_links('menu-reference-and-manuals')));
+  $variables['menu_ethics'] = theme('links__menu-ethics-internal-justice', array('links' => menu_navigation_links('menu-ethics-internal-justice')));
+  $variables['menu_finance'] = theme('links__menu-finance-and-budget', array('links' => menu_navigation_links('menu-finance-and-budget')));
+
+  //put the path to needed images
+  $variables['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
+  
   //block views
   $block = module_invoke('weather', 'block_view', 'system_1');
   $variables['weather'] = $block['content'];
@@ -285,6 +275,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['spotlight'] = $block['content'];
 
   //blocks
+  $variables['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
+
   $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
 
   $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
