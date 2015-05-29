@@ -241,8 +241,11 @@ $iseekAdvSearchFieldsHelpText = array(
 	<div class="modal fade bs-example-modal-lg" id="myModalAdvanced" tabindex="-1" role="dialog" aria-labelledby="myModalAdvancedLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-lg">
 		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <div class="modal-header">
+                        <i class="fa fa-search"></i> Advanced Search
+                  </div>
+                  <div class="modal-post-header">
+			<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">&times;</span></button>
 			<h2 class="modal-title" id="myModalLabel">United Nations Global Contact Directory</h2>
 
 			<div class="form-horizontal">			
@@ -295,7 +298,7 @@ $iseekAdvSearchFieldsHelpText = array(
 						<input class="form-control" type="text" id="advFieldroom" name="room"  placeholder="Room" />
 					</div>	
 					<div class="col-sm-2">
-						<button id="searchTriggerAdvancedInModal" type="button" class="btn btn-primary">Go</button> 
+						<button id="searchTriggerAdvancedInModal" type="button" class="btn btn-primary">Search </button> 
 					</div>	
 				</div>
 						
@@ -333,9 +336,9 @@ $iseekAdvSearchFieldsHelpText = array(
 
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default"><a href="/content/update-information-global-contact-directory">Update my information</a></button>
-			<button type="button" class="btn btn-default"><a href="/content/additional-phone-resources">Additional resources</a></button>
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a href="/content/update-information-global-contact-directory">Update my information</a>
+                        |
+                        <a href="/content/additional-phone-resources">Additional resources</a>
 		  </div>
 		</div>
 	  </div>

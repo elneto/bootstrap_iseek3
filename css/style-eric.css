@@ -399,7 +399,7 @@ select#select-search {
 	padding: 15px;
 }
 
-button#searchTriggerSimpleInModal {
+button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal {
   	background-color: #808080;
   	color: white;
   	border: 0;
@@ -428,36 +428,36 @@ button#searchTriggerSimpleInModal {
 	border-radius: 0;
 }
 
-#myModal thead tr {
+thead tr {
 	background-color: #266DB6;
 	color: #fff; 
 }
 
-#myModal thead tr a.sort_link {
+thead tr a.sort_link {
 	color: #fff;
 }
 
-#myModal .table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped>tbody>tr:nth-of-type(odd) {
 	background-color: #fff;
 }
 
-#myModal .table-striped>tbody>tr:nth-of-type(even) {
+.table-striped>tbody>tr:nth-of-type(even) {
 	background-color: #E6F0F7;
 }
 
-#myModal .table>tbody>tr>td {
+.table>tbody>tr>td {
 	border-top: 0;
 }
 
-#myModal .table>thead>tr>th {
+.table>thead>tr>th {
         border-bottom: 0;
 }
 
-#myModal .wildcard.checkbox {
+.wildcard.checkbox {
 	font-size: 14px;
 }
 
-#myModal .dutyStationBtn {
+.dutyStationBtn {
 	border: 0;
 	border-radius: 0;
 	margin: 2px 1px;
@@ -466,18 +466,28 @@ button#searchTriggerSimpleInModal {
 	background-color: #E3E3D9;
 }
 
-#myModal .dutyStationBtn.active {
+.dutyStationBtn.active {
 	background-color: #808080;
 }
 
-#myModal .dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active {
+.dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active {
         outline: 0;
 }
 
-#myModal .pagination>li>a {
+.pagination>li>a {
 	font-size: 12px;
 }
 
-#myModal ul.pagination {
+ul.pagination {
 	margin: 0;
 }
+
+#myModalAdvanced input.form-control {
+	border-radius: 0;	
+}
+
+#myModalAdvanced .control-label {
+  	font-size: 14px;
+}
+
+
