@@ -234,8 +234,11 @@ $iseekAdvSearchFieldsHelpText = array(
 		  </div>
 		  <div class="modal-footer">
 			<!-- <button type="button" class="btn btn-default" id="searchTriggerAdvancedInSimpleModal">Advanced search</button> -->
-			<button type="button" class="btn btn-default"><a href="/content/update-information-global-contact-directory">Update my information</a></button>
-			<button type="button" class="btn btn-default"><a href="/content/additional-phone-resources">Additional resources</a></button>
+			<a href="/content/update-information-global-contact-directory">Update my information</a> 
+			|
+			<a href="/content/additional-phone-resources">Additional resources</a>
+			<!-- <button type="button" class="btn btn-default"><a href="/content/update-information-global-contact-directory">Update my information</a></button>
+			<button type="button" class="btn btn-default"><a href="/content/additional-phone-resources">Additional resources</a></button> -->
 			<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
 		  </div>
 		</div>

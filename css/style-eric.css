@@ -390,7 +390,7 @@ select#select-search {
 }
 
 .modal-post-header #find_a_colleague_text {
-	font-size: 19px;
+	font-size: 18px;
   	color: #0071B9;
 	margin-bottom: 5px;
 } 
@@ -417,8 +417,31 @@ button#searchTriggerSimpleInModal {
 	cursor: pointer;
 }
 
-
+.modal-footer {
+  color: #0071B9;
+  font-size: 16px;
+  text-align: center;
+  border-top: 0;
+}
 
 #searchSimpleInputInModal {
 	border-radius: 0;
 }
+
+#myModal thead tr {
+	background-color: #266DB6;
+	color: #fff; 
+}
+
+#myModal thead tr a.sort_link {
+	color: #fff;
+}
+
+#myModal .table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #fff;
+}
+
+#myModal .table-striped>tbody>tr:nth-of-type(even) {
+	background-color: #E6F0F7;
+}
+
