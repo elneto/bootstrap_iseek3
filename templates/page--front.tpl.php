@@ -145,7 +145,7 @@
 
                 <?php
                         // uses nodequeue module
-                        echo views_embed_view('nodequeue_4','block'); 
+                        echo views_embed_view('nodequeue_3','block'); 
                 ?>
 <!--
                 <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>

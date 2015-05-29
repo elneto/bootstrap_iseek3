@@ -218,6 +218,11 @@ select#select-search {
   	height: auto;
 }
 
+.thumbnail-most-popular img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @media (max-width: 1200px) {
         .language-switcher-locale-url {
                 float: none;
