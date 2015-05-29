@@ -466,6 +466,11 @@ button#searchTriggerSimpleInModal {
 	background-color: #E3E3D9;
 }
 
-#myModal .dutyStationBtn:active {
+#myModal .dutyStationBtn.active {
 	background-color: #808080;
+}
+
+#myModal .dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus {
+        outline: 0;
+	background-color: orange;
 }
