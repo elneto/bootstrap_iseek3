@@ -182,7 +182,7 @@ form#user-login-form {
         content: "\f0b1";     
 }   
 
-.menu-mlid-47736 a:before, .menu-mlid-48268 a:before {
+.menu-mlid-47736 > span:before, .menu-mlid-48268 > span:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f002";     

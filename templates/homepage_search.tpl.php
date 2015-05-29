@@ -137,6 +137,9 @@ $iseekAdvSearchFieldsHelpText = array(
 		<div id="search-form">
                 <!-- <form id="search-form"> -->
                         <div class="row">
+                                <div class="col-xs-12">
+                                        <label for="input-search-iseek">Find a colleague</label>
+                                </div>
                                 <div class="col-lg-10 col-xs-9 search-rpad0">
                                   <!-- <input type="text" name="find-colleague" class="search-input" id="input-find-colleague"> -->
 					<input class="search-input" name="query" type="text" id="searchSimpleInput">

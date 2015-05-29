@@ -4,6 +4,25 @@
 
 	jQuery(document).ready(function() {
 
+		// local
+		jQuery( ".menu-mlid-47836" ).click(function (e) {
+		   	e.preventDefault();
+			e.stopPropagation();
+			searchType = "#myModal";
+			jQuery('#myModal').modal('toggle');
+                        return false;
+		});
+
+		// dev
+                jQuery( ".menu-mlid-48656" ).click(function (e) {
+                        e.preventDefault();
+			e.stopPropagation();
+                        searchType = "#myModal";
+                        jQuery('#myModal').modal('toggle');
+                        return false;
+                });
+
+
                 jQuery( "#searchIseekOrOds" ).click(function() {
 
 			var searchApp = jQuery('#select-search :selected').text();
@@ -414,4 +433,7 @@ console.log("solrQueryUrl: " + solrQueryUrl);
 		}
 		return advQ;
 	}
+
+
+
 </script>
