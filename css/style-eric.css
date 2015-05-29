@@ -212,13 +212,13 @@ select#select-search {
 
 
 /* same as .img_responsive */
-#container-main-image img, .main-thumbnail img, .thumbnail-most-popular img {
+#container-main-image img, .main-thumbnail img, #thumbnail-most-popular img {
 	display: block;
   	max-width: 100%;
   	height: auto;
 }
 
-.thumbnail-most-popular img {
+#thumbnail-most-popular img {
 	margin-left: auto;
 	margin-right: auto;
 }
