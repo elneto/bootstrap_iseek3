@@ -89,6 +89,7 @@
         <div class="col-md-5 col-md-push-7">
 
 		<!-- gcd overlay -->
+		<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/search_include.tpl.php'); ?>	
 		<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/homepage_search.tpl.php'); ?>
 		<!-- /gcd overlay -->	
 

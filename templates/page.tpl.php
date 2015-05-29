@@ -79,6 +79,8 @@
 
 <?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-header.tpl.php'); ?>
 
+<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/search_include.tpl.php'); ?>
+
 <!-- end common header -->
 
   <div class="row">
