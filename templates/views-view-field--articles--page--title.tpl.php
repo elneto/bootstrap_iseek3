@@ -23,4 +23,4 @@
  */
 ?>
 <div class="col-md-7">
-<?php print $output; ?>
+<div class="archives-title"><?php print $output; ?></div>

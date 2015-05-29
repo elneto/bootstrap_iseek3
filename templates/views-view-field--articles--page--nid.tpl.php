@@ -24,4 +24,3 @@
 ?>
 <?php print $output; ?>
 </div> <!-- The end of the col-md-7 started in views view-field-articles-page-title template -->
-

@@ -22,5 +22,4 @@
  * the view is modified.
  */
 ?>
-<div class="col-md-2">
 <i class="fa fa-comment-o"></i> <?php print $output; ?>
