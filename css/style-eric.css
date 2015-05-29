@@ -445,3 +445,10 @@ button#searchTriggerSimpleInModal {
 	background-color: #E6F0F7;
 }
 
+#myModal .table>tbody>tr>td {
+	border-top: 0;
+}
+
+#myModal .table>tbody>tr>th {
+        border-bottom: 0;
+}
