@@ -9,12 +9,14 @@ tbody > tr > td {
 
 .gcd_pagination {
 	text-align: center;
-}	
+}
+/*	
 .dutyStationBtn {
 	margin: 2px 4px;
 	padding: 3px 6px;
 	font-size: 13px;
 }
+*/
 h3.gcd_results {
 	font-size: 18px;
 }
@@ -33,9 +35,11 @@ h3.gcd_results {
 th {
 	font-weight: normal;
 }
+/*
 thead tr {
 	background-color: rgb(238, 244, 250);
 }
+*/
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
 
 } 
