@@ -1,54 +1,7 @@
 <?php
 // echo "<br/>v1.14<br/>";
 
-/**
- * @file
- * Bartik's theme implementation to display a node.
- *
- */
-
-// echo "current_path: " . current_path();
-
-$languageLookup = array(
-	'en' => 'English',
-     'fr' => 'Français',
-     'und' => 'No language specified'
-	);
-
-
-$iseekFields = array(
-	'entity_id' => 'entity_id',
-     'bundle_name' => 'bundle_name',
-     'url' => 'url',
-     'label' => 'label',
-     'ds_created' => 'ds_created',
-     'ds_changed' => 'ds_changed',
-     'content' => 'content',
-     'teaser' => 'teaser'
-	);
-
-$iseekAdvSearchFields = array(
-	'title' => 'title',
-     'lastName' => 'last name',
-     'firstName' => 'first name',
-     'email' => 'e-mail',
-     'phoneDisplay1' => 'phone',
-     'building' => 'building',
-     'room' => 'room',
-     'organizationalUnit' => 'org unit');
-	 
-$iseekFacetLookup = array(
-     'Announcements' => 'Local announcements',
-     'Basic page' => 'About iSeek',
-	);
-	 
-
-// echo ksd_solr_search_test_function("http://intra-srch.un.org/solr/iseek/select");
-
-// function ksd_solr_search_process_search($solr_path, $rows_per_page, $wildcard, $default_sort, $default_sort_dir, $multivalue_facets, $iseekAdvSearchFields, $highlight, $highlight_field, $highlight_snippets, $defType, $qf, $stopwords, $lowercaseOperators) {
-
-// echo "test v1.1<br/>";
-
+/*
 $results = ksd_solr_search_process_search (
 	// "http://intra-srch.un.org:8983/solr/iseekdrupal_shard1_replica2/select",
 	// "http://intra-srch.un.org/solr/iseekdrupal_shard1_replica2/select",
@@ -67,50 +20,16 @@ $results = ksd_solr_search_process_search (
 	1,
 	1
 );
-
-/* 
-$solr_path, 
-$rows_per_page, 
-$wildcard, 
-$default_sort, 
-$default_sort_dir, 
-$multivalue_facets, 
-$iseekAdvSearchFields, 
-$highlight, 
-$highlight_field, 
-$highlight_snippets, 
-$defType, 
-$qf, 
-$stopwords, 
-$lowercaseOperators
-*/
-/*
-$results = ksd_solr_search_process_search (
-	"http://intra-srch.un.org/solr/iseekdrupal_shard1_replica2/select",
-	30,
-	1,
-	"lastName",
-	"asc",
-	array("dutyStation"),
-	$iseekAdvSearchFields,
-	0,
-	"",
-	0
-);
 */
 
-
-
-
-
-
+// include('sites/iseek.un.org/themes/bootstrap_iseek/js/sitesearch.js'); 
 
 // print_r($results);
 
 ?>
 
 <script type="text/javascript">
-
+/*
 	jQuery(document).ready(function() {
 
 		// clear all duty stations when user clicks go button
@@ -173,7 +92,7 @@ $results = ksd_solr_search_process_search (
 	function showLoadingMessage() {
 		jQuery("#resultsArea").html("<p style=\"text-align: center\">Loading...</p>");
 	}
-
+*/
 </script>
 
 
@@ -181,6 +100,39 @@ $results = ksd_solr_search_process_search (
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
    <section id="search-main" class="clearfix container-fluid">
+
+	<div class="row">
+
+        	<div class="col-lg-12">
+          		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-search"></i>Search</div>
+
+			<h2>The UN Intranet - iSeek site search results</h2>
+
+        	</div>
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-sm-7"> 
+			<div class="input-group">
+				<input class="form-control" name="query" type="text" id="sitesearchInput">
+				<span class="input-group-btn">
+					<button id="sitesearchTrigger" type="button" class="btn btn-primary">Search</button> 
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12" class="sitesearch_results">
+		</div>
+	</div>
+
+
+
+<?php 
+/*
 
 	<div class="row">
 
@@ -200,16 +152,6 @@ $results = ksd_solr_search_process_search (
 
 						<form class="search-form" id="search-form-simple" action="<?php echo $results["page_path"]; ?>">
 
-			<?php
-			/*							
-							<div class="controls">
-								<input type="text" class="input-small" name="query" value="<?php echo $results["query"]; ?>">
-							</div>
-							<div class="controls">
-									<input type="submit" class="btn" id="searchTriggerSimple" value="Go">
-							</div>
-			*/
-			?>
 							<div class="input-group">
 								<input type="text" class="form-control" name="query" value="<?php echo $results["query"]; ?>">
 								<span class="input-group-btn">
@@ -242,24 +184,6 @@ $results = ksd_solr_search_process_search (
 								
 							<?php } ?>
 
-			<?php
-			/*				
-							<div class="muted">Refine by language</div>
-							<div class="controls dutyStationFacetControls">
-								<?php foreach($results["facets_nonzero_hash"]["ss_language"] as $facets_nonzero_hash_item_key => $facets_nonzero_hash_item_value) { ?>
-										<label>
-											<input type="checkbox" name="ss_languageFacet" value="<?php echo $facets_nonzero_hash_item_key; ?>" <?php if (in_array($facets_nonzero_hash_item_key, $results["multivalue_facet_array"]["ss_language"])) {  echo "checked"; }  ?> >
-											<?php echo $languageLookup[$facets_nonzero_hash_item_key]; ?> (<?php echo $facets_nonzero_hash_item_value; ?>)
-										</label>
-								<?php } ?>
-							</div>
-							<?php if (count($results["multivalue_facet_array"]) > 0) { ?>
-								<div>
-											<a class="reset" href="#" onClick="clearCheckboxesAndSubmitSimpleForm();">Clear</a>
-									</div>
-							<?php } ?>
-			*/
-			?>
 						</form>
 					</div>
 				</div>
@@ -267,8 +191,6 @@ $results = ksd_solr_search_process_search (
 		</div>
 
 		<div class="col-sm-8 col-md-9 main">
-
-			<!-- <h2 id="branding_headline"><?php echo $title; ?></h1> -->
 
 			<div id="resultsArea">
 			
@@ -382,12 +304,15 @@ $results = ksd_solr_search_process_search (
 				   </nav>
 
 				<?php
-				   } /* results == 0 */
+				   }
 				?>
-
+	
 			</div> <!-- resultsArea -->
 			</div> <!-- span10 -->
       </div> <!-- row-fluid -->
+*/
+?>
+
    </section>
 </div>
 

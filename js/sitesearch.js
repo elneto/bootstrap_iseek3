@@ -1,192 +1,33 @@
 <script type="text/javascript">
-	var solrGcdUrl = "/solr-gcd-output";
 	var solrSitesearchUrl = "/solr-sitesearch-output";
-	var searchType = "#myModal";
 
 	jQuery(document).ready(function() {
 
-		// local
-		jQuery( ".menu-mlid-47836" ).click(function (e) {
-		   	e.preventDefault();
-			e.stopPropagation();
-			searchType = "#myModal";
-			jQuery('#myModal').modal('toggle');
-                        return false;
-		});
-
-		// dev
-                jQuery( ".menu-mlid-48656" ).click(function (e) {
-                        e.preventDefault();
-			e.stopPropagation();
-                        searchType = "#myModal";
-                        jQuery('#myModal').modal('toggle');
-                        return false;
-                });
-
-		
-                jQuery( "#sitesearchTrigger" ).click(function() {
-                        // searchType = "#myModal";
-                        submitSitesearch(jQuery("#sitesearchInput").val(), 0, "", "", "");
-                        // jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
-                });
-
-                jQuery( "#searchIseekOrOds" ).click(function() {
-
-			var searchApp = jQuery('#select-search :selected').text();
-			var searchQuery = jQuery('#input-search-iseek').val();
-
-			if (searchApp == "ODS") {
-				window.location.href = "http://unitesearch.un.org/?query=" + searchQuery + "&tpl=ods";
-			} else {
-				window.location.href = "/iseek-site-search?query=" + searchQuery;
-			}
-                });
-		
-
-		jQuery('#searchSimpleInput').keypress(function (e) {
+		jQuery('#sitesearchInput').keypress(function (e) {
 		  if (e.which == 13) {
-			searchType = "#myModal";
-			submitSearch(jQuery("#searchSimpleInput").val(), 0, "", "", "", 0);
-			jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
-			jQuery('#myModal').modal('toggle');
+
+			// searchType = "#myModal";
+			submitSitesearch(jQuery("#sitesearchInput").val(), 0, "", "", "");
+			// jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
+			// jQuery('#myModal').modal('toggle');
 			return false;
 		  }
 		});
-		jQuery('#searchSimpleInputInModal').keypress(function (e) {
-		  if (e.which == 13) {
-			searchType = "#myModal";
-			submitSearch(jQuery("#searchSimpleInputInModal").val(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});
-		jQuery( "#searchTriggerSimple" ).click(function() {
-			searchType = "#myModal";
-			submitSearch(jQuery("#searchSimpleInput").val(), 0, "", "", "", 0);
-			jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
-		});
-		jQuery( "#searchTriggerSimpleInModal" ).click(function() {
-			searchType = "#myModal";
-			submitSearch(jQuery("#searchSimpleInputInModal").val(), 0, "", "", "", returnExact());
-		});
-		jQuery( "#searchTriggerAdvanced" ).click(function() {
-			searchType = "#myModalAdvanced";
-			jQuery('#myModalAdvanced').modal('toggle');
-		});	
-		jQuery( "#searchTriggerAdvancedInSimpleModal" ).click(function() {
-			searchType = "#myModalAdvanced";
-			jQuery('#myModal').modal('hide');
-			jQuery('#myModalAdvanced').modal('toggle');
-		});	
-		jQuery( "#searchTriggerAdvancedInModal" ).click(function() {
-			searchType = "#myModalAdvanced";
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-		});
 
-		jQuery('#advFieldlastName').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
-		jQuery('#advFieldfirstName').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
-		jQuery('#advFieldemail').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
-		jQuery('#advFieldphoneDisplay1').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
-		jQuery('#advFieldorganizationalUnit').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
-		jQuery('#advFieldroom').keypress(function (e) {
-		  if (e.which == 13) {
-			submitSearch(returnAdvancedSearchQuery(), 0, "", "", "", returnExact());
-			return false;
-		  }
-		});		
+		jQuery( "#sitesearchTrigger" ).click(function() {
+console.log("sitesearchTriggerSimple click");
+			// searchType = "#myModal";
+			submitSitesearch(jQuery("#sitesearchInput").val(), 0, "", "", "");
+			// jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
+		});
 
 		jQuery("[rel=tooltip]").tooltip({ placement: 'right'});
 		
 	});
 
-	/* site search */
-
-        function submitSitesearch(q, start, fq, sort, sort_dir) {
-                var checkedSort = "lastName";
-                var checkedSort_dir = "asc";
-                if (sort.length > 0 && sort_dir.length > 0) {
-                        checkedSort = sort;
-                        checkedSort_dir = sort_dir;
-                }
-                var checkedQ = q;
-                checkedQ = checkedQ.replace(/\//g, ' ');
-                var solrSitesearchQueryUrl = solrSitesearchUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
-
-console.log("solrSitesearchQueryUrl: " + solrSitesearchQueryUrl);
-
-                jQuery.ajax({
-                        url: solrSitesearchQueryUrl,
-                        type: 'GET',
-                        dataType: 'json',
-                        success: loadSitesearchData,
-                        error: function(data) {
-                        }
-                });
-
-	}		
-
-        function loadSitesearchData(data) {
-
-                jQuery( searchType + " .sitesearch_results" ).empty();
-/*
-                jQuery( searchType + " .dutyStationButtons" ).empty();
-                jQuery( searchType + " thead > tr" ).empty();
-                jQuery( searchType + " .wildcard" ).empty();
-                jQuery( searchType + " .narrow_by_duty_station_text" ).empty();
-*/
-
-                var start = data.response.start;
-                var rows_per_page = 10;
-                var resultsStart = data.response.start + 1;
-                var resultsEnd = rows_per_page;
-                var resultsFound = data.response.numFound;
-
-console.log("resultsFound: " + resultsFound);		
-
-                if (resultsFound == 0) {
-
-			jQuery(searchType + " .sitesearch_results").append("Sorry, no results could be found.");
-
-                        // jQuery(searchType + " tbody" ).empty();
-                        // jQuery(searchType + " .gcd_pagination" ).empty();
-                        // jQuery(searchType + " .modal-body").removeClass("loading");
-                        // jQuery(searchType + " .gcd_results").append("Sorry, no results could be found.");
-
-                } else {
-
-
-		}
-	}
-
-	/* //site search */
-
-	function submitSearch(q, start, fq, sort, sort_dir, exact) {
-		jQuery(searchType + " .modal-body").addClass("loading");
-		jQuery(searchType + " #wildcard").addClass("loading");
+	function submitSitesearch(q, start, fq, sort, sort_dir) {
+//		jQuery(searchType + " .modal-body").addClass("loading");
+//		jQuery(searchType + " #wildcard").addClass("loading");
 		var checkedSort = "lastName";
 		var checkedSort_dir = "asc";
 		if (sort.length > 0 && sort_dir.length > 0) {
@@ -195,13 +36,10 @@ console.log("resultsFound: " + resultsFound);
 		}
 		var checkedQ = q;
 		checkedQ = checkedQ.replace(/\//g, ' ');
-		if (exact == 0) {
-			checkedQ = checkedQ + "*";
-		}
-		var solrQueryUrl = solrGcdUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
+		var solrSitesearchQueryUrl = solrSitesearchUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
 	
-console.log("solrQueryUrl: " + solrQueryUrl);
-	
+console.log("solrSitesearchQueryUrl: " + solrSitesearchQueryUrl);
+die;	
 		jQuery.ajax({
 			url: solrQueryUrl,
 			type: 'GET',
@@ -452,56 +290,5 @@ console.log("solrQueryUrl: " + solrQueryUrl);
 		return multivalue_facet_queryphrase_local;
 	}
 	
-	function returnAdvancedSearchQuery() {
-		// determine fq
-		
-		var exact = "";
-		if (returnExact() == 0) {
-			exact = "*";
-		}
-		
-		var advQ = "";
-		if (jQuery("#advFieldlastName").val()) {
-			advQ = "lastName:" + jQuery("#advFieldlastName").val() + exact;
-		}
-		if (jQuery("#advFieldfirstName").val()) {
-			if (advQ.length > 0) {
-				advQ += " AND firstName:" + jQuery("#advFieldfirstName").val() + exact;
-			} else {
-				advQ = "firstName:" + jQuery("#advFieldfirstName").val() + exact;
-			}
-		}
-		if (jQuery("#advFieldemail").val()) {
-			if (advQ.length > 0) {
-				advQ += " AND email:" + jQuery("#advFieldemail").val() + exact;
-			} else {
-				advQ += "email:" + jQuery("#advFieldemail").val() + exact;
-			}
-		}
-		if (jQuery("#advFieldphoneDisplay1").val()) {
-			if (advQ.length > 0) {
-				advQ += " AND phoneDisplay1:" + exact + jQuery("#advFieldphoneDisplay1").val() + exact;
-			} else {
-				advQ += "phoneDisplay1:" + exact + jQuery("#advFieldphoneDisplay1").val() + exact;
-			}
-		}
-		if (jQuery("#advFieldorganizationalUnit").val()) {
-			if (advQ.length > 0) {
-				advQ += " AND organizationalUnit:" + exact + jQuery("#advFieldorganizationalUnit").val() + exact;
-			} else {
-				advQ += "organizationalUnit:" + exact + jQuery("#advFieldorganizationalUnit").val() + exact;
-			}
-		}
-		if (jQuery("#advFieldroom").val()) {
-			if (advQ.length > 0) {
-				advQ += " AND room:" + exact + jQuery("#advFieldroom").val() + exact;
-			} else {
-				advQ += "room:" + exact + jQuery("#advFieldroom").val() + exact;
-			}
-		}
-		return advQ;
-	}
-
-
 
 </script>
