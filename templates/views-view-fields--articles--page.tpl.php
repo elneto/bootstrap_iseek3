@@ -54,7 +54,11 @@
 		<div class="archives-size archives-social">
 			<i class="fa fa-comment-o"></i> <?php print $fields['comment_count']->content; ?><br>
 			<i class="fa fa-thumbs-o-up"></i> <?php print $fields['count']->content; ?><br>
+			<?php if (user_is_logged_in()): ?>
 			<?php print $fields['nid_1']->content; ?>
+			<?php else: ?>
+			<?php print '<a href="user/login?destination=comment/reply/'.$fields['nid_1']->raw.'#comment-form">'.t('Log in to post comments or like').'</a>'; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
