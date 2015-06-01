@@ -126,7 +126,7 @@
 	/* site search */
 
         function submitSitesearch(q, start, fq, sort, sort_dir) {
-                var checkedSort = "lastName";
+                var checkedSort = "relevance";
                 var checkedSort_dir = "asc";
                 if (sort.length > 0 && sort_dir.length > 0) {
                         checkedSort = sort;
@@ -136,7 +136,7 @@
                 checkedQ = checkedQ.replace(/\//g, ' ');
                 var solrSitesearchQueryUrl = solrSitesearchUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
 
-console.log("solrSitesearchQueryUrl: " + solrSitesearchQueryUrl);
+console.log("solrSitesearchQueryUrl1: " + solrSitesearchQueryUrl);
 
                 jQuery.ajax({
                         url: solrSitesearchQueryUrl,
@@ -151,7 +151,7 @@ console.log("solrSitesearchQueryUrl: " + solrSitesearchQueryUrl);
 
         function loadSitesearchData(data) {
 
-                jQuery( searchType + " .sitesearch_results" ).empty();
+                jQuery(".sitesearch_results" ).empty();
 /*
                 jQuery( searchType + " .dutyStationButtons" ).empty();
                 jQuery( searchType + " thead > tr" ).empty();
@@ -169,7 +169,7 @@ console.log("resultsFound: " + resultsFound);
 
                 if (resultsFound == 0) {
 
-			jQuery(searchType + " .sitesearch_results").append("Sorry, no results could be found.");
+			jQuery(".sitesearch_results").append("Sorry, no results could be found.");
 
                         // jQuery(searchType + " tbody" ).empty();
                         // jQuery(searchType + " .gcd_pagination" ).empty();
@@ -177,6 +177,29 @@ console.log("resultsFound: " + resultsFound);
                         // jQuery(searchType + " .gcd_results").append("Sorry, no results could be found.");
 
                 } else {
+
+                        if (resultsFound < rows_per_page) {
+                                resultsEnd = resultsFound;
+                        } else if (resultsFound < (resultsStart + rows_per_page - 1)) {
+                                resultsEnd = resultsFound;
+                        } else {
+                                resultsEnd = resultsStart + rows_per_page - 1;
+                        }
+                        var total_pages = Math.floor(resultsFound / rows_per_page) ;
+                        var current_page = start / rows_per_page;
+
+			jQuery(".sitesearch_results").append("Results " + resultsStart + "-" + resultsEnd + " of " + resultsFound);
+
+                        jQuery.each(data.facet_counts.facet_fields.bundle_name,function(index,value){
+                                var buttonClass = "btn btn-default bundleNameBtn";
+                                if (typeof data.responseHeader.params.fq !== 'undefined') {
+                                        if (data.responseHeader.params.fq.indexOf(index) > -1) {
+                                                buttonClass = "btn btn-primary bundleNameBtn active";
+                                        }
+                                }
+                                jQuery( searchType + " .dutyStationButtons" ).append("<button type=\"button\" value=\"" + index + "\" class=\"" + buttonClass  + "\">" +  index + "</button>");
+                        });
+
 
 
 		}

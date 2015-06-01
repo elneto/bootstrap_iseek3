@@ -125,7 +125,8 @@ $results = ksd_solr_search_process_search (
 	</div>
 
 	<div class="row">
-		<div class="col-sm-12" class="sitesearch_results">
+		<div class="col-sm-12 sitesearch_results">
+			hello, i'm sitesearch_results!
 		</div>
 	</div>
 

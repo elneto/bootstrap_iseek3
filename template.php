@@ -187,9 +187,14 @@ function bootstrap_iseek3_form_element(&$variables) {
 // Full username fix for long names
 // Implements THEME_preprocess_username().
 
+/*
+
+// commented out by eric - 1 june 2015
+
 function bootstrap_iseek_preprocess_username(&$vars) {
   $vars['name'] = $vars['name_raw'];
 }
+*/
 
 /**
  * Implements hook_js_alter().
