@@ -44,7 +44,7 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
-@title-size:2.6em;
+@title-size:1.3em; //it multiplies apparently
 @less-large-text:0.9em;
 @content-large-text:1.6em;
 @medium-text:1.4em;
@@ -57,7 +57,7 @@
 @phone-width:480px;
 @tablet-min-width:480px;
 @tablet-max-width:1024px;
-@slug-size:1.8em;
+@slug-size:0.9em;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -1223,13 +1223,16 @@ img.weather-image{
  * Arhives / articles page
  */
 
+  .archives-size{
+    font-size: @large-text;
+  }
  .archives-title a{
-  font-size: @title-size;
+  font-size: @title-size; //it multiyplies with large text (as its parent div) apparently
   color: @statement-grey;
   line-height: 1.1em;
  }
 
- .slug-archive{
+ .slug-archive *{
   .font('Light');
   color: @slug-grey;
   font-size: @slug-size;
@@ -1238,7 +1241,13 @@ img.weather-image{
 
  .archives-body{
   color: @statement-grey;
-  font-size: 2em;
+ }
+
+ hr.archives-hr{
+  border:0;
+  height: 2px;
+  color: #c9c9c9;
+  background-color: #c9c9c9;
  }
 
 /*
