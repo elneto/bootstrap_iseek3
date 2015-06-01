@@ -27,7 +27,7 @@
  * @ingroup views_templates
  */
 ?>
-<div class="row">
+<div class="row archive-pad-bot">
   <div class="col-lg-12">
     <div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> Staff stories and news <i class="fa fa-angle-double-right"></i></div>
   </div>
