@@ -47,6 +47,11 @@
 		</div>
 	</div>
 	<div class="col-md-2">
+		<div class="archives-size archives-social">
+			<i class="fa fa-comment-o"></i> <?php print $fields['comment_count']->content; ?><br>
+			<i class="fa fa-thumbs-o-up"></i> <?php print $fields['count']->content; ?><br>
+			<?php print $fields['nid_1']->content; ?>
+		</div>
 	</div>
 </div>
 <div class="row">
