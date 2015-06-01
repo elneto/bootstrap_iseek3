@@ -21,6 +21,7 @@
 @statement-blue: #dceced;
 @statement-grey: #333333; 
 @notification-background-blue: #dceced;
+@slug-grey:#666666;
 /////////
 @list-font-grey: #4d4d4d;
 @division-grey: #c9c9c9;
@@ -56,6 +57,7 @@
 @phone-width:480px;
 @tablet-min-width:480px;
 @tablet-max-width:1024px;
+@slug-size:1.8em;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -1223,8 +1225,20 @@ img.weather-image{
 
  .archives-title a{
   font-size: @title-size;
-  color: #333;
+  color: @statement-grey;
   line-height: 1.1em;
+ }
+
+ .slug-archive{
+  .font('Light');
+  color: @slug-grey;
+  font-size: @slug-size;
+  display: inline;
+ }
+
+ .archives-body{
+  color: @statement-grey;
+  font-size: 2em;
  }
 
 /*
