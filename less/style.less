@@ -21,6 +21,7 @@
 @statement-blue: #dceced;
 @statement-grey: #333333; 
 @notification-background-blue: #dceced;
+@slug-grey:#666666;
 /////////
 @list-font-grey: #4d4d4d;
 @division-grey: #c9c9c9;
@@ -43,6 +44,7 @@
 // constants
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:2em;
+@title-size:1.3em; //it multiplies apparently
 @less-large-text:0.9em;
 @content-large-text:1.6em;
 @medium-text:1.4em;
@@ -55,6 +57,7 @@
 @phone-width:480px;
 @tablet-min-width:480px;
 @tablet-max-width:1024px;
+@slug-size:0.9em;
 ///////////////////////////////////////////////////////////////////////////
 
 /*
@@ -1215,6 +1218,42 @@ img.weather-image{
 .dutystaion-container a {
   color: @statement-grey;
 }
+
+/*
+ * Arhives / articles page
+ */
+
+  .archives-size{
+    font-size: @large-text;
+  }
+ .archives-title a{
+  font-size: @title-size; //it multiyplies with large text (as its parent div) apparently
+  color: @statement-grey;
+  line-height: 1.1em;
+ }
+
+ .slug-archive *{
+  .font('Light');
+  color: @slug-grey;
+  font-size: @slug-size;
+  display: inline;
+ }
+
+ .archives-body{
+  color: @statement-grey;
+ }
+
+ hr.archives-hr{
+  border:0;
+  height: 2px;
+  color: #c9c9c9;
+  background-color: #c9c9c9;
+ }
+
+ .archives-social{
+  color: @brand-bar-blue;
+  padding-top: 3em;
+ }
 
 /*
 * Media queries not huge screens
