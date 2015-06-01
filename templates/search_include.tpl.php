@@ -17,9 +17,6 @@ tbody > tr > td {
 	font-size: 13px;
 }
 */
-h3.gcd_results {
-	font-size: 18px;
-}
 .modal-header .input-group {
 	margin-bottom: 10px;
 }

@@ -399,7 +399,7 @@ select#select-search {
 	padding: 15px;
 }
 
-button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal {
+button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#sitesearchTrigger {
   	background-color: #808080;
   	color: white;
   	border: 0;
@@ -457,7 +457,7 @@ thead tr a.sort_link {
 	font-size: 14px;
 }
 
-.dutyStationBtn {
+.dutyStationBtn, .bundleNameBtn {
 	border: 0;
 	border-radius: 0;
 	margin: 2px 1px;
@@ -466,11 +466,11 @@ thead tr a.sort_link {
 	background-color: #E3E3D9;
 }
 
-.dutyStationBtn.active {
+.dutyStationBtn.active, .bundleNameBtn.active {
 	background-color: #808080;
 }
 
-.dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active {
+.dutyStationBtn.active:hover, #myModal .dutyStationBtn.active:focus, .dutyStationBtn.active:active, .bundleNameBtn.active:hover, .bundleNameBtn.active:focus, .bundleNameBtn.active:active {
         outline: 0;
 }
 
@@ -490,4 +490,17 @@ ul.pagination {
   	font-size: 14px;
 }
 
+h3.gcd_results, h3.sitesearch_results {
+        font-size: 18px;
+}
 
+section#block-system-main ul.apachesolr_search-results {
+	padding-left: 0;
+  	list-style: none;
+}
+
+.sitesearch_pagination {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

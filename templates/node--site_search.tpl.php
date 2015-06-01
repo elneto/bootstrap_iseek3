@@ -124,12 +124,31 @@ $results = ksd_solr_search_process_search (
 		</div>
 	</div>
 
+        <div class="row">
+                <div class="col-sm-12 bundleNameButtons">
+                </div>
+        </div>
+
 	<div class="row">
-		<div class="col-sm-12 sitesearch_results">
-			hello, i'm sitesearch_results!
+		<div class="col-sm-12">
+			<h3 class="sitesearch_results">
+			</h3>
 		</div>
 	</div>
 
+        <div class="row">
+                <div class="col-sm-12">
+			<ul class="search-results apachesolr_search-results">
+			</ul>
+                </div>
+        </div>	
+
+	<div class="row">
+                <div class="col-sm-12">
+			<div class="sitesearch_pagination">
+			</div>
+		</div>
+	</div>
 
 
 <?php 

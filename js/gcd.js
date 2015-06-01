@@ -152,6 +152,8 @@ console.log("solrSitesearchQueryUrl1: " + solrSitesearchQueryUrl);
         function loadSitesearchData(data) {
 
                 jQuery(".sitesearch_results" ).empty();
+		jQuery(".bundleNameButtons" ).empty();
+		jQuery(".apachesolr_search-results" ).empty();
 /*
                 jQuery( searchType + " .dutyStationButtons" ).empty();
                 jQuery( searchType + " thead > tr" ).empty();
@@ -190,6 +192,8 @@ console.log("resultsFound: " + resultsFound);
 
 			jQuery(".sitesearch_results").append("Results " + resultsStart + "-" + resultsEnd + " of " + resultsFound);
 
+			jQuery(".bundleNameButtons").append("<h5 class=\"narrow_by_duty_station_text\">Refine by content type</h5>");
+
                         jQuery.each(data.facet_counts.facet_fields.bundle_name,function(index,value){
                                 var buttonClass = "btn btn-default bundleNameBtn";
                                 if (typeof data.responseHeader.params.fq !== 'undefined') {
@@ -197,13 +201,116 @@ console.log("resultsFound: " + resultsFound);
                                                 buttonClass = "btn btn-primary bundleNameBtn active";
                                         }
                                 }
-                                jQuery( searchType + " .dutyStationButtons" ).append("<button type=\"button\" value=\"" + index + "\" class=\"" + buttonClass  + "\">" +  index + "</button>");
+                                jQuery( ".bundleNameButtons" ).append("<button type=\"button\" value=\"" + index + "\" class=\"" + buttonClass  + "\">" +  index + "</button>");
                         });
 
+			// skipping sort for now
+
+                        jQuery.each(data.response.docs,function(i,doc){
+
+                                var label = doc.label != undefined ? doc.label : "";
+				var path_alias = doc.path_alias != undefined ? '/' + doc.path_alias: "";
+				if (doc.ss_language == 'fr') {
+					path_alias = "/" + doc.ss_language + path_alias ;
+				}	
+				var bundle_name = doc.bundle_name != undefined ? doc.bundle_name : "";
+				var ds_changed = doc.ds_changed != undefined ? doc.ds_changed : "";
+				if (ds_changed.length >= 10) {
+					ds_changed = ds_changed.substring(0,10);
+				}
+
+				jQuery( ".apachesolr_search-results" ).append( "<li class=\"search-result\"><h4 class=\"title\"><a href=\"" + path_alias  + "\">" + label + "</a></h4><div class=\"search-snippet-info\"><p class=\"search-snippet\"></p><p class=\"slug\">" + bundle_name  + " - " + ds_changed + "</p></div></li>" );
+			
+                        });
+
+			// pagination
+
+                        jQuery( ".sitesearch_pagination" ).empty();
+                        var lower_page_limit = 0;
+                        var upper_page_limit = total_pages;
+                        var page_links_to_show = 10;
+
+                        if ((current_page < (page_links_to_show / 2)) && (total_pages > page_links_to_show)) {
+                                lower_page_limit = 0;
+                                upper_page_limit = page_links_to_show;
+                        } else if ((current_page <= (page_links_to_show / 2)) && (total_pages <= page_links_to_show)) {
+                                lower_page_limit = 0;
+                                upper_page_limit = total_pages;
+                        } else if ((current_page + page_links_to_show) > total_pages) {
+                                lower_page_limit = total_pages - page_links_to_show;
+                                upper_page_limit = total_pages;
+                        } else {
+                                lower_page_limit = current_page - (page_links_to_show / 2);
+                                upper_page_limit = current_page + (page_links_to_show / 2);
+                        }
+                        if (lower_page_limit < 0) {
+                                lower_page_limit = 0;
+                        }
+
+                        var pagination = "<nav><ul class=\"pagination\">";
+                        pagination += "<li><a class=\"sitesearch_pagination_link\" href=\"0\">« first</a></li>";
+                        if (start > 0) {
+                                pagination += "<li><a class=\"sitesearch_pagination_link\" href=\"" + ((current_page - 1) * rows_per_page) + "\">‹ previous</a></li>";
+                        }
+                        for (var pager_i = lower_page_limit; pager_i <= upper_page_limit; pager_i++ ) {
+                                if (current_page == pager_i) {
+                                        pagination += "<li class=\"active sitesearch_pagination_link\"><a href=\"" + (pager_i * rows_per_page) + "\">" + (pager_i + 1) + "</a></li>";
+                                } else {
+                                        pagination += "<li><a class=\"sitesearch_pagination_link\" href=\"" + (pager_i * rows_per_page) + "\">" + (pager_i + 1) + "</a></li>";
+                                }
+                        }
+                        if (resultsFound - (current_page * rows_per_page) > rows_per_page) {
+                                pagination += "<li><a class=\"sitesearch_pagination_link\" href=\"" + ((current_page + 1) * rows_per_page)  + "\">next ›</a></li>";
+                        }
+                        pagination += "<li><a class=\"sitesearch_pagination_link\" href=\"" + (total_pages * rows_per_page) + "\">last »</a></li>";
+                        pagination += "</ul></nav>";
+                        jQuery( ".sitesearch_pagination" ).append(pagination);
+
+                        jQuery(".bundleNameBtn").click(function(){
+
+                                if (jQuery(this).hasClass("active")) {
+                                        jQuery(this).removeClass("active");
+                                } else {
+                                        jQuery(this).addClass("active");
+                                }
+                                if (jQuery(this).hasClass("btn-default")) {
+                                        jQuery(this).removeClass("btn-default");
+                                } else {
+                                        jQuery(this).addClass("btn-default");
+                                }
+                                if (jQuery(this).hasClass("btn-primary")) {
+                                        jQuery(this).removeClass("btn-primary");
+                                } else {
+                                        jQuery(this).addClass("btn-primary");
+                                }
+
+                                submitSitesearch(jQuery("#sitesearchInput").val(), 0, returnSelectedBundleNameButtons(), "", "" );
+
+                        });
+
+                        jQuery(".sitesearch_pagination_link").click(function(event){
+                                event.preventDefault();
+                                event.stopPropagation();
+                                submitSearch(jQuery("#searchSimpleInput").val(), jQuery(this).attr("href"), returnSelectedBundleNameButtons(), '', '');
+                                return false;
+                        });
 
 
 		}
 	}
+
+        function returnSelectedBundleNameButtons() {
+                var multivalue_facet_queryphrase_local = "";
+                jQuery(".bundleNameBtn.btn-primary").each(function(){
+                        if (multivalue_facet_queryphrase_local.length > 0) {
+                                multivalue_facet_queryphrase_local += " OR \"" + jQuery(this).attr("value") + "\"";
+                        } else {
+                                multivalue_facet_queryphrase_local += "\"" + jQuery(this).attr("value") + "\"" ;
+                        }
+                });
+                return multivalue_facet_queryphrase_local;
+        }
+
 
 	/* //site search */
 
