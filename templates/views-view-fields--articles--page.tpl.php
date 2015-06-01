@@ -26,10 +26,14 @@
 //kpr($fields);
 ?>
 <div class="row">
+	<?php if (isset($fields['field_image'])): ?>
 	<div class="col-md-3">
 		<?php print $fields['field_image']->content; ?>
 	</div>
 	<div class="col-md-7">
+	<?php else: ?>
+	<div class="col-md-10">
+	<?php endif; ?>
 		<div class="archives-size">
 			<div class="archives-title">
 				<?php print $fields['title']->content; ?>	
