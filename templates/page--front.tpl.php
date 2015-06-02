@@ -128,7 +128,7 @@
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
-          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="#">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
+          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="articles/">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="container-main-image">
 
 		<?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
@@ -165,7 +165,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <div class="bottom-staff-stories"><a href="#">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="bottom-staff-stories"><a href="articles/">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
             </div>
           </div>
         </div> <!-- END Stories -->
