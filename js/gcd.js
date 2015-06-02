@@ -126,6 +126,9 @@
 	/* site search */
 
         function submitSitesearch(q, start, fq, sort, sort_dir) {
+
+                jQuery(".sitesearch_results_area").addClass("loading");
+
                 var checkedSort = "relevance";
                 var checkedSort_dir = "asc";
                 if (sort.length > 0 && sort_dir.length > 0) {
@@ -173,6 +176,7 @@ console.log("resultsFound: " + resultsFound);
 
 			jQuery(".sitesearch_results").append("Sorry, no results could be found.");
 
+			jQuery(".sitesearch_results_area").removeClass("loading");
                         // jQuery(searchType + " tbody" ).empty();
                         // jQuery(searchType + " .gcd_pagination" ).empty();
                         // jQuery(searchType + " .modal-body").removeClass("loading");
@@ -218,6 +222,18 @@ console.log("resultsFound: " + resultsFound);
 				if (ds_changed.length >= 10) {
 					ds_changed = ds_changed.substring(0,10);
 				}
+
+				var result_doc_id = doc->id;
+
+
+//////fix ///////
+/*
+				foreach ($results["decoded_search_results"]->highlighting->$result_doc_id->content as $snippets) {
+                                                                                      echo $snippets;
+				}
+*/
+////////////
+
 
 				jQuery( ".apachesolr_search-results" ).append( "<li class=\"search-result\"><h4 class=\"title\"><a href=\"" + path_alias  + "\">" + label + "</a></h4><div class=\"search-snippet-info\"><p class=\"search-snippet\"></p><p class=\"slug\">" + bundle_name  + " - " + ds_changed + "</p></div></li>" );
 			
@@ -266,6 +282,8 @@ console.log("resultsFound: " + resultsFound);
                         pagination += "</ul></nav>";
                         jQuery( ".sitesearch_pagination" ).append(pagination);
 
+			jQuery( ".sitesearch_results_area" ).removeClass("loading");
+
                         jQuery(".bundleNameBtn").click(function(){
 
                                 if (jQuery(this).hasClass("active")) {
@@ -291,7 +309,7 @@ console.log("resultsFound: " + resultsFound);
                         jQuery(".sitesearch_pagination_link").click(function(event){
                                 event.preventDefault();
                                 event.stopPropagation();
-                                submitSearch(jQuery("#searchSimpleInput").val(), jQuery(this).attr("href"), returnSelectedBundleNameButtons(), '', '');
+                                submitSitesearch(jQuery("#sitesearchInput").val(), jQuery(this).attr("href"), returnSelectedBundleNameButtons(), '', '');
                                 return false;
                         });
 

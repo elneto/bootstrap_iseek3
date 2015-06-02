@@ -29,72 +29,21 @@ $results = ksd_solr_search_process_search (
 ?>
 
 <script type="text/javascript">
-/*
+
 	jQuery(document).ready(function() {
-
-		// clear all duty stations when user clicks go button
-		jQuery( "#searchTriggerSimple" ).click(function() {
-			showLoadingMessage();
-			clearCheckboxes();
-			submitSimpleForm();
-		});
-
-		jQuery('#search-form-simple input:checkbox').change(function() {
-			showLoadingMessage();
-			submitSimpleForm();
-		});
-
-		jQuery( "#searchTriggerAdvanced" ).click(function() {
-				showLoadingMessage();
-				clearCheckboxes();
-				submitSimpleForm();
-		});
-
-		jQuery('#search-form-advanced input:checkbox').change(function() {
-				showLoadingMessage();
-				submitAdvancedForm();
-		});
-
-		jQuery(document).ready(function(){
-    			jQuery("[data-toggle=tooltip]").tooltip({ placement: 'right'});
-		});
-
+		var qs_href_query = jQuery.urlParam('query');
+		jQuery("#sitesearchInput").val(qs_href_query);
+		submitSitesearch(qs_href_query, 0, "", "", "" );	
+ 		console.log("ready!");
 	});
 
-	function clearCheckboxesAndSubmitSimpleForm() {
-		showLoadingMessage();
-		clearCheckboxes();
-		submitSimpleForm();
-	}
 
-	function clearCheckboxesAndSubmitAdvancedForm() {
-                showLoadingMessage();
-                clearCheckboxes();
-                submitAdvancedForm();
+	jQuery.urlParam = function(name){
+		var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (!results) { return 0; }
+		return results[1] || 0;
 	}
-
-	function clearCheckboxes() {
-			jQuery("input:checkbox").prop("checked", false);
-	}
-
-	function submitSimpleForm() {
-		jQuery("#search-form-simple").submit();
-	}
-
-	function submitAdvancedForm() {
-			jQuery("#search-form-advanced").submit();
-	}
-
-	function resetAdvancedForm() {
-		jQuery("input:text").val("");
-	}
-
-	function showLoadingMessage() {
-		jQuery("#resultsArea").html("<p style=\"text-align: center\">Loading...</p>");
-	}
-*/
 </script>
-
 
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -124,28 +73,30 @@ $results = ksd_solr_search_process_search (
 		</div>
 	</div>
 
-        <div class="row">
-                <div class="col-sm-12 bundleNameButtons">
-                </div>
-        </div>
+       	<div class="row">
+       	        <div class="col-sm-12 bundleNameButtons">
+       	        </div>
+       	</div>
 
-	<div class="row">
-		<div class="col-sm-12">
-			<h3 class="sitesearch_results">
-			</h3>
+	<div class="sitesearch_results_area">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="sitesearch_results">
+				</h3>
+			</div>
 		</div>
-	</div>
 
-        <div class="row">
-                <div class="col-sm-12">
-			<ul class="search-results apachesolr_search-results">
-			</ul>
-                </div>
-        </div>	
+        	<div class="row">
+        	        <div class="col-sm-12">
+				<ul class="search-results apachesolr_search-results">
+				</ul>
+        	        </div>
+        	</div>	
 
-	<div class="row">
-                <div class="col-sm-12">
-			<div class="sitesearch_pagination">
+		<div class="row">
+        	        <div class="col-sm-12">
+				<div class="sitesearch_pagination">
+				</div>
 			</div>
 		</div>
 	</div>
