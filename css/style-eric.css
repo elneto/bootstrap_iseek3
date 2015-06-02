@@ -284,6 +284,25 @@ select#select-search {
 	margin-top: 10px;
 }
 
+.not-front .search-snippet {
+        font-size: 14px;
+        color: #666666;
+        margin-top: 0;
+	margin-bottom: 0;
+}
+
+.apachesolr_search-results .search-result h4 {
+	margin-bottom: 5px;	
+}
+
+.not-front .search-result .slug {
+	margin-top: 0;
+}
+
+li.search-result {
+	margin-bottom: 25px;
+}
+
 .not-front h2#headline {
 	font-size: 30px;
 	margin-top: 15px;
@@ -424,8 +443,12 @@ button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#s
   border-top: 0;
 }
 
-#searchSimpleInputInModal {
+#searchSimpleInputInModal, #sitesearchInput {
 	border-radius: 0;
+}
+
+strong {
+	font-family:'Source Sans Pro Bold',Helvetica,sans-serif;
 }
 
 thead tr {
@@ -504,3 +527,25 @@ section#block-system-main ul.apachesolr_search-results {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+/* departmental */
+
+.departmentalSubmenu-nav {
+	float: left;
+  	margin: 0;
+	padding-left: 0;	
+}
+
+.departmentalSubmenu-nav > li {
+	float: left;
+        list-style: none;
+        list-style-image: none;
+	padding: 5px 15px;
+	background-color: #DCECED;
+	margin-right: 5px;
+	font-size: 14px;
+	color: #0071B9;
+	cursor: pointer;
+}
+
+

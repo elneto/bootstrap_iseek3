@@ -77,7 +77,69 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+
+
+$menu_name = "";
+$menu_display_name = "";
+$query_menu_result = db_query(
+        "SELECT menu_name FROM {og_menu} WHERE gid = :gid LIMIT 1",    
+        array(':gid' => $node->nid)
+);
+
+if ($query_menu_result) {
+        while ($row = $query_menu_result->fetchAssoc()) {
+                $menu_name = $row['menu_name'];
+		$menu_display_name = menu_load($menu_name)['title'];	
+        }
+}
+
+
+
 ?>
+
+<div class="row">
+       	<div class="col-lg-12">
+      		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $node->title; ?></div>
+	</div>
+	<div class="col-lg-12">
+                <div style="background-color:yellow;height:10px;"></div>
+        </div>
+</div>
+
+<div class="row departmentalSubmenu">
+        <div class="col-lg-12">
+		<ul class="departmentalSubmenu-nav">
+			<li class="first expanded dropdown">
+				<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown">Quicklinks <span class="caret"></span></span>
+				<?php print views_embed_view('departmental_page_in_og', 'block', $node->nid); ?>
+			</li>
+			<li>Site map</li>
+			<?php 
+				if ($menu_display_name) {
+			?>
+	
+					<li class="expanded dropdown">
+						<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><?php echo $menu_display_name ?> <span class="caret"></span></span>
+					</li>
+			<?php 	} ?>
+		
+			<li>FAQ</li>
+			<li>Contact us</li>
+		</ul>
+	</div>
+</div>
+
+<div>
+<?php
+
+kpr(menu_load($menu_name));
+kpr(menu_navigation_links($menu_name));
+ 	
+?>
+</div>
+
+
+<?php /*
 
 <section class="clearfix container-fluid">
 <div class="row">
@@ -158,19 +220,6 @@
 				</div>
 			</section>
 
-			<?php /*	
-			
-			// hiding documents on request
-				
-			<section class="block">
-				<h2><?php echo $node->title; ?> documents</h2>
-				<div class="content">
-					<?php
-						print views_embed_view('document_groupings_in_og', 'block', $node->nid);
-					?>
-				</div>
-			</section>
-			*/ ?>
 		</div>
 
 	</aside>
@@ -523,3 +572,5 @@
 
 </div>
 </section>
+
+*/ ?>

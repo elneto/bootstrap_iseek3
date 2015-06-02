@@ -30,6 +30,13 @@
                         // jQuery("#searchSimpleInputInModal").val(jQuery("#searchSimpleInput").val());
                 });
 
+                jQuery('#sitesearchInput').keypress(function (e) {
+                  if (e.which == 13) {
+			submitSitesearch(jQuery("#sitesearchInput").val(), 0, "", "", "");
+                        return false;
+                  }
+                });
+
                 jQuery( "#searchIseekOrOds" ).click(function() {
 
 			var searchApp = jQuery('#select-search :selected').text();
@@ -139,7 +146,7 @@
                 checkedQ = checkedQ.replace(/\//g, ' ');
                 var solrSitesearchQueryUrl = solrSitesearchUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
 
-console.log("solrSitesearchQueryUrl1: " + solrSitesearchQueryUrl);
+// console.log("solrSitesearchQueryUrl1: " + solrSitesearchQueryUrl);
 
                 jQuery.ajax({
                         url: solrSitesearchQueryUrl,
@@ -170,7 +177,7 @@ console.log("solrSitesearchQueryUrl1: " + solrSitesearchQueryUrl);
                 var resultsEnd = rows_per_page;
                 var resultsFound = data.response.numFound;
 
-console.log("resultsFound: " + resultsFound);		
+// console.log("resultsFound: " + resultsFound);		
 
                 if (resultsFound == 0) {
 
@@ -225,7 +232,7 @@ console.log("resultsFound: " + resultsFound);
 
 							var result_doc_id = doc.id;
 
-							console.log("result_doc_id: " + result_doc_id); 
+							// console.log("result_doc_id: " + result_doc_id); 
 
 							var snippet = "";		
 
@@ -235,24 +242,7 @@ console.log("resultsFound: " + resultsFound);
 									snippet = snippets.content;	
 								}	
 
-
-// console.log("snippet_id: " + snippet_id);
-// console.log("snippet: " + snippet);
-
-//								console.log(jQuery(snippets).attr('id'));		
-/*
-									var snippet_id = highlighting.	
-
-									console.log("snippets: " + snippets); 
-*/
 							});
-
-			/*
-							foreach ($results["decoded_search_results"]->highlighting->$result_doc_id->content as $snippets) {
-			                                                                                      echo $snippets;
-							}
-			*/
-
 
 							jQuery( ".apachesolr_search-results" ).append( "<li class=\"search-result\"><h4 class=\"title\"><a href=\"" + path_alias  + "\">" + label + "</a></h4><div class=\"search-snippet-info\"><p class=\"search-snippet\">" + snippet + "</p><p class=\"slug\">" + bundle_name  + " - " + ds_changed + "</p></div></li>" );
 			
@@ -367,7 +357,7 @@ console.log("resultsFound: " + resultsFound);
 		}
 		var solrQueryUrl = solrGcdUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
 	
-console.log("solrQueryUrl: " + solrQueryUrl);
+// console.log("solrQueryUrl: " + solrQueryUrl);
 	
 		jQuery.ajax({
 			url: solrQueryUrl,

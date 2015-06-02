@@ -34,7 +34,6 @@ $results = ksd_solr_search_process_search (
 		var qs_href_query = jQuery.urlParam('query');
 		jQuery("#sitesearchInput").val(qs_href_query);
 		submitSitesearch(qs_href_query, 0, "", "", "" );	
- 		console.log("ready!");
 	});
 
 
