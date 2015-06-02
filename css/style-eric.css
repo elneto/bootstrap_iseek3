@@ -279,7 +279,7 @@ select#select-search {
 }
 
 .not-front .slug {
-	font-size: 14px;
+	font-size: 1.6em;
 	color: #666666;	
 	margin-top: 10px;
 }
@@ -303,12 +303,12 @@ select#select-search {
 
 .not-front .field-name-body {	
 	margin-top: 20px;
-	font-size: 20px;
+	font-size: 1.6em;
 	color: #333333;
 }
 
 .not-front #comments {
-	font-size: 20px;
+	font-size: 1.6em;
 }
 
 .node-type-article .iseek-like a, .node-type-article #comments h2 {
