@@ -212,30 +212,49 @@ console.log("resultsFound: " + resultsFound);
 
                         jQuery.each(data.response.docs,function(i,doc){
 
-                                var label = doc.label != undefined ? doc.label : "";
-				var path_alias = doc.path_alias != undefined ? '/' + doc.path_alias: "";
-				if (doc.ss_language == 'fr') {
-					path_alias = "/" + doc.ss_language + path_alias ;
-				}	
-				var bundle_name = doc.bundle_name != undefined ? doc.bundle_name : "";
-				var ds_changed = doc.ds_changed != undefined ? doc.ds_changed : "";
-				if (ds_changed.length >= 10) {
-					ds_changed = ds_changed.substring(0,10);
-				}
+                            var label = doc.label != undefined ? doc.label : "";
+							var path_alias = doc.path_alias != undefined ? '/' + doc.path_alias: "";
+							if (doc.ss_language == 'fr') {
+								path_alias = "/" + doc.ss_language + path_alias ;
+							}	
+							var bundle_name = doc.bundle_name != undefined ? doc.bundle_name : "";
+							var ds_changed = doc.ds_changed != undefined ? doc.ds_changed : "";
+							if (ds_changed.length >= 10) {
+								ds_changed = ds_changed.substring(0,10);
+							}
 
-				var result_doc_id = doc->id;
+							var result_doc_id = doc.id;
+
+							console.log("result_doc_id: " + result_doc_id); 
+
+							var snippet = "";		
+
+							jQuery.each(data.highlighting,function(snippet_id,snippets){
+
+								if (snippet_id == result_doc_id) {
+									snippet = snippets.content;	
+								}	
 
 
-//////fix ///////
+// console.log("snippet_id: " + snippet_id);
+// console.log("snippet: " + snippet);
+
+//								console.log(jQuery(snippets).attr('id'));		
 /*
-				foreach ($results["decoded_search_results"]->highlighting->$result_doc_id->content as $snippets) {
-                                                                                      echo $snippets;
-				}
+									var snippet_id = highlighting.	
+
+									console.log("snippets: " + snippets); 
 */
-////////////
+							});
+
+			/*
+							foreach ($results["decoded_search_results"]->highlighting->$result_doc_id->content as $snippets) {
+			                                                                                      echo $snippets;
+							}
+			*/
 
 
-				jQuery( ".apachesolr_search-results" ).append( "<li class=\"search-result\"><h4 class=\"title\"><a href=\"" + path_alias  + "\">" + label + "</a></h4><div class=\"search-snippet-info\"><p class=\"search-snippet\"></p><p class=\"slug\">" + bundle_name  + " - " + ds_changed + "</p></div></li>" );
+							jQuery( ".apachesolr_search-results" ).append( "<li class=\"search-result\"><h4 class=\"title\"><a href=\"" + path_alias  + "\">" + label + "</a></h4><div class=\"search-snippet-info\"><p class=\"search-snippet\">" + snippet + "</p><p class=\"slug\">" + bundle_name  + " - " + ds_changed + "</p></div></li>" );
 			
                         });
 
