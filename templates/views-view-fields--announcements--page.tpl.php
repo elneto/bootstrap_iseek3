@@ -25,6 +25,7 @@
  */
 //kpr($fields);
 ?>
+
 <div class="row">
 	<?php if (isset($fields['field_optional_image'])): ?>
 	<div class="col-md-3">
