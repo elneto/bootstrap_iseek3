@@ -95,6 +95,7 @@ if ($query_menu_result) {
 
 $divisions_menu_array = menu_navigation_links($menu_name)
 
+
 ?>
 
 <div class="row">
@@ -113,7 +114,7 @@ $divisions_menu_array = menu_navigation_links($menu_name)
 				<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown">Quicklinks <span class="caret"></span></span>
 				<?php print views_embed_view('departmental_page_in_og', 'block', $node->nid); ?>
 			</li>
-			<li>Site map</li>
+			<li><span data-toggle="modal" data-target="#deptSiteMapModal">Site map</span></li>
 			<?php 
 				if ($menu_display_name) {
 			?>
@@ -123,22 +124,263 @@ $divisions_menu_array = menu_navigation_links($menu_name)
 						<ul class="dropdown-menu">
 							<?php
 								foreach ($divisions_menu_array as $divisions_menu_array_item) { 
-									echo "<li class=\"leaf\"><a href=\"" . $divisions_menu_array_item['href'] . "\">" . $divisions_menu_array_item['title'] . "</a></li>";
+									echo "<li class=\"leaf\"><a href=\"/" . drupal_get_path_alias($divisions_menu_array_item['href']) . "\">" . $divisions_menu_array_item['title'] . "</a></li>";
 								}	
 							?>
 						</ul>		
 					</li>
 			<?php 	} ?>
 		
-			<li>FAQ</li>
-			<li>Contact us</li>
+			<?php print views_embed_view('departmental_faq_in_og', 'block', $node->nid); ?>
+			<?php
+				if (count($node->field_departmental_contact_us)) {
+			?>	
+					<li><a href="<?php echo $node->field_departmental_contact_us['und'][0]['safe_value'] ?>">Contact us</a></li>
+			<?php
+				}
+			?>
 		</ul>
 	</div>
 </div>
 
 <div>
 <?php
+
+// print "nid: " . $node->nid;
+// kpr($node);
+// kpr($content);
+
+$taxonomy_term_array = taxonomy_get_term_by_name($node->title, "departments");
+
+// print_r($taxonomy_term_array);
+
+$taxonomy_id = key($taxonomy_term_array);
+
+// print ("taxonomy_id: " . $taxonomy_id);
+
+// get the parents
+
+// kpr(taxonomy_get_parents_all($taxonomy_id));
+
+$full_parent_taxonomy_array = taxonomy_get_parents_all($taxonomy_id);
+
+$depts_vid = 22;
+
+$dept_site_map_array = array();
+$ultimate_parent_name = "";
+
+if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name == 'Secretariat') {
+	$dept_site_map_array = taxonomy_get_tree($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->vid, $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->tid);
+	$ultimate_parent_name = $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->name;	
+} else {
+	$dept_site_map_array = taxonomy_get_tree($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->vid, $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->tid);
+	$ultimate_parent_name = $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name;
+}
+
+// kpr($dept_site_map_array);	
+
+
 ?>
+
+
+<div class="modal fade" id="deptSiteMapModal" tabindex="-1" role="dialog" aria-labelledby="deptSiteMapModal" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content"> 
+   <div class="modal-header">
+	Site map
+   </div>
+   <div class="modal-post-header">
+	<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">×</span></button>
+   </div>
+   <div class="modal-body">
+
+     	<ul class="dept_site_map">
+	
+	<?php
+	// first add the parent
+                $ultimate_parent_query = new EntityFieldQuery();
+                $ultimate_parent_entities = $ultimate_parent_query->entityCondition('entity_type', 'node')
+                ->propertyCondition('type', 'department')
+                ->propertyCondition('title', $ultimate_parent_name)
+                ->propertyCondition('status', 1)
+                ->range(0,1)
+                ->execute();
+
+                    $strong_start = "";     
+                    $strong_end = "";
+                    if ($node->title == $ultimate_parent_name) {
+                            $strong_start = "<strong>";
+                            $strong_end = "</strong>";
+                    }
+
+
+                if (!empty($ultimate_parent_entities['node'])) {
+                        $child_node = node_load(array_shift(array_keys($ultimate_parent_entities['node'])));
+        ?>
+                                <li class="depth0"><a href="<?php print url("node/" . $child_node->nid) ?>"><?php echo $strong_start; ?><?php print $ultimate_parent_name; ?><?php echo $strong_end; ?></a></li>
+                <?php
+                } else {
+                ?>
+                                <li class="depth0"><?php print $ultimate_parent_name; ?></li>
+                <?php
+                }
+
+	?>
+
+ 	<?php
+	foreach ($dept_site_map_array as $dept_site_map_array_item) {
+	?>
+		<li class="depth<?php echo ($dept_site_map_array_item->depth + 1); ?>">	
+
+		<?php	
+			$dept_site_map_query = new EntityFieldQuery();
+			$dept_site_map_entities = $dept_site_map_query->entityCondition('entity_type', 'node')
+			->propertyCondition('type', 'department')
+			->propertyCondition('title', $dept_site_map_array_item->name)
+			->propertyCondition('status', 1)
+			->range(0,1)
+			->execute();
+
+			$strong_start = "";	
+			$strong_end = "";
+			if ($node->title == $dept_site_map_array_item->name) {
+				$strong_start = "<strong>";
+				$strong_end = "</strong>";
+			}
+
+
+			if (!empty($dept_site_map_entities['node'])) {
+				$child_node = node_load(array_shift(array_keys($dept_site_map_entities['node'])));
+
+					
+		?>
+			                <a href="<?php print url("node/" . $child_node->nid) ?>"><?php echo $strong_start; ?><?php print $dept_site_map_array_item->name; ?><?php echo $strong_end; ?></a>
+			<?php
+			} else {
+			?>
+			                <?php echo $strong_start; ?><?php print $dept_site_map_array_item->name; ?><?php echo $strong_end; ?>
+			<?php
+			}
+			?>		
+
+		</li>	
+	<?php
+	}
+	?>
+	  </ul>
+	</div>
+	<div class="modal-footer">
+		
+	</div>
+  </div>
+ </div>
+</div>
+
+
+
+<div class="row">
+	<div class="col-sm-12">
+
+
+
+                    <div class="departmental_page_breadcrumb">
+
+                    <?php
+
+                            $taxonomy_term_array = taxonomy_get_term_by_name($node->title, "departments");
+
+                            $taxonomy_id = key($taxonomy_term_array);
+
+                            $taxonomy_parents_array = taxonomy_get_parents_all(key($taxonomy_term_array));
+
+                            // reverse sort for display purposes
+                            krsort($taxonomy_parents_array);
+
+                            $i = 1;
+
+                            foreach ($taxonomy_parents_array as $parent) {
+                                    //$parent->tid
+
+                                    // get path based on name
+
+                                    $query = new EntityFieldQuery();
+                                    $breadcrumb_entities = $query->entityCondition('entity_type', 'node')
+                                            ->propertyCondition('type', 'department')
+                                            ->propertyCondition('title', $parent->name)
+                                            ->propertyCondition('status', 1)
+                                            ->range(0,1)
+                                            ->execute();
+
+                                    if (!empty($breadcrumb_entities['node'])) {
+                                            $breadcrumb_node = node_load(array_shift(array_keys($breadcrumb_entities['node'])));
+                                    ?>
+
+                                            <a href="<?php print url("node/" . $breadcrumb_node->nid) ?>"><?php print $parent->name; ?></a>
+                                    <?php
+
+                                    } else {
+
+                                            print $parent->name ;
+
+                                    }
+
+                                    if ($i < count($taxonomy_parents_array)) {
+                                            print " &gt; ";
+                                    }
+
+                                    $i++;
+                            }
+                    ?>
+
+                    </div>
+
+	</div>
+</div>
+
+<?php print views_embed_view('department_about_us_for_department_home_page', 'block', $node->nid); ?>              	 
+
+<div class="row" id="departmental_home_page_blocks">
+        <div class="col-md-4">
+		<div class="row">
+			<?php print views_embed_view('department_bio_for_department_home_page', 'block', $node->nid); ?>			
+		</div>
+                <div class="row">
+			<div class="col-md-12">
+               			<h4>What we do</h4>
+				<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?> 
+			</div>
+                </div>
+
+	</div>
+	<div class="col-md-4">
+		<div class="row">
+                        <div class="col-md-12">
+                                <h4>Highlights</h4>
+				<?php print views_embed_view('departmental_news_in_og', 'block', $node->nid); ?>	
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                                <h4><?php echo $node->field_departmental_where_label['und'][0]['value'] ; ?></h4>
+                               	<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
+				 	<?php print render($content['field_departmental_where_image']) ; ?>
+				</a>
+                        </div>
+                </div>
+	</div>
+	<div class="col-md-4">
+                <div class="row">
+                        <div class="col-md-12">
+                                <h4>Resources</h4>
+				<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+				Social media
+                        </div>
+                </div>
+        </div>
 </div>
 
 

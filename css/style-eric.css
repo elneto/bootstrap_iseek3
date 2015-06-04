@@ -212,7 +212,7 @@ select#select-search {
 
 
 /* same as .img_responsive */
-#container-main-image img, .main-thumbnail img, #thumbnail-most-popular img {
+#container-main-image img, .main-thumbnail img, #thumbnail-most-popular img, .field-name-field-departmental-where-image img, #department-about-us-for-department-home-page img  {
 	display: block;
   	max-width: 100%;
   	height: auto;
@@ -547,5 +547,134 @@ section#block-system-main ul.apachesolr_search-results {
 	color: #0071B9;
 	cursor: pointer;
 }
+
+.dept_site_map li {
+	font-size: 13px;
+}
+.dept_site_map li.depth0 {
+        margin-left: 0;
+}
+.dept_site_map li.depth1 {
+        margin-left: 20px;
+}
+.dept_site_map li.depth2 {
+        margin-left: 40px;
+}
+.dept_site_map li.depth3 {
+        margin-left: 60px;
+}
+.dept_site_map li.depth4 {
+        margin-left: 80px;
+}
+.dept_site_map li.depth5 {
+        margin-left: 100px;
+}
+.dept_site_map li.depth6 {
+        margin-left: 120px;
+}
+.dept_site_map li.depth7 {
+        margin-left: 140px;
+}
+.dept_site_map li.depth8 {
+        margin-left: 160px;
+}
+
+.node-type-department #caption-mi {
+	background-color: #808080;
+}
+
+.node-type-department #caption-mi-title {
+	color: #FFFFFF;
+}
+
+.node-type-department h2 {
+	font-size: 28px;
+}
+
+.node-type-department h2 a {
+	color: #4D4D4D;
+}
+
+.node-type-department .dept_about_us_body p {
+	font-size: 18px;
+}
+
+.node-type-department .modal-header {
+  background-color: #4D4D4D;
+}
+
+#departmental_home_page_blocks {
+	margin-top: 20px;
+}
+
+#departmental_home_page_blocks p {
+	color: #333333;
+	font-size: 15px;
+	padding-left: 15px;
+}
+
+#departmental_home_page_blocks h4 {
+	color: #007EA8;
+	border-bottom: solid 3px #007EA8;
+	padding-left: 15px;
+  	padding-bottom: 3px;
+	font-size: 20px;
+}
+
+#departmental_home_page_blocks ul {
+        list-style: none;
+        list-style-image: none;	
+	padding-left: 15px;
+	font-size: 15px;
+}
+
+#departmental_home_page_blocks li a {
+        color: #333333;
+}
+/*
+#field_departmental_bio_image img {
+}
+*/
+
+#departmental_home_page_blocks .media-body p {
+	padding-left: 0;
+}
+
+#departmental_home_page_blocks .media-body h5.media-heading {
+	color: #007EA8;
+	font-size: 15px;	
+}
+
+#field_departmental_bio_image_des {
+        color: #4D4D4D;
+        font-size: 13px;	
+}
+
+#department_organigram {
+	font-size: 20px;
+}
+
+#department_organigram a {
+        color: #007EA8;
+}
+
+.departmental_page_breadcrumb {
+	font-size: 13px;
+	color: #808080;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.departmental_page_breadcrumb a {
+        color: #808080;
+}
+
+
+
+
+
+
+
+
 
 
