@@ -296,4 +296,12 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
 }
 
+/*function bootstrap_iseek3_preprocess_views_view_fields(&$vars){
+  $view = $vars['view'];
+  if ($view->name == 'announcements'){
+    $title = $vars['fields']['title'];
+    $title->content == 'claseCHIDA';
+  }
+  //kpr($vars); die;
+}*/
 

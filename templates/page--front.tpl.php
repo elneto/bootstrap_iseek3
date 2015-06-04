@@ -99,7 +99,7 @@
 		<?php echo views_embed_view('events_block_for_home_page','block'); ?>	
           </div>
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="#">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="announcements-box">
 		<?php 
 			// eric: need to built out view to have all of these displays with groupIds
