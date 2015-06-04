@@ -40,7 +40,7 @@
 				<?php print $fields['title']->content; ?>	
 			</div>
 			<div class="slug-archive">
-				<?php print $fields['field_announcement_event_date']->content; ?> <span>|</span>
+				<?php if (isset($fields['field_announcement_event_date'])): print $fields['field_announcement_event_date']->content; ?> <span>|</span> <?php endif; ?>
 				<?php print $fields['og_group_ref']->content; ?>
 			</div>
 
