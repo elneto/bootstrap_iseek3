@@ -341,6 +341,13 @@ jQuery(document).ready(function($) {
 	}
 
 	function translateFrench(){
+		
+		if(lang.localeCompare('fr') != 0) //if it's not french already
+		{
+			window.location.replace('/fr/node/add/business-cards/?lang=fr');
+		}
+			
+
 		var unaction = $("#un-actions").attr("src");
 		unaction = unaction.replace('actions.png', 'actions-fr.png');
 		$("#un-actions").attr("src", unaction);
