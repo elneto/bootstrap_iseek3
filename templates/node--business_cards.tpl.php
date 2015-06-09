@@ -78,13 +78,15 @@
  * @see template_process()
  */
 
-global $language ;
-$lang_name = $language->language;
+drupal_goto('content/print-your-business-cards');
 
-if ($lang_name == 'fr')
-  {drupal_goto('content/imprimez-vos-cartes-de-visite');}
-else
-  {drupal_goto('content/print-your-business-cards');}
+// global $language ;
+// $lang_name = $language->language;
+
+// if ($lang_name == 'fr')
+//   {drupal_goto('content/imprimez-vos-cartes-de-visite');}
+// else
+//   {drupal_goto('content/print-your-business-cards');}
 
 
 //actually nothing from below gets print... this just redirects to the page where you just created your new business card
