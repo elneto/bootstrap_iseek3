@@ -29,7 +29,7 @@ form#user-login-form {
 }
 
 .top-nav-item {
-	font-size: 1.25em;
+	font-size: 0.9em;
 	padding-left: 3px;
 }
 
@@ -50,7 +50,7 @@ form#user-login-form {
 
 #user-login-form label {
   	color: white;
-	font-size: 1.25em;
+	font-size: 0.9em;
 	float: left;
 	padding-right: 15px;
 }
@@ -63,7 +63,7 @@ form#user-login-form {
 	background-color: #5aabd7;
 	color: #fff;
 	font-family: Source Sans Pro Semibold,Helvetica,sans-serif;
-  	font-size: 1.3em;
+  	font-size: 0.92em;
   	padding: .1em .2em 0 .2em;
 	border: 0;
 	border-radius: 0;
@@ -77,7 +77,7 @@ form#user-login-form {
 
 #block_login_or_user-menu a {
         color: #ffffff;
-        font-size: 1.25em;	
+        font-size: 0.9em;	
 }
 
 /* main menu */
@@ -104,7 +104,7 @@ form#user-login-form {
 
 
 .menu-name-menu-external-main-menu > ul > li > a, .menu-name-menu-external-main-menu > ul > li > span {
-        font-size: 1.5em;
+        font-size: 1.07em;
         color: #267bb2;
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
 }
@@ -203,7 +203,7 @@ form#user-login-form {
 }
 
 #search-form {
-  font-size: 1.5em;
+  font-size: 1.07em;
 }
 
 select#select-search {
