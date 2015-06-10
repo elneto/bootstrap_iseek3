@@ -55,7 +55,7 @@ include('departmental_nodeload_and_menuload.inc');
 	<div class="col-md-3">
 
 		<?php 
-			print views_embed_view('nmu_bulletin_calendar', 'block_1'); 
+			print views_embed_view('nmu_clippings_calendar', 'block_1'); 
 		?>
 
 		<?php include('nmu_search_block.inc'); ?>
@@ -63,7 +63,7 @@ include('departmental_nodeload_and_menuload.inc');
 	</div>
 	<div class="col-md-9">
 
-		<h3>DPI News Bulletin #2</h3>
+		<h3>DPI News Clippings</h3>	
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>

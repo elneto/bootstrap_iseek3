@@ -6,7 +6,9 @@
                                 <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>">Welcome to the United Nations Intranet</a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
+<!--
                                 <a class="top-nav-item" href="#">Low bandwidth | High contrast</a>
+-->
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6" id="block_login_or_user-menu">
                                 <?php

@@ -63,7 +63,8 @@ include('departmental_nodeload_and_menuload.inc');
 	</div>
 	<div class="col-md-9">
 
-		<h3>DPI News Bulletin #2</h3>
+		<h3>DPI News Bulletin #1</h3>
+
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>

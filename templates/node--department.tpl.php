@@ -93,8 +93,10 @@ if ($query_menu_result) {
         }
 }
 
-$divisions_menu_array = menu_navigation_links($menu_name)
+$divisions_menu_array = menu_navigation_links($menu_name);
 
+// kpr($node);
+// kpr($content);
 
 ?>
 
@@ -337,17 +339,148 @@ if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name ==
 	</div>
 </div>
 
-<?php print views_embed_view('department_about_us_for_department_home_page', 'block', $node->nid); ?>              	 
+<?php // print views_embed_view('department_about_us_for_department_home_page', 'block', $node->nid); ?>              	 
+
+<?php
+/*
+$caption_result = db_query(
+        "select t1.field_caption_value from {field_data_field_caption} t1 join {file_usage} t2 on t1.entity_id = t2.fid where t2.id = :id",
+        array(':id' => $fields['field_about_us_images']->raw)
+);
+
+$caption = "";
+if ($caption_result) {
+        while ($row = $caption_result->fetchAssoc()) {
+                $caption = $row['field_caption_value'];
+        }
+}
+*/
+?>
+<div class="row" id="department-about-us-for-department-home-page">
+        <div class="col-md-6">
+
+			<div id="departmental_about_us_carousel" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+				<?php 
+/*
+                                	$i = 0;
+                                	foreach ($content['field_departmental_about_us_imag']['#items'] as $about_us_image) { 
+                       	        ?>
+						<li data-target="#departmental_about_us_carousel" data-slide-to="<?php echo $i ?>" <?php if ($i == 0) { echo "class=active"; } ?>></li>
+                          <?php 
+                                        	$i++;
+
+                               		} 
+*/
+                          ?>   
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+
+			  <?php 
+				$i = 0;	
+				foreach ($content['field_departmental_about_us_imag']['#items'] as $about_us_image) { 
+			?> 
+
+
+			    		<div class="item <?php if ($i == 0) { echo "active"; } ?>">
+						<img src="<?php print image_style_url('xlarge', $about_us_image['uri']); ?>"></img>
+			      			<div class="carousel-caption">
+							<h3><?php echo $about_us_image['field_caption']['und'][0]['value']; ?> </h3>
+			      			</div>
+			    		</div>
+
+			  <?php 
+					$i++;
+				} 
+			  ?>
+
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#departmental_about_us_carousel" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#departmental_about_us_carousel" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+
+
+
+
+<!--
+                        <?php print $fields['field_about_us_images']->content; ?>
+                        <div id="caption-mi">
+                                <div id="caption-mi-title"><?php print $caption; ?></div>
+                        </div>
+-->
+        </div>
+        <div class="col-md-6">
+                <h2><?php print render($content['field_departmental_about_us_labe']); ?></h2>
+                <div class="dept_about_us_body"><?php print render($content['field_departmental_about_us_body']); ?></div>
+                <?php if (count($node->field_departmental_organigram)) { ?>
+                        <div class="text-right" id="department_organigram"><a href="<?php print file_create_url($node->field_departmental_organigram['und'][0]['uri']); ?>"><i class="fa fa-sitemap"></i> Organigramme</a></div>
+                <?php } ?>
+
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="row" id="departmental_home_page_blocks">
         <div class="col-md-4">
 		<div class="row">
-			<?php print views_embed_view('department_bio_for_department_home_page', 'block', $node->nid); ?>			
+			<div class="col-md-12">
+				<h4><?php echo $node->field_departmental_bio_label['und'][0]['value'] ; ?></h4>
+				<div class="departmental_home_page_block_fixed_container" id="bio">
+					<?php // print views_embed_view('department_bio_for_department_home_page', 'block', $node->nid); ?>		
+					<div class="row">
+        					<div class="col-md-12">
+                					<div class="media">
+                        					<div class="media-left">
+									<?php print render($content['field_departmental_bio_image']) ; ?>
+                        					</div>
+                        					<div class="media-body">
+                                					<h5 class="media-heading"><?php print $node->field_departmental_bio_image_cap['und'][0]['value']; ?></h5>
+                                					<div id="field_departmental_bio_image_des"><?php print $node->field_departmental_bio_image_des['und'][0]['value']; ?></div>
+                                					<div id="field_departmental_home_page_bod"><?php print $node->field_departmental_bio_body['und'][0]['value']; ?></div>
+                        					</div>
+                					</div>
+        					</div>
+					</div>	
+				</div>
+				<div class="departmental_home_page_block_bottom">
+					<?php if (count($node->field_departmental_bio_link)) { ?>
+						<a href="<?php print $node->field_departmental_bio_link['und'][0]['url']; ?>">Read more</a>
+					<?php } ?>
+				</div>	
+			</div>	
 		</div>
                 <div class="row">
 			<div class="col-md-12">
                			<h4>What we do</h4>
-				<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?> 
+				<div class="departmental_home_page_block_fixed_container">	
+					<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?>
+				</div>
+				<div class="departmental_home_page_block_bottom">
+					<?php if (count($node->field_departmental_what_we_do_li)) { ?>
+                                                <a href="<?php print $node->field_departmental_what_we_do_li['und'][0]['url']; ?>">Read more</a>
+                                        <?php } ?>
+				</div> 
 			</div>
                 </div>
 
@@ -356,15 +489,28 @@ if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name ==
 		<div class="row">
                         <div class="col-md-12">
                                 <h4>Highlights</h4>
-				<?php print views_embed_view('departmental_news_in_og', 'block', $node->nid); ?>	
+				<div class="departmental_home_page_block_fixed_container">
+					<?php print views_embed_view('departmental_news_in_og', 'block', $node->nid); ?>
+					<?php print views_embed_view('departmental_news_in_office', 'block', $node->field_departmental_offices_for_f['und'][0]['tid'] ); ?>
+				</div>
+				<div class="departmental_home_page_block_bottom">Read more</div>	
                         </div>
                 </div>
                 <div class="row">
                         <div class="col-md-12">
                                 <h4><?php echo $node->field_departmental_where_label['und'][0]['value'] ; ?></h4>
-                               	<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
-				 	<?php print render($content['field_departmental_where_image']) ; ?>
-				</a>
+				<?php if (count($node->field_departmental_where_image)) { ?>
+					<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
+                                                <?php print render($content['field_departmental_where_image']) ; ?>
+                                        </a>
+					<div class="departmental_home_page_block_bottom"><a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">Read more</a></div>	
+				<?php } else { ?>
+					<div class="departmental_home_page_block_fixed_container">
+						<?php print render($content['field_departmental_where_body']) ; ?>
+					</div>
+					<div class="departmental_home_page_block_bottom"><a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">Read more</a></div>
+				<?php } ?>
+
                         </div>
                 </div>
 	</div>
@@ -373,11 +519,42 @@ if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name ==
                         <div class="col-md-12">
                                 <h4>Resources</h4>
 				<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+				<div class="departmental_home_page_block_bottom">
+					<?php if (count($node->field_departmental_resources_lin)) { ?>
+                                                <a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>
+                                        <?php } ?>
+				</div>
                         </div>
                 </div>
                 <div class="row">
-                        <div class="col-md-12">
-				Social media
+                        <div class="col-md-12" id="departmental_home_page_social_media">
+				<?php 
+					if (count($node->field_departmental_social_media) ) {
+						foreach ($node->field_departmental_social_media['und'] as $social_media_item) {
+							$social_media_item_entity = field_collection_field_get_entity($social_media_item);		
+
+							echo "<a href=\"" . $social_media_item_entity->field_social_media_url['und'][0]['display_url'] . "\">"; 
+
+							if ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Facebook") {
+								echo "<i class=\"fa fa-facebook-square\"></i>";			
+							} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Twitter") {
+								echo "<i class=\"fa fa-twitter-square\"></i>";
+							} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "YouTube") {
+								echo "<i class=\"fa fa-youtube-square\"></i>";
+							} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Google+") {
+								echo "<i class=\"fa fa-google-plus-square\"></i>";
+							} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Instagram") {
+								echo "<i class=\"fa fa-instagram\"></i>";
+							} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Other") {
+								echo "<i class=\"fa fa-users\"></i>";
+							}
+
+							echo "</a>";
+
+						}
+					}
+
+				?>
                         </div>
                 </div>
         </div>

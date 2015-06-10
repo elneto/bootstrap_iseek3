@@ -626,6 +626,7 @@ section#block-system-main ul.apachesolr_search-results {
         list-style-image: none;	
 	padding-left: 15px;
 	font-size: 15px;
+	margin-bottom: 0;
 }
 
 #departmental_home_page_blocks li a {
@@ -669,12 +670,251 @@ section#block-system-main ul.apachesolr_search-results {
         color: #808080;
 }
 
+#departmental_home_page_social_media {
+	font-size: 4em;
+	text-align: center;
+}
+
+#departmental_home_page_social_media i {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.departmental_home_page_block_bottom {
+	border-bottom-left-radius: 10px;
+  	width: 100%;
+  	height: 35px;
+  	background-color: #E3E3E3;
+  	border-bottom-right-radius: 10px;
+	margin-top: 10px;
+}
+
+.departmental_home_page_block_fixed_container {
+	height: 250px;
+  	overflow: scroll; 
+}
+
+.departmental_home_page_block_fixed_container#bio {
+	overflow-x: hidden;
+}
+
+#departmental_home_page_blocks li {
+	margin-bottom: 10px;
+}
+
+.departmental_home_page_block_bottom {
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 10px;
+  	font-size: 13px;
+  	text-align: right;
+}
+
+#department-about-us-for-department-home-page .carousel-caption {
+	right: auto;
+	left: auto;
+	width: 100%;
+	background-color: #808080;
+	padding-top: 0;
+	padding-bottom: 0;	
+	opacity: 0.8;
+	bottom: 0;
+}
+
+#department-about-us-for-department-home-page .carousel-caption h3 {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+#departmental_faq_toc {
+	font-size: 18px;
+}
+
+#departmental_faq_toc ul {
+        list-style: none;
+}
+
+#departmental_faq_body {
+	font-size: 18px;
+}
+
+#departmental_faq_body a {
+        color: #333333;
+	font-weight: bold;
+}
+
+#departmental_faq_body > div {
+        background-color: #E3E3E3;
+        border: 1px solid #E3E3E3;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-top: 10px;
+}
+
+
+#departmental_faq_body > div.departmental_faq_body_entry_even {
+	background-color: #ffffff;
+}
+
+.view-nmu-bulletin-calendar .date-nav-wrapper li.date-prev, .view-nmu-bulletin-calendar .date-nav-wrapper li.date-next, .view-nmu-clippings-calendar .date-nav-wrapper li.date-prev, .view-nmu-clippings-calendar .date-nav-wrapper li.date-next {
+	background: none;
+}
+
+.view-nmu-bulletin-calendar .date-nav-wrapper li.date-prev, .view-nmu-clippings-calendar .date-nav-wrapper li.date-prev {
+	left: 0;   
+	right: auto;
+}
+
+.view-nmu-bulletin-calendar, .view-nmu-clippings-calendar {
+	background-color: #EDE9E6;
+	border-radius: 10px;
+  	padding: 15px;
+}
+
+.view-nmu-bulletin-calendar .date-nav.item-list, .view-nmu-clippings-calendar .date-nav.item-list {
+	height: 40px;
+}
+
+.view-nmu-bulletin-calendar h3, .view-nmu-clippings-calendar h3, #nmu_search_block h3 {
+	font-size: 20px;
+  	margin-top: 0;
+}
+
+.view-nmu-bulletin-calendar .pager li>a, .view-nmu-bulletin-calendar .pager li>span, .view-nmu-clippings-calendar .pager li>a, .view-nmu-clippings-calendar .pager li>span  {
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: #EDE9E6;
+}
+
+#nmu_search_block {
+	margin-top: 10px;
+	background-color: #DCEBEC;
+	border-radius: 10px;
+        padding: 15px;
+}
+
+#nmu_search_block .date-label {
+	font-size: 15px;
+}
+
+#nmu_search_block .input-group {
+	margin-bottom: 10px;
+}
+
+.node-nmu-article {
+	font-size: 18px;
+}
+
+.node-nmu-article .slug {
+        font-size: 16px;
+}
+
+.node-nmu-article h2 {
+	margin-top: 10px;
+}
+
+#nmu_search_block .datepicker.dropdown-menu th.dow {
+	background-color: #fff;
+	border: solid 1px #ececec;
+	font-weight: bold;
+	border-radius: 0;
+	color: #888;
+}
+
+.datepicker table tr td, .datepicker table tr th { 
+	border-radius: 0;
+}
 
 
 
+.view-nmu-email.view-display-id-page_7 .view-header .nmu_bulletin_dateline, .view-nmu-email.view-display-id-page_6 .view-header .nmu_bulletin_dateline, .view-nmu-email.view-display-id-page_5 .view-header .nmu_bulletin_dateline {
+    	background-color: #808080;
+	color: #ffffff;
+	padding: 3px;
+	margin-top: 10px;
+  	margin-bottom: 10px;
+}
 
+.view-nmu-email {
+	font-size: 16px;
+}
 
+.view-nmu-email .view-grouping-header {
+	font-size: 20px;
+	margin-top: 20px;	
+}
 
+.view-nmu-email .view-grouping-header strong {
+        font-weight: normal;
+}
 
+.view-nmu-email .view-grouping-content h3 {
+	font-size: 18px;
+	margin-top: 10px;
+}
 
+.view-nmu-email .view-grouping-content .views-field-title {
+	margin-top: 10px;
+}
+
+.view-nmu-email.view-display-id-page_5 input.vbo-select-this-page {
+	display: inline;
+}
+
+.view-nmu-email.view-display-id-page_5 .vbo-fieldset-select-all label {
+	padding-left: 0;
+    	display: inline;
+}
+
+.view-nmu-email.view-display-id-page_5 legend.panel-heading {
+      display: none;
+}
+
+.view-nmu-email.view-display-id-page_5 .view-grouping-header {
+    	clear: both;
+/*	text-align: center; */
+/*	font-size: 16px;
+	margin: 40px 0 0 0;
+*/
+}
+
+.view-nmu-email.view-display-id-page_5 .view-grouping-header p {
+	margin: 0;	
+}
+
+/*
+.view-nmu-email h3 {
+  font-size: 14px;
+  margin: 15px 0 10px 0;
+  font-weight: bold;
+}
+*/
+
+.view-nmu-email.view-display-id-page_5 .form-type-checkbox {
+  	display:inline;
+}
+
+.view-nmu-email.view-display-id-page_5 .checkbox input[type="checkbox"] {
+  	position: relative;
+  	margin-left: 0;
+}
+
+.view-nmu-email.view-display-id-page_5 fieldset.panel {
+    	float: left;
+    	display: inline;
+	border: 0;
+  	border-radius: 0;
+  	box-shadow: 0 0 0;   	
+  	width: inherit;
+  	margin-left: 10px;
+}
+
+.view-nmu-email.view-display-id-page_5 fieldset .panel-body {
+	padding: 0;
+}
+
+.view-nmu-email.view-display-id-page_5 .vbo-views-form {
+	margin-top: 10px;
+}
 
