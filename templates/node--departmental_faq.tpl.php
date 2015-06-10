@@ -131,75 +131,61 @@ include('departmental_nodeload_and_menuload.inc');
 	</div>
 </div>
 
-
 <?php include('departmental_site_map.inc'); ?>
 
+<?php include('departmental_breadcrumb.inc'); ?>
+
 
 <div class="row">
-	<div class="col-sm-12">
+	<div class="col-sm-12" id="departmental_faq_toc">
+		<h2>FAQ</h2>
 
+<?php
+		if (count($node->field_faq_entry) ) {
+?>
+			<ul>
+<?php
+		        	foreach ($node->field_faq_entry['und'] as $field_faq_entry) {
+		        	        $field_faq_item_entry = field_collection_field_get_entity($field_faq_entry);
 
+					echo "<li><a href=\"#" . $field_faq_item_entry->item_id . "\">" . $field_faq_item_entry->field_faq_question['und'][0]['safe_value'] . "</a></li>"; 
 
-                    <div class="departmental_page_breadcrumb">
-
-                    <?php
-
-                            $taxonomy_term_array = taxonomy_get_term_by_name($og_node->title, "departments");
-
-                            $taxonomy_id = key($taxonomy_term_array);
-
-                            $taxonomy_parents_array = taxonomy_get_parents_all(key($taxonomy_term_array));
-
-                            // reverse sort for display purposes
-                            krsort($taxonomy_parents_array);
-
-                            $i = 1;
-
-                            foreach ($taxonomy_parents_array as $parent) {
-                                    //$parent->tid
-
-                                    // get path based on name
-
-                                    $query = new EntityFieldQuery();
-                                    $breadcrumb_entities = $query->entityCondition('entity_type', 'node')
-                                            ->propertyCondition('type', 'department')
-                                            ->propertyCondition('title', $parent->name)
-                                            ->propertyCondition('status', 1)
-                                            ->range(0,1)
-                                            ->execute();
-
-                                    if (!empty($breadcrumb_entities['node'])) {
-                                            $breadcrumb_node = node_load(array_shift(array_keys($breadcrumb_entities['node'])));
-                                    ?>
-
-                                            <a href="<?php print url("node/" . $breadcrumb_node->nid) ?>"><?php print $parent->name; ?></a>
-                                    <?php
-
-                                    } else {
-
-                                            print $parent->name ;
-
-                                    }
-
-                                    if ($i < count($taxonomy_parents_array)) {
-                                            print " &gt; ";
-                                    }
-
-                                    $i++;
-                            }
-                    ?>
-
-                    </div>
+				}
+?>
+			</ul>
+<?php
+		}
+?>		
 
 	</div>
-</div>
 
-<!-- begin departmental page -->
+	<div class="col-sm-12" id="departmental_faq_body">
 
+<?php
+                if (count($node->field_faq_entry) ) {
 
-<div class="row">
-	<div class="col-sm-12">
-		<h2><?php echo $node->title; ?></h2>
-		<?php echo render($content['body']); ?>	
+			$iter = 1;
+
+                        foreach ($node->field_faq_entry['und'] as $field_faq_entry) {
+
+				$oddeven = "odd";
+				if ($iter % 2 == 0) {
+					$oddeven = "even";
+				}	
+
+				echo "<div class=\"departmental_faq_body_entry_" . $oddeven . "\">";
+
+                        	$field_faq_item_entry = field_collection_field_get_entity($field_faq_entry);
+                        
+                                echo "<a id=\"" . $field_faq_item_entry->item_id . "\"><i class=\"fa fa-caret-right\"></i> " . $field_faq_item_entry->field_faq_question['und'][0]['safe_value'] . "</a></li>";
+				echo "<div>" . $field_faq_item_entry->field_faq_answer['und'][0]['safe_value']  . "</div>";			
+
+				echo "</div>";
+
+				$iter++;
+                	}
+                }
+?>		
+
 	</div>
 </div>

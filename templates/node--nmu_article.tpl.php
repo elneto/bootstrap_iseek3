@@ -82,52 +82,81 @@
 
 $nmu_type = $node->field_type['und'][0]['value']; 
 
+// hardcoded department node id for NMU 
+$og_id = 11426;
+
+include('departmental_nodeload_and_menuload.inc');
+
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print $user_picture; ?>
+<div class="row">
+        <div class="col-lg-12">
+                <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $og_node->title; ?></div>
+        </div>
+        <div class="col-lg-12">
+                <div style="background-color:yellow;height:10px;"></div>
+        </div>
+</div>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+<?php include('departmental_nmu_submenu.inc'); ?>
 
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
+<?php include('departmental_site_map.inc'); ?>
 
-  <?php if ($nmu_type == 'Bulletin') { ?>
-  	<p><?php echo $node->field_bulletin_source['und'][0]['entity']->name; ?>. <?php echo date("j F Y", strtotime($node->field_published_date['und'][0]['value'])); ?></p> 
-  <?php } elseif ($nmu_type == 'Clipping') { ?>
-	<p><?php echo $node->field_clipping_source['und'][0]['entity']->name; ?>. [<?php echo $node->field_type_of_article['und'][0]['taxonomy_term']->name; ?>]. 
-<?php
-      $author_iter = 1;	
-      $author_to_print = "";	 
-      foreach ($node->field_clipping_author['und'] as $author) { 
-		$author_to_print .= $author['entity']->title;
-		if ($author_iter == count($node->field_clipping_author['und'])) {
-			$author_to_print .= ". ";	
-		} else {
-			$author_to_print .= "; ";	
+<?php include('departmental_breadcrumb.inc'); ?>
+
+
+<div class="row">
+	<div class="col-md-3">
+
+		<?php 
+		if ($nmu_type == 'Bulletin') { 
+			print views_embed_view('nmu_bulletin_calendar', 'block_1'); 
+		} elseif ($nmu_type == 'Clipping') { 
+			print views_embed_view('nmu_clippings_calendar', 'block_1'); 	
 		}
-		$author_iter++;
-      } 
-      echo $author_to_print;	
-?>
-<?php echo date("j F Y", strtotime($node->field_published_date['und'][0]['value'])); ?>.</p>
-  <?php } ?> 	
+		?>
 
-  <?php // print_r($node); ?>
+		<?php include('nmu_search_block.inc'); ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-	echo $node->body['und'][0]['safe_value'];
+	</div>
+	<div class="col-md-9">
+
+		<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+			<div class="slug">
+
+		  		<?php if ($nmu_type == 'Bulletin') { ?>
+		  			<?php echo $node->field_bulletin_source['und'][0]['entity']->name; ?>. <?php echo date("j F Y", strtotime($node->field_published_date['und'][0]['value'])); ?></p> 
+		  		<?php } elseif ($nmu_type == 'Clipping') { ?>
+					<?php echo $node->field_clipping_source['und'][0]['entity']->name; ?>. [<?php echo $node->field_type_of_article['und'][0]['taxonomy_term']->name; ?>]. 
+					<?php
+					      $author_iter = 1;	
+					      $author_to_print = "";	 
+					      foreach ($node->field_clipping_author['und'] as $author) { 
+							$author_to_print .= $author['entity']->title;
+							if ($author_iter == count($node->field_clipping_author['und'])) {
+								$author_to_print .= ". ";	
+							} else {
+								$author_to_print .= "; ";	
+							}
+							$author_iter++;
+					      } 
+					      echo $author_to_print;	
+					?>
+					<?php echo date("j F Y", strtotime($node->field_published_date['und'][0]['value'])); ?>.
+		  		<?php } ?> 	
+
+			</div>
 	
-    ?>
-  </div>
+			<h2><?php print $title; ?></h2>
+	
+  			<div class="content"<?php print $content_attributes; ?>>
+			    <?php
+				echo $node->body['und'][0]['safe_value'];
+			    ?>
+	  		</div>
 
+		</div>
 
+	</div>
 </div>
