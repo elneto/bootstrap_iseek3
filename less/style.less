@@ -297,9 +297,42 @@ a#language-links {
   font-size: @top-nav-size; 
 }
 
-.language-switcher-locale-url a{
-  font-size: @top-nav-size;  
+form#user-login-form * {
+  float: left;
 }
+
+#user-login-form button *{
+  float: none;
+}
+
+#user-login-form label {
+  color: white;
+  font-size: @top-nav-size;
+  float: left;
+  padding-right: 0.375em;
+  font-weight: normal;
+}
+
+#user-login-form button {
+  background-color: @button-blue;
+  color: #fff;
+  font-size: @top-nav-size;
+  padding: .1em .2em 0 .2em;
+  border: 0;
+  border-radius: 0;
+}
+
+.language-switcher-locale-url{
+  clear: both;
+  float: right;
+  padding-top: 0.375em;
+  & a{
+    font-size: @top-nav-size;
+    text-decoration: none;
+    color: #fff; 
+  }
+}
+
 
 /*
 * Top banner
@@ -1283,6 +1316,10 @@ img.weather-image{
   a#language-links {
     float: none;
   }
+
+  .language-switcher-locale-url{
+    float: none;  
+  }
 }
 
 /*
@@ -1300,6 +1337,10 @@ img.weather-image{
     margin-top: 1em;
     font-size: 1.8em;
     color: @brand-bar-blue;
+  }
+
+  .language-switcher-locale-url{
+    float: none;  
   }
 
   .time{
@@ -1431,6 +1472,10 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : landscape) { 
 
+  .language-switcher-locale-url{
+    float: none;  
+  }
+  
   .about-us{
     display: none;
   }
@@ -1513,6 +1558,11 @@ and (orientation : landscape) {
 * Media queries (tablets - landscape)
 */
 @media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: landscape){
+
+  .language-switcher-locale-url{
+    float: none;  
+  }
+
   .time{
       border-bottom: 0px;
   };
@@ -1574,6 +1624,10 @@ and (orientation : landscape) {
 */
 
 @media (min-width: @tablet-min-width) and (max-width:@tablet-max-width) and (orientation: portrait){ 
+
+  .language-switcher-locale-url{
+    float: none;  
+  }
   .about-us-xs{
     display: block;
     background-color: @brand-bar-blue;
