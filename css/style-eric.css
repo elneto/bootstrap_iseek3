@@ -6,7 +6,6 @@
 .language-switcher-locale-url a {
 	text-decoration: none;
 	color: #fff;
-	font-size: 13px;
 }
 
 .language-switcher-locale-url li {
@@ -29,7 +28,6 @@ form#user-login-form {
 }
 
 .top-nav-item {
-	font-size: 0.9em;
 	padding-left: 3px;
 }
 
@@ -73,11 +71,6 @@ form#user-login-form {
 	padding: 10px;
 	background-color: #267bb2;
 	
-}
-
-#block_login_or_user-menu a {
-        color: #ffffff;
-        font-size: 0.9em;	
 }
 
 /* main menu */
@@ -279,7 +272,6 @@ select#select-search {
 }
 
 .not-front .slug {
-	font-size: 1.6em;
 	color: #666666;	
 	margin-top: 10px;
 }
@@ -322,7 +314,6 @@ li.search-result {
 
 .not-front .field-name-body {	
 	margin-top: 20px;
-	font-size: 1.6em;
 	color: #333333;
 }
 

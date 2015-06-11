@@ -43,11 +43,12 @@
 @text-grey: #4D4D4D;
 
 // constants
+@top-nav-size: 0.781em;
 @padding: 0.5em 0.5em 0.5em 0.5em;
 @large-text:1.43em;
 @title-size:1.3em; //it multiplies apparently
 @page-title-size:1.9em;
-@less-large-text:0.9em;
+@less-large-text:0.844em;
 @content-large-text:1.143em;
 @medium-text:1em;
 @small-text:1.2em;
@@ -235,7 +236,7 @@
 
 body {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 ::-webkit-scrollbar {
@@ -279,15 +280,25 @@ a.top-nav-item:visited{
   padding: 10px;
   font-weight: 500;
   color: @brand-font-color;
-  font-size: 1.3em;
+  font-size: @top-nav-size;
 }
 
 img#un-top-logo {
   padding-bottom: 2px;
+  width: 30px;
 }
 
 a#language-links {
   float: right;
+}
+
+#block_login_or_user-menu a {
+  color: white;
+  font-size: @top-nav-size; 
+}
+
+.language-switcher-locale-url a{
+  font-size: @top-nav-size;  
 }
 
 /*
@@ -455,7 +466,7 @@ select#select-search{
 }
 
 div#search-links{
-  font-size: 0.9em;
+  font-size: @less-large-text;
   padding-top: 0.8em;
   color: @side-box-blue;
   & a{
@@ -1363,7 +1374,7 @@ img.weather-image{
   }
 
   div#key-tools ul li a{
-    font-size: 0.9em;
+    font-size: 0.781em;
   }
 
   .social a {
@@ -1444,7 +1455,7 @@ and (orientation : landscape) {
   }
 
    div#key-tools ul li a{
-    font-size: 0.9em;
+    font-size: 0.781em;
   }
 
   div#location-navbar {
