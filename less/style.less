@@ -44,7 +44,7 @@
 
 // constants
 @top-nav-size: 0.781em;
-@padding: 0.5em 0.5em 0.5em 0.5em;
+@padding: 0.313em 0.313em 0.313em 0.313em;
 @large-text:1.25em;
 @title-size:1.3em;
 @page-title-size:1.9em;
@@ -52,7 +52,7 @@
 @content-large-text:1em;
 @medium-text:0.875em;
 @small-text:1.05em;
-@divider:2em;
+@divider:1.25em;
 @fixed-hieght:200px;
 @staff-stories-margin: 4px;
 @top-boxes-height: 214px;
@@ -140,7 +140,7 @@
 }
 
 .gray-border-box{
-  padding: 1em;
+  padding: 0.625em;
   border-right: 2px solid @bottom-grey;
   border-left: 2px solid @bottom-grey;
   border-bottom: 2px solid @bottom-grey;
@@ -154,8 +154,8 @@
 
   & > li{
     border-bottom: 1px solid @division-grey;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
+    padding-bottom: 0.313em;
+    padding-top: 0.313em;
     color: @list-font-grey;
   }
 
@@ -317,7 +317,7 @@ form#user-login-form * {
   background-color: @button-blue;
   color: #fff;
   font-size: @top-nav-size;
-  padding: .1em .2em 0 .2em;
+  padding: .1em .2em 0 .2em; //change this? discuss
   border: 0;
   border-radius: 0;
 }
@@ -421,7 +421,7 @@ div#main-navbar-collapse-1 li a {
   color: @brand-bar-blue;
   padding-right: 0.6em;
   padding-left: 0.6em;
-  margin-right: 0.5em;
+  margin-right: 0.313em;
 
   &:hover{
     background-color: @brand-bar-blue;
@@ -698,8 +698,7 @@ div.spotlight-thumbnail{
 */
 
 div.margin-submit{
-  margin-top: -2.5em;
-  margin-bottom: -2.5em;
+  margin-top: -1em;
 }
 
 span.less-large{
@@ -729,6 +728,11 @@ span.less-large{
   padding:@padding;
   margin-top: @divider;
 }
+
+.timezone .fa-2x {
+  font-size: 1.25em;
+}
+
 .time{
   .underline;
 }
@@ -755,7 +759,7 @@ span.less-large{
    background-color: @side-box-blue;
    color:white;
    padding:@padding;
-   margin-top:@divider;
+   margin-top:0.625em;
    margin-bottom: 0;
    //.font('');
    font-size: @large-text;
@@ -778,8 +782,8 @@ span.less-large{
 .un-news ul li{
   list-style-type: none;
   .underline;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.313em;
+  padding-bottom: 0.313em;
 }
 .un-news ul li a{
   color:#4D4D4D;
@@ -861,8 +865,8 @@ h3.nohoverfx:hover{
 }
 .tjo-content ul li {
   list-style-type: none;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.313em;
+  padding-bottom: 0.313em;
   margin:0;
   .underline;
 }
@@ -894,8 +898,8 @@ h3.nohoverfx:hover{
 }
 .classifieds-content ul li {
   list-style-type: none;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.313em;
+  padding-bottom: 0.313em;
   margin:0;
   .underline;
 }
@@ -927,8 +931,8 @@ h3.nohoverfx:hover{
 }
 .staffunion-content ul li {
   list-style-type: none;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.313em;
+  padding-bottom: 0.313em;
   margin:0;
   .underline;
 }
@@ -958,7 +962,7 @@ h3.nohoverfx:hover{
 }
 .community-content ul li {
   list-style-type: none;
-  padding:0.5em 0 0 0.5em;
+  padding:0.313em 0 0 0.313em;
   margin:0;
   
 }
@@ -987,7 +991,7 @@ h3.nohoverfx:hover{
   border: 1px solid @bottom-grey;
 }
 .social a {
-  margin: 0.5em;
+  margin: 0.313em;
 }
 button#go-button{
   background-color: @button-blue;
@@ -1031,7 +1035,7 @@ button#go-button{
   margin-left: 0;
 }
 .duty-padding {
-  padding-left: 5em;
+  padding-left: 3em;
 }
 .duty-margin{
   margin-left:0.02em;
@@ -1093,7 +1097,7 @@ button#go-button{
 .partners h5{
   font-size: 1.1em;
   display: block;
-  width: 60%;
+  width: 65%;
   border-bottom: 2px solid white;
   margin-left: 1em;
   margin-top: 1em;
@@ -1129,7 +1133,7 @@ button#go-button{
   list-style-type: none;
   .border-radiuses(10px,10px,0,0);
   padding:@padding;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.313em 0 0.313em 0;
   text-align: left; 
   background-color: @footer-background-blue;
   
@@ -1189,13 +1193,13 @@ button#go-button{
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.313em;
     color:@text-grey;
   }
 
   & li{
     list-style-type: none;
-    padding-left: 0.5em;
+    padding-left: 0.313em;
     margin: 0;
     text-align: left;
 
@@ -1243,7 +1247,7 @@ div#key-tools ul {
 img.weather-image{
   width: 44px;
   height: inherit;
-  padding-top: 0.5em;
+  padding-top: 0.313em;
 }
 
 .dutystaion-container a {
@@ -1407,7 +1411,7 @@ img.weather-image{
 
 
   h3.top-boxes-margin {
-    margin-top: 0.5em;
+    margin-top: 0.313em;
   }
 
   div#key-tools ul li a{
@@ -1454,7 +1458,7 @@ img.weather-image{
   }
 
   .duty-padding {
-    padding-left: 0.5em;
+    padding-left: 0.313em;
   }
 
 }
@@ -1546,7 +1550,7 @@ and (orientation : landscape) {
   }
 
   .duty-padding {
-    padding-left: 0.5em;
+    padding-left: 0.313em;
   }
 }
 
