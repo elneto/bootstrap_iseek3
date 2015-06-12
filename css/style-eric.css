@@ -269,7 +269,6 @@ li.search-result {
 }
 
 .node-type-article .field-slideshow-caption-text {
-	font-size: 16px;	
 	color: #808080;
 }
 
@@ -285,26 +284,22 @@ li.search-result {
 	color: #333333;
 }
 
-.not-front #comments {
-	font-size: 1.6em;
-}
-
 .node-type-article .iseek-like a, .node-type-article #comments h2 {
-	font-size: 20px;
-        color: #0071B9;
+	font-size: 1em;
+    color: #0071B9;
 }
-
 
 .node-type-article .iseek-like i {
 	color: #0071B9;	
 }
 
 .node-type-article .comment {
-	 background-color: #E3E3E3; 
-	border: 1px solid #E3E3E3;	
-	border-radius: 10px;
-	padding: 20px;
-	margin-top: 10px;
+	background-color: #E3E3E3;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-top: 10px;
+  padding-bottom: 0;
 }
 
 .node-type-article .comment .links.list-inline {
