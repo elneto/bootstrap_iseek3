@@ -7,7 +7,7 @@
       
       <div class="row">
         <div class="col-lg-12">
-          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase fa-lg"></i>&nbsp;&nbsp;Toolkit</div>
+          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Toolkit</div>
         </div>
       </div>
 

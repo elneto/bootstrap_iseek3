@@ -1,16 +1,16 @@
 <div id="top-bar">
         <div class="container">
                 <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 hidden-xs">
+                        <div class="col-lg-5 col-md-5 col-sm-12 hidden-xs">
                                 <!-- eric: base_url needs to be i18n and domain aware: is not currently -->
                                 <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>">Welcome to the United Nations Intranet</a>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-<!--
+                        <!-- <div class="col-lg-2 col-md-6 col-sm-6">
+
                                 <a class="top-nav-item" href="#">Low bandwidth | High contrast</a>
--->
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6" id="block_login_or_user-menu">
+
+                        </div> -->
+                        <div class="col-lg-4 col-md-4 col-sm-12" id="block_login_or_user-menu">
                                 <?php
                                         if (user_is_logged_in()) {
                                                 $user_menu_block = module_invoke('system', 'block_view', 'user-menu');
@@ -21,7 +21,7 @@
                                         }
                                 ?>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
                                 <?php
                                         $block = module_invoke('locale', 'block_view', 'language');
                                         print render($block['content']);
