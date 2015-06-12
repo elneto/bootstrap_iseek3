@@ -554,8 +554,14 @@ section#block-system-main ul.apachesolr_search-results {
 	color: #4D4D4D;
 }
 
+/*
 .node-type-department .dept_about_us_body p {
 	font-size: 18px;
+}
+*/
+
+#department-about-us-for-department-home-page h2 {
+	margin-top: 10px;
 }
 
 .node-type-department .modal-header {
@@ -630,7 +636,7 @@ section#block-system-main ul.apachesolr_search-results {
 }
 
 #departmental_home_page_social_media {
-	font-size: 4em;
+	font-size: 3em;
 	text-align: center;
 }
 
