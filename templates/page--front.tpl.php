@@ -1,4 +1,4 @@
-fmost<?php
+<?php
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
