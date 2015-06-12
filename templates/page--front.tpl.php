@@ -187,14 +187,10 @@
       <!-- Submit -->
       <div class="row">
         <div class="col-lg-12 margin-submit">
-          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print render($submit_content_title); ?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;<?php print render($submit_content_body); ?></span></span></div>
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#">Submit content <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
         </div>
       </div>
       <!-- END Submit -->
-     <!-- ******************************************************************************************************
-        * From here down is for Husain and up for Ernesto
-        *********************************************************************************************************
-      !-->
       <!-- News, Tips, Social Media -->
       <div class="row">      
 
@@ -256,7 +252,7 @@
           <div class="twitter-border fluid">
               <?php print render($social_media_corner); ?>
           </div>
-        <div class="large-text social"> <a href=""><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href=""><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href=""><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href=""><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href=""><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
+        <div class="large-text social"> <a href="http://www.facebook.com/unitednations" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="http://twitter.com/#!/un"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="http://www.youtube.com/unitednations"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="http://gplus.to/unitednations"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="http://instagram.com/unitednations"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
         </div>
   
       </div>
