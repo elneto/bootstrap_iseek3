@@ -574,7 +574,6 @@ section#block-system-main ul.apachesolr_search-results {
 
 #departmental_home_page_blocks p {
 	color: #333333;
-	font-size: 15px;
 	padding-left: 15px;
 }
 
@@ -590,7 +589,6 @@ section#block-system-main ul.apachesolr_search-results {
         list-style: none;
         list-style-image: none;	
 	padding-left: 15px;
-	font-size: 15px;
 	margin-bottom: 0;
 }
 
@@ -883,3 +881,6 @@ section#block-system-main ul.apachesolr_search-results {
 	margin-top: 10px;
 }
 
+#admin-menu {
+	font-size: 12px;	
+}
