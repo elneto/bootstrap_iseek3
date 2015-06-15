@@ -27,36 +27,34 @@
 ?>
 
 <div class="row">
-	<div class="col-md-12">
-		<hr class="events-hr">
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-3">
-		<div class="corner-events">
-		<?php print $fields['og_group_ref']->content; ?>
-		<?php print $fields['field_announcement_event_date']->content; ?>
-		</div>
-	</div>
-	<div class="col-md-7">
-		<div class="archives-size">
-			<div class="events-title">
-				<?php print $fields['title']->content; ?>	
+	<div class="event-top"></div>
+	<div class="single-event">
+		<div class="col-md-3">
+			<div class="corner-events">
+			<?php print $fields['og_group_ref']->content; ?>
+			<?php print $fields['field_announcement_event_date']->content; ?>
 			</div>
-			<div class="archives-body">
-				<?php print $fields['body']->content; ?>
-			</div>
-				<?php print $fields['nid']->content; ?>
 		</div>
-	</div>
-	<div class="col-md-2">
-		<div class="archives-size archives-social">
-			<i class="fa fa-comment-o"></i> <?php print $fields['comment_count']->content; ?><br>
-			<?php if (user_is_logged_in()): ?>
-			<?php print $fields['nid_1']->content; ?>
-			<?php else: ?>
-			<?php print '<a href="user/login?destination=comment/reply/'.$fields['nid_1']->raw.'#comment-form">'.t('Log in to post comments or like').'</a>'; ?>
-			<?php endif; ?>
+		<div class="col-md-7">
+			<div class="events-size">
+				<div class="events-title">
+					<?php print $fields['title']->content; ?>	
+				</div>
+				<div class="archives-body">
+					<?php print $fields['body']->content; ?>
+				</div>
+					<?php print $fields['nid']->content; ?>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="archives-size archives-social">
+				<i class="fa fa-comment-o"></i> <?php print $fields['comment_count']->content; ?><br>
+				<?php if (user_is_logged_in()): ?>
+				<?php print $fields['nid_1']->content; ?>
+				<?php else: ?>
+				<?php print '<a href="user/login?destination=comment/reply/'.$fields['nid_1']->raw.'#comment-form">'.t('Log in to post comments or like').'</a>'; ?>
+				<?php endif; ?>
+			</div>
 		</div>
 	</div>
 </div>
