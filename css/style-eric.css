@@ -105,6 +105,7 @@ form#user-login-form {
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
 }
 
+/*
 .menu-mlid-47730 a, .menu-mlid-47731 a, .menu-mlid-47732 a, .menu-mlid-47733 a, .menu-mlid-47734 a, .menu-mlid-47735 a, .menu-mlid-47736 a,
 .menu-mlid-48256 a, .menu-mlid-48258 a, .menu-mlid-48260 a, .menu-mlid-48262 a, .menu-mlid-48264 a, .menu-mlid-48266 a, .menu-mlid-48268 a,
 {
@@ -152,6 +153,55 @@ form#user-login-form {
         margin-right: 5px;
         content: "\f002";     
 }   
+*/
+.menu-name-menu-external-main-menu > ul > li > a {
+	position:relative;
+}
+.menu-name-menu-external-main-menu > ul > li:nth-child(1) a:before {
+	font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f015";
+}
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(2) > span:before {
+	font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f128";
+}
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(3) > span:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f0ac";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(4) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f044";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(5) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f071";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(6) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f0b1";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(7) > span:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f002";
+} 
+
+
+
+
 
 #caption-mi-title a {
 	color: #ffffff;

@@ -407,7 +407,7 @@ if ($field_departmental_theme_value == "") {
 
 
 				    		<div class="item <?php if ($i == 0) { echo "active"; } ?>">
-							<img src="<?php print image_style_url('large-article-image-style', $about_us_image['uri']); ?>"></img>
+							<img src="<?php print image_style_url('large-article-image-style-16-9', $about_us_image['uri']); ?>"></img>
 				      			<div class="carousel-caption">
 								<h3><?php echo $about_us_image['field_caption']['und'][0]['value']; ?> </h3>
 				      			</div>
