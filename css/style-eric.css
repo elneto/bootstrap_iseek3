@@ -105,6 +105,7 @@ form#user-login-form {
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
 }
 
+/*
 .menu-mlid-47730 a, .menu-mlid-47731 a, .menu-mlid-47732 a, .menu-mlid-47733 a, .menu-mlid-47734 a, .menu-mlid-47735 a, .menu-mlid-47736 a,
 .menu-mlid-48256 a, .menu-mlid-48258 a, .menu-mlid-48260 a, .menu-mlid-48262 a, .menu-mlid-48264 a, .menu-mlid-48266 a, .menu-mlid-48268 a,
 {
@@ -152,6 +153,55 @@ form#user-login-form {
         margin-right: 5px;
         content: "\f002";     
 }   
+*/
+.menu-name-menu-external-main-menu > ul > li > a {
+	position:relative;
+}
+.menu-name-menu-external-main-menu > ul > li:nth-child(1) a:before {
+	font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f015";
+}
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(2) > span:before {
+	font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f128";
+}
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(3) > span:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f0ac";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(4) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f044";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(5) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f071";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(6) a:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f0b1";
+} 
+
+.menu-name-menu-external-main-menu > ul > li:nth-child(7) > span:before {
+        font-family: FontAwesome;
+        margin-right: 5px;
+        content: "\f002";
+} 
+
+
+
+
 
 #caption-mi-title a {
 	color: #ffffff;
@@ -569,7 +619,6 @@ section#block-system-main ul.apachesolr_search-results {
 
 #departmental_home_page_blocks p {
 	color: #333333;
-	font-size: 15px;
 	padding-left: 15px;
 }
 
@@ -585,7 +634,6 @@ section#block-system-main ul.apachesolr_search-results {
         list-style: none;
         list-style-image: none;	
 	padding-left: 15px;
-	font-size: 15px;
 	margin-bottom: 0;
 }
 
@@ -878,10 +926,15 @@ section#block-system-main ul.apachesolr_search-results {
 	margin-top: 10px;
 }
 
+#admin-menu {
+	font-size: 12px;	
+}
+
 /********************************************************************************************/
 /*** CSS for departmental pages ***/
 /********************************************************************************************/
 
+/*
 .node-type-department.two-sidebars #content, .node-type-departmental-page.two-sidebars #content {
 	width: 100%;
 }
@@ -903,7 +956,7 @@ background-color: #f2dede;
 .view-id-featured_photo_block img, section#block-views-top-left-corner-block img {
         width: 100%;
 }
-/* language-switcher */
+
 .language-switcher-locale-url li {
 	float: left;
 }
@@ -952,6 +1005,7 @@ section#block-system-main ul.classifieds-listing {
   max-height: 150px;
   overflow: auto;
 }
+*/
 
 /********************************************************************************************/
 /*** Ends CSS for departmental pages ***/
