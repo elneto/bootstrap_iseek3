@@ -82,7 +82,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> Staff stories and news <i class="fa fa-angle-double-right"></i></div>
+		<div class="top-side-box"><i class="fa fa-newspaper-o"></i> <a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
 	</div>
 </div>
 
@@ -238,7 +238,7 @@
 						<span id="iseek-likes"></span>
 						<div class="iseek-like">
 							<span>
-								<i class="fa fa-2x fa-thumbs-o-up"></i> 
+								<i class="fa fa-thumbs-o-up"></i> 
 								<?php print flag_create_link('iseek_like', $node->nid); ?>
 							</span>
 						</div>

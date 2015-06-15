@@ -269,7 +269,6 @@ li.search-result {
 }
 
 .node-type-article .field-slideshow-caption-text {
-	font-size: 16px;	
 	color: #808080;
 }
 
@@ -285,26 +284,22 @@ li.search-result {
 	color: #333333;
 }
 
-.not-front #comments {
-	font-size: 1.6em;
-}
-
 .node-type-article .iseek-like a, .node-type-article #comments h2 {
-	font-size: 20px;
-        color: #0071B9;
+	font-size: 1em;
+    color: #0071B9;
 }
-
 
 .node-type-article .iseek-like i {
 	color: #0071B9;	
 }
 
 .node-type-article .comment {
-	 background-color: #E3E3E3; 
-	border: 1px solid #E3E3E3;	
-	border-radius: 10px;
-	padding: 20px;
-	margin-top: 10px;
+	background-color: #E3E3E3;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-top: 10px;
+  padding-bottom: 0;
 }
 
 .node-type-article .comment .links.list-inline {
@@ -884,3 +879,84 @@ section#block-system-main ul.apachesolr_search-results {
 #admin-menu {
 	font-size: 12px;	
 }
+
+/********************************************************************************************/
+/*** CSS for departmental pages ***/
+/********************************************************************************************/
+
+/*
+.node-type-department.two-sidebars #content, .node-type-departmental-page.two-sidebars #content {
+	width: 100%;
+}
+.comment-unpublished, .comment-unpublished.odd {
+background-color: #f2dede;
+}
+.item-list ul li {
+    margin-bottom: 10px;
+}
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .cutoff, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .continues {
+	background-color: #e0ffff;
+}
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .announcements {
+	background-color: #ffb6c1;
+}
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .holiday {
+	background-color: #F0F8FF;
+}
+.view-id-featured_photo_block img, section#block-views-top-left-corner-block img {
+        width: 100%;
+}
+
+.language-switcher-locale-url li {
+	float: left;
+}
+.language-switcher-locale-url li.first {
+	margin-right: 20px;
+	border-right: 1px solid #d6d6d6;
+	padding-right: 20px;	
+}
+section#block-system-main ul {
+	list-style: inherit;
+	padding-left: 40px;
+}
+section#block-system-main aside ul {
+	list-style: none;
+	padding-left: 0;
+}
+section#search-main #resultsArea ul {
+	list-style: none;
+	padding-left: 0;
+}
+.alert-error {
+   background-color: #f2dede;
+}
+section#block-system-main ul.classifieds-listing {
+	list-style-type: none;
+	padding-left: 0px;
+}
+.field-slideshow-image {
+  margin-bottom: .8em;
+}
+.field-slideshow-caption{
+  margin-top: -0.8em;
+  margin-bottom: .8em;
+}
+.view .date-nav-wrapper .date-prev {
+   right: 100px;
+}
+#nmu-email-submit-my-form {
+	margin-left: 50px;
+}
+.facetControls {
+  background-color: #ffffff;
+  padding: 5px 5px 0 5px;
+  margin: 0 0 10px 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow: auto;
+}
+*/
+
+/********************************************************************************************/
+/*** Ends CSS for departmental pages ***/
+/********************************************************************************************/

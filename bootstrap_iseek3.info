@@ -26,6 +26,7 @@ regions[page_top]             = 'Page top'
 ;;;;;;;;;;;;;;;;;;;;;
 
 features[] = logo
+features[] = favicon
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets

@@ -243,7 +243,7 @@ function iseek_custom_block($machine_name, $retrieve){
 
 function bootstrap_iseek3_preprocess_page(&$variables){
 
-  //put the menu links in vars
+  //put the toolkit menu links in vars
   $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   $variables['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
   $variables['menu_ktb'] = theme('links__menu-key-tools-bottom', array('links' => menu_navigation_links('menu-key-tools-bottom')));
@@ -256,44 +256,40 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_reference'] = theme('links__menu-reference-and-manuals', array('links' => menu_navigation_links('menu-reference-and-manuals')));
   $variables['menu_ethics'] = theme('links__menu-ethics-internal-justice', array('links' => menu_navigation_links('menu-ethics-internal-justice')));
   $variables['menu_finance'] = theme('links__menu-finance-and-budget', array('links' => menu_navigation_links('menu-finance-and-budget')));
-
-  //put the path to needed images
+  //put the path to the footer in the logo
   $variables['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
-  
-  //block views
-  $block = module_invoke('weather', 'block_view', 'system_1');
-  $variables['weather'] = $block['content'];
-
-  $block = module_invoke('views', 'block_view', 'staff_union_block-block');
-  $variables['staff_union_block'] = $block['content'];
-
-  $block = module_invoke('views', 'block_view', 'recent_tjos-block');
-  $variables['recent_tjos'] = $block['content'];
-
-  $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
-  $variables['latest_zeekoslist'] = $block['content'];
-
-  $block = module_invoke('views', 'block_view', 'latest_news-block');
-  $variables['latest_news'] = $block['content'];
-
-  $block = module_invoke('views', 'block_view', 'spotlight-block_1');
-  $variables['spotlight'] = $block['content'];
-
   //blocks
-  $variables['about_us_block'] = iseek_custom_block('about_us_footer_block', 'content'); 
+  $variables['about_us_block'] = iseek_custom_block('about_us_footer_block_i3', 'content'); 
 
-  $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block', 'content');
+  if (drupal_is_front_page()) //only in the homepage
+  {
+    //block views
+    $block = module_invoke('weather', 'block_view', 'system_1');
+    $variables['weather'] = $block['content'];
 
-  $variables['submit_content_body'] = iseek_custom_block('submit_content_block', 'content');
-  //$variables['submit_content_link'] = iseek_custom_block('submit_content_link_block', 'content');
-  $variables['submit_content_title'] = iseek_custom_block('submit_content_block', 'title');
+    $block = module_invoke('views', 'block_view', 'staff_union_block-block');
+    $variables['staff_union_block'] = $block['content'];
 
-  //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
-  $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
-  $variables['useful_tips'] = $block['content'];
+    $block = module_invoke('views', 'block_view', 'recent_tjos-block');
+    $variables['recent_tjos'] = $block['content'];
 
-  //menus
-  $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
+    $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
+    $variables['latest_zeekoslist'] = $block['content'];
+
+    $block = module_invoke('views', 'block_view', 'latest_news-block');
+    $variables['latest_news'] = $block['content'];
+
+    $block = module_invoke('views', 'block_view', 'spotlight-block_1');
+    $variables['spotlight'] = $block['content'];
+
+    $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
+    //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
+    $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
+    $variables['useful_tips'] = $block['content'];
+    //menus
+    $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
+  }
+  
 }
 
 /*function bootstrap_iseek3_preprocess_views_view_fields(&$vars){
