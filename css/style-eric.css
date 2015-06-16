@@ -58,50 +58,47 @@ form#user-login-form {
 	padding-left: 0;
 }
 
-.menu-name-menu-external-main-menu > ul > li { 
+#block-menu-menu-iseek3-main-menu > ul > li { 
   	margin-right: .5em;	
 	background-color: #ffffff;
 }
 
-.menu-name-menu-external-main-menu > ul > li.first {
+#block-menu-menu-iseek3-main-menu > ul > li.first {
         padding-left: 0;
 }
 
-
-.menu-name-menu-external-main-menu > ul > li > a, .menu-name-menu-external-main-menu > ul > li > span {
+#block-menu-menu-iseek3-main-menu > ul > li > a, #block-menu-menu-iseek3-main-menu > ul > li > span {
         font-size: 0.938em;
         color: #267bb2;
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
 }
 
-.menu-name-menu-external-main-menu > ul > li > a:hover, .menu-name-menu-external-main-menu > ul > li > span:hover {
+#block-menu-menu-iseek3-main-menu > ul > li > a:hover, #block-menu-menu-iseek3-main-menu > ul > li > span:hover {
 	background-color: #267bb2;
 	color: #ffffff;
 }
 
-.menu-name-menu-external-main-menu > ul > li.open > span {
+#block-menu-menu-iseek3-main-menu > ul > li.open > span {
 	background-color: #e7e7e7;
 	color: #267bb2;
 }
 
-.menu-name-menu-external-main-menu > ul > li.open > span:hover {
+#block-menu-menu-iseek3-main-menu > ul > li.open > span:hover {
         background-color: #267bb2;
         color: #ffffff;	
 }
 
-.menu-name-menu-external-main-menu .navbar-nav > li > span {
+#block-menu-menu-iseek3-main-menu .navbar-nav > li > span {
 	padding: 15px;
     	cursor: pointer;
 }
 
-/*
-.menu-name-menu-external-main-menu li.expanded.dropdown {
+#block-menu-menu-iseek3-main-menu li.expanded.dropdown {
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
-*/
 
-.menu-name-menu-external-main-menu ul.dropdown-menu li a {
+#block-menu-menu-iseek3-main-menu ul.dropdown-menu li a {
 	background-color: #ffffff;
 	color: #267bb2;
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
@@ -156,46 +153,46 @@ form#user-login-form {
         content: "\f002";     
 }   
 */
-.menu-name-menu-external-main-menu > ul > li > a {
+#block-menu-menu-iseek3-main-menu > ul > li > a {
 	position:relative;
 }
-.menu-name-menu-external-main-menu > ul > li:nth-child(1) a:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(1) a:before {
 	font-family: FontAwesome;
         margin-right: 5px;
         content: "\f015";
 }
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(2) > span:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(2) > span:before {
 	font-family: FontAwesome;
         margin-right: 5px;
         content: "\f128";
 }
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(3) > span:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(3) > span:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f0ac";
 } 
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(4) a:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(4) a:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f044";
 } 
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(5) a:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(5) a:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f071";
 } 
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(6) a:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(6) a:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f0b1";
 } 
 
-.menu-name-menu-external-main-menu > ul > li:nth-child(7) > span:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(7) > span:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f002";
