@@ -94,10 +94,12 @@ form#user-login-form {
     	cursor: pointer;
 }
 
+/*
 .menu-name-menu-external-main-menu li.expanded.dropdown {
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
+*/
 
 .menu-name-menu-external-main-menu ul.dropdown-menu li a {
 	background-color: #ffffff;

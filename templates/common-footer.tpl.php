@@ -29,11 +29,22 @@
           <div class="col-md-3">
            <div class="footer-menu-items">
             <div class="content-large-text" id="key-tools">
-              <?php print $menu_ktt; ?>
+              <?php //  print $menu_ktt; ?>
             </div>
-            <h5 class="content-large-text underline">Key tools</h5>
+
+<?php
+$children = menu_build_tree('menu-tookit---key-tools');
+$menu_title = "";
+$menu_children = array();
+foreach($children as $child) {
+        kpr($child);
+        $menu_title = $child['link']['title'];
+}
+?>
+
+            <h5 class="content-large-text underline"><?php echo $menu_title; ?></h5>
             <div class="medium-text">
-              <?php print $menu_ktb; ?>
+              <?php // print $menu_ktb; ?>
             </div>             
           </div>
 
