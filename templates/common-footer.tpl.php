@@ -17,7 +17,7 @@
         <div class="col-md-3 left-menu">
            <div class="row underline left-menu-top">
               <div  class="partners content-large-text">
-                <h5 class="content-large-text">Quicklinks - New York</h5>
+                <h5 class="content-large-text"><?php print $menu_quicklinksNY_title;?></h5>
                 <?php print $menu_quicklinksNY;?>
               </div>
           </div>
@@ -29,45 +29,34 @@
           <div class="col-md-3">
            <div class="footer-menu-items">
             <div class="content-large-text" id="key-tools">
-              <?php //  print $menu_ktt; ?>
+              <?php print $menu_ktt; ?>
             </div>
-
-<?php
-$children = menu_build_tree('menu-tookit---key-tools');
-$menu_title = "";
-$menu_children = array();
-foreach($children as $child) {
-        kpr($child);
-        $menu_title = $child['link']['title'];
-}
-?>
-
-            <h5 class="content-large-text underline"><?php echo $menu_title; ?></h5>
+            <h5 class="content-large-text underline"><?php echo $menu_ktb_title; ?></h5>
             <div class="medium-text">
-              <?php // print $menu_ktb; ?>
+              <?php print $menu_ktb; ?>
             </div>             
           </div>
 
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline">Staff development</h5>
+            <h5 class="content-large-text underline"><?php print $menu_staff_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_staff; ?>
             </div> 
-            <h5 class="content-large-text underline">Pay, benefits, insurance</h5>
+            <h5 class="content-large-text underline"><?php print $menu_pay_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_pay; ?>
             </div> 
-            <h5 class="content-large-text underline">Security</h5>
+            <h5 class="content-large-text underline"><?php print $menu_security_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_security; ?>
             </div> 
-            <h5 class="content-large-text underline">Travel and Visas</h5>
+            <h5 class="content-large-text underline"><?php print $menu_travel_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_travel; ?>
             </div> 
-            <h5 class="content-large-text underline">Health and wellbeing</h5>
+            <h5 class="content-large-text underline"><?php print $menu_health_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_health; ?>
             </div> 
@@ -76,20 +65,20 @@ foreach($children as $child) {
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline">Rules and regulations</h5>
+            <h5 class="content-large-text underline"><?php print $menu_rules_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_rules; ?>
             </div> 
-            <h5 class="content-large-text underline">Reference and manuals</h5>
+            <h5 class="content-large-text underline"><?php print $menu_reference_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_reference; ?>
             </div> 
 
-            <h5 class="content-large-text underline">Ethics, internal justice</h5>
+            <h5 class="content-large-text underline"><?php print $menu_ethics_title; ?></h5>
             <div class="medium-text">
               <?php print $menu_ethics; ?>
             </div> 
-              <h5 class="content-large-text underline">Finance and budget</h5>
+              <h5 class="content-large-text underline"><?php print $menu_finance_title; ?></h5>
               <div class="medium-text">
                 <?php print $menu_finance; ?>
             </div> 

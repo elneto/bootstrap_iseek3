@@ -238,11 +238,36 @@ function iseek_custom_block($machine_name, $retrieve){
 }
 
 /**
+ * Gets menu title
+ */
+function iseek_custom_get_menu_title($name){
+  $children = menu_build_tree($name);
+  $menu_title = "";
+  foreach($children as $child) {
+    $menu_title = $child['link']['title'];
+  }
+  return $menu_title;
+}
+
+/**
  * Provides menu links for the front page: page--front.tpl.php
  */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
 
+  //$variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-tookit---key-tools');
+  $variables['menu_quicklinksNY_title'] = iseek_custom_get_menu_title('menu-quick-links---ny');
+  $variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-key-tools-top');
+  $variables['menu_ktb_title'] = iseek_custom_get_menu_title('menu-key-tools-bottom');
+  $variables['menu_staff_title'] = iseek_custom_get_menu_title('menu-staff-development');
+  $variables['menu_pay_title'] = iseek_custom_get_menu_title('menu-pay-benefits-insurance');
+  $variables['menu_security_title'] = iseek_custom_get_menu_title('menu-security');
+  $variables['menu_travel_title'] = iseek_custom_get_menu_title('menu-travel');
+  $variables['menu_health_title'] = iseek_custom_get_menu_title('menu-health-and-wellbeing');
+  $variables['menu_rules_title'] = iseek_custom_get_menu_title('menu-rules-and-regulations');
+  $variables['menu_reference_title'] = iseek_custom_get_menu_title('menu-reference-and-manuals');
+  $variables['menu_ethics_title'] = iseek_custom_get_menu_title('menu-ethics-internal-justice');
+  $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-finance-and-budget');
   //put the toolkit menu links in vars
   $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   $variables['menu_ktt'] = theme('links__menu-key-tools-top', array('links' => menu_navigation_links('menu-key-tools-top')));
@@ -292,12 +317,4 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   
 }
 
-/*function bootstrap_iseek3_preprocess_views_view_fields(&$vars){
-  $view = $vars['view'];
-  if ($view->name == 'announcements'){
-    $title = $vars['fields']['title'];
-    $title->content == 'claseCHIDA';
-  }
-  //kpr($vars); die;
-}*/
 
