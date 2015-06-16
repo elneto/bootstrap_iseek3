@@ -165,7 +165,7 @@ form#user-login-form {
 #block-menu-menu-iseek3-main-menu > ul > li:nth-child(2) > span:before {
 	font-family: FontAwesome;
         margin-right: 5px;
-        content: "\f128";
+        content: "\f059";
 }
 
 #block-menu-menu-iseek3-main-menu > ul > li:nth-child(3) > span:before {
@@ -215,11 +215,6 @@ form#user-login-form {
 #caption-mi-date span {
         color: #ffffff;	
 }
-
-select#select-search {
-	background: url('../images/trianglew10.png') no-repeat right #5aabd7;
-}
-
 
 /* same as .img_responsive */
 #container-main-image img, .main-thumbnail img, #thumbnail-most-popular img, .field-name-field-departmental-where-image img, #department-about-us-for-department-home-page img  {
@@ -331,6 +326,10 @@ li.search-result {
 .not-front .field-name-body {	
 	margin-top: 20px;
 	color: #333333;
+}
+
+.field-name-body {
+   clear: both;
 }
 
 .node-type-article .iseek-like a, .node-type-article #comments h2 {
