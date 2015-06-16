@@ -1257,19 +1257,27 @@ img.weather-image{
  * Arhives / articles page
  */
 
-  .archives-size{
+  .archives-size, .events-size{
     font-size: @medium-text;
+  }
+
+  .events-size{
+    padding-bottom: 0.5em;
   }
 
   .archive-pad-bot{
     padding-bottom: 2em;
   }
 
- .archives-title a{
+ .archives-title a, .events-title a{
   font-size: @title-size; //it multiyplies with large text (as its parent div) apparently
   color: @statement-grey;
   line-height: 1.1em;
   font-weight: 600;
+ }
+
+ .events-title{
+  padding-top: 0.5em;
  }
 
  .slug-archive *{
@@ -1283,12 +1291,31 @@ img.weather-image{
   padding-top: 1em;
  }
 
- hr.archives-hr{
-  border:0;
+.division-border{
   height: 2px;
-  color: #c9c9c9;
-  background-color: #c9c9c9;
+  color: @division-grey;
+  background-color: @division-grey;
+}
+
+ hr.archives-hr{
+  .division-border;
+  border:0;
  }
+
+/*hr.events-hr{
+  .division-border;
+  top: 1.35em;
+  position: relative;
+  width: 96%;
+ }*/
+
+.event-top{
+  margin-left: 6%;
+  border-bottom: 1px solid @division-grey;
+  position: relative;
+  top: 1px;
+}
+
 
  .archives-social{
   color: @brand-bar-blue;
@@ -1303,6 +1330,24 @@ img.weather-image{
 
  .dutyStationBtn.active{
   color: white;
+}
+
+.corner-events{
+  .border-radiuses(0,0,0,15px);
+  padding: 0.5em;
+  color: white;
+}
+
+/*.border-top-events{
+  border-top: 2px solid @division-grey;
+}*/
+
+.views-row-odd .corner-events{
+  background-color: @button-blue;
+}
+
+.views-row-even .corner-events{
+  background-color: @search-grey;
 }
 
 /*
