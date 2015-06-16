@@ -219,11 +219,6 @@ form#user-login-form {
         color: #ffffff;	
 }
 
-select#select-search {
-	background: url('../images/trianglew10.png') no-repeat right #5aabd7;
-}
-
-
 /* same as .img_responsive */
 #container-main-image img, .main-thumbnail img, #thumbnail-most-popular img, .field-name-field-departmental-where-image img, #department-about-us-for-department-home-page img  {
 	display: block;
@@ -334,6 +329,10 @@ li.search-result {
 .not-front .field-name-body {	
 	margin-top: 20px;
 	color: #333333;
+}
+
+.field-name-body {
+   clear: both;
 }
 
 .node-type-article .iseek-like a, .node-type-article #comments h2 {
