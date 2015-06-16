@@ -242,8 +242,10 @@ function iseek_custom_block($machine_name, $retrieve){
  */
 function iseek_custom_get_menu_title($name){
   $children = menu_build_tree($name);
+  //kpr($children);
   $menu_title = "";
   foreach($children as $child) {
+    //kpr($child);
     $menu_title = $child['link']['title'];
   }
   return $menu_title;
