@@ -5,19 +5,10 @@
 
 	jQuery(document).ready(function() {
 
-		// local
-		jQuery( ".menu-mlid-47836" ).click(function (e) {
-		   	e.preventDefault();
-			e.stopPropagation();
-			searchType = "#myModal";
-			jQuery('#myModal').modal('toggle');
-                        return false;
-		});
-
-		// dev
-                jQuery( ".menu-mlid-48656" ).click(function (e) {
+		// not hard-coded
+		jQuery( "#block-menu-menu-iseek3-main-menu li.last li.first a" ).click(function (e) {
                         e.preventDefault();
-			e.stopPropagation();
+                        e.stopPropagation();
                         searchType = "#myModal";
                         jQuery('#myModal').modal('toggle');
                         return false;
