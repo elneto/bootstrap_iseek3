@@ -241,8 +241,46 @@ function iseek_custom_block($machine_name, $retrieve){
  * Gets menu title
  */
 function iseek_custom_get_menu_title($name){
-  $ml = menu_load($name);
-  return $ml['title'];
+  
+
+  $parameters = array(
+    'min_depth' => 1,
+  );
+
+  $children = menu_build_tree($name, $parameters);
+
+  $menu_title = "";
+  //$menu_children = array();
+  foreach($children as $child) {
+          //kpr($child);
+          $menu_title = $child['link']['title'];
+  }
+  return $menu_title;
+}
+
+/**
+ * Gets menu children
+ */
+function iseek_custom_get_menu_children($name){
+
+  $parameters = array(
+    'min_depth' => 2,
+  );
+
+  $children = menu_build_tree($name, $parameters);
+
+  //kpr($children); die;
+  
+  $menu_children = array();
+  foreach($children as $child) {
+    $menu_children['menu-' . $child['link']['mlid']] = array('alter'=>TRUE, 'href'=>$child['link']['href'], 'title'=>$child['link']['title']);
+          //kpr($child);
+          //array_push($menu_children, $child['link']['link_title']);
+          //$menu_children[]
+          //$menu_children = $child['link']['link_title']; //push array, find better version
+  }
+  //kpr($children); die;
+  return $menu_children;
 }
 
 /**
@@ -266,17 +304,19 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-toolkit---finance-and-budge');
   //put the toolkit menu links in vars
   $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
-  $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => menu_navigation_links('menu-toolkit---key-tools-top')));
-  $variables['menu_ktb'] = theme('links__menu-toolkit---key-tools-bottom', array('links' => menu_navigation_links('menu-toolkit---key-tools-bottom')));
-  $variables['menu_staff'] = theme('links__menu-toolkit---staff-development', array('links' => menu_navigation_links('menu-toolkit---staff-development')));
-  $variables['menu_pay'] = theme('links__menu-toolkit---pay-benefits-and-', array('links' => menu_navigation_links('menu-toolkit---pay-benefits-and-')));
-  $variables['menu_security'] = theme('links__menu-toolkit---security', array('links' => menu_navigation_links('menu-toolkit---security')));
-  $variables['menu_travel'] = theme('links__menu-toolkit---travel', array('links' => menu_navigation_links('menu-toolkit---travel')));
-  $variables['menu_health'] = theme('links__menu-toolkit---health-and-wellbe', array('links' => menu_navigation_links('menu-toolkit---health-and-wellbe')));
-  $variables['menu_rules'] = theme('links__menu-toolkit---rules-and-regulat', array('links' => menu_navigation_links('menu-toolkit---rules-and-regulat')));
-  $variables['menu_reference'] = theme('links__menu-toolkit---references-and-ma', array('links' => menu_navigation_links('menu-toolkit---references-and-ma')));
-  $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => menu_navigation_links('menu-toolkit---ethics-and-intern')));
-  $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => menu_navigation_links('menu-toolkit---finance-and-budge')));
+  //kpr(menu_navigation_links('menu-quick-links---ny')); die;
+  //kpr($variables['menu_quicklinksNY']); die;
+  $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-top')));
+  $variables['menu_ktb'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-bottom')));
+  $variables['menu_staff'] = theme('links__menu-toolkit---staff-development', array('links' => iseek_custom_get_menu_children('menu-toolkit---staff-development')));
+  $variables['menu_pay'] = theme('links__menu-toolkit---pay-benefits-and-', array('links' => iseek_custom_get_menu_children('menu-toolkit---pay-benefits-and-')));
+  $variables['menu_security'] = theme('links__menu-toolkit---security', array('links' => iseek_custom_get_menu_children('menu-toolkit---security')));
+  $variables['menu_travel'] = theme('links__menu-toolkit---travel', array('links' => iseek_custom_get_menu_children('menu-toolkit---travel')));
+  $variables['menu_health'] = theme('links__menu-toolkit---health-and-wellbe', array('links' => iseek_custom_get_menu_children('menu-toolkit---health-and-wellbe')));
+  $variables['menu_rules'] = theme('links__menu-toolkit---rules-and-regulat', array('links' => iseek_custom_get_menu_children('menu-toolkit---rules-and-regulat')));
+  $variables['menu_reference'] = theme('links__menu-toolkit---references-and-ma', array('links' => iseek_custom_get_menu_children('menu-toolkit---references-and-ma')));
+  $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => iseek_custom_get_menu_children('menu-toolkit---ethics-and-intern')));
+  $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => iseek_custom_get_menu_children('menu-toolkit---finance-and-budge')));
   //put the path to the footer in the logo
   $variables['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
   //blocks

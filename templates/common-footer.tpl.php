@@ -17,7 +17,7 @@
         <div class="col-md-3 left-menu">
            <div class="row underline left-menu-top">
               <div  class="partners content-large-text">
-                <h5 class="content-large-text"><?php print $menu_quicklinksNY_title;?></h5>
+                <h5 class="content-large-text">Quicklinks - New York <?php //print $menu_quicklinksNY_title;?></h5>
                 <?php print $menu_quicklinksNY;?>
               </div>
           </div>
