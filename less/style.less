@@ -248,19 +248,6 @@ body {
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
-  white-space: initial;
-}
-
-.view .date-nav-wrapper .date-prev {
-  right: 8em;
-}
-
 /*
  * Masthead for nav
  */
@@ -1366,6 +1353,33 @@ img.weather-image{
 
 .views-row-even .corner-events{
   background-color: @search-grey;
+}
+
+
+/*
+* Calendar
+*/
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+  white-space: normal;
+  padding: 0;
+}
+
+.view .date-nav-wrapper .date-prev {
+  right: 8em;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+  background: none;
+}
+
+.thecalendarcontent{
+  padding: 0 3px !important;
 }
 
 /*
