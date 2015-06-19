@@ -53,7 +53,39 @@
                                 <ul class="nav navbar-nav">
                                         <li class="dropdown">
 
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="location-display">New York</span> <span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="location-display">
+				                <?php
+				                        // switch depending on domain      
+				                        // 555
+				                        if (require_login_display_local('newyork')) {
+				                                echo "New York";
+				                        // 131
+				                        } elseif (require_login_display_local('geneva')) {
+				                                echo "Geneva"; 
+				                        // 60
+				                        } elseif (require_login_display_local('addisababa')) {
+				                                echo "Addis Ababa";
+				                        // 61
+				                        } elseif (require_login_display_local('bangkok')) {
+				                                echo "Bangkok";
+				                        // 62
+				                        } elseif (require_login_display_local('beirut')) {
+				                                echo "Beirut";
+				                        // 63
+				                        } elseif (require_login_display_local('nairobi')) {
+				                                echo "Nairobi";
+				                        // 64
+				                        } elseif (require_login_display_local('santiago')) {
+				                                echo "Santiago";
+				                        // 65
+				                        } elseif (require_login_display_local('vienna')) {
+				                                echo "Vienna";
+				                        // external
+				                        } else {
+				                                echo "New York"; 
+				                        }
+				                ?>
+						</span> <span class="caret"></span></a>
                                                 <ul id="ul-location" class="dropdown-menu" role="menu">
                                                         <li><a href="https://iseek-addisababa.un.org">Addis Ababa</a></li>
                                                         <li><a href="https://iseek-bangkok.un.org">Bangkok</a></li>
