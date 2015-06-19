@@ -42,6 +42,11 @@
 @footer-border: #668595;
 @text-grey: #4D4D4D;
 
+//CALENDAR colors
+@announcements-color: #ffb6c1;
+@holidays-color: #f0f8ff;
+@global-announcement: #ffc;
+
 // constants
 @top-nav-size: 0.781em;
 @padding: 0.313em 0.313em 0.313em 0.313em;
@@ -1357,7 +1362,7 @@ img.weather-image{
 
 
 /*
-* Calendar
+* Calendar module
 */
 
 table {
@@ -1378,8 +1383,22 @@ table {
   background: none;
 }
 
-.thecalendarcontent{
-  padding: 0 3px !important;
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .cutoff, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .continues {
+  background-color: @global-announcement;
+  padding: 0 3px;
+}
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .announcements {
+  background-color: @announcements-color;
+  padding: 0 3px;
+}
+
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .global_announcements {
+  background-color: @global-announcement;
+  padding: 0 3px;
+}
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .holiday {
+  background-color: @holidays-color;
+  padding: 0 3px;
 }
 
 /*
