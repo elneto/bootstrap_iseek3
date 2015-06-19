@@ -183,7 +183,7 @@
       <!-- Spotlight -->
       
       <div class="row">
-        <div class="col-md-12 zindex99">
+        <div class="col-md-12">
           <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight</h3>
           <div class="row">
           	<?php print render($spotlight); ?>

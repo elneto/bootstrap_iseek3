@@ -49,7 +49,7 @@
 @title-size:1.3em;
 @page-title-size:1.9em;
 @less-large-text:0.844em;
-@content-large-text:1em;
+@content-large-text:0.875em;
 @medium-text:0.875em;
 @small-text:1.05em;
 @divider:1.25em;
@@ -676,13 +676,15 @@ h3#spotlight-box{
 }
 
 div.spotlight-thumbnail{
-  background-color: @bottom-grey;
   color: @brand-bar-blue;
-  font-size: 1.125em;
   overflow: hidden;
   & > a{
     padding: 0.2em 0.2em 0 0.4em;
     display: block;
+  }
+
+  & span.field-content {
+  padding-left: 0.3em;
   }
   
   div#most-popular-title{
@@ -690,10 +692,6 @@ div.spotlight-thumbnail{
   font-size: @small-text;
   }
   
-}
-
-.zindex99{
-  z-index: 999;
 }
 
 /*
@@ -1021,6 +1019,9 @@ button#go-button{
 .dutystaion-container{
   padding: 0;
   margin: 0;
+}
+.duty-station-city{
+  font-size: @content-large-text;
 }
 .dutystaion{
   border-right: 1px solid #CCC;
@@ -1352,6 +1353,33 @@ img.weather-image{
 
 .views-row-even .corner-events{
   background-color: @search-grey;
+}
+
+
+/*
+* Calendar
+*/
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+  white-space: normal;
+  padding: 0;
+}
+
+.view .date-nav-wrapper .date-prev {
+  right: 8em;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+  background: none;
+}
+
+.thecalendarcontent{
+  padding: 0 3px !important;
 }
 
 /*

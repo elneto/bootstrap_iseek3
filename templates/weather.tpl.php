@@ -41,7 +41,7 @@
           <div class="col-md-3 col-xs-6 dutystaion-last">
         <?php endif ?>
           
-          <div class="large-text duty-margin"><?php print $place['name']; ?></div> <!-- $place['link'] links to forecast -->
+          <div class="duty-station-city duty-margin"><?php print $place['name']; ?></div> <!-- $place['link'] links to forecast -->
           <?php if (empty($place['forecasts'])): ?>
             <?php print(t('Currently, there is no weather information available.')); ?>
           <?php endif ?>
