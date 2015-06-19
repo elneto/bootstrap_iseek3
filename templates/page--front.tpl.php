@@ -105,20 +105,28 @@
 			// eric: need to built out view to have all of these displays with groupIds
 			// 555 
 			if (require_login_display_local('newyork')) {
+				echo views_embed_view('announcements_block_for_home_page','block');
 			// 131 	
 			} elseif (require_login_display_local('geneva')) {
+				echo views_embed_view('announcements_block_for_home_page','block_1');
 			// 60
 			} elseif (require_login_display_local('addisababa')) {
+				echo views_embed_view('announcements_block_for_home_page','block_2');
 			// 61
                         } elseif (require_login_display_local('bangkok')) {
+				echo views_embed_view('announcements_block_for_home_page','block_3');
 			// 62
                         } elseif (require_login_display_local('beirut')) { 
+				echo views_embed_view('announcements_block_for_home_page','block_4');
 			// 63
                         } elseif (require_login_display_local('nairobi')) {
+				echo views_embed_view('announcements_block_for_home_page','block_5');
 			// 64 
                         } elseif (require_login_display_local('santiago')) {
+				echo views_embed_view('announcements_block_for_home_page','block_6');
 			// 65 
                         } elseif (require_login_display_local('vienna')) { 
+				echo views_embed_view('announcements_block_for_home_page','block_7');
 			// external?
 			} else {
 				echo views_embed_view('announcements_block_for_home_page','block');
