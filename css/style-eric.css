@@ -942,15 +942,7 @@ background-color: #f2dede;
 .item-list ul li {
     margin-bottom: 10px;
 }
-.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .cutoff, .calendar-calendar .month-view table.full td.multi-day .inner .item .view-item .un_observances .continues {
-	background-color: #e0ffff;
-}
-.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .announcements {
-	background-color: #ffb6c1;
-}
-.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .holiday {
-	background-color: #F0F8FF;
-}
+
 .view-id-featured_photo_block img, section#block-views-top-left-corner-block img {
         width: 100%;
 }
