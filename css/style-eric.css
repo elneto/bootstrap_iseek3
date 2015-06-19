@@ -928,6 +928,11 @@ section#block-system-main ul.apachesolr_search-results {
 	font-size: 12px;	
 }
 
+#calendar-box, #announcements-box {
+	font-size: 14px;
+}
+
+
 /********************************************************************************************/
 /*** CSS for departmental pages ***/
 /********************************************************************************************/
