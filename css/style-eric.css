@@ -223,7 +223,8 @@ form#user-login-form {
   	height: auto;
 }
 
-#thumbnail-most-popular img {
+div#thumbnail-most-popular > img {
+	padding: 0 10px;	
 	margin-left: auto;
 	margin-right: auto;
 }
