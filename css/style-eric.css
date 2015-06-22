@@ -275,6 +275,7 @@ div#thumbnail-most-popular > img {
 .not-front #toolkit-anchor {
 	background-color: #1C90CE;
 	font-size: 20px; 
+	border: 0;
 }
 
 .not-front #event_toolkit {
