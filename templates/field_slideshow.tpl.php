@@ -46,7 +46,13 @@ if (!isset($pager_position)) {
 
 				<div class="row" id="mail_print_icon_row">
 					<div class="col-lg-12">
-				 		<i class="fa fa-2x fa-envelope-o"></i>	
+						<?php 
+							$addblock = module_invoke('forward', 'block_view', 'form');
+							$forward_block = render($addblock['content']); 
+							$forward_block = preg_replace("/forward_placeholder/", "<i class=\"fa fa-2x fa-envelope-o\"></i>", $forward_block);
+							$forward_block = preg_replace("/Email this page/", "<i class=\"fa fa-2x fa-envelope-o\"></i>", $forward_block);
+							echo $forward_block;
+						?>
 				 		<i class="fa fa-2x fa-print"></i>	 
 					</div>
 				</div>
