@@ -33,7 +33,7 @@ features[] = favicon
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/bootstrap.min.css
-stylesheets[all][] = css/font-awesome.min.css
+;stylesheets[all][] = css/font-awesome.min.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/style-eric.css
 stylesheets[all][] = bootstrap-datepicker/css/datepicker3.css
@@ -72,6 +72,7 @@ scripts[] = js/custom.js
 ;scripts[] = js/dropdown-doubletap.js
 ;scripts[] = js/app.js
 scripts[] = bootstrap-datepicker/js/bootstrap-datepicker.js
+scripts[] = js/jquery-scrollto/lib/jquery-scrollto.js
 
 ; exclude[js][] = sites/all/themes/bootstrap/bootstrap/js/bootstrap.js
 exclude[js][] = sites/iseek.un.org/themes/bootstrap/js/bootstrap.js

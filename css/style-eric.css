@@ -223,7 +223,8 @@ form#user-login-form {
   	height: auto;
 }
 
-#thumbnail-most-popular img {
+div#thumbnail-most-popular > img {
+	padding: 0 10px;	
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -274,6 +275,7 @@ form#user-login-form {
 .not-front #toolkit-anchor {
 	background-color: #1C90CE;
 	font-size: 20px; 
+	border: 0;
 }
 
 .not-front #event_toolkit {
@@ -927,6 +929,11 @@ section#block-system-main ul.apachesolr_search-results {
 #admin-menu {
 	font-size: 12px;	
 }
+
+#calendar-box, #announcements-box {
+	font-size: 14px;
+}
+
 
 /********************************************************************************************/
 /*** CSS for departmental pages ***/

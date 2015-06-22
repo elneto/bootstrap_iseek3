@@ -104,7 +104,36 @@ if (count($node->field_departmental_theme)) {
 	$field_departmental_theme_value = $node->field_departmental_theme['und'][0]['value']; 	
 }
 
+$taxonomy_term_array = taxonomy_get_term_by_name($node->title, "departments");
 
+$taxonomy_id = key($taxonomy_term_array);
+
+// get the parents
+
+$full_parent_taxonomy_array = taxonomy_get_parents_all($taxonomy_id);
+
+$depts_vid = 22;
+
+$dept_site_map_array = array();
+$ultimate_parent_name = "";
+
+if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name == 'Secretariat') {
+        $dept_site_map_array = taxonomy_get_tree($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->vid, $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->tid);
+        $ultimate_parent_name = $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 2]->name;
+} else {
+        $dept_site_map_array = taxonomy_get_tree($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->vid, $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->tid);
+        $ultimate_parent_name = $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name;
+}
+
+$dept_color_array = array(
+	"Department of Public Information" => "#FFCC33",
+	"Department of Management" => "#70C175",
+);
+
+$dept_color_band = "#000000";
+if (array_key_exists($ultimate_parent_name, $dept_color_array)) {
+	$dept_color_band = $dept_color_array[$ultimate_parent_name];		
+}
 ?>
 
 <div class="row">
@@ -112,7 +141,7 @@ if (count($node->field_departmental_theme)) {
       		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $node->title; ?></div>
 	</div>
 	<div class="col-lg-12">
-                <div style="background-color:yellow;height:10px;"></div>
+                <div style="background-color: <?php echo $dept_color_band ?>;height:10px;"></div>
         </div>
 </div>
 
@@ -155,21 +184,11 @@ if (count($node->field_departmental_theme)) {
 <div>
 <?php
 
-// print "nid: " . $node->nid;
-// kpr($node);
-// kpr($content);
-
 $taxonomy_term_array = taxonomy_get_term_by_name($node->title, "departments");
-
-// print_r($taxonomy_term_array);
 
 $taxonomy_id = key($taxonomy_term_array);
 
-// print ("taxonomy_id: " . $taxonomy_id);
-
 // get the parents
-
-// kpr(taxonomy_get_parents_all($taxonomy_id));
 
 $full_parent_taxonomy_array = taxonomy_get_parents_all($taxonomy_id);
 
