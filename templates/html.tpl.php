@@ -52,6 +52,7 @@
 <?php print $head; ?>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200normal,200italic,300normal,300italic,400normal,400italic,600normal,600italic,700normal,700italic,900normal,900italic&amp;subset=all" rel="stylesheet" type="text/css">
   <title><?php print $head_title; ?></title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>

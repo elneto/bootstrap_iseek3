@@ -33,7 +33,7 @@ features[] = favicon
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/bootstrap.min.css
-stylesheets[all][] = css/font-awesome.min.css
+;stylesheets[all][] = css/font-awesome.min.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/style-eric.css
 stylesheets[all][] = bootstrap-datepicker/css/datepicker3.css
