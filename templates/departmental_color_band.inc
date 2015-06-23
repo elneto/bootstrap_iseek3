@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 <?php
+>>>>>>> 57322451e04a5ad93c82c935948c74cd7533ffe8
 $dept_color_array = array(
         "Department of Public Information" => "#FFCC33",
         "Department for General Assembly and Conference Management" => "#BD5400",
@@ -17,4 +20,7 @@ $dept_color_band = "#000000";
 if (array_key_exists($ultimate_parent_name, $dept_color_array)) {
         $dept_color_band = $dept_color_array[$ultimate_parent_name];
 }
+<<<<<<< HEAD
+=======
 ?>
+>>>>>>> 57322451e04a5ad93c82c935948c74cd7533ffe8
