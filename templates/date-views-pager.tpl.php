@@ -26,17 +26,26 @@
  *   Query strings and other options for the links that need to
  *   be used in the l() function, including rel=nofollow.
  */
+$subject = $nav_title;
+$pattern = '/ \w+/';
+preg_match($pattern, $subject, $matches);
+//kpr($matches[0]);
+$month = substr($matches[0], 1);
+
 ?>
 <?php if (!empty($pager_prefix)) print $pager_prefix; ?>
 <div class="date-nav-wrapper clearfix<?php if (!empty($extra_classes)) print $extra_classes; ?>">
   <div class="date-nav item-list">
     <div class="date-heading">
 	  <h3>
+      <span class="cal-month-name">
 		<?php		
-			if (preg_match('/[0-9][0-9][0-9][0-9]-[0-9][0-9]/', $nav_title, $nav_title_matches)) {
+			/*if (preg_match('/[0-9][0-9][0-9][0-9]-[0-9][0-9]/', $nav_title, $nav_title_matches)) {
 				print date("M Y", strtotime($nav_title_matches[0] . "-01"));
-			}		
+			}		*/
+      print $month;
 		?> 
+      </span>
 	  </h3>
     </div>
     <ul class="pager">
@@ -45,6 +54,7 @@
         <?php print l('&laquo;' . ($mini ? '' : ' ' . t('Prev', array(), array('context' => 'date_nav'))), $prev_url, $prev_options); ?>
       </li>
     <?php endif; ?>
+    
     <?php if (!empty($next_url)) : ?>
       <li class="date-next">
         <?php print l(($mini ? '' : t('Next', array(), array('context' => 'date_nav')) . ' ') . '&raquo;', $next_url, $next_options); ?>
