@@ -83,7 +83,7 @@ $group = og_context();
 $og_id = $group['gid'];
 
 include('departmental_nodeload_and_menuload.inc');
-
+include('departmental_color_band.inc');
 ?>
 
 <div class="row">
@@ -91,7 +91,7 @@ include('departmental_nodeload_and_menuload.inc');
       		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $og_node->title; ?></div>
 	</div>
 	<div class="col-lg-12">
-                <div style="background-color:yellow;height:10px;"></div>
+                <div class="dept-color-band" style="background-color:<?php echo $dept_color_band; ?>;"></div>
         </div>
 </div>
 
