@@ -27,8 +27,15 @@
  * @ingroup views_templates
  */
 
-//kpr('views-view has been called')
+//kpr('views-view has been called');
+$arg = arg(1);
 ?>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> <a href="<?php echo url('<front>').'announcements/'; ?>" class="white-link">Announcements <i class="fa fa-angle-double-right"></i></a></div>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-xs-12 col-md-12">
@@ -42,6 +49,7 @@
       <a href="<?php echo url('<front>').'announcements/newyork'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>">New York</a>
       <a href="<?php echo url('<front>').'announcements/santiago'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>">Santiago</a>
       <a href="<?php echo url('<front>').'announcements/vienna'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>">Vienna</a>
+      <a href="<?php echo url('<front>').'announcements/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>">All</a>
     </div>
   </div>
 </div>
