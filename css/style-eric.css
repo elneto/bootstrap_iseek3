@@ -552,6 +552,10 @@ section#block-system-main ul.apachesolr_search-results {
 	cursor: pointer;
 }
 
+.dept-color-band {
+	height: 15px;
+}
+
 .dept_site_map li {
 	font-size: 13px;
 }

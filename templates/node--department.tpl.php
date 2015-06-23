@@ -125,15 +125,8 @@ if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name ==
         $ultimate_parent_name = $full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name;
 }
 
-$dept_color_array = array(
-	"Department of Public Information" => "#FFCC33",
-	"Department of Management" => "#70C175",
-);
+include('departmental_color_band.inc');
 
-$dept_color_band = "#000000";
-if (array_key_exists($ultimate_parent_name, $dept_color_array)) {
-	$dept_color_band = $dept_color_array[$ultimate_parent_name];		
-}
 ?>
 
 <div class="row">
@@ -141,7 +134,7 @@ if (array_key_exists($ultimate_parent_name, $dept_color_array)) {
       		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $node->title; ?></div>
 	</div>
 	<div class="col-lg-12">
-                <div style="background-color: <?php echo $dept_color_band ?>;height:10px;"></div>
+                <div class="dept-color-band" style="background-color: <?php echo $dept_color_band ?>;"></div>
         </div>
 </div>
 
