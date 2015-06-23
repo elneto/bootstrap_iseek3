@@ -100,16 +100,16 @@ include('departmental_color_band.inc');
         <div class="col-lg-12">
 		<ul class="departmentalSubmenu-nav">
 			<li class="first expanded dropdown">
-				<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown">Quicklinks <span class="caret"></span></span>
+				<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><i class="fa fa-link"></i> Quicklinks <span class="caret"></span></span>
 				<?php print views_embed_view('departmental_page_in_og', 'block', $og_id); ?>
 			</li>
-			<li><span data-toggle="modal" data-target="#deptSiteMapModal">Site map</span></li>
+			<li><span data-toggle="modal" data-target="#deptSiteMapModal"><i class="fa fa-list-alt"></i> Site map</span></li>
 			<?php 
 				if ($menu_display_name) {
 			?>
 	
 					<li class="expanded dropdown">
-						<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><?php echo $menu_display_name ?> <span class="caret"></span></span>
+						<span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><i class="fa fa-sign-in"></i> <?php echo $menu_display_name ?> <span class="caret"></span></span>
 						<ul class="dropdown-menu">
 							<?php
 								foreach ($divisions_menu_array as $divisions_menu_array_item) { 
@@ -124,7 +124,7 @@ include('departmental_color_band.inc');
 			<?php
 				if (count($og_node->field_departmental_contact_us)) {
 			?>	
-					<li><a href="<?php echo $og_node->field_departmental_contact_us['und'][0]['safe_value'] ?>">Contact us</a></li>
+					<li><a href="<?php echo $og_node->field_departmental_contact_us['und'][0]['safe_value'] ?>"><i class="fa fa-phone-square"></i> Contact us</a></li>
 			<?php
 				}
 			?>
