@@ -83,6 +83,7 @@ $group = og_context();
 $og_id = $group['gid'];
 
 include('departmental_nodeload_and_menuload.inc');
+include('departmental_get_parents.inc');	
 include('departmental_color_band.inc');
 ?>
 
