@@ -36,7 +36,7 @@ $arg = arg(1);
     <div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> <a href="<?php echo url('<front>').'announcements/'; ?>" class="white-link">Announcements <i class="fa fa-angle-double-right"></i></a></div>
   </div>
 </div>
-
+<br>
 <div class="row">
   <div class="col-xs-12 col-md-12">
     <h4 class="page-title">Filter by duty station</h4>
