@@ -245,7 +245,7 @@
 					<?php } else { ?>
                                                   <?php
                                                         if (!(user_is_logged_in()) && !($teaser)) {
-                                                                $login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+                                                                $login_label = array('en' => 'Log in to post comments and <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
                                                                 $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
                                                   ?>
                                                 	<span id="iseek-likes"></span>
