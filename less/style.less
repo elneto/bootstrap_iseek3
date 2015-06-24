@@ -557,9 +557,9 @@ div.main-thumbnail{
 
   & > a{
     text-decoration: none;
-    padding: 0.2em 0.2em 0 0.4em;
+    padding: 0.4em 0.2em 0 0.4em;
     display: block;
-
+    line-height: 1.2em;
     //text-align: center;
   }
 
@@ -1021,7 +1021,7 @@ button#go-button{
   background-color:@brand-bar-blue;
   color:#FFF;
   padding:@padding;
-  margin: 2em 0 0 0;
+  margin: 1.2em 0 0 0;
   border-bottom: 1px white solid;
 }
 .timezone-pad-r0{
@@ -1108,14 +1108,17 @@ button#go-button{
 
 .partners, .partners ul {
   color:white;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 7.5em;
   text-align: left;
 }
 
 .partners h5{
   font-size: 1.1em;
   display: block;
-  width: 65%;
+  width: 54%;
   border-bottom: 2px solid white;
   margin-left: 1em;
   margin-top: 1em;
@@ -1162,8 +1165,8 @@ button#go-button{
 .about-us, .about-us-xs {
   background-color: @brand-bar-blue;
   color:white;
-  padding:2em;
-  margin: 0;
+  //padding:2em;
+  //margin-top: 14em;
   width: 100%;
 }
 .about-us a, .about-us-xs a{
@@ -1198,7 +1201,7 @@ button#go-button{
 
   & h5{
     background-color: white;
-    padding: .5em .5em 0.2em 0em;
+    padding: .5em .5em 0.2em 0.2em;
     margin-bottom: 0;
     border-bottom: 2px solid @brand-bar-blue;
     .font('Semibold');
@@ -1716,10 +1719,12 @@ and (orientation : landscape) {
       width: 100% !important; 
     }
 
-  div#calendar-box, div#announcements-box {
+  div#calendar-box {
     max-height: 172px;
   }
-
+  div#announcements-box{
+    max-height: 225px;
+  }
   .lpad5 {
     padding-left: 15px;
   }
