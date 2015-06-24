@@ -618,7 +618,8 @@ h3.top-boxes-margin{
 */
 
 div#announcements-box {
-  max-height: @top-boxes-height;
+  //max-height: @top-boxes-height;
+  max-height: 225px;
   overflow-y: scroll;
 }
 
@@ -1106,7 +1107,7 @@ button#go-button{
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  padding-bottom: 7.5em;
+  padding-bottom: 7em;
   text-align: left;
 }
 
@@ -1161,7 +1162,7 @@ button#go-button{
   background-color: @brand-bar-blue;
   color:white;
   //padding:2em;
-  //margin-top: 14em;
+  margin-top: 1em;
   width: 100%;
 }
 .about-us a, .about-us-xs a{
@@ -1173,6 +1174,7 @@ button#go-button{
   //height: inherit;
   //padding: @padding;
   //margin: 0;
+  padding-bottom: 2em;
   .border-radiuses(0,15px,15px,0);
   border-right: 1px solid @brand-bar-blue;
   border-bottom: 1px solid @brand-bar-blue;
@@ -1714,12 +1716,10 @@ and (orientation : landscape) {
       width: 100% !important; 
     }
 
-  div#calendar-box {
+  div#calendar-box, div#announcements-box {
     max-height: 172px;
   }
-  div#announcements-box{
-    max-height: 225px;
-  }
+  
   .lpad5 {
     padding-left: 15px;
   }
@@ -1773,6 +1773,7 @@ and (orientation : landscape) {
  
   .footer-background{
     border-left: 1px solid @brand-bar-blue;
+    padding-bottom: 2em;
   }
 
   .left-menu, row.left-menu{
