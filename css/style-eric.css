@@ -504,14 +504,6 @@ thead tr a.sort_link {
         outline: 0;
 }
 
-.pagination>li>a {
-	font-size: 12px;
-}
-
-ul.pagination {
-	margin: 0;
-}
-
 #myModalAdvanced input.form-control {
 	border-radius: 0;	
 }
