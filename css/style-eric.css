@@ -396,6 +396,7 @@ li.search-result {
 	color: #666666;
 	font-size: 16px;
 	opacity: 0.8;
+	font-weight: normal;
 }
 
 .modal-dialog button.close:hover, .modal-header button.close:focus {
@@ -406,7 +407,7 @@ li.search-result {
 	font-size: 18px;
 	color: #fff;
 	border-bottom: 0;
-	background-color: #0071B9;
+	background-color: #337ab7;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
 	padding: 10px 15px;
@@ -446,7 +447,9 @@ button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#s
   text-align: center;
   border-top: 0;
 }
-
+div.tooltip-inner{
+	max-width: 120px;
+}
 #searchSimpleInputInModal, #sitesearchInput {
 	border-radius: 0;
 }
