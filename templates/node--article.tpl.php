@@ -245,7 +245,7 @@
 					<?php } else { ?>
                                                   <?php
                                                         if (!(user_is_logged_in()) && !($teaser)) {
-                                                                $login_label = array('en' => 'Log in to post comments and <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+                                                                $login_label = array('en' => 'Log in to post comments and like <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
                                                                 $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
                                                   ?>
                                                 	<span id="iseek-likes"></span>
@@ -299,7 +299,7 @@
 
 						  <?php
 							if (!(user_is_logged_in()) && !($teaser)) {
-								$login_label = array('en' => 'Log in to post comments & <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+								$login_label = array('en' => 'Log in to post comments and like <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
 								$login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
 						  ?>
 							<li class="comment-add last">
@@ -313,7 +313,7 @@
 						  if (!(user_is_logged_in()) && ($teaser)): ?>
 							<li>
 								<?php
-									$login_label_teaser = array('en' => 'Log in to post comments or like', 'fr' => 'Connectez-vous pour poster un commentaire ou "J\'aime"');
+									$login_label_teaser = array('en' => 'Log in to post comments and like', 'fr' => 'Connectez-vous pour poster un commentaire ou "J\'aime"');
 									$login_path_teaser = array('en' => '/user/login', 'fr' => '/fr/user/login');
 								?>
 
