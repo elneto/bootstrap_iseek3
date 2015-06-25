@@ -27,25 +27,29 @@
  *   be used in the l() function, including rel=nofollow.
  */
 
-//kpr($monthName);
+//kpr($plugin->view->date_info->month);
 
-function iseek_url_num_to_month($url){
-  $pattern = "/\d{2}$/"; //matches last two digits
-//we find the previous and next month
-  $subject = $url;
-  preg_match($pattern, $subject, $matches);
-  $monthNum  = $matches[0];
+function iseek_next_month($num){
+  if($num >= 12)
+    return 1;
+  else
+    return $num+1;
+}
+
+function iseek_prev_month($num){
+  if($num <= 1)
+    return 12;
+  else
+    return $num-1;
+}
+
+function iseek_num_to_month($monthNum){
   return date('F', mktime(0, 0, 0, $monthNum, 10));
 }
 
-$subject = $nav_title;
-$pattern = '/ \w+/u'; //matches the month from the title (u for utf-8)
-preg_match($pattern, $subject, $matches);
-//kpr($matches[0]);
-$month = substr($matches[0], 1);
-
-$prevMonth = iseek_url_num_to_month($prev_url);
-$nextMonth = iseek_url_num_to_month($next_url);
+$month = iseek_num_to_month($plugin->view->date_info->month);
+$prevMonth = iseek_num_to_month(iseek_prev_month($plugin->view->date_info->month));
+$nextMonth = iseek_num_to_month(iseek_next_month($plugin->view->date_info->month));
 
 ?>
 <?php if (!empty($pager_prefix)) print $pager_prefix; ?>
@@ -54,7 +58,7 @@ $nextMonth = iseek_url_num_to_month($next_url);
     <div class="date-heading">
 	  <h3>
       <span class="cal-month-name">
-		  <?php	print l(t($prevMonth), $next_url, $next_options) .' | '. $month .' | '. l(t($nextMonth), $next_url, $next_options); ?> 
+		  <?php	print l(t($prevMonth), $prev_url, $prev_options) .' | '. t($month) .' | '. l(t($nextMonth), $next_url, $next_options); ?> 
       </span>
 	  </h3>
     </div>
