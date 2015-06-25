@@ -96,43 +96,46 @@
  
           <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="calendar-box">
-		<?php echo views_embed_view('events_block_for_home_page','block'); ?>	
+		        <?php echo views_embed_view('clone_of_events_block_for_home_page','block'); ?>	
+            
           </div>
- 
+          <div class="content-large-text bottom-box-opacity-down"></div>
           <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="announcements-box">
-		<?php 
-			// switch depending on domain 
-			// 555 
-			if (require_login_display_local('newyork')) {
-				echo views_embed_view('announcements_block_for_home_page','block');
-			// 131 	
-			} elseif (require_login_display_local('geneva')) {
-				echo views_embed_view('announcements_block_for_home_page','block_1');
-			// 60
-			} elseif (require_login_display_local('addisababa')) {
-				echo views_embed_view('announcements_block_for_home_page','block_2');
-			// 61
-                        } elseif (require_login_display_local('bangkok')) {
-				echo views_embed_view('announcements_block_for_home_page','block_3');
-			// 62
-                        } elseif (require_login_display_local('beirut')) { 
-				echo views_embed_view('announcements_block_for_home_page','block_4');
-			// 63
-                        } elseif (require_login_display_local('nairobi')) {
-				echo views_embed_view('announcements_block_for_home_page','block_5');
-			// 64 
-                        } elseif (require_login_display_local('santiago')) {
-				echo views_embed_view('announcements_block_for_home_page','block_6');
-			// 65 
-                        } elseif (require_login_display_local('vienna')) { 
-				echo views_embed_view('announcements_block_for_home_page','block_7');
-			// external?
-			} else {
-				echo views_embed_view('announcements_block_for_home_page','block');
-			}
-		?>
-            </div>
+        		<?php 
+        			// switch depending on domain 
+        			// 555 
+        			if (require_login_display_local('newyork')) {
+        				echo views_embed_view('announcements_block_for_home_page','block');
+        			// 131 	
+        			} elseif (require_login_display_local('geneva')) {
+        				echo views_embed_view('announcements_block_for_home_page','block_1');
+        			// 60
+        			} elseif (require_login_display_local('addisababa')) {
+        				echo views_embed_view('announcements_block_for_home_page','block_2');
+        			// 61
+                                } elseif (require_login_display_local('bangkok')) {
+        				echo views_embed_view('announcements_block_for_home_page','block_3');
+        			// 62
+                                } elseif (require_login_display_local('beirut')) { 
+        				echo views_embed_view('announcements_block_for_home_page','block_4');
+        			// 63
+                                } elseif (require_login_display_local('nairobi')) {
+        				echo views_embed_view('announcements_block_for_home_page','block_5');
+        			// 64 
+                                } elseif (require_login_display_local('santiago')) {
+        				echo views_embed_view('announcements_block_for_home_page','block_6');
+        			// 65 
+                                } elseif (require_login_display_local('vienna')) { 
+        				echo views_embed_view('announcements_block_for_home_page','block_7');
+        			// external?
+        			} else {
+        				echo views_embed_view('announcements_block_for_home_page','block');
+        			}
+        		?>
+            
+          </div>
+          <div class="content-large-text bottom-box-opacity-down"></div>
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
@@ -205,7 +208,7 @@
         <div class="col-lg-8">
           <div class="row">
             <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
-             <div class="un-news content-large-text"> gV
+             <div class="un-news content-large-text"> 
                 <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>

@@ -133,6 +133,15 @@
   opacity:    @opacity;
 }
 
+.bottom-box-opacity-down{
+  .opacity(0.8);
+  margin-top: -2em;
+  .border-radiuses(0,10px,10px,0);
+  background-color: @bottom-grey;
+  color:@news-blue;
+  height: 2em;
+}
+
 .element-color( @color ) when ( lightness( @color ) >= 60% ) {
     color: @color - #888;
 } 
@@ -150,7 +159,7 @@
   border-right: 2px solid @bottom-grey;
   border-left: 2px solid @bottom-grey;
   border-bottom: 2px solid @bottom-grey;
-  .border-radiuses(0,15px,15px,0);
+  .border-radiuses(0,10px,10px,0);
 }
 
 .list-in-box{
@@ -628,6 +637,7 @@ span.calendar-date{
 
 ul#calendar-list, ul#announcements-list {
   .list-in-box;
+  margin-bottom: 1.5em;
 }
 
 h3.main-boxes-margin{
@@ -1546,6 +1556,14 @@ table {
     border-left: 1px solid @brand-bar-blue;
   }
 
+  .partners, .partners ul{
+    padding-bottom: 0;
+  }
+
+  .footer-background{
+    padding-bottom: 0;
+  }
+
   .left-menu, row.left-menu{
     padding-bottom: 0;
     margin-bottom: 0;
@@ -1706,7 +1724,13 @@ and (orientation : landscape) {
   .left-menu{
     background-color: white;
   }
-  
+  .partners, .partners ul{
+    padding-bottom: 0;
+  }
+
+  .footer-background{
+    padding-bottom: 0;
+  }
   //reset the padding to normal
   .rpad0, .rpad5, .rpad75{
     padding-right: 15px;
@@ -1823,10 +1847,13 @@ and (orientation : landscape) {
   .duty-margin{
     margin:0.2em;
   }
- 
+ .partners, .partners ul{
+    padding-bottom: 0;
+  }
+
   .footer-background{
     border-left: 1px solid @brand-bar-blue;
-    padding-bottom: 2em;
+    //padding-bottom: 2em;
   }
 
   .left-menu, row.left-menu{
