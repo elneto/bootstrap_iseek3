@@ -133,6 +133,11 @@
   opacity:    @opacity;
 }
 
+.opacity-down{
+  .opacity();
+  margin-top: -2em;
+}
+
 .element-color( @color ) when ( lightness( @color ) >= 60% ) {
     color: @color - #888;
 } 
