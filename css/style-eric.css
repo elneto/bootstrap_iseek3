@@ -448,7 +448,7 @@ button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#s
   border-top: 0;
 }
 div.tooltip-inner{
-	min-width: 120px;
+	min-width: 20em;
 }
 #searchSimpleInputInModal, #sitesearchInput {
 	border-radius: 0;
