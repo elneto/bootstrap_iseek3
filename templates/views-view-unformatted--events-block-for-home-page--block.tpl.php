@@ -10,8 +10,6 @@
 <?php if (!empty($title)): ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
-<div class="container">
-	<?php foreach ($rows as $id => $row): ?>
-	    <?php print $row; ?>
-	<?php endforeach; ?>
-</div>
+<?php foreach ($rows as $id => $row): ?>
+    <?php print $row; ?>
+<?php endforeach; ?>
