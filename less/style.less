@@ -133,9 +133,13 @@
   opacity:    @opacity;
 }
 
-.opacity-down{
+.bottom-box-opacity-down{
   .opacity();
   margin-top: -2em;
+  .border-radiuses(0,4px,4px,0);
+  background-color: @bottom-grey;
+  color:@news-blue;
+  height: 2em;
 }
 
 .element-color( @color ) when ( lightness( @color ) >= 60% ) {
