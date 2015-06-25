@@ -933,6 +933,10 @@ section#block-system-main ul.apachesolr_search-results {
 	font-size: 14px;
 }
 
+#calendar-box .calendar-date { 
+	color: #4372aa;
+}
+
 
 /********************************************************************************************/
 /*** CSS for departmental pages ***/
@@ -1006,3 +1010,5 @@ section#block-system-main ul.classifieds-listing {
 /********************************************************************************************/
 /*** Ends CSS for departmental pages ***/
 /********************************************************************************************/
+
+
