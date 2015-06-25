@@ -35,8 +35,7 @@ function iseek_url_num_to_month($url){
   $subject = $url;
   preg_match($pattern, $subject, $matches);
   $monthNum  = $matches[0];
-  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
-  return  $dateObj->format('F'); 
+  return date('F', mktime(0, 0, 0, $monthNum, 10));
 }
 
 $subject = $nav_title;
