@@ -96,7 +96,7 @@
  
           <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="calendar-box">
-		        <?php echo views_embed_view('events_block_for_home_page','block'); ?>	
+		        <?php echo views_embed_view('clone_of_events_block_for_home_page','block'); ?>	
             
           </div>
           <div class="content-large-text bottom-box-opacity-down"></div>
