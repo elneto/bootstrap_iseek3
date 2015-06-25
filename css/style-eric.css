@@ -98,64 +98,25 @@ form#user-login-form {
 	padding-bottom: 14px;
 }
 
+
+
 #block-menu-menu-iseek3-main-menu ul.dropdown-menu li a {
 	background-color: #ffffff;
 	color: #267bb2;
 	font-family: 'Source Sans Pro Semibold', Helvetica, sans-serif;
 }
 
-/*
-.menu-mlid-47730 a, .menu-mlid-47731 a, .menu-mlid-47732 a, .menu-mlid-47733 a, .menu-mlid-47734 a, .menu-mlid-47735 a, .menu-mlid-47736 a,
-.menu-mlid-48256 a, .menu-mlid-48258 a, .menu-mlid-48260 a, .menu-mlid-48262 a, .menu-mlid-48264 a, .menu-mlid-48266 a, .menu-mlid-48268 a,
-{
-	position:relative;
+#block-menu-menu-iseek3-main-menu ul.dropdown-menu li a:hover, #block-menu-menu-iseek3-main-menu ul.dropdown-menu li a:focus {
+        background-color: #267bb2;
+        color: #ffffff;
 }
 
-.menu-mlid-47730 a:before, .menu-mlid-48256 a:before {
-        font-family: FontAwesome;
-	margin-right: 5px;
-        content: "\f015"; 
-}
 
-.menu-mlid-47731 > span:before, .menu-mlid-48258 > span:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f128";     
-}   
 
-.menu-mlid-47732 > span:before, .menu-mlid-48260 > span:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f0ac";     
-}   
-
-.menu-mlid-47733 a:before, .menu-mlid-48262 a:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f044";     
-}   
-
-.menu-mlid-47734 a:before, .menu-mlid-48264 a:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f071";     
-}   
-
-.menu-mlid-47735 a:before, .menu-mlid-48266 a:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f0b1";     
-}   
-
-.menu-mlid-47736 > span:before, .menu-mlid-48268 > span:before {
-        font-family: FontAwesome;
-        margin-right: 5px;
-        content: "\f002";     
-}   
-*/
 #block-menu-menu-iseek3-main-menu > ul > li > a {
 	position:relative;
 }
+
 #block-menu-menu-iseek3-main-menu > ul > li:nth-child(1) a:before {
 	font-family: FontAwesome;
         margin-right: 5px;
