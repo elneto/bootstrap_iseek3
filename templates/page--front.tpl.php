@@ -231,7 +231,7 @@
 
             </div>
             <div class="col-md-6 bpad15">
-              <h4 class="classifieds"><a href="">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
+              <h4 class="classifieds"><a href="classified/">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="classifieds-content content-large-text">
                     <?php print render($latest_zeekoslist); ?>
                 </div>
