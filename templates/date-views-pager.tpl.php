@@ -63,3 +63,9 @@ $month = substr($matches[0], 1);
     </ul>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-lg-12 text-center calendar-legend">
+    <span id="legend-announcement"></span> Announcement &nbsp;&nbsp;<span id="legend-holiday"></span> Holiday &nbsp;&nbsp;<span id="legend-global"></span> Global announcement
+  </div>    
+</div>

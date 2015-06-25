@@ -43,9 +43,9 @@
 @text-grey: #4D4D4D;
 
 //CALENDAR colors
-@announcements-color: #ffb6c1;
-@holidays-color: #f0f8ff;
-@global-announcement: #ffc;
+@announcements-color: #ecd3ac;
+@holidays-color: #caddda;
+@global-announcement: #d1dba9;
 
 // constants
 @top-nav-size: 0.781em;
@@ -184,6 +184,25 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.square-shape(@color) {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: @color;
+}
+
+#legend-announcement{
+  .square-shape(@announcements-color);
+}
+
+#legend-holiday{
+  .square-shape(@holidays-color);
+}
+
+#legend-global{
+  .square-shape(@global-announcement);
 }
 
 /*
@@ -617,6 +636,20 @@ h3.main-boxes-margin{
 
 h3.top-boxes-margin{
   margin-top: 0;
+}
+
+.calendar-calendar .stripe {
+  background: none !important;
+}
+
+.view-holiday-calendar .pager li>a {
+  background-color: @brand-bar-blue;
+  color: white !important;
+  font-weight: normal !important;
+}
+
+.calendar-legend {
+  margin-top: -3em;
 }
 
 /*
@@ -1408,6 +1441,7 @@ table {
 
 .view .date-nav-wrapper .date-prev {
   right: 8em;
+  max-width: 10em;
 }
 
 .calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
