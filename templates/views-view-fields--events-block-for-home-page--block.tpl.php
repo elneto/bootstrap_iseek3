@@ -25,8 +25,8 @@
  */
 ?>
 <div class="row">
-	<div class="col-md-3 calendar-date"><?php print $fields['field_date_with_end']->content; ?><?php print $fields['field_announcement_event_date']->content; ?></div>
-	<div class="col-md-9">
+	<div class="col-md-2 calendar-date"><?php print $fields['field_date_with_end']->content; ?><?php print $fields['field_announcement_event_date']->content; ?></div>
+	<div class="col-md-10">
 	<?php
 		$title_link = "";
 		if ($row->node_type == "un_observances") {
