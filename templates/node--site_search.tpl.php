@@ -52,7 +52,7 @@ $results = ksd_solr_search_process_search (
 	<div class="row">
 
         	<div class="col-lg-12">
-          		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-search"></i>Search</div>
+          		<div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;Search</div>
 
 			<h2>The UN Intranet - iSeek site search results</h2>
 
