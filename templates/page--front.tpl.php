@@ -94,7 +94,7 @@
 		<!-- /gcd overlay -->	
 
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="calendar">Calendar of events <i class="fa fa-angle-double-right"></i></a></h3>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="calendar-box">
 		<?php echo views_embed_view('events_block_for_home_page','block'); ?>	
           </div>
@@ -205,7 +205,7 @@
         <div class="col-lg-8">
           <div class="row">
             <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
-             <div class="un-news content-large-text">
+             <div class="un-news content-large-text"> gV
                 <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
