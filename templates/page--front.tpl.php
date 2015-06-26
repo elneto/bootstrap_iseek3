@@ -97,14 +97,18 @@ kpr(taxonomy_get_term_by_name('Events'));
 		<!-- /gcd overlay -->	
 
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="calendar-box">
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events"><?php print t('Events');?> <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#calendar-box" aria-expanded="true" aria-controls="calendar-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>
+          </h3>
+          <div id="calendar-box" class="collapse in">
 		        <?php echo views_embed_view('events_block_for_home_page','block'); ?>	
             
           </div>
-          <div class="content-large-text bottom-box-opacity-down"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="announcements-box">
+          <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div id="announcements-box" class="collapse in">
         		<?php 
         			// switch depending on domain 
         			// 555 
@@ -138,50 +142,54 @@ kpr(taxonomy_get_term_by_name('Events'));
         		?>
             
           </div>
-          <div class="content-large-text bottom-box-opacity-down"></div>
+          <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
-          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="container-main-image">
+          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>"><?php print t('Staff stories and news');?> <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#all-stories-cont" aria-expanded="true" aria-controls="all-stories-cont" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div id="all-stories-cont" class="collapse in">
+            <div id="container-main-image">
 
-		<?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
+  		        <?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
 
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
 
-	    <?php echo views_embed_view('staff_stories_and_news_submain','block'); ?>		
+  	           <?php echo views_embed_view('staff_stories_and_news_submain','block'); ?>		
 
-            <div class="col-md-4 lpad5">
-          
-	      <div id="thumbnail-most-popular" class="main-thumbnail">
-                <div id="most-popular-title">Most popular</div>
+              <div class="col-md-4 lpad5">
+            
+  	      <div id="thumbnail-most-popular" class="main-thumbnail">
+                  <div id="most-popular-title"><?php print t('Most popular');?></div>
 
 
-                <?php
-                        // uses nodequeue module
-                        echo views_embed_view('nodequeue_3','block'); 
-                ?>
-<!--
-                <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
-                <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
--->
+                  <?php
+                          // uses nodequeue module
+                          echo views_embed_view('nodequeue_3','block'); 
+                  ?>
+  <!--
+                  <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
+                  <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
+  -->
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              	<div id="low-statement"><div class="arrow-right"></div>
-			<?php echo views_embed_view('staff_stories_and_news_miniarticles','block'); ?>
-		</div>
+            <div class="row">
+              <div class="col-md-12">
+                	<div id="low-statement"><div class="arrow-right"></div>
+          			<?php echo views_embed_view('staff_stories_and_news_miniarticles','block'); ?>
+          		</div>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+          
+            <div class="row">
+              <div class="col-md-12">
+                <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>"><?php print t('All staff stories and news');?> <i class="fa fa-angle-double-right"></i></a></div>
+              </div>
             </div>
-          </div>
+          </div>  <!-- All stories cont --> 
         </div> <!-- END Stories -->
         
       </div> <!-- END Stories, search, events, announcements -->
@@ -190,8 +198,10 @@ kpr(taxonomy_get_term_by_name('Events'));
       
       <div class="row">
         <div class="col-md-12">
-          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight</h3>
-          <div class="row">
+          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;<?php print t('In the Spotlight');?>
+          <a data-toggle="collapse" data-target="#spotlight-box-content" aria-expanded="true" aria-controls="spotlight-box-content" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div class="row collapse in" id="spotlight-box-content">
           	<?php print render($spotlight); ?>
           </div>
         </div>
@@ -201,7 +211,7 @@ kpr(taxonomy_get_term_by_name('Events'));
       <!-- Submit -->
       <div class="row">
         <div class="col-lg-12 margin-submit">
-          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#">Submit content <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
         </div>
       </div>
       <!-- END Submit -->
@@ -210,15 +220,19 @@ kpr(taxonomy_get_term_by_name('Events'));
 
         <div class="col-lg-8">
           <div class="row">
-            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
-             <div class="un-news content-large-text"> 
+            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href=""><?php print t('UN in the news');?> <i class="fa fa-angle-double-right"></i></a>
+            <a data-toggle="collapse" data-target="#un-news-box" aria-expanded="true" aria-controls="un-news-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+            </div>
+             <div class="un-news content-large-text collapse in" id="un-news-box"> 
                 <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>
             <div class="col-md-6">
-              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="">Useful tips <i class="fa fa-angle-double-right"></i></a></div>
-              <div class="tip-content">
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
+              <a data-toggle="collapse" data-target="#tip-content-box" aria-expanded="true" aria-controls="tip-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+              </div>
+              <div class="tip-content collapse in" id="tip-content-box">
               <!-- <img src="images/tweet-tip.png" class="img-responsive">
               <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div> -->
               <?php print render($useful_tips); ?>
@@ -230,15 +244,19 @@ kpr(taxonomy_get_term_by_name('Events'));
           <div class="staff-box">
           <div class="row">
             <div class="col-md-6 bpad15 wborr">
-                <h4 class="tjo"><a href="">Temporary Job Openings <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="tjo-content content-large-text">
+                <h4 class="tjo"><a href=""><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
+                <a data-toggle="collapse" data-target="#tjo-content-box" aria-expanded="true" aria-controls="tjo-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+                </h4>
+                <div class="tjo-content content-large-text collapse in" id="tjo-content-box">
                       <?php print render($recent_tjos); ?>
                 </div>
 
             </div>
             <div class="col-md-6 bpad15">
-              <h4 class="classifieds"><a href="classified/">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="classifieds-content content-large-text">
+              <h4 class="classifieds"><a href="classified/"><?php print t('Classified ads');?> <i class="fa fa-angle-double-right"></i></a>
+              <a data-toggle="collapse" data-target="#classifieds-box" aria-expanded="true" aria-controls="classifieds-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+              </h4>
+                <div class="classifieds-content content-large-text collapse in" id="classifieds-box">
                     <?php print render($latest_zeekoslist); ?>
                 </div>
             </div>
@@ -247,14 +265,18 @@ kpr(taxonomy_get_term_by_name('Events'));
           <!-- staff union and comm -->
           <div class="row">
             <div class="col-md-6 wborr">
-                <h4 class="staffunion"><a href="">Staff Union <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="staffunion-content content-large-text">
+                <h4 class="staffunion"><a href=""><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a>
+                <a data-toggle="collapse" data-target="#staffu-box" aria-expanded="true" aria-controls="staffu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+                </h4>
+                <div class="staffunion-content content-large-text collapse in" id="staffu-box">
                     <?php print render($staff_union_block); ?>
                 </div>
             </div>
             <div class="col-md-6">
-              <h4 class="community"><a href="">Community <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="community-content content-large-text">
+              <h4 class="community"><a href=""><?php print t('Community');?> <i class="fa fa-angle-double-right"></i></a>
+              <a data-toggle="collapse" data-target="#commu-box" aria-expanded="true" aria-controls="commu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+              </h4>
+                <div class="community-content content-large-text collapse in" id="commu-box">
                     <?php print $menu_community; ?>
                 </div>
             </div>
@@ -262,8 +284,10 @@ kpr(taxonomy_get_term_by_name('Events'));
         </div>
       </div>
         <div class="col-lg-4">
-          <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;Social media corner</h3>
-          <div class="twitter-border fluid">
+          <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;<?php print t('Social media corner');?>
+          <a data-toggle="collapse" data-target="#socialmedia-box" aria-expanded="true" aria-controls="socialmedia-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div class="twitter-border fluid collapse in" id="socialmedia-box">
               <?php print render($social_media_corner); ?>
           </div>
         <div class="large-text social"> <a href="http://www.facebook.com/unitednations" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="http://twitter.com/#!/un"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="http://www.youtube.com/unitednations"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="http://gplus.to/unitednations"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="http://instagram.com/unitednations"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
