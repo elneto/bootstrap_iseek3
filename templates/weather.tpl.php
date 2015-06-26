@@ -6,9 +6,13 @@
  */
 ?>
 <div class="row">
-  <div class="col-lg-12"><div class="timezone">&nbsp;&nbsp;&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;&nbsp;<span class="large-text">Time zone and weather</span></div></div>
+  <div class="col-lg-12">
+    <div class="timezone">&nbsp;&nbsp;&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;&nbsp;<span class="large-text"><?php print t('Time zone and weather');?></span>
+      <a data-toggle="collapse" data-target="#weather-box" aria-expanded="true" aria-controls="weather-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+    </div>
+  </div>
 </div>
-<div class="row">
+<div class="row collapse in" id="weather-box">
   <div class="col-md-12 col-lg-6 timezone-pad-r0">
     <div class="dutystaion-container ">
       <?php 
