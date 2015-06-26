@@ -73,15 +73,6 @@
  * @ingroup themeable
  */
 
-//kpr($variables);
-
-// print_r(taxonomy_get_term_by_name('Events'));
-
-print "222: ";
-print_r(i18n_taxonomy_term_name(taxonomy_get_term_by_name('Events')));
-print_r(i18n_taxonomy_term_name(taxonomy_get_term_by_name('Events'), 'fr'));
-print "666 ";
-
 ?>
 
 <!-- begin common header -->
