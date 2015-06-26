@@ -77,6 +77,7 @@
 
 // print_r(taxonomy_get_term_by_name('Events'));
 
+print "111: ";
 print i18n_taxonomy_term_get_translation(taxonomy_get_term_by_name('Events'));
 print i18n_taxonomy_term_get_translation(taxonomy_get_term_by_name('Events'), 'fr');
 
