@@ -226,8 +226,10 @@
               <div class="bottom-side-box content-large-text"></div>
             </div>
             <div class="col-md-6">
-              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a></div>
-              <div class="tip-content">
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
+              <a data-toggle="collapse" data-target="#tip-content-box" aria-expanded="true" aria-controls="tip-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+              </div>
+              <div class="tip-content collapse in" id="tip-content-box">
               <!-- <img src="images/tweet-tip.png" class="img-responsive">
               <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div> -->
               <?php print render($useful_tips); ?>
@@ -239,15 +241,19 @@
           <div class="staff-box">
           <div class="row">
             <div class="col-md-6 bpad15 wborr">
-                <h4 class="tjo"><a href=""><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="tjo-content content-large-text">
+                <h4 class="tjo"><a href=""><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
+                <a data-toggle="collapse" data-target="#tjo-content-box" aria-expanded="true" aria-controls="tjo-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+                </h4>
+                <div class="tjo-content content-large-text collapse in" id="tjo-content-box">
                       <?php print render($recent_tjos); ?>
                 </div>
 
             </div>
             <div class="col-md-6 bpad15">
-              <h4 class="classifieds"><a href="classified/"><?php print t('Classified ads');?> <i class="fa fa-angle-double-right"></i></a></h4>
-                <div class="classifieds-content content-large-text">
+              <h4 class="classifieds"><a href="classified/"><?php print t('Classified ads');?> <i class="fa fa-angle-double-right"></i></a>
+              <a data-toggle="collapse" data-target="#classifieds-box" aria-expanded="true" aria-controls="classifieds-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+              </h4>
+                <div class="classifieds-content content-large-text collapse in" id="classifieds-box">
                     <?php print render($latest_zeekoslist); ?>
                 </div>
             </div>
