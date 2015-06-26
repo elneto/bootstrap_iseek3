@@ -195,8 +195,9 @@
       
       <div class="row">
         <div class="col-md-12">
-          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight</h3>
+          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight
           <a data-toggle="collapse" data-target="#spotlight-box-content" aria-expanded="true" aria-controls="spotlight-box-content" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
           <div class="row collapse in" id="spotlight-box-content">
           	<?php print render($spotlight); ?>
           </div>
