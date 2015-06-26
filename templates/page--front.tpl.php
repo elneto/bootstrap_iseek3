@@ -75,6 +75,9 @@
 
 //kpr($variables);
 
+print_r(taxonomy_get_term_by_name('Events'));
+
+
 ?>
 
 <!-- begin common header -->
