@@ -57,43 +57,43 @@
 				                        // switch depending on domain      
 				                        // 555
 				                        if (require_login_display_local('newyork')) {
-				                                echo "New York";
+				                                echo t("New York");
 				                        // 131
 				                        } elseif (require_login_display_local('geneva')) {
-				                                echo "Geneva"; 
+				                                echo t("Geneva"); 
 				                        // 60
 				                        } elseif (require_login_display_local('addisababa')) {
-				                                echo "Addis Ababa";
+				                                echo t("Addis Ababa");
 				                        // 61
 				                        } elseif (require_login_display_local('bangkok')) {
-				                                echo "Bangkok";
+				                                echo t("Bangkok");
 				                        // 62
 				                        } elseif (require_login_display_local('beirut')) {
-				                                echo "Beirut";
+				                                echo t("Beirut");
 				                        // 63
 				                        } elseif (require_login_display_local('nairobi')) {
-				                                echo "Nairobi";
+				                                echo t("Nairobi");
 				                        // 64
 				                        } elseif (require_login_display_local('santiago')) {
-				                                echo "Santiago";
+				                                echo t("Santiago");
 				                        // 65
 				                        } elseif (require_login_display_local('vienna')) {
-				                                echo "Vienna";
+				                                echo t("Vienna");
 				                        // external
 				                        } else {
-				                                echo "New York"; 
+				                                echo t("New York"); 
 				                        }
 				                ?>
 						</span> <span class="caret"></span></a>
                                                 <ul id="ul-location" class="dropdown-menu" role="menu">
-                                                        <li><a href="https://iseek-addisababa.un.org">Addis Ababa</a></li>
-                                                        <li><a href="https://iseek-bangkok.un.org">Bangkok</a></li>
-                                                        <li><a href="https://iseek-beirut.un.org">Beirut</a></li>
-                                                        <li><a href="https://iseek-geneva.un.org">Geneva</a></li>
-                                                        <li><a href="https://iseek-nairobi.un.org">Nairobi</a></li>
-                                                        <li><a href="https://iseek-newyork.un.org">New York</a></li>
-                                                        <li><a href="https://iseek-santiago.un.org">Santiago</a></li>
-                                                        <li><a href="https://iseek-vienna.un.org">Vienna</a></li>
+                                                        <li><a href="https://iseek-addisababa.un.org"><?php echo t("Addis Ababa"); ?></a></li>
+                                                        <li><a href="https://iseek-bangkok.un.org"><?php echo t("Bangkok"); ?></a></li>
+                                                        <li><a href="https://iseek-beirut.un.org"><?php echo t("Beirut"); ?></a></li>
+                                                        <li><a href="https://iseek-geneva.un.org"><?php echo t("Geneva"); ?></a></li>
+                                                        <li><a href="https://iseek-nairobi.un.org"><?php echo t("Nairobi"); ?></a></li>
+                                                        <li><a href="https://iseek-newyork.un.org"><?php echo t("New York"); ?></a></li>
+                                                        <li><a href="https://iseek-santiago.un.org"><?php echo t("Santiago"); ?></a></li>
+                                                        <li><a href="https://iseek-vienna.un.org"><?php echo t("Vienna"); ?></a></li>
                                                 </ul>
 
                                         </li>
