@@ -75,7 +75,10 @@
 
 //kpr($variables);
 
-print_r(taxonomy_get_term_by_name('Events'));
+// print_r(taxonomy_get_term_by_name('Events'));
+
+print i18n_taxonomy_term_get_translation('Events');
+print i18n_taxonomy_term_get_translation('Events', 'fr');
 
 
 ?>
