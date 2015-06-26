@@ -102,8 +102,10 @@
             
           </div>
           <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="announcements-box">
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div id="announcements-box" class="collapse in">
         		<?php 
         			// switch depending on domain 
         			// 555 
@@ -137,45 +139,48 @@
         		?>
             
           </div>
-          <div class="content-large-text bottom-box-opacity-down"></div>
+          <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
-          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="container-main-image">
+          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#all-stories-cont" aria-expanded="true" aria-controls="all-stories-cont" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </h3>
+          <div id="all-stories-cont" class="collapse in">
+            <div id="container-main-image">
 
-		<?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
+  		        <?php echo views_embed_view('staff_stories_and_news_main','block'); ?>
 
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
 
-	    <?php echo views_embed_view('staff_stories_and_news_submain','block'); ?>		
+  	           <?php echo views_embed_view('staff_stories_and_news_submain','block'); ?>		
 
-            <div class="col-md-4 lpad5">
-          
-	      <div id="thumbnail-most-popular" class="main-thumbnail">
-                <div id="most-popular-title">Most popular</div>
+              <div class="col-md-4 lpad5">
+            
+  	      <div id="thumbnail-most-popular" class="main-thumbnail">
+                  <div id="most-popular-title">Most popular</div>
 
 
-                <?php
-                        // uses nodequeue module
-                        echo views_embed_view('nodequeue_3','block'); 
-                ?>
-<!--
-                <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
-                <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
--->
+                  <?php
+                          // uses nodequeue module
+                          echo views_embed_view('nodequeue_3','block'); 
+                  ?>
+  <!--
+                  <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
+                  <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
+  -->
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              	<div id="low-statement"><div class="arrow-right"></div>
-			<?php echo views_embed_view('staff_stories_and_news_miniarticles','block'); ?>
-		</div>
+            <div class="row">
+              <div class="col-md-12">
+                	<div id="low-statement"><div class="arrow-right"></div>
+          			<?php echo views_embed_view('staff_stories_and_news_miniarticles','block'); ?>
+          		</div>
+              </div>
             </div>
-          </div>
+          </div>  <!-- All stories cont --> 
           <div class="row">
             <div class="col-md-12">
               <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
