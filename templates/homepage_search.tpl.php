@@ -6,13 +6,13 @@
                 <!-- <form id="search-form"> -->
                         <div class="row">
                                 <div class="col-xs-12">
-                                        <label for="input-search-iseek"><?php print t('Find a colleague by name, department, and more')?>;</label>
+                                        <label for="input-search-iseek"><?php print t('Find a colleague by name, department, and more');?></label>
                                 </div>
-                                <div class="col-lg-10 col-xs-9 search-rpad0">
+                                <div class="col-lg-9 col-xs-8 search-rpad0">
                                   <!-- <input type="text" name="find-colleague" class="search-input" id="input-find-colleague"> -->
 					<input class="search-input" name="query" type="text" id="searchSimpleInput">
                                 </div>
-                                <div class="col-lg-2 col-xs-3 search-lpad0">
+                                <div class="col-lg-3 col-xs-4 search-lpad0">
 					<button id="searchTriggerSimple" type="button" class="search-button" data-toggle="modal" data-target="#myModal"><?php print t('Search');?></button>
                                   	<!-- <button name="Search" class="search-button">Search</button> -->
                                 </div>
@@ -21,7 +21,7 @@
                                 <div class="col-xs-12">
                                         <label for="input-search-iseek"><?php print t('Search iSeek or ODS');?></label> <!-- placeholder="Search the UN Intranet or ODS"  !-->
                                 </div>
-                                <div class="col-lg-8 col-md-7 col-xs-6 search-rpad0">
+                                <div class="col-lg-7 col-md-7 col-xs-5 search-rpad0">
                                         <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0">
@@ -30,8 +30,8 @@
                                                 <option>ODS</option>
                                         </select>
                                 </div>
-                                <div class="col-lg-2 col-md-3 col-xs-3 search-lpad0">
-                                        <button id="searchIseekOrOds" name="Search" class="search-button">Search</button>
+                                <div class="col-lg-3 col-md-3 col-xs-4 search-lpad0">
+                                        <button id="searchIseekOrOds" name="Search" class="search-button"><?php print t('Search');?></button>
                                 </div>
                         </div>
                         <div class="row">
