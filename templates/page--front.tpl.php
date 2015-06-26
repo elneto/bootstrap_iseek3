@@ -77,18 +77,10 @@
 
 // print_r(taxonomy_get_term_by_name('Events'));
 
-/*
 print "222: ";
-print_r(i18n_taxonomy_term_get_translation(taxonomy_get_term_by_name('Events')));
-print_r(i18n_taxonomy_term_get_translation(taxonomy_get_term_by_name('Events'), 'fr'));
-*/
-
-print "333 ";
-$tid = 44349;
-$term = taxonomy_term_load($tid);
-$translated_term = i18n_taxonomy_localize_terms($term);
-print $translated_term->name;
-print "444 ";
+print_r(i18n_taxonomy_term_name(taxonomy_get_term_by_name('Events')));
+print_r(i18n_taxonomy_term_name(taxonomy_get_term_by_name('Events'), 'fr'));
+print "666 ";
 
 ?>
 
