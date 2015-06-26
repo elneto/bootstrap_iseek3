@@ -531,16 +531,18 @@ if ($field_departmental_theme_value == "") {
 
 			<!-- resources -->	
 			<div class="row">
-                <div class="col-md-12">
-                    <h4>Resources</h4>
-					<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+                		<div class="col-md-12">
+                    			<h4>Resources</h4>
+					<div class="departmental_home_page_resources_section">	
+						<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+					</div>
 					<div class="departmental_home_page_block_bottom">
 						<?php if (count($node->field_departmental_resources_lin)) { ?>
-                                <a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>
-                        <?php } ?>
+                        				<a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>
+                       				<?php } ?>
 					</div>
-                </div>			
-            </div>			
+                		</div>			
+            		</div>			
 
 		</div>
 	</div>	
@@ -627,7 +629,9 @@ if ($field_departmental_theme_value == "") {
 		                <div class="row">
 		                        <div class="col-md-12">
 		                                <h4>Resources</h4>
-						<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+						<div class="departmental_home_page_resources_section">
+							<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
+						</div>
 						<div class="departmental_home_page_block_bottom">
 							<?php if (count($node->field_departmental_resources_lin)) { ?>
 		                                                <a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>

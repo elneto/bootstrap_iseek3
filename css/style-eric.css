@@ -666,6 +666,11 @@ section#block-system-main ul.apachesolr_search-results {
 	overflow-x: hidden;
 }
 
+.departmental_home_page_resources_section { 
+	height: 425px;
+}	
+
+
 #departmental_home_page_blocks li {
 	margin-bottom: 10px;
 }
