@@ -217,8 +217,10 @@
 
         <div class="col-lg-8">
           <div class="row">
-            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href=""><?php print t('UN in the news');?> <i class="fa fa-angle-double-right"></i></a></div>
-             <div class="un-news content-large-text"> 
+            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href=""><?php print t('UN in the news');?> <i class="fa fa-angle-double-right"></i></a>
+            <a data-toggle="collapse" data-target="#un-news-box" aria-expanded="true" aria-controls="un-news-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+            </div>
+             <div class="un-news content-large-text collapse in" id="un-news-box"> 
                 <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
