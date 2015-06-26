@@ -75,7 +75,7 @@
 
 //kpr($variables);
 
-kpr(taxonomy_get_term_by_name('Events'));
+print_r(taxonomy_get_term_by_name('Events'));
 
 
 ?>
