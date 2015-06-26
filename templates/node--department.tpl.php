@@ -446,7 +446,11 @@ if ($field_departmental_theme_value == "") {
 	        <div class="col-md-6">
 	                <h2>About us <?php // print render($content['field_departmental_about_us_labe']); ?></h2>
 	                <div class="dept_about_us_body"><?php print render($content['field_departmental_about_us_body']); ?></div>
-			<div><a href="<?php print render($content['field_departmental_about_us_link']); ?>">Read more</a></div>
+			<div>
+				<?php if (count($node->field_departmental_about_us_link)) { ?>
+					<a href="<?php echo $node->field_departmental_about_us_link['und'][0]['display_url']; ?>">Read more</a>
+				<?php } ?>
+			</div>
 	                <?php if (count($node->field_departmental_organigram)) { ?>
 	                        <div class="text-right" id="department_organigram"><a href="<?php print file_create_url($node->field_departmental_organigram['und'][0]['uri']); ?>"><i class="fa fa-sitemap"></i> Organigramme</a></div>
 	                <?php } ?>
