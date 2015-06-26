@@ -180,12 +180,13 @@
           		</div>
               </div>
             </div>
-          </div>  <!-- All stories cont --> 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+          
+            <div class="row">
+              <div class="col-md-12">
+                <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+              </div>
             </div>
-          </div>
+          </div>  <!-- All stories cont --> 
         </div> <!-- END Stories -->
         
       </div> <!-- END Stories, search, events, announcements -->
