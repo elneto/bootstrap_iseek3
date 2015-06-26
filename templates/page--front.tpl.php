@@ -94,7 +94,7 @@
 		<!-- /gcd overlay -->	
 
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events"><?php print t('Events');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#calendar-box" aria-expanded="true" aria-controls="calendar-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>
           </h3>
           <div id="calendar-box" class="collapse in">
@@ -102,7 +102,7 @@
             
           </div>
           <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div id="announcements-box" class="collapse in">
@@ -143,7 +143,7 @@
         </div>
         <!-- Stories -->
         <div class="col-md-7 col-md-pull-5">
-          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box top-boxes-margin">&nbsp;<i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;<a href="<?php echo url('articles');?>"><?php print t('Staff stories and news');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#all-stories-cont" aria-expanded="true" aria-controls="all-stories-cont" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div id="all-stories-cont" class="collapse in">
@@ -159,7 +159,7 @@
               <div class="col-md-4 lpad5">
             
   	      <div id="thumbnail-most-popular" class="main-thumbnail">
-                  <div id="most-popular-title">Most popular</div>
+                  <div id="most-popular-title"><?php print t('Most popular');?></div>
 
 
                   <?php
@@ -183,7 +183,7 @@
           
             <div class="row">
               <div class="col-md-12">
-                <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>">All staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+                <div class="bottom-staff-stories"><a href="<?php echo url('articles');?>"><?php print t('All staff stories and news');?> <i class="fa fa-angle-double-right"></i></a></div>
               </div>
             </div>
           </div>  <!-- All stories cont --> 
@@ -195,7 +195,7 @@
       
       <div class="row">
         <div class="col-md-12">
-          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;In the Spotlight
+          <h3 id="spotlight-box">&nbsp;<i class="fa fa-bullseye"></i>&nbsp;&nbsp;<?php print t('In the Spotlight');?>
           <a data-toggle="collapse" data-target="#spotlight-box-content" aria-expanded="true" aria-controls="spotlight-box-content" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div class="row collapse in" id="spotlight-box-content">
@@ -208,7 +208,7 @@
       <!-- Submit -->
       <div class="row">
         <div class="col-lg-12 margin-submit">
-          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#">Submit content <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
         </div>
       </div>
       <!-- END Submit -->
@@ -217,14 +217,14 @@
 
         <div class="col-lg-8">
           <div class="row">
-            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href="">UN in the news <i class="fa fa-angle-double-right"></i></a></div>
+            <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;<a href=""><?php print t('UN in the news');?> <i class="fa fa-angle-double-right"></i></a></div>
              <div class="un-news content-large-text"> 
                 <?php print render($latest_news); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>
             <div class="col-md-6">
-              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="">Useful tips <i class="fa fa-angle-double-right"></i></a></div>
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a></div>
               <div class="tip-content">
               <!-- <img src="images/tweet-tip.png" class="img-responsive">
               <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div> -->
@@ -237,14 +237,14 @@
           <div class="staff-box">
           <div class="row">
             <div class="col-md-6 bpad15 wborr">
-                <h4 class="tjo"><a href="">Temporary Job Openings <i class="fa fa-angle-double-right"></i></a></h4>
+                <h4 class="tjo"><a href=""><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="tjo-content content-large-text">
                       <?php print render($recent_tjos); ?>
                 </div>
 
             </div>
             <div class="col-md-6 bpad15">
-              <h4 class="classifieds"><a href="classified/">Classified ads <i class="fa fa-angle-double-right"></i></a></h4>
+              <h4 class="classifieds"><a href="classified/"><?php print t('Classified ads');?> <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="classifieds-content content-large-text">
                     <?php print render($latest_zeekoslist); ?>
                 </div>
@@ -254,13 +254,13 @@
           <!-- staff union and comm -->
           <div class="row">
             <div class="col-md-6 wborr">
-                <h4 class="staffunion"><a href="">Staff Union <i class="fa fa-angle-double-right"></i></a></h4>
+                <h4 class="staffunion"><a href=""><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="staffunion-content content-large-text">
                     <?php print render($staff_union_block); ?>
                 </div>
             </div>
             <div class="col-md-6">
-              <h4 class="community"><a href="">Community <i class="fa fa-angle-double-right"></i></a></h4>
+              <h4 class="community"><a href=""><?php print t('Community');?> <i class="fa fa-angle-double-right"></i></a></h4>
                 <div class="community-content content-large-text">
                     <?php print $menu_community; ?>
                 </div>
@@ -269,7 +269,7 @@
         </div>
       </div>
         <div class="col-lg-4">
-          <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;Social media corner</h3>
+          <h3 class="top-side-box nohoverfx">&nbsp;<i class="fa fa-rss"></i>&nbsp;&nbsp;<?php print t('Social media corner');?></h3>
           <div class="twitter-border fluid">
               <?php print render($social_media_corner); ?>
           </div>
