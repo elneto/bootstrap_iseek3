@@ -101,7 +101,7 @@
 		        <?php echo views_embed_view('events_block_for_home_page','block'); ?>	
             
           </div>
-          <div class="content-large-text bottom-box-opacity-down"></div>
+          <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
           <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/">Announcements <i class="fa fa-angle-double-right"></i></a></h3>
           <div id="announcements-box">
         		<?php 
