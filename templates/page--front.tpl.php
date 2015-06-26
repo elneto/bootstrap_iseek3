@@ -94,8 +94,10 @@
 		<!-- /gcd overlay -->	
 
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a></h3>
-          <div id="calendar-box">
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events">Events <i class="fa fa-angle-double-right"></i></a>
+          <a data-toggle="collapse" data-target="#calendar-box" aria-expanded="true" aria-controls="calendar-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>
+          </h3>
+          <div id="calendar-box" class="collapse in">
 		        <?php echo views_embed_view('events_block_for_home_page','block'); ?>	
             
           </div>
