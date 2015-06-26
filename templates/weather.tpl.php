@@ -7,7 +7,7 @@
 ?>
 <div class="row">
   <div class="col-lg-12">
-    <div class="timezone">&nbsp;&nbsp;&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;&nbsp;<span class="large-text"><?php print t('Time zone and weather');?></span>
+    <div class="timezone large-text">&nbsp;<i class="fa fa-sun-o fa-2x"></i>&nbsp;&nbsp;<?php print t('Time zone and weather');?></span>
       <a data-toggle="collapse" data-target="#weather-box" aria-expanded="true" aria-controls="weather-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
     </div>
   </div>
