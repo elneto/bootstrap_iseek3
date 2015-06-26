@@ -1,17 +1,14 @@
-<?php
-
-//dpm($menu_quicklinksNY);
-
-?>
 <!-- Staff Toolkit -->
       
       <div class="row">
         <div class="col-lg-12">
-          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Toolkit</div>
+          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Toolkit
+          <a data-toggle="collapse" data-target="#footer-box" aria-expanded="true" aria-controls="footer-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
+          </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row collapse in" id="footer-box">
         <div class="col-lg-12 footer-border">
         <div class="footer-background toolkit-row">
         <div class="col-md-3 left-menu">
@@ -104,4 +101,4 @@
       </p>
 
     </footer>
-  </div> <!-- main container
+  </div> <!-- main container -->
