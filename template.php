@@ -318,7 +318,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => iseek_custom_get_menu_children('menu-toolkit---ethics-and-intern')));
   $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => iseek_custom_get_menu_children('menu-toolkit---finance-and-budge')));
   //put the path to the footer in the logo
-  $variables['path_logo_footer'] = '"'.drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
+  $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
   //blocks
   $variables['about_us_block'] = iseek_custom_block('about_us_footer_block_i3', 'content'); 
 
