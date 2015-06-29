@@ -81,7 +81,7 @@
 				                                echo t("Vienna");
 				                        // external
 				                        } else {
-				                                echo t("New York"); 
+				                                echo t("Global"); 
 				                        }
 				                ?>
 						</span> <span class="caret"></span></a>
