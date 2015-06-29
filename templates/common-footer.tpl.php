@@ -14,8 +14,40 @@
         <div class="col-md-3 left-menu">
            <div class="row underline left-menu-top">
               <div  class="partners content-large-text">
-                <h5 class="content-large-text">Quicklinks - New York <?php //print $menu_quicklinksNY_title;?></h5>
-                <?php print $menu_quicklinksNY;?>
+                <h5 class="content-large-text">Quicklinks -
+                <?php
+                        // switch depending on domain
+                        // 555
+                        if (require_login_display_local('newyork')) {
+                                echo t("New York");
+                        // 131
+                        } elseif (require_login_display_local('geneva')) {
+                                echo t("Geneva");
+                        // 60
+                        } elseif (require_login_display_local('addisababa')) {
+                                echo t("Addis Ababa");
+                        // 61
+                        } elseif (require_login_display_local('bangkok')) {
+                                echo t("Bangkok");
+                        // 62
+                        } elseif (require_login_display_local('beirut')) {
+                                echo t("Beirut");
+                        // 63
+                        } elseif (require_login_display_local('nairobi')) {
+                                echo t("Nairobi");
+                        // 64
+                        } elseif (require_login_display_local('santiago')) {
+                                echo t("Santiago");
+                        // 65
+                        } elseif (require_login_display_local('vienna')) {
+                                echo t("Vienna");
+                        // external
+                        } else {
+                                echo t("Global");
+                        }
+                ?>
+                </h5>
+                <?php print $menu_quicklinks; ?>
               </div>
           </div>
           <div class="about-us">
