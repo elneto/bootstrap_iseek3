@@ -206,7 +206,7 @@
       <!-- Submit -->
       <div class="row">
         <div class="col-lg-12 margin-submit">
-          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;<?php print t("Share your articles, stories, photos, TJO's, ads and more."); ?></span></span></div>
         </div>
       </div>
       <!-- END Submit -->
