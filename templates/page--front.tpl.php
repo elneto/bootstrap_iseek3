@@ -158,16 +158,10 @@
             
   	      <div id="thumbnail-most-popular" class="main-thumbnail">
                   <div id="most-popular-title"><?php print t('Most popular');?></div>
-
-
                   <?php
                           // uses nodequeue module
                           echo views_embed_view('nodequeue_3','block'); 
                   ?>
-  <!--
-                  <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
-                  <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
-  -->
                 </div>
               </div>
             </div>
@@ -206,7 +200,7 @@
       <!-- Submit -->
       <div class="row">
         <div class="col-lg-12 margin-submit">
-          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;Share your articles, stories, photos, TJO's, ads and more.</span></span></div>
+          <div class="large-text submit-content">&nbsp;<i class="fa fa-pencil-square-o fa-lg"> </i>&nbsp;&nbsp;<a href="#"><?php print t('Submit content');?> <i class="fa fa-angle-double-right"></i></a> <span class="less-large"><span class="hidden-xs">&nbsp;&nbsp;<?php print t("Share your articles, stories, photos, TJO's, ads and more."); ?></span></span></div>
         </div>
       </div>
       <!-- END Submit -->

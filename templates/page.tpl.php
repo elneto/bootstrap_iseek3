@@ -122,6 +122,14 @@
 
 <!-- begin common footer -->
 
-<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php'); ?>
+<?php 
+
+if (!(require_login_display_global_external_only())) {
+	echo "include";
+	include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php'); 
+} else {
+	echo "don't include";
+}
+?>
 
 <!-- end common footer -->

@@ -2,8 +2,7 @@
         <div class="container">
                 <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-12 hidden-xs">
-                                <!-- eric: base_url needs to be i18n and domain aware: is not currently -->
-                                <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>">Welcome to the United Nations Intranet</a>
+                                <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>"><?php print t('Welcome to the United Nations Intranet'); ?></a>
                         </div>
                         <!-- <div class="col-lg-2 col-md-6 col-sm-6">
 
@@ -40,7 +39,7 @@
                         <div class="row">
                                 <div class="col-md-10 col-xs-12">
                                         <a href="<?php echo url('<front>');?>">
-                                                <img src="<?php print $logo; ?>" onerror="this.onerror=null; this.src='images/iseek-logo.png'" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
+                                                <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("iseek-logo.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
                                         </a>
                                 </div>
                                 <div class="col-md-2 hidden-xs">
@@ -58,43 +57,43 @@
 				                        // switch depending on domain      
 				                        // 555
 				                        if (require_login_display_local('newyork')) {
-				                                echo "New York";
+				                                echo t("New York");
 				                        // 131
 				                        } elseif (require_login_display_local('geneva')) {
-				                                echo "Geneva"; 
+				                                echo t("Geneva"); 
 				                        // 60
 				                        } elseif (require_login_display_local('addisababa')) {
-				                                echo "Addis Ababa";
+				                                echo t("Addis Ababa");
 				                        // 61
 				                        } elseif (require_login_display_local('bangkok')) {
-				                                echo "Bangkok";
+				                                echo t("Bangkok");
 				                        // 62
 				                        } elseif (require_login_display_local('beirut')) {
-				                                echo "Beirut";
+				                                echo t("Beirut");
 				                        // 63
 				                        } elseif (require_login_display_local('nairobi')) {
-				                                echo "Nairobi";
+				                                echo t("Nairobi");
 				                        // 64
 				                        } elseif (require_login_display_local('santiago')) {
-				                                echo "Santiago";
+				                                echo t("Santiago");
 				                        // 65
 				                        } elseif (require_login_display_local('vienna')) {
-				                                echo "Vienna";
+				                                echo t("Vienna");
 				                        // external
 				                        } else {
-				                                echo "New York"; 
+				                                echo t("Global"); 
 				                        }
 				                ?>
 						</span> <span class="caret"></span></a>
                                                 <ul id="ul-location" class="dropdown-menu" role="menu">
-                                                        <li><a href="https://iseek-addisababa.un.org">Addis Ababa</a></li>
-                                                        <li><a href="https://iseek-bangkok.un.org">Bangkok</a></li>
-                                                        <li><a href="https://iseek-beirut.un.org">Beirut</a></li>
-                                                        <li><a href="https://iseek-geneva.un.org">Geneva</a></li>
-                                                        <li><a href="https://iseek-nairobi.un.org">Nairobi</a></li>
-                                                        <li><a href="https://iseek-newyork.un.org">New York</a></li>
-                                                        <li><a href="https://iseek-santiago.un.org">Santiago</a></li>
-                                                        <li><a href="https://iseek-vienna.un.org">Vienna</a></li>
+                                                        <li><a href="https://iseek-addisababa.un.org"><?php echo t("Addis Ababa"); ?></a></li>
+                                                        <li><a href="https://iseek-bangkok.un.org"><?php echo t("Bangkok"); ?></a></li>
+                                                        <li><a href="https://iseek-beirut.un.org"><?php echo t("Beirut"); ?></a></li>
+                                                        <li><a href="https://iseek-geneva.un.org"><?php echo t("Geneva"); ?></a></li>
+                                                        <li><a href="https://iseek-nairobi.un.org"><?php echo t("Nairobi"); ?></a></li>
+                                                        <li><a href="https://iseek-newyork.un.org"><?php echo t("New York"); ?></a></li>
+                                                        <li><a href="https://iseek-santiago.un.org"><?php echo t("Santiago"); ?></a></li>
+                                                        <li><a href="https://iseek-vienna.un.org"><?php echo t("Vienna"); ?></a></li>
                                                 </ul>
 
                                         </li>
@@ -102,7 +101,7 @@
                         </div><!-- /.navbar-collapse -->
                 </div>
                 <div class="col-md-2 visible-md visible-lg">
-                        <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-70.svg" onerror="this.onerror=null; this.src='/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-70.png'" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo" width="145">
+                        <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo" width="145">
                 </div>
         </div>
 
