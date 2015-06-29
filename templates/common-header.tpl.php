@@ -39,7 +39,7 @@
                         <div class="row">
                                 <div class="col-md-10 col-xs-12">
                                         <a href="<?php echo url('<front>');?>">
-                                                <img src="<?php print $logo; ?>" onerror="this.onerror=null; this.src='images/iseek-logo.png'" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
+                                                <img src="<?php t("sites/iseek.un.org/themes/bootstrap_iseek3/images/iseek-logo.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
                                         </a>
                                 </div>
                                 <div class="col-md-2 hidden-xs">
