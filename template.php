@@ -304,35 +304,34 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-toolkit---finance-and-budge');
   //put the toolkit menu links in vars
   
-  // $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   // switch depending on domain
   // 555
   if (require_login_display_local('newyork')) {
           $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
   // 131
   } elseif (require_login_display_local('geneva')) {
-          echo t("Geneva");
+          $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
   // 60
   } elseif (require_login_display_local('addisababa')) {
-          echo t("Addis Ababa");
+          $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
   // 61
   } elseif (require_login_display_local('bangkok')) {
           $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
   // 62
   } elseif (require_login_display_local('beirut')) {
-          echo t("Beirut");
+          $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
   // 63
   } elseif (require_login_display_local('nairobi')) {
-          echo t("Nairobi");
+          $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
   // 64
   } elseif (require_login_display_local('santiago')) {
-          echo t("Santiago");
+          $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
   // 65
   } elseif (require_login_display_local('vienna')) {
-          echo t("Vienna");
+          $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
   // external
   } else {
-          echo t("Global");
+          $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
   }
 
 
