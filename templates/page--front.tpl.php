@@ -158,16 +158,10 @@
             
   	      <div id="thumbnail-most-popular" class="main-thumbnail">
                   <div id="most-popular-title"><?php print t('Most popular');?></div>
-
-
                   <?php
                           // uses nodequeue module
                           echo views_embed_view('nodequeue_3','block'); 
                   ?>
-  <!--
-                  <img src="http://tuco.co/iseek/images/xthumb3.jpg.pagespeed.ic.aBTCalV4UN.jpg" border="0" alt="alternate text"/>
-                  <a href="#">Snow hampers relief efforts this can go to three lines with more text</a>
-  -->
                 </div>
               </div>
             </div>
