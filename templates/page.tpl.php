@@ -74,12 +74,15 @@
  */
 ?>
 
-
 <!-- begin common header -->
 
 <?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-header.tpl.php'); ?>
 
-<?php include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/search_include.tpl.php'); ?>
+<?php 
+if (require_login_display_global()) {
+	include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/search_include.tpl.php'); 
+}
+?>
 
 <!-- end common header -->
 
@@ -123,12 +126,8 @@
 <!-- begin common footer -->
 
 <?php 
-
 if (require_login_display_global()) {
-	echo "don't include 4:17";
 	include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php');
-} else {
-	echo "include 4:17";
 }
 ?>
 

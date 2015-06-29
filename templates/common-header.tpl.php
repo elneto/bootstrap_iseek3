@@ -110,6 +110,10 @@
 
 <div class="main-container container">
 
+	<?php
+	if (require_login_display_global()) {
+	?>
+
         <div class="row" id="iseek-main-nav">
 
                 <div class="col-sm-12">
@@ -141,11 +145,12 @@
 
                 </div>
 
-        <!-- <div class="col-sm-2 col-xs-12">
-                <?php //print render($page['header']); //do we need this region? ?>
-        </div> -->
-
         </div>
+
+	<?php
+	}
+	?>
+
         <!-- Urgent message -->
         <div class="row">
                 <div class="col-md-12">
