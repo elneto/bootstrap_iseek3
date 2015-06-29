@@ -124,11 +124,11 @@
 
 <?php 
 
-if (!(require_login_display_global_external_only())) {
-	echo "include";
-	include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php'); 
+if (require_login_display_global()) {
+	echo "don't include 4:17";
+	include('sites/iseek.un.org/themes/bootstrap_iseek3/templates/common-footer.tpl.php');
 } else {
-	echo "don't include";
+	echo "include 4:17";
 }
 ?>
 
