@@ -47,7 +47,7 @@
                         }
                 ?>
                 </h5>
-                <?php // print $menu_quicklinksNY;?>
+                <?php print $menu_quicklinks; ?>
               </div>
           </div>
           <div class="about-us">

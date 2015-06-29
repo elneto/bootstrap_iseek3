@@ -290,7 +290,7 @@ function iseek_custom_get_menu_children($name){
 function bootstrap_iseek3_preprocess_page(&$variables){
 
   //$variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-tookit---key-tools');
-  $variables['menu_quicklinksNY_title'] = iseek_custom_get_menu_title('menu-quick-links---ny');
+  // $variables['menu_quicklinksNY_title'] = iseek_custom_get_menu_title('menu-quick-links---ny');
   //$variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-key-tools-top');
   $variables['menu_ktb_title'] = iseek_custom_get_menu_title('menu-toolkit---key-tools-bottom');
   $variables['menu_staff_title'] = iseek_custom_get_menu_title('menu-toolkit---staff-development');
@@ -303,7 +303,40 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_ethics_title'] = iseek_custom_get_menu_title('menu-toolkit---ethics-and-intern');
   $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-toolkit---finance-and-budge');
   //put the toolkit menu links in vars
-  $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+  
+  // $variables['menu_quicklinksNY'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+  // switch depending on domain
+  // 555
+  if (require_login_display_local('newyork')) {
+          $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+  // 131
+  } elseif (require_login_display_local('geneva')) {
+          echo t("Geneva");
+  // 60
+  } elseif (require_login_display_local('addisababa')) {
+          echo t("Addis Ababa");
+  // 61
+  } elseif (require_login_display_local('bangkok')) {
+          $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
+  // 62
+  } elseif (require_login_display_local('beirut')) {
+          echo t("Beirut");
+  // 63
+  } elseif (require_login_display_local('nairobi')) {
+          echo t("Nairobi");
+  // 64
+  } elseif (require_login_display_local('santiago')) {
+          echo t("Santiago");
+  // 65
+  } elseif (require_login_display_local('vienna')) {
+          echo t("Vienna");
+  // external
+  } else {
+          echo t("Global");
+  }
+
+
+
   //kpr(menu_navigation_links('menu-quick-links---ny')); die;
   //kpr($variables['menu_quicklinksNY']); die;
   $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-top')));
