@@ -23,7 +23,11 @@
  *
  * @ingroup views_templates
  */
-kpr($fields);
+//kpr($fields);
+if ($fields['field_display_title']->content == '<div>0</div>') //is false
+	$fields['title']->content = "";
+
+unset($fields['field_display_title']);
 ?>
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
@@ -32,8 +36,6 @@ kpr($fields);
 
   <?php print $field->wrapper_prefix; ?>
     <?php print $field->label_html; ?>
-    <?php 
-    kpr($field);
-    print $field->content; ?>
+    <?php print $field->content; ?>
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
