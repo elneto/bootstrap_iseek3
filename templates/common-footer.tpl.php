@@ -103,10 +103,12 @@
               <?php print $menu_reference; ?>
             </div> 
 
-            <h5 class="content-large-text underline"><?php print "ethics"; // $menu_ethics_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Ethics and internal justice"); ?></h5>
             <div class="medium-text">
               <?php // print $menu_ethics; 
-			kpr(menu_navigation_links("menu-toolkit---ethics-and-intern"));
+			$footer_menu = render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 ))));
+			$footer_menu = preg_replace('/"nav navbar-nav"/', '"links"', $footer_menu);
+			echo $footer_menu;
 		?>
             </div> 
               <h5 class="content-large-text underline"><?php print $menu_finance_title; ?></h5>
