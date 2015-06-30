@@ -30,11 +30,8 @@
 
       $i = 0;
       foreach($weather as $place): 
-        $date = date_create(null, timezone_open($city[$place['name']]));
-        // $iSeekDate = date_format($date, 'D, j M');
-        $iSeekTime = date_format($date, 'H:i'); 
+        $iSeekTime = format_date(time(), "custom", "H:i", $city[$place['name']]); 
 	$iSeekDate = format_date(time(), "custom", "D, j M", $city[$place['name']]);	
-	// $iSeekTime = t("@time", array('@time' => format_date($date, NULL, 'H:i')));
 
           if ($i == 4): //2nd row?>
             </div></div>
