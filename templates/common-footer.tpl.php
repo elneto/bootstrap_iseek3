@@ -51,8 +51,17 @@
               </div>
           </div>
           <div class="about-us">
-              <img src=<?php print $path_logo_footer;?>  class="img-responsive" id="logo-footer" alt="iseek logo"/>
-              <?php print render($about_us_block); ?>
+              <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.svg'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
+                <p class="content-large-text">
+                    <a href=""><?php echo t("About us"); ?></a>
+                </p>
+                <div class="medium-text">
+                  <p><?php echo t("The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide."); ?></p>
+                </div>
+                <p class="content-large-text">
+                    <a href=""><?php echo t("Contact us"); ?></a>
+                </p>
+              
         </div>
         </div>
           <div class="col-md-3">
@@ -114,8 +123,16 @@
           </div>
         </div>
               <div class="about-us-xs visible-xs visible-sm">
-                <img src=<?php print $path_logo_footer;?> class="img-responsive" id="logo-footer" alt="iseek logo"/>
-                <?php print render($about_us_block); ?>
+                <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.svg'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
+                <p class="content-large-text">
+                    <a href="">About us </a>
+                </p>
+                <div class="medium-text">
+                  <p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide.</p>
+                </div>
+                <p class="content-large-text">
+                    <a href="">Contact us </a>
+                </p>
             </div>
         </div>
       </div>
