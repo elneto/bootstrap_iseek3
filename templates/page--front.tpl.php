@@ -92,7 +92,7 @@
 		<!-- /gcd overlay -->	
 
  
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events"><?php print t('Events');?> <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;<a href="events-list/"><?php print t('Events');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#calendar-box" aria-expanded="true" aria-controls="calendar-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>
           </h3>
           <div id="calendar-box" class="collapse in">
@@ -100,7 +100,7 @@
             
           </div>
           <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements-list/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div id="announcements-box" class="collapse in">
