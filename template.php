@@ -307,7 +307,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   // switch depending on domain
   // 555
   if (require_login_display_local('newyork')) {
-          $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---ny"))));
   // 131
   } elseif (require_login_display_local('geneva')) {
           $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
@@ -331,7 +332,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
           $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
   // external
   } else {
-          $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-external-quicklinks"))));
   }
 
 
