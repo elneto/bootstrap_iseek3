@@ -311,25 +311,32 @@ function bootstrap_iseek3_preprocess_page(&$variables){
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---ny"))));
   // 131
   } elseif (require_login_display_local('geneva')) {
-          $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
+          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---gva"))));
   // 60
   } elseif (require_login_display_local('addisababa')) {
-          $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-addis-ababa-quicklinks"))));
   // 61
   } elseif (require_login_display_local('bangkok')) {
-          $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-bangkok-quicklinks"))));
   // 62
   } elseif (require_login_display_local('beirut')) {
-          $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-beirut-quicklinks"))));
   // 63
   } elseif (require_login_display_local('nairobi')) {
-          $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-nairobi-quicklinks"))));
   // 64
   } elseif (require_login_display_local('santiago')) {
-          $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-santiago-quicklinks"))));
   // 65
   } elseif (require_login_display_local('vienna')) {
-          $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-vienna-quicklinks"))));
   // external
   } else {
           // $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
