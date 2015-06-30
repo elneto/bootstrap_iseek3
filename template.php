@@ -336,8 +336,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 
 
 
-  //kpr(menu_navigation_links('menu-quick-links---ny')); die;
-  //kpr($variables['menu_quicklinksNY']); die;
+/*  
   $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-top')));
   $variables['menu_ktb'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-bottom')));
   $variables['menu_staff'] = theme('links__menu-toolkit---staff-development', array('links' => iseek_custom_get_menu_children('menu-toolkit---staff-development')));
@@ -349,6 +348,20 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_reference'] = theme('links__menu-toolkit---references-and-ma', array('links' => iseek_custom_get_menu_children('menu-toolkit---references-and-ma')));
   $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => iseek_custom_get_menu_children('menu-toolkit---ethics-and-intern')));
   $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => iseek_custom_get_menu_children('menu-toolkit---finance-and-budge')));
+*/
+   $variables['menu_ktt'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-top", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_ktb'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-bottom", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_staff'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---staff-development", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_pay'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---pay-benefits-and-", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_security'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---security", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_travel'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---travel", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_health'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---health-and-wellbe", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_rules'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---rules-and-regulat", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_reference'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---references-and-ma", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
+
+
   //put the path to the footer in the logo
   $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
   //blocks
