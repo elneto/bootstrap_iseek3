@@ -103,9 +103,11 @@
               <?php print $menu_reference; ?>
             </div> 
 
-            <h5 class="content-large-text underline"><?php print $menu_ethics_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print "ethics"; // $menu_ethics_title; ?></h5>
             <div class="medium-text">
-              <?php print $menu_ethics; ?>
+              <?php // print $menu_ethics; 
+			kpr(menu_navigation_links("menu-toolkit---ethics-and-intern"));
+		?>
             </div> 
               <h5 class="content-large-text underline"><?php print $menu_finance_title; ?></h5>
               <div class="medium-text">
