@@ -307,37 +307,45 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   // switch depending on domain
   // 555
   if (require_login_display_local('newyork')) {
-          $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---ny"))));
   // 131
   } elseif (require_login_display_local('geneva')) {
-          $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
+          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---gva"))));
   // 60
   } elseif (require_login_display_local('addisababa')) {
-          $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-addis-ababa-quicklinks"))));
   // 61
   } elseif (require_login_display_local('bangkok')) {
-          $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-bangkok-quicklinks"))));
   // 62
   } elseif (require_login_display_local('beirut')) {
-          $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-beirut-quicklinks"))));
   // 63
   } elseif (require_login_display_local('nairobi')) {
-          $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-nairobi-quicklinks"))));
   // 64
   } elseif (require_login_display_local('santiago')) {
-          $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-santiago-quicklinks"))));
   // 65
   } elseif (require_login_display_local('vienna')) {
-          $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-vienna-quicklinks"))));
   // external
   } else {
-          $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
+          // $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
+          $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-external-quicklinks"))));
   }
 
 
 
-  //kpr(menu_navigation_links('menu-quick-links---ny')); die;
-  //kpr($variables['menu_quicklinksNY']); die;
+/*  
   $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-top')));
   $variables['menu_ktb'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-bottom')));
   $variables['menu_staff'] = theme('links__menu-toolkit---staff-development', array('links' => iseek_custom_get_menu_children('menu-toolkit---staff-development')));
@@ -349,6 +357,20 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_reference'] = theme('links__menu-toolkit---references-and-ma', array('links' => iseek_custom_get_menu_children('menu-toolkit---references-and-ma')));
   $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => iseek_custom_get_menu_children('menu-toolkit---ethics-and-intern')));
   $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => iseek_custom_get_menu_children('menu-toolkit---finance-and-budge')));
+*/
+   $variables['menu_ktt'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-top", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_ktb'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-bottom", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_staff'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---staff-development", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_pay'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---pay-benefits-and-", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_security'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---security", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_travel'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---travel", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_health'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---health-and-wellbe", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_rules'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---rules-and-regulat", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_reference'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---references-and-ma", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
+
+
   //put the path to the footer in the logo
   $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
   //blocks

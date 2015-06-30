@@ -2,7 +2,7 @@
       
       <div class="row">
         <div class="col-lg-12">
-          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;Toolkit
+          <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;<?php echo t("Toolkit"); ?>
           <a data-toggle="collapse" data-target="#footer-box" aria-expanded="true" aria-controls="footer-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </div>
         </div>
@@ -51,8 +51,17 @@
               </div>
           </div>
           <div class="about-us">
-              <img src=<?php print $path_logo_footer;?>  class="img-responsive" id="logo-footer" alt="iseek logo"/>
-              <?php print render($about_us_block); ?>
+              <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.svg'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
+                <p class="content-large-text">
+                    <a href=""><?php echo t("About us"); ?></a>
+                </p>
+                <div class="medium-text">
+                  <p><?php echo t("The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide."); ?></p>
+                </div>
+                <p class="content-large-text">
+                    <a href=""><?php echo t("Contact us"); ?></a>
+                </p>
+              
         </div>
         </div>
           <div class="col-md-3">
@@ -60,7 +69,7 @@
             <div class="content-large-text" id="key-tools">
               <?php print $menu_ktt; ?>
             </div>
-            <h5 class="content-large-text underline"><?php echo $menu_ktb_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Key tools"); ?></h5>
             <div class="medium-text">
               <?php print $menu_ktb; ?>
             </div>             
@@ -69,23 +78,23 @@
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline"><?php print $menu_staff_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Staff development"); ?></h5>
             <div class="medium-text">
               <?php print $menu_staff; ?>
             </div> 
-            <h5 class="content-large-text underline"><?php print $menu_pay_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Pay, benefits and insurance"); ?></h5>
             <div class="medium-text">
               <?php print $menu_pay; ?>
             </div> 
-            <h5 class="content-large-text underline"><?php print $menu_security_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Security"); ?></h5>
             <div class="medium-text">
               <?php print $menu_security; ?>
             </div> 
-            <h5 class="content-large-text underline"><?php print $menu_travel_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Travel"); ?></h5>
             <div class="medium-text">
               <?php print $menu_travel; ?>
             </div> 
-            <h5 class="content-large-text underline"><?php print $menu_health_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Health and wellbeing"); ?></h5>
             <div class="medium-text">
               <?php print $menu_health; ?>
             </div> 
@@ -94,34 +103,36 @@
         </div>
         <div class="col-md-3">
           <div class="footer-menu-items"> 
-            <h5 class="content-large-text underline"><?php print $menu_rules_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("Rules and regulations"); ?></h5>
             <div class="medium-text">
               <?php print $menu_rules; ?>
             </div> 
-            <h5 class="content-large-text underline"><?php print $menu_reference_title; ?></h5>
+            <h5 class="content-large-text underline"><?php print t("References and manuals"); ?></h5>
             <div class="medium-text">
               <?php print $menu_reference; ?>
             </div> 
 
             <h5 class="content-large-text underline"><?php print t("Ethics and internal justice"); ?></h5>
             <div class="medium-text">
-              <?php // print $menu_ethics; 
-			$footer_menu = render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 ))));
-			$footer_menu = preg_replace('/"nav navbar-nav"/', '"links"', $footer_menu);
-			echo $footer_menu;
-		?>
+              <?php print $menu_ethics; ?>
             </div> 
-              <h5 class="content-large-text underline"><?php print $menu_finance_title; ?></h5>
+              <h5 class="content-large-text underline"><?php print t("Finance and budget"); ?></h5>
               <div class="medium-text">
                 <?php print $menu_finance; ?>
             </div> 
           </div>
-        
-        
         </div>
               <div class="about-us-xs visible-xs visible-sm">
-                <img src=<?php print $path_logo_footer;?> class="img-responsive" id="logo-footer" alt="iseek logo"/>
-                <?php print render($about_us_block); ?>
+                <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.svg'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
+                <p class="content-large-text">
+                    <a href="">About us </a>
+                </p>
+                <div class="medium-text">
+                  <p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide.</p>
+                </div>
+                <p class="content-large-text">
+                    <a href="">Contact us </a>
+                </p>
             </div>
         </div>
       </div>
