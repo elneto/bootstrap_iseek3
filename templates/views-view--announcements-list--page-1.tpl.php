@@ -33,7 +33,13 @@ $arg = arg(1);
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-calendar"></i> <a href="<?php echo url('<front>').'events-list/'; ?>" class="white-link">Events <i class="fa fa-angle-double-right"></i></a></div>
+    <div class="toolkit large-text"><i class="fa fa-calendar"></i> <a href="<?php echo url('<front>').'events-list/'; ?>" class="white-link">Events <i class="fa fa-angle-double-right"></i></a></div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-title calendar-view-link"><a href="<?php echo url('<front>').'calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
   </div>
 </div>
 <br>
