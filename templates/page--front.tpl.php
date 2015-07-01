@@ -279,7 +279,7 @@
           <div class="twitter-border fluid collapse in" id="socialmedia-box">
               <?php print render($social_media_corner); ?>
           </div>
-        <div class="large-text social"> <a href="http://www.facebook.com/unitednations" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="http://twitter.com/#!/un"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="http://www.youtube.com/unitednations"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="http://gplus.to/unitednations"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="http://instagram.com/unitednations"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
+        <div class="large-text social"> <a href="<?php print t('http://www.facebook.com/unitednations');?>" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="<?php print t('http://twitter.com/#!/un');?>"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="<?php print t('http://www.youtube.com/unitednations');?>"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="<?php print t('http://gplus.to/unitednations');?>"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="<?php print t('http://instagram.com/unitednations');?>"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
         </div>
   
       </div>
