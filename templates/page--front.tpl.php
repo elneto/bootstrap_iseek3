@@ -262,7 +262,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-              <h4 class="community"><a href=""><?php print t('Community');?> <i class="fa fa-angle-double-right"></i></a>
+              <h4 class="community"><?php print t('Community');?> 
               <a data-toggle="collapse" data-target="#commu-box" aria-expanded="true" aria-controls="commu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </h4>
                 <div class="community-content content-large-text collapse in" id="commu-box">
