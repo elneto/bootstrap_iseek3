@@ -254,7 +254,7 @@
           <!-- staff union and comm -->
           <div class="row">
             <div class="col-md-6 wborr">
-                <h4 class="staffunion"><a href=""><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a>
+                <h4 class="staffunion"><a href="staff-union/"><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a>
                 <a data-toggle="collapse" data-target="#staffu-box" aria-expanded="true" aria-controls="staffu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="staffunion-content content-large-text collapse in" id="staffu-box">
