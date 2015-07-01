@@ -1529,6 +1529,9 @@ table {
 #oneun h4 {
   color: #227DA6;
   font-weight: bold;
+  display: inline;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 #oneun h2 {
   color: #227DA6;
@@ -1583,23 +1586,65 @@ table {
 }
 #oneun .secretariat-legend{
   .square-shape(#C7BA41);
+  vertical-align: middle;
 }
+#oneun .green-orange-container {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  display: inline;
+}
+#oneun .green-orange {
+  width: 0; 
+  height: 0; 
+  border-top: 1em solid  #B4DA92; 
+  border-right: 1em solid #E6BA85;
+  display: inline-block;
+}
+
+#oneun .green-blue-container {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  display: inline;
+}
+#oneun .green-blue {
+  width: 0; 
+  height: 0; 
+  border-top: 1em solid #6FB9D4; 
+  border-right: 1em solid #B4DA92;
+  display: inline-block;
+}
+
 #oneun .ga-legend{
   .square-shape(#B4DA92);
+  vertical-align: middle;
 }
 #oneun .sc-legend{
   .square-shape(#E6BA85);
+  vertical-align: middle;
 }
 #oneun .ecosoc-legend{
   .square-shape(#6FB9D4);
+  vertical-align: middle;
 }
 #oneun .iseek-logo::after{
-  content: "<i class=\"fa fa-map-marker\"></i>";
+  font-family: FontAwesome;
+  content: "\f041";
   color:#2771B7;
 }
 #oneun .note-logo::before{
-  content: "<i class=\"fa fa-map-marker\"></i>";
+  font-family: FontAwesome;
+  content: "\f041";
   color:#2771B7;
+}
+#oneun a{
+  color:#4d4d4d;
+  text-decoration: none;
+}
+#oneun a:hover{
+  color:#337ab7;
+  text-decoration: underline;
 }
 /*
 * Media queries not huge screens
