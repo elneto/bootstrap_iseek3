@@ -218,7 +218,7 @@
               <div class="bottom-side-box content-large-text"></div>
             </div>
             <div class="col-md-6">
-              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="useful-tips/"><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
               <a data-toggle="collapse" data-target="#tip-content-box" aria-expanded="true" aria-controls="tip-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </div>
               <div class="tip-content collapse in" id="tip-content-box">
