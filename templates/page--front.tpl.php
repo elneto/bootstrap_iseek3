@@ -100,7 +100,7 @@
             
           </div>
           <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements-list/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-list-ul"></i>&nbsp;&nbsp;<a href="announcements-list/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div id="announcements-box" class="collapse in">
