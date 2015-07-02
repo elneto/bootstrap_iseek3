@@ -31,7 +31,7 @@
       $i = 0;
       foreach($weather as $place): 
         $iSeekTime = format_date(time(), "custom", "H:i", $city[$place['name']]); 
-	$iSeekDate = format_date(time(), "custom", "D, j M", $city[$place['name']]);	
+	$iSeekDate = format_date(time(), "custom", "D j M", $city[$place['name']]);	
 
           if ($i == 4): //2nd row?>
             </div></div>
