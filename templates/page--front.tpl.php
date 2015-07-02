@@ -100,7 +100,7 @@
             
           </div>
           <div class="content-large-text bottom-box-opacity-down hidden-xs"></div>
-          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;<a href="announcements-list/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
+          <h3 class="top-side-box main-boxes-margin">&nbsp;<i class="fa fa-list-ul"></i>&nbsp;&nbsp;<a href="announcements-list/"><?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></a>
           <a data-toggle="collapse" data-target="#announcements-box" aria-expanded="true" aria-controls="announcements-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div id="announcements-box" class="collapse in">
@@ -218,7 +218,7 @@
               <div class="bottom-side-box content-large-text"></div>
             </div>
             <div class="col-md-6">
-              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href=""><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
+              <div class="top-side-box large-text">&nbsp;<i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;<a href="useful-tips/"><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a>
               <a data-toggle="collapse" data-target="#tip-content-box" aria-expanded="true" aria-controls="tip-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </div>
               <div class="tip-content collapse in" id="tip-content-box">
@@ -254,7 +254,7 @@
           <!-- staff union and comm -->
           <div class="row">
             <div class="col-md-6 wborr">
-                <h4 class="staffunion"><a href=""><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a>
+                <h4 class="staffunion"><a href="staff-union/"><?php print t('Staff Union');?> <i class="fa fa-angle-double-right"></i></a>
                 <a data-toggle="collapse" data-target="#staffu-box" aria-expanded="true" aria-controls="staffu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="staffunion-content content-large-text collapse in" id="staffu-box">
@@ -262,7 +262,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-              <h4 class="community"><a href=""><?php print t('Community');?> <i class="fa fa-angle-double-right"></i></a>
+              <h4 class="community"><?php print t('Community');?> 
               <a data-toggle="collapse" data-target="#commu-box" aria-expanded="true" aria-controls="commu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </h4>
                 <div class="community-content content-large-text collapse in" id="commu-box">
@@ -279,7 +279,7 @@
           <div class="twitter-border fluid collapse in" id="socialmedia-box">
               <?php print render($social_media_corner); ?>
           </div>
-        <div class="large-text social"> <a href="http://www.facebook.com/unitednations" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="http://twitter.com/#!/un"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="http://www.youtube.com/unitednations"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="http://gplus.to/unitednations"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="http://instagram.com/unitednations"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
+        <div class="large-text social"> <a href="<?php print t('http://www.facebook.com/unitednations');?>" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="<?php print t('http://twitter.com/#!/un');?>"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="<?php print t('http://www.youtube.com/unitednations');?>"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="<?php print t('http://gplus.to/unitednations');?>"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="<?php print t('http://instagram.com/unitednations');?>"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
         </div>
   
       </div>

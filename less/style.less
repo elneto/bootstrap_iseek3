@@ -1175,7 +1175,6 @@ button#go-button{
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  padding-bottom: 7em;
   text-align: left;
 }
 
@@ -1493,6 +1492,36 @@ table {
   text-align: left;
 }
 
+.calendar-view-link{
+  background-color: #fecc7b;
+  .border-radiuses(5px,5px,5px,5px);
+  padding: 0.3em;
+}
+
+/*
+* Submit Content page
+*/
+
+#subcon .box{
+ .border-radiuses(15px,15px,15px,15px); 
+ padding:.2em;
+ margin:0;
+}
+
+#subcon .top-box{
+  background-color: #fde9c6;
+}
+
+#subcon ul.folder1 {
+  .border-radiuses(15px,15px,15px,15px); 
+  background-color: #fff6e7;
+  list-style-type: none;
+
+  & a{
+    color: black;
+  }
+}
+
 /*
 * One UN page
 */
@@ -1500,6 +1529,9 @@ table {
 #oneun h4 {
   color: #227DA6;
   font-weight: bold;
+  display: inline;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 #oneun h2 {
   color: #227DA6;
@@ -1545,13 +1577,75 @@ table {
    margin-top:1em;
    padding: .5em;
 }
+
 #oneun .icoj{
   background-color: #B4BEE1;
 }
 #oneun .trusteship{
   background-color: #EDF1F2;
 }
+#oneun .secretariat-legend{
+  .square-shape(#C7BA41);
+  vertical-align: middle;
+}
+#oneun .green-orange-container {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  display: inline;
+}
+#oneun .green-orange {
+  width: 0; 
+  height: 0; 
+  border-top: 1em solid  #B4DA92; 
+  border-right: 1em solid #E6BA85;
+  display: inline-block;
+}
 
+#oneun .green-blue-container {
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+  display: inline;
+}
+#oneun .green-blue {
+  width: 0; 
+  height: 0; 
+  border-top: 1em solid #6FB9D4; 
+  border-right: 1em solid #B4DA92;
+  display: inline-block;
+}
+
+#oneun .ga-legend{
+  .square-shape(#B4DA92);
+  vertical-align: middle;
+}
+#oneun .sc-legend{
+  .square-shape(#E6BA85);
+  vertical-align: middle;
+}
+#oneun .ecosoc-legend{
+  .square-shape(#6FB9D4);
+  vertical-align: middle;
+}
+#oneun .iseek-logo::after{
+  font-family: FontAwesome;
+  content: "\f041";
+  color:#2771B7;
+}
+#oneun .note-logo::before{
+  font-family: FontAwesome;
+  content: "\f041";
+  color:#2771B7;
+}
+#oneun a{
+  color:#4d4d4d;
+  text-decoration: none;
+}
+#oneun a:hover{
+  color:#337ab7;
+  text-decoration: underline;
+}
 /*
 * Media queries not huge screens
 */

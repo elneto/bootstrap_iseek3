@@ -26,41 +26,14 @@
  *
  * @ingroup views_templates
  */
-
-//kpr('views-view has been called');
-$arg = arg(1);
 ?>
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text white-link"><i class="fa fa-calendar"></i>&nbsp;&nbsp;<?php print t('Events');?></div>
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-lg-12">
-    <div class="page-title calendar-view-link"><a href="<?php echo url('<front>').'calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-xs-12 col-md-12">
-    <h4 class="page-title">Filter by duty station</h4>
-    <div class="dutyStationButtons">
-      <a href="<?php echo url('<front>').'events-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>">Addis Ababa</a>
-      <a href="<?php echo url('<front>').'events-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>">Bangkok</a>
-      <a href="<?php echo url('<front>').'events-list/62'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==62 or $arg=='beirut'){echo 'active';}?>">Beirut</a>
-      <a href="<?php echo url('<front>').'events-list/131'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==131 or $arg=='geneva'){echo 'active';}?>">Geneva</a>
-      <a href="<?php echo url('<front>').'events-list/63'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==63 or $arg=='nairobi'){echo 'active';}?>">Nairobi</a>
-      <a href="<?php echo url('<front>').'events-list/555'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>">New York</a>
-      <a href="<?php echo url('<front>').'events-list/64'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>">Santiago</a>
-      <a href="<?php echo url('<front>').'events-list/65'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>">Vienna</a>
-      <a href="<?php echo url('<front>').'events-list/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>">All</a>
-    </div>
+    <div class="toolkit large-text white-link">&nbsp;<?php print t('Useful tips');?></div>
   </div>
 </div>
 <br><br>
-
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
