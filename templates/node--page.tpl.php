@@ -86,7 +86,7 @@
 
   <?php print render($title_prefix); ?>
   <?php // if (!$page): ?>
-    <h2<?php print $title_attributes; ?>>PAGE<?php print $title; ?></h2>
+    <div class="toolkit large-text" id="toolkit-anchor"><h2><?php print $title_attributes; ?>PAGE<?php print $title; ?></h2></div>
   <?php // endif; ?>
   <?php print render($title_suffix); ?>
 
