@@ -668,7 +668,9 @@ section#block-system-main ul.apachesolr_search-results {
 }
 
 .departmental_home_page_resources_section { 
-	height: 425px;
+	height: 496px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }	
 
 
