@@ -229,6 +229,7 @@ div#thumbnail-most-popular > img {
 
 /* node-type-article */
 
+/*
 .not-front #toolkit-anchor {
         margin-top: 10px;        
 }
@@ -238,6 +239,7 @@ div#thumbnail-most-popular > img {
 	font-size: 20px; 
 	border: 0;
 }
+*/
 
 .not-front #event_toolkit {
 	background-color: #5AABD7;	
@@ -909,6 +911,11 @@ section#block-system-main ul.apachesolr_search-results {
 .page-forms thead tr {
 	background-color: #ffffff;
 	color: #337ab7;	
+}
+
+.page-forms thead tr th {
+	border-bottom: 1px #CCC solid;	
+	font-size: 1.25em;
 }
 
 
