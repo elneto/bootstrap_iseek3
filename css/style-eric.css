@@ -654,12 +654,13 @@ section#block-system-main ul.apachesolr_search-results {
   	height: 35px;
   	background-color: #E3E3E3;
   	border-bottom-right-radius: 10px;
-	margin-top: 10px;
+	/*margin-top: 10px;*/
 }
 
 .departmental_home_page_block_fixed_container {
 	height: 200px;
-  	overflow: scroll; 
+  	overflow-y: scroll; 
+  	overflow-x: hidden; 
 }
 
 .departmental_home_page_block_fixed_container#bio {
@@ -667,7 +668,9 @@ section#block-system-main ul.apachesolr_search-results {
 }
 
 .departmental_home_page_resources_section { 
-	height: 425px;
+	height: 496px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }	
 
 
