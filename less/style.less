@@ -1516,7 +1516,7 @@ table {
   //width: 60%;
   margin-bottom:0;
   //background-color: #fff6e7;
-  background-color: rgba(255, 246, 231, 0.3);
+  background-color: rgb(255, 246, 231);
   padding:.5em;
   font-weight: bold;
   color: #1C90CE;
@@ -1540,10 +1540,14 @@ table {
   margin-top:.5em;
 }
 #subcon ul.folder1 {
-  .border-radiuses(15px,15px,15px,0px); 
+  .border-radiuses(0px,15px,15px,0px); 
   background-color: #fff6e7;
   list-style-type: none;
-  padding:.5em;
+  padding-right:.5em;
+  padding-left:.5em;
+  padding-top:.5em;
+  padding-bottom: .5em;
+  
   & a{
     color: black;
   }
@@ -1552,10 +1556,11 @@ table {
   .border-radiuses(15px,15px,15px,15px); 
   background-color: #EDF4E2;
   list-style-type: none;
-  padding:0;
   margin-left:3em;
   margin-right:3em;
   margin-top: 0;
+  padding-bottom: .5em;
+  
   & a{
     color: black;
   }
