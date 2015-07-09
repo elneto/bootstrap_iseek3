@@ -906,6 +906,11 @@ section#block-system-main ul.apachesolr_search-results {
 	color: #4372aa;
 }
 
+.page-forms thead tr {
+	background-color: #ffffff;
+	color: #337ab7;	
+}
+
 
 /********************************************************************************************/
 /*** CSS for departmental pages ***/
