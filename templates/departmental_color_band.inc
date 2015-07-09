@@ -13,7 +13,7 @@ $dept_color_array = array(
         "UNOG" => "#AF8A2E",
 );
 
-$dept_color_band = "#000000";
+$dept_color_band = "#C8C8C8";
 if (array_key_exists($ultimate_parent_name, $dept_color_array)) {
         $dept_color_band = $dept_color_array[$ultimate_parent_name];
 }
