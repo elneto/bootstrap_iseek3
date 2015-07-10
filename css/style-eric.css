@@ -942,6 +942,88 @@ section#block-system-main ul.apachesolr_search-results {
 	margin-top: 10px;
 }
 
+
+/* previously in search_include */
+
+tbody > tr > td, thead > tr > th {
+        font-size: small;
+}
+
+#myModal tbody > tr > td {
+        white-space: nowrap;
+}
+
+.gcd_pagination {
+        text-align: center;
+}
+
+.modal-header .input-group {
+        margin-bottom: 10px;
+}
+
+.modal-title {
+        font-size: 26px;
+        margin-bottom: 10px;
+}
+
+.wildcard input#wildcard {
+        position: relative;
+        margin-left: 0;
+        margin-right: 4px;
+}
+
+th {
+        font-weight: normal;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+}
+
+.loading {
+        opacity: 0.3;
+}
+
+.modal-body {
+        padding-top: 0;
+}
+
+.modal-body table {
+        word-wrap: break-word;
+}
+
+/* not fixed in less than 768 pixel width */
+@media (max-width: 768px) {
+}
+@media (min-width: 768px) {
+        .table-responsive {
+                width: 100%;
+                margin-bottom: 15px;
+                overflow-y: hidden;
+                overflow-x: auto;
+        }
+}
+
+#searchTriggerAdvanced {
+        color: #003377;
+        text-decoration: none;
+}
+
+#searchTriggerAdvancedInSimpleModal {
+        color: #003377;
+}
+
+#searchTriggerAdvanced:hover, #searchTriggerAdvanced:focus, #searchTriggerAdvanced:active  {
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+/* /previously in search include */
+
+
+
+
+
+
 /********************************************************************************************/
 /*** CSS for departmental pages ***/
 /********************************************************************************************/
