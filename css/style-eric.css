@@ -918,6 +918,10 @@ section#block-system-main ul.apachesolr_search-results {
 	font-size: 1em;
 }
 
+.page-forms thead tr th a {
+	color: #4d4d4d;
+}
+
 .page-forms .dept-color-band {
 	background-color: #c8c8c8;
 }

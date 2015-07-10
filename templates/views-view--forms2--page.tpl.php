@@ -31,6 +31,30 @@
 $arg = arg(1);
 ?>
 
+<div class="modal fade" id="formsCategoriesModal" tabindex="-1" role="dialog" aria-labelledby="formsCategoriesModal" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+        Forms categories
+   </div>
+   <div class="modal-post-header">
+        <button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">×</span></button>
+   </div>
+   <div class="modal-body">
+        <ul class="dept_site_map">
+		<?php echo views_embed_view('forms2_block','block'); ?>
+	</ul>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+  </div>
+ </div>
+</div>		
+
+
+
+
 <div class="row">
   <div class="col-lg-12">
     <div class="toolkit large-text white-link"> <?php print t('Forms');?></div>
