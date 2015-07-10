@@ -33,9 +33,21 @@ $arg = arg(1);
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text white-link"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<?php print t('Forms');?></div>
+    <div class="toolkit large-text white-link"> <?php print t('Forms');?></div>
+  </div>
+  <div class="col-lg-12">
+	<div class="dept-color-band"></div>	
   </div>
 </div>
+
+<div class="row departmentalSubmenu">
+        <div class="col-lg-12">
+                <ul class="departmentalSubmenu-nav">
+                        <li><span data-toggle="modal" data-target="#formsCategoriesModal"><i class="fa fa-list-alt"></i> Categories</span></li>
+		</ul>
+	</div>
+</div>
+
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
