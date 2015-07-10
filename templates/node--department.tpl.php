@@ -463,7 +463,7 @@ if ($field_departmental_theme_value == "") {
 ?>		
 
 	<div class="row" id="departmental_home_page_blocks">
-		<div class="col-md-4">
+		<div class="col-md-4" id="col1">
 
 			<div class="row">	
 
@@ -508,12 +508,10 @@ if ($field_departmental_theme_value == "") {
 			</div>		
 
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4"  id="col1">
 
 			<!-- what we do -->	
-            <div class="row">
-				<div class="col-md-12">
-           			<h4>What we do</h4>
+            	<h4>What we do</h4>
 					<div>	
 						<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?>
 					</div>
@@ -522,17 +520,13 @@ if ($field_departmental_theme_value == "") {
                                 <a href="<?php print $node->field_departmental_what_we_do_li['und'][0]['url']; ?>">Read more</a>
                         <?php } ?>
 					</div> 
-				</div>
-            </div>
-
+			
 
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4"  id="col1">
 
 			<!-- resources -->	
-			<div class="row">
-                		<div class="col-md-12">
-                    			<h4>Resources</h4>
+					<h4>Resources</h4>
 					<div class="departmental_home_page_resources_section">	
 						<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
 					</div>
@@ -541,10 +535,7 @@ if ($field_departmental_theme_value == "") {
                         				<a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>
                        				<?php } ?>
 					</div>
-                		</div>			
-            		</div>			
-
-		</div>
+        </div>
 	</div>	
 
 <?php
@@ -553,14 +544,13 @@ if ($field_departmental_theme_value == "") {
 
 
 		<div class="row" id="departmental_home_page_blocks">
-		        <div class="col-md-4">
+		        <div class="col-md-4" id="col1">
 				<div class="row">
 					<div class="col-md-12">
 						<h4><?php echo $node->field_departmental_bio_label['und'][0]['value'] ; ?></h4>
 						<div class="departmental_home_page_block_fixed_container" id="bio">
 							<?php // print views_embed_view('department_bio_for_department_home_page', 'block', $node->nid); ?>		
-							<div class="row">
-		        					<div class="col-md-12">
+							
 		                					<div class="media">
 		                        					<div class="media-left">
 											<?php print render($content['field_departmental_bio_image']) ; ?>
@@ -570,8 +560,7 @@ if ($field_departmental_theme_value == "") {
 		                                					<div id="field_departmental_bio_image_des"><?php print $node->field_departmental_bio_image_des['und'][0]['value']; ?></div>
 		                                					<div id="field_departmental_home_page_bod"><?php print $node->field_departmental_bio_body['und'][0]['value']; ?></div>
 		                        					</div>
-		                					</div>
-		        					</div>
+		                			
 							</div>	
 						</div>
 						<div class="departmental_home_page_block_bottom">
@@ -596,7 +585,7 @@ if ($field_departmental_theme_value == "") {
                 </div>
 
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4"  id="col1">
 				<div class="row">
                     <div class="col-md-12">
                         <h4>Highlights</h4>
@@ -625,10 +614,8 @@ if ($field_departmental_theme_value == "") {
                     </div>
                 </div>
 			</div>
-			<div class="col-md-4">
-		                <div class="row">
-		                        <div class="col-md-12">
-		                                <h4>Resources</h4>
+			<div class="col-md-4"  id="col1">
+		                <h4>Resources</h4>
 						<div class="departmental_home_page_resources_section">
 							<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
 						</div>
@@ -637,40 +624,38 @@ if ($field_departmental_theme_value == "") {
 		                                                <a href="<?php print $node->field_departmental_resources_lin['und'][0]['url']; ?>">Read more</a>
 		                                        <?php } ?>
 						</div>
-		                        </div>
-		                </div>
 		                <div class="row">
 		                        <div class="col-md-12" id="departmental_home_page_social_media">
-						<?php 
-							if (count($node->field_departmental_social_media) ) {
-								foreach ($node->field_departmental_social_media['und'] as $social_media_item) {
-									$social_media_item_entity = field_collection_field_get_entity($social_media_item);		
+									<?php 
+										if (count($node->field_departmental_social_media) ) {
+											foreach ($node->field_departmental_social_media['und'] as $social_media_item) {
+												$social_media_item_entity = field_collection_field_get_entity($social_media_item);		
 
-									echo "<a href=\"" . $social_media_item_entity->field_social_media_url['und'][0]['display_url'] . "\">"; 
+												echo "<a href=\"" . $social_media_item_entity->field_social_media_url['und'][0]['display_url'] . "\">"; 
 
-									if ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Facebook") {
-										echo "<i class=\"fa fa-facebook-square\"></i>";			
-									} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Twitter") {
-										echo "<i class=\"fa fa-twitter-square\"></i>";
-									} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "YouTube") {
-										echo "<i class=\"fa fa-youtube-square\"></i>";
-									} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Google+") {
-										echo "<i class=\"fa fa-google-plus-square\"></i>";
-									} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Instagram") {
-										echo "<i class=\"fa fa-instagram\"></i>";
-									} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Other") {
-										echo "<i class=\"fa fa-users\"></i>";
-									}
+												if ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Facebook") {
+													echo "<i class=\"fa fa-facebook-square\"></i>";			
+												} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Twitter") {
+													echo "<i class=\"fa fa-twitter-square\"></i>";
+												} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "YouTube") {
+													echo "<i class=\"fa fa-youtube-square\"></i>";
+												} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Google+") {
+													echo "<i class=\"fa fa-google-plus-square\"></i>";
+												} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Instagram") {
+													echo "<i class=\"fa fa-instagram\"></i>";
+												} elseif ($social_media_item_entity->field_social_media_type['und'][0]['value'] == "Other") {
+													echo "<i class=\"fa fa-users\"></i>";
+												}
 
-									echo "</a>";
+												echo "</a>";
 
-								}
-							}
+											}
+										}
 
-						?>
+									?>
 		                        </div>
 		                </div>
-		        </div>
+		    </div>
 		</div>
 
 <?php 
