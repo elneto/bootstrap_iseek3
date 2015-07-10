@@ -920,25 +920,25 @@ section#block-system-main ul.apachesolr_search-results {
 	color: #4372aa;
 }
 
-.page-forms thead tr {
+.view-forms2 thead tr {
 	background-color: #ffffff;
 	color: #337ab7;	
 }
 
-.page-forms thead tr th {
+.view-forms2 thead tr th {
 	border-bottom: 1px #CCC solid;	
 	font-size: 1em;
 }
 
-.page-forms tbody tr td a {
+.view-forms2 tbody tr td a {
 	color: #4d4d4d;
 }
 
-.page-forms .dept-color-band {
+.view-forms2 .dept-color-band {
 	background-color: #c8c8c8;
 }
 
-.page-forms .view-forms2 .view-header {
+.view-forms2 .view-header {
 	margin-top: 10px;
 }
 
