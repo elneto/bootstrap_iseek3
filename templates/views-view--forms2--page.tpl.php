@@ -35,7 +35,7 @@ $arg = arg(1);
  <div class="modal-dialog">
   <div class="modal-content">
    <div class="modal-header">
-        Forms categories
+        Find forms by category
    </div>
    <div class="modal-post-header">
         <button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">×</span></button>
@@ -57,7 +57,7 @@ $arg = arg(1);
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text white-link"> <?php print t('Forms');?></div>
+    <div class="toolkit large-text white-link"> <?php print t('Find forms by category');?></div>
   </div>
   <div class="col-lg-12">
 	<div class="dept-color-band"></div>	
@@ -67,7 +67,7 @@ $arg = arg(1);
 <div class="row departmentalSubmenu">
         <div class="col-lg-12">
                 <ul class="departmentalSubmenu-nav">
-                        <li><span data-toggle="modal" data-target="#formsCategoriesModal"><i class="fa fa-list-alt"></i> Categories</span></li>
+                        <li><span data-toggle="modal" data-target="#formsCategoriesModal"><i class="fa fa-list-alt"></i> Find forms by category</span></li>
 		</ul>
 	</div>
 </div>
