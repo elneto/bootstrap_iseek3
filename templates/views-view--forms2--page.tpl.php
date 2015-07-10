@@ -31,11 +31,47 @@
 $arg = arg(1);
 ?>
 
+<div class="modal fade" id="formsCategoriesModal" tabindex="-1" role="dialog" aria-labelledby="formsCategoriesModal" aria-hidden="true">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+        Find forms by category
+   </div>
+   <div class="modal-post-header">
+        <button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">×</span></button>
+   </div>
+   <div class="modal-body">
+        <ul class="dept_site_map">
+		<?php echo views_embed_view('forms2_block','block'); ?>
+	</ul>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+  </div>
+ </div>
+</div>		
+
+
+
+
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text white-link"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<?php print t('Forms');?></div>
+    <div class="toolkit large-text white-link"> <?php print t('Find forms by category');?></div>
+  </div>
+  <div class="col-lg-12">
+	<div class="dept-color-band"></div>	
   </div>
 </div>
+
+<div class="row departmentalSubmenu">
+        <div class="col-lg-12">
+                <ul class="departmentalSubmenu-nav">
+                        <li><span data-toggle="modal" data-target="#formsCategoriesModal"><i class="fa fa-list-alt"></i> Find forms by category</span></li>
+		</ul>
+	</div>
+</div>
+
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
