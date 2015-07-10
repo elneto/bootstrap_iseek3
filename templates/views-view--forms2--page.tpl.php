@@ -57,7 +57,7 @@ $arg = arg(1);
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text white-link"> <?php print t('Find forms by category');?></div>
+    <div class="toolkit large-text white-link"> <?php print t('Forms');?></div>
   </div>
   <div class="col-lg-12">
 	<div class="dept-color-band"></div>	
