@@ -419,7 +419,7 @@ if ($field_departmental_theme_value == "") {
 
 
 				    		<div class="item <?php if ($i == 0) { echo "active"; } ?>">
-							<img src="<?php print image_style_url('large-article-image-style-16-9', $about_us_image['uri']); ?>"></img>
+							<img src="<?php print image_style_url('large-article-image-style-16-9', $about_us_image['uri']); ?>" />
 				      			<div class="carousel-caption">
 								<h3><?php echo $about_us_image['field_caption']['und'][0]['value']; ?> </h3>
 				      			</div>
@@ -509,7 +509,7 @@ if ($field_departmental_theme_value == "") {
 
 		</div>
 		<div class="col-md-4"  id="col1">
-			
+
 			<!-- what we do -->	
             	<h4>What we do</h4>
 						
@@ -600,7 +600,8 @@ if ($field_departmental_theme_value == "") {
 		                                <h4><?php echo $node->field_departmental_where_label['und'][0]['value'] ; ?></h4>
 						<?php if (count($node->field_departmental_where_image)) { ?>
 							<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
-		                                                <?php print render($content['field_departmental_where_image']) ; ?>
+								<img src="<?php print image_style_url('large-article-image-style-16-9', $content['field_departmental_where_image']); ?>" />
+		                                                <?//php print render($content['field_departmental_where_image']) ; ?>
 		                                        </a>
 							<div class="departmental_home_page_block_bottom"><a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">Read more</a></div>	
 						<?php } else { ?>
