@@ -509,12 +509,11 @@ if ($field_departmental_theme_value == "") {
 
 		</div>
 		<div class="col-md-4"  id="col1">
-
+			
 			<!-- what we do -->	
             	<h4>What we do</h4>
-					<div>	
+						
 						<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?>
-					</div>
 					<div class="departmental_home_page_block_bottom">
 						<?php if (count($node->field_departmental_what_we_do_li)) { ?>
                                 <a href="<?php print $node->field_departmental_what_we_do_li['und'][0]['url']; ?>">Read more</a>
