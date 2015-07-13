@@ -77,17 +77,16 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+kpr($content);
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>>
-      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
-	<?php echo $type; ?>
-    </h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="toolkit large-text"><?php print $title; ?></div>
+  </div>
+</div>
+
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php if ($display_submitted): ?>
     <div class="meta submitted slug">
@@ -95,6 +94,12 @@
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <?php print render($content['field_photo']); ?>
+    </div>
+  </div>  
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php

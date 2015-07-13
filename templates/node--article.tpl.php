@@ -77,7 +77,7 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-
+//kpr($content['field_images']);
 ?>
 
 <div class="row">
