@@ -34,6 +34,8 @@
   </div>
 </div>
 
+<br/>
+
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
