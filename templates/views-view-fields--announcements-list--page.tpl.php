@@ -56,7 +56,14 @@
 			<?php if (user_is_logged_in()): ?>
 			<?php print $fields['nid_1']->content; ?>
 			<?php else: ?>
-			<?php print '<a href="user/login?destination=comment/reply/'.$fields['nid_1']->raw.'#comment-form">'.t('Log in to post comments or like').'</a>'; ?>
+
+			<?php
+                              $login_label = array('en' => 'Log in to post comments and like <i class="fa fa-thumbs-o-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
+                              $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
+                        ?>
+                              <a href="<?php print $login_path[$node->language]; ?>?destination=comment/reply/<?php print $fields['nid_1']->raw; ?>#comment-form"><?php print $login_label[$node->language]; ?></a>
+
+			<?php // print '<a href="user/login?destination=comment/reply/'.$fields['nid_1']->raw.'#comment-form">'.t('Log in to post comments or like').'</a>'; ?>
 			<?php endif; ?>
 		</div>
 	</div>
