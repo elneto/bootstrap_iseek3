@@ -577,18 +577,15 @@ section#block-system-main ul.apachesolr_search-results {
 
 #departmental_home_page_blocks {
 	margin-top: 20px;
-	width:100%;
-	overflow: hidden;
-	display: table-row;
+	display: table;
+  	table-layout: auto;
+ 	height: 100%;
+ 	width: 100%;
 }
 #departmental_home_page_blocks #col1{
-	width:33%;
-	margin-bottom: -1000px;
-	padding-bottom: 1000px;
-	display:table-cell;
-}
-#col1.row{
-	min-height: 100%;
+	width: 32%;
+	display: table-cell;
+  	height: 100%;
 }
 #departmental_home_page_blocks p {
 	color: #333333;
@@ -677,7 +674,8 @@ section#block-system-main ul.apachesolr_search-results {
 }
 
 .departmental_home_page_block_fixed_container#bio {
-	overflow: hidden;
+	overflow-y: scroll;
+	overflow-x:hidden;
 	
 }
 

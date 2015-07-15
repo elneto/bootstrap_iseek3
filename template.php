@@ -372,7 +372,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 
 
   //put the path to the footer in the logo
-  $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.png') . '"';
+  $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
   //blocks
   $variables['about_us_block'] = iseek_custom_block('about_us_footer_block_i3', 'content'); 
 
