@@ -33,7 +33,7 @@
     <div class="toolkit large-text white-link">&nbsp;<?php print t('Useful tips');?></div>
   </div>
 </div>
-<br><br>
+
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
