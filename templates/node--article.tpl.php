@@ -82,7 +82,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="top-side-box"><i class="fa fa-newspaper-o"></i> <a href="<?php echo url('articles');?>">Staff stories and news <i class="fa fa-angle-double-right"></i></a></div>
+		<div class="top-side-box"><i class="fa fa-newspaper-o"></i> <a href="<?php echo url('articles');?>"><?php print t('Staff stories and news');?> <i class="fa fa-angle-double-right"></i></a></div>
 	</div>
 </div>
 
