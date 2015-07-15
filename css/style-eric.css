@@ -1114,3 +1114,7 @@ div#search-links {
 div.main-thumbnail div#most-popular-title {
 	color: #333;
 }
+
+div#calendar-box {
+	overflow-x: hidden;
+}
