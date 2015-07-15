@@ -98,9 +98,9 @@
 				<?php
 					if ($node->language == "fr") {
 						setlocale(LC_TIME, "fr_FR");
-						echo ucfirst(utf8_encode(strftime('%A %e %B %G', strtotime($created))));
+						echo ucfirst(utf8_encode(strftime('%A %e %B %G', $created)));
 					} else {
-						echo utf8_encode(strftime('%A, %e %B %G', strtotime($created)));
+						echo utf8_encode(strftime('%A, %e %B %G', $created));
 					}
 				?>
 			</div>
