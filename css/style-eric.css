@@ -1119,6 +1119,8 @@ div#calendar-box {
 	overflow-x: hidden;
 }
 
+/* toolkit footer */
+
 .left-menu-top .partners h5.content-large-text {
 	color: #267bb2;
 	background-color: #fff;
@@ -1141,5 +1143,9 @@ div#calendar-box {
 
 div#key-tools ul li a {
 	font-size: 1.188em;
+	color: #4d4d4d;
+}
+
+.footer-menu-items li a {
 	color: #4d4d4d;
 }
