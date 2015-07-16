@@ -1152,7 +1152,6 @@ div#key-tools ul li a {
 
 /* /toolkit footer */
 
-.archives-social {
+.archives-social, .archives-social a {
 	color: #4d4d4d;
 }
-
