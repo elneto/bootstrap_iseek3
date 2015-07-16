@@ -1118,3 +1118,17 @@ div.main-thumbnail div#most-popular-title {
 div#calendar-box {
 	overflow-x: hidden;
 }
+
+.left-menu-top .partners h5.content-large-text {
+	color: #267bb2;
+	background-color: #fff;
+	text-decoration: none;
+	width: 100%;
+	border-bottom: 0;
+	margin-left: 0;
+}
+
+.left-menu-top .content-large-text {
+	font-size: inherit;
+}
+
