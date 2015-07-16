@@ -1128,9 +1128,18 @@ div#calendar-box {
 	margin-left: 0;
 	padding: 0.5em;
 	margin: 1em 0.5em 0.5em 0.5em;
+	font-size: 1.1em;
 }
 
 .left-menu-top .content-large-text {
 	font-size: inherit;
 }
 
+.partners li {
+	margin-bottom: .2em;
+}
+
+div#key-tools ul li a {
+	font-size: 1.188em;
+	color: #4d4d4d;
+}
