@@ -1123,9 +1123,11 @@ div#calendar-box {
 	color: #267bb2;
 	background-color: #fff;
 	text-decoration: none;
-	width: 100%;
+	width: inherit;
 	border-bottom: 0;
 	margin-left: 0;
+	padding: 0.5em;
+	margin: 1em 0.5em 0.5em 0.5em;
 }
 
 .left-menu-top .content-large-text {
