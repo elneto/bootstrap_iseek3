@@ -1160,7 +1160,7 @@ div#key-tools ul li a {
 	background-color: #DAEFF9;
 }
 
-.calendar-calendar .month-view table.full td .inner .item .view-item .holiday {
+.view-holiday-calendar .calendar-calendar .month-view table.full td .inner .item .view-item .holiday {
 	background-color: #E9F5F3;
 }
 
@@ -1168,7 +1168,7 @@ div#key-tools ul li a {
 	background-color: #E9F5F3;
 }
 
-.calendar-calendar .month-view table.full td .inner .item .view-item .global_announcements {
+.view-holiday-calendar .calendar-calendar .month-view table.full td .inner .item .view-item .global_announcements {
  	background-color: #F9EAD7;
 }
 
@@ -1176,7 +1176,7 @@ div#key-tools ul li a {
         background-color: #F9EAD7;
 }
 
-.calendar-calendar .month-view table.full td .inner .item .view-item .announcements {
+.view-holiday-calendar .calendar-calendar .month-view table.full td .inner .item .view-item .announcements {
 	background-color: #F9F3D1;
 }
 
@@ -1184,6 +1184,6 @@ div#key-tools ul li a {
         background-color: #F9F3D1;
 }
 
-.calendar-calendar .month-view table.full td .inner .item .view-item .cutoff, .calendar-calendar .month-view table.full td .inner .item .view-item .continues {
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
 	background: inherit;
 }
