@@ -18,6 +18,15 @@
                                 </div>
                         </div>
                         <div class="row">
+                                <div class="col-md-12">
+                                        <div id="search-links">
+                                                <a href="#"><?php print t('Update my Information');?></a>  |
+                                                <span id="searchTriggerAdvanced"><?php print t('Advanced search');?></span> |
+                                                <a href="#"><?php print t('Additional Resources');?></a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="row">
                                 <div class="col-xs-12">
                                         <label for="input-search-iseek"><?php print t('Search iSeek or ODS');?></label> <!-- placeholder="Search the UN Intranet or ODS"  !-->
                                 </div>
@@ -34,15 +43,6 @@
                                         <button id="searchIseekOrOds" name="Search" class="search-button"><?php print t('Search');?></button>
                                 </div>
                         </div>
-                        <div class="row">
-                                <div class="col-md-12">
-                                        <div id="search-links">
-                                                <a href="#"><?php print t('Update my Information');?></a>  |
-						<span id="searchTriggerAdvanced"><?php print t('Advanced search');?></span> | 
-                                                <a href="#"><?php print t('Additional Resources');?></a>
-                                        </div>
-                                </div>  
-                        </div> 
 		</div> 
                 <!-- </form> -->
             </div>

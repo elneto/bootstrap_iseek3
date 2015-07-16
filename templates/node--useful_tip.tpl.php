@@ -78,11 +78,14 @@
  * @see template_process()
  */
 
+
+
+
 ?>
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text" id="toolkit-anchor"><i class="fa fa-newspaper-o"></i> <?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></div>
+		<div class="toolkit large-text" id="toolkit-anchor"> <a href="/useful-tips"><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a></div>
 	</div>
 </div>
 
@@ -95,9 +98,9 @@
 				<?php
 					if ($node->language == "fr") {
 						setlocale(LC_TIME, "fr_FR");
-						echo ucfirst(utf8_encode(strftime('%A %e %B %G', strtotime($node->field_announcement_publish_date['und'][0]['value']))));
+						echo ucfirst(utf8_encode(strftime('%A %e %B %G', $created)));
 					} else {
-						echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_announcement_publish_date['und'][0]['value'])));
+						echo utf8_encode(strftime('%A, %e %B %G', $created));
 					}
 				?>
 			</div>
@@ -119,44 +122,10 @@
 	</div>	
 
         <div class="row">
+	
+               	<div class="col-lg-10 col-md-12">
 
-                <?php if (count($node->field_announcement_event_date)) { ?>
-
-                        <div class="col-lg-3 col-md-12">
-
-                                <div class="row">
-                                        <div class="col-lg-12">
-                                                <div class="toolkit" id="event_toolkit">
-                                                        <div>
-                                                                Global
-                                                        </div>
-                                                        <div>
-                                                                <?php
-                                                                        if ($node->language == "fr") {
-                                                                                setlocale(LC_TIME, "fr_FR");
-                                                                                echo ucfirst(utf8_encode(strftime('%A %e %B %G', strtotime($node->field_announcement_event_date['und'][0]['value']))));
-                                                                        } else {
-                                                                                echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_announcement_event_date['und'][0]['value'])));
-                                                                        }
-                                                                ?>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-
-                        </div>
-
-                        <div class="col-lg-7 col-md-12">
-
-                <?php } else { ?>
-
-                        <div class="col-lg-10 col-md-12">
-
-                <?php } ?>
-
-
-
-			  <div class="content clearfix"<?php print $content_attributes; ?>>
+		  <div class="content clearfix"<?php print $content_attributes; ?>>
 			    <?php
 			      // We hide the comments and links now so that we can render them later.
 			      hide($content['comments']);
@@ -164,21 +133,24 @@
 			      // print render($content);
 			    ?>
 
-				<div class="content-body">
+			<div class="content-body">
 
-					<?php print render($content['body']); ?>
+				<?php print render($content); ?>
 
-				</div>
+			</div>
 
-			  </div><!-- content -->
-		</div>	  
+		   </div>
+
+		</div>
+	  
 		<div class="col-lg-2 col-md-12">
 		        <div class="row" id="mail_print_icon_row">
 		                <div class="col-lg-12">
-		                        <i class="fa fa-2x fa-envelope-o"></i>
-		                        <i class="fa fa-2x fa-print"></i>
+		                        <i class="fa fa-envelope-o"></i>
+		                        <i class="fa fa-print"></i>
         		        </div>
         		</div>
 		</div>	
+
 	</div>		  
 </div><!-- node -->

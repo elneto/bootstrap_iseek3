@@ -47,7 +47,7 @@
 			<div class="archives-body">
 				<?php print $fields['body']->content; ?>
 			</div>
-				<?php print $fields['nid']->content; ?>
+			<?php print $fields['nid']->content; ?> <i class="fa fa-angle-double-right"></i>
 		</div>
 	</div>
 	<div class="col-md-2">

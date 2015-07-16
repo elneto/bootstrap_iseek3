@@ -1,4 +1,3 @@
-
 .language-switcher-locale-url li {
 	float: left;
 	list-style: none;
@@ -940,6 +939,13 @@ section#block-system-main ul.apachesolr_search-results {
 	margin-top: 10px;
 }
 
+#toolkit-anchor a {
+	color: #ffffff;
+}
+
+
+
+
 
 /* previously in search_include */
 
@@ -1095,4 +1101,85 @@ section#block-system-main ul.classifieds-listing {
 /*** Ends CSS for departmental pages ***/
 /********************************************************************************************/
 
+/* changes that should be moved to style.css */
+div#search-box {
+	padding: 0.625em;
+	padding-bottom: 1.25em;
+}
 
+div#search-links {
+	padding-top: 0.125em;
+}
+
+div.main-thumbnail div#most-popular-title {
+	color: #333;
+}
+
+div#calendar-box {
+	overflow-x: hidden;
+}
+
+/* toolkit footer */
+
+.left-menu-top .partners h5.content-large-text {
+	color: #267bb2;
+	background-color: #fff;
+	text-decoration: none;
+	width: inherit;
+	border-bottom: 0;
+	margin-left: 0;
+	padding: 0.5em;
+	margin: 1em 0.5em 0.5em 0.5em;
+	font-size: 1.1em;
+}
+
+.left-menu-top .content-large-text {
+	font-size: inherit;
+}
+
+.partners li {
+	margin-bottom: .2em;
+}
+
+div#key-tools ul li a {
+	font-size: 1.188em;
+	color: #4d4d4d;
+}
+
+.footer-menu-items li a {
+	color: #4d4d4d;
+}
+
+/* /toolkit footer */
+
+.archives-social, .archives-social a, .view-articles span a {
+	color: #4d4d4d;
+}
+
+.calendar-view-link {
+	background-color: #DAEFF9;
+}
+
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .holiday {
+	background-color: #E9F5F3;
+}
+
+#legend-holiday {
+	background-color: #E9F5F3;
+}
+
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .global_announcements {
+ 	background-color: #F9EAD7;
+}
+
+#legend-global {
+        background-color: #F9EAD7;
+}
+
+.calendar-calendar .month-view table.full td.single-day .inner .item .view-item .announcements {
+	background-color: #F9F3D1;
+}
+
+#legend-announcement {
+        background-color: #F9F3D1;
+}
