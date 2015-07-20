@@ -35,7 +35,7 @@
 
 <div class="row">
         <div class="col-lg-12">
-		<p id="user_login_intro">
+		<p id="user_login_footer">
 			<?php echo t('* If you have difficulties accessing the system with your Lotus Notes webmail account or if you use Exchange or Outlook, please contact the UN Intranet Team.');?>
 		</p>
         </div>
