@@ -216,7 +216,7 @@
                 <?php // print render($latest_news);
 			global $language;
 			if ($language->language == "fr") {
-				echo views_embed_view('news_centre_fr_block_for_home_page','block');
+				echo views_embed_view('news_centre_block_for_home_page','block_1');
 			} else {
 				echo views_embed_view('news_centre_block_for_home_page','block');
 			}
