@@ -60,6 +60,7 @@ form#user-login-form {
 #block-menu-menu-iseek3-main-menu > ul > li { 
   	margin-right: .5em;	
 	background-color: #ffffff;
+	padding-top: 2px;
 }
 
 #block-menu-menu-iseek3-main-menu > ul > li.first {
