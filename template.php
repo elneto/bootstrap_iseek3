@@ -407,24 +407,14 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   
 }
 
-function bootstrap_iseek3_form_alter(&$vars){
-  //print_r($vars);
-  kpr($vars);
-  //print $vars['form']['#id']; die;*/
+//removes the exposed filter location select from the classified/% view
+function bootstrap_iseek3_form_alter(&$form, &$form_state, $form_id){
 
-  if ($vars['form']['#id'] == 'views-exposed-form-zeekoslist-zeekoslist-page' and
-      $vars['form']['#action'] == '/classified/all')
+  if ($form['#id'] == 'views-exposed-form-zeekoslist-zeekoslist-page' and
+      $form['#action'] == '/classified/all')
     { 
-
-        //kpr($vars['form']);
-        //$vars['form']['loc']['#type'] = 'hidden';
-        //unset($vars['form']['loc']);
-        //hide($vars['form']['loc']);
-        //$vars['form']['loc']['#access'] = false;
-        //kpr($vars['form']);
-        //kpr($vars);
-        /*print 'in classified/all';
-        die;*/
+        unset($form['#info']['filter-field_ad_location_tid']);
+        $form['loc']['#access'] = FALSE;
     }
 }
 

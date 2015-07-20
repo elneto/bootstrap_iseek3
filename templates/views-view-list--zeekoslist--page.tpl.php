@@ -8,7 +8,6 @@
  * - $options['type'] will either be ul or ol.
  * @ingroup views_templates
  */
-kpr($title);
 ?>
 <?php print $wrapper_prefix; ?>
   <?php if (!empty($title)) : ?>

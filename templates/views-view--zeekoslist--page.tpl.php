@@ -26,10 +26,6 @@
  *
  * @ingroup views_templates
  */
-kpr($header);
-kpr($view);
-kpr($view->get_title());
-
 ?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
@@ -40,9 +36,10 @@ kpr($view->get_title());
   <?php if ($header): ?>
     <div class="row">
       <div class="col-lg-12">
-        <div class="toolkit large-text">
+        <div class="toolkit large-text" id="zeekos-latest-ads">
           <?php print $header; ?>
         </div>
+        <br>
      </div>
     </div>
   <?php endif; ?>
