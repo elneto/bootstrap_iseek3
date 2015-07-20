@@ -14,39 +14,36 @@
         <div class="col-md-3 left-menu">
            <div class="row underline left-menu-top">
               <div  class="partners content-large-text">
-                <h5 class="content-large-text">Quicklinks -
                 <?php
                         // switch depending on domain
                         // 555
                         if (require_login_display_local('newyork')) {
-                                echo t("New York");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("New York") . "</h5>";
                         // 131
                         } elseif (require_login_display_local('geneva')) {
-                                echo t("Geneva");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Geneva") . "</h5>";
                         // 60
                         } elseif (require_login_display_local('addisababa')) {
-                                echo t("Addis Ababa");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Addis Ababa") . "</h5>";
                         // 61
                         } elseif (require_login_display_local('bangkok')) {
-                                echo t("Bangkok");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Bangkok") . "</h5>";
                         // 62
                         } elseif (require_login_display_local('beirut')) {
-                                echo t("Beirut");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Beirut") . "</h5>";
                         // 63
                         } elseif (require_login_display_local('nairobi')) {
-                                echo t("Nairobi");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Nairobi") . "</h5>";
                         // 64
                         } elseif (require_login_display_local('santiago')) {
-                                echo t("Santiago");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Santiago") . "</h5>";
                         // 65
                         } elseif (require_login_display_local('vienna')) {
-                                echo t("Vienna");
+                                echo "<h5 class=\"content-large-text\">Quicklinks - " . t("Vienna") . "</h5>";
                         // external
                         } else {
-                                echo t("Global");
                         }
                 ?>
-                </h5>
                 <?php print $menu_quicklinks; ?>
               </div>
           </div>
