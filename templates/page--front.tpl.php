@@ -248,7 +248,7 @@ if ($language->language == "fr") {
           <div class="staff-box">
           <div class="row">
             <div class="col-md-6 bpad15 wborr">
-                <h4 class="tjo"><a href=""><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
+                <h4 class="tjo"><a href="">Umoja<?php // print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
                 <a data-toggle="collapse" data-target="#tjo-content-box" aria-expanded="true" aria-controls="tjo-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="tjo-content content-large-text collapse in" id="tjo-content-box">
