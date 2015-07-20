@@ -1188,3 +1188,16 @@ div#key-tools ul li a {
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
 	background: inherit;
 }
+
+p#user_login_intro {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+p#user_login_footer {
+        margin-top: 20px;
+}
+
+#user_login_form input.form-control {
+	width: inherit;
+}

@@ -40,7 +40,7 @@ include('departmental_color_band.inc');
 
 <div class="row">
         <div class="col-lg-12">
-                <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<?php echo $og_node->title; ?></div>
+                <div class="toolkit large-text">&nbsp;<?php echo $og_node->title; ?></div>
         </div>
         <div class="col-lg-12">
                 <div style="background-color:<?php echo $dept_color_band; ?>"></div>

@@ -26,57 +26,21 @@
  *
  * @ingroup views_templates
  */
-
-// hardcoded department node id for NMU 
-$og_id = 11426;
-
-include('departmental_nodeload_and_menuload.inc');
-include('departmental_get_parents.inc');
-include('departmental_color_band.inc');
-
 ?>
-
-
-
-<div class="row">
-        <div class="col-lg-12">
-                <div class="toolkit large-text">&nbsp;<?php echo $og_node->title; ?></div>
-        </div>
-        <div class="col-lg-12">
-                <div style="background-color:<?php echo $dept_color_band; ?>"></div>
-        </div>
-</div>
-
-<?php include('departmental_nmu_submenu.inc'); ?>
-
-<?php include('departmental_site_map.inc'); ?>
-
-<?php include('departmental_breadcrumb.inc'); ?>
-
-<div class="row">
-	<div class="col-md-3">
-
-		<?php 
-			print views_embed_view('nmu_bulletin_calendar', 'block_1'); 
-		?>
-
-		<?php include('nmu_search_block.inc'); ?>
-
-	</div>
-	<div class="col-md-9">
-
-		<h3>DPI News Bulletin #1</h3>
-
-
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <?php print $title; ?>
+  <?php print $title; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <div class="view-header">
-      <?php print $header; ?>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="toolkit large-text" id="zeekos-latest-ads">
+          <?php print $header; ?>
+        </div>
+        <br>
+     </div>
     </div>
   <?php endif; ?>
 
@@ -129,9 +93,3 @@ include('departmental_color_band.inc');
   <?php endif; ?>
 
 </div><?php /* class view */ ?>
-
-
-	</div>
-</div>
-
-

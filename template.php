@@ -72,6 +72,14 @@ function bootstrap_iseek3_form_alter(&$form, &$form_state, $form_id) {
 
 	}
 
+  //removes the exposed filter location select from the classified/% view
+  if ($form['#id'] == 'views-exposed-form-zeekoslist-zeekoslist-page' and
+      $form['#action'] == '/classified/all')
+    { 
+        unset($form['#info']['filter-field_ad_location_tid']);
+        $form['loc']['#access'] = FALSE;
+    }
+
 }
 
 
@@ -426,5 +434,4 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   }
   
 }
-
 
