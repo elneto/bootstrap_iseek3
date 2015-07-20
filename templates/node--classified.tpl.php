@@ -77,12 +77,12 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-kpr($content);
+//kpr($content);
 ?>
 
 <div class="row">
   <div class="col-lg-12">
-    <div class="toolkit large-text"><?php print $title; ?></div>
+    <div class="toolkit large-text"><?php print t('Classifieds');?></div>
   </div>
 </div>
 
@@ -94,6 +94,12 @@ kpr($content);
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
+
+  <?php print render($title_prefix); ?>
+          <h2 id="headline">
+            <?php print $title; ?>
+          </h2>
+  <?php print render($title_suffix); ?>
 
   <div class="row">
     <div class="col-lg-12">
