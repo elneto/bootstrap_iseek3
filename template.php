@@ -18,6 +18,21 @@ require_once __DIR__ . '/includes/menu.inc';
  * @file template.php
  */
 
+function bootstrap_iseek3_theme() {
+	$items = array();
+  	// create custom user-login.tpl.php
+  	$items['user_login'] = array(
+  		'render element' => 'form',
+  		'path' => drupal_get_path('theme', 'bootstrap_iseek3') . '/templates',
+  		'template' => 'user-login',
+  		'preprocess functions' => array(
+  			'bootstrap_iseek3_preprocess_user_login'
+  		),
+ 	);
+	return $items;
+}
+
+
 function bootstrap_iseek3_menu_tree(&$vars) {
 
   return '<ul class="nav navbar-nav">' . $vars['tree'] . '</ul>';
@@ -25,12 +40,6 @@ function bootstrap_iseek3_menu_tree(&$vars) {
 }
 
 function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $form_id) {
-
-// print_r($form); //added meaningless comment
-
-	// print "PRE";
-
-	// print_r($form);
 
 	$form['name']['#title'] = t('Login');
 	$form['name']['#description'] = ''; 
@@ -48,11 +57,22 @@ function bootstrap_iseek3_form_user_login_block_alter(&$form, &$form_state, $for
 
 	unset($form['links']);
 
-	// print "POST";
-
-	// print_r($form);
 }
 
+
+function bootstrap_iseek3_form_alter(&$form, &$form_state, $form_id) {
+
+	if ($form_id == "user_login") {
+
+		$form['name']['#description'] = t('Webmail user name');
+		$form['name']['#attributes']['placeholder'] = t('Webmail user name');
+
+		$form['pass']['#description'] = t('Webmail password');
+		$form['pass']['#attributes']['placeholder'] = t('Webmail password');
+
+	}
+
+}
 
 
 /**

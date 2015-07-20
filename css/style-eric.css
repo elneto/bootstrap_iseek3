@@ -60,6 +60,7 @@ form#user-login-form {
 #block-menu-menu-iseek3-main-menu > ul > li { 
   	margin-right: .5em;	
 	background-color: #ffffff;
+	padding-top: 1px;
 }
 
 #block-menu-menu-iseek3-main-menu > ul > li.first {
@@ -1186,4 +1187,17 @@ div#key-tools ul li a {
 
 .calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, .calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff, .calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, .calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
 	background: inherit;
+}
+
+p#user_login_intro {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+p#user_login_footer {
+        margin-top: 20px;
+}
+
+#user_login_form input.form-control {
+	width: inherit;
 }
