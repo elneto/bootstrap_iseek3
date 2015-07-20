@@ -9,7 +9,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text" id="toolkit-anchor"> <?php echo t('Welcome to the United Nations Intranet');?></div>
+		<div class="toolkit large-text"> <?php echo t('Welcome to the United Nations Intranet');?></div>
 	</div>
 </div>
 

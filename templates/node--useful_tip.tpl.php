@@ -85,7 +85,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text" id="toolkit-anchor"> <a href="/useful-tips"><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a></div>
+		<div class="toolkit large-text"> <a href="/useful-tips"><?php print t('Useful tips');?> <i class="fa fa-angle-double-right"></i></a></div>
 	</div>
 </div>
 
