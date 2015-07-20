@@ -18,6 +18,21 @@ require_once __DIR__ . '/includes/menu.inc';
  * @file template.php
  */
 
+function bootstrap_iseek3_theme() {
+	$items = array();
+  	// create custom user-login.tpl.php
+  	$items['user_login'] = array(
+  		'render element' => 'form',
+  		'path' => drupal_get_path('theme', 'bootstrap_iseek3') . '/templates',
+  		'template' => 'user-login',
+  		'preprocess functions' => array(
+  			'bootstrap_iseek3_preprocess_user_login'
+  		),
+ 	);
+	return $items;
+}
+
+
 function bootstrap_iseek3_menu_tree(&$vars) {
 
   return '<ul class="nav navbar-nav">' . $vars['tree'] . '</ul>';
