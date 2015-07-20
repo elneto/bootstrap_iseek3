@@ -129,13 +129,13 @@ form#user-login-form {
         content: "\f059";
 }
 
-#block-menu-menu-iseek3-main-menu > ul > li:nth-child(3) > span:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(3) > a:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f0ac";
 } 
 
-#block-menu-menu-iseek3-main-menu > ul > li:nth-child(4) > span:before {
+#block-menu-menu-iseek3-main-menu > ul > li:nth-child(4) > a:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f044";
