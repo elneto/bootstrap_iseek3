@@ -31,7 +31,7 @@
 		$title_link = "";
 		if ($row->node_type == "un_observances") {
 			$title_link = $row->field_field_link[0]['raw']['safe_value'];	
-                } elseif ($row->node_type == "announcements") {
+                } elseif ($row->node_type == "announcements" || $row->node_type == "global_announcements") {
 			$title_link = drupal_get_path_alias("node/" . $row->nid);
 		} elseif ($row->node_type == "holiday") {
 		}
