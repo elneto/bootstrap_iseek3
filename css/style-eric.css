@@ -1209,3 +1209,7 @@ p#user_login_footer {
 #myModal table {
 	table-layout: auto;
 }
+
+div#searchTriggerAdvancedInSimple {
+	margin-top: 1.2em;
+}
