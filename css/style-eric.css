@@ -1201,3 +1201,7 @@ p#user_login_footer {
 #user_login_form input.form-control {
 	width: inherit;
 }
+
+.departmental_where_image {
+	width: 100%;
+}
