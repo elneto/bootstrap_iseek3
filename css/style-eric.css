@@ -1215,3 +1215,9 @@ p#user_login_footer {
 div#searchTriggerAdvancedInSimple {
 	margin-top: 1.2em;
 }
+
+.locale-untranslated {
+	color: #fff; 
+	font-size: 0.781em;	
+}
+
