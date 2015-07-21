@@ -200,8 +200,7 @@ if ($full_parent_taxonomy_array[count($full_parent_taxonomy_array) - 1]->name ==
 
 // kpr($dept_site_map_array);	
 
-
-kpr($node->field_departmental_where_image); 
+// kpr($node->field_departmental_where_image); 
 
 ?>
 
