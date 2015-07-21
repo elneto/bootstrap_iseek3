@@ -20,9 +20,9 @@
                         <div class="row">
                                 <div class="col-md-12">
                                         <div id="search-links">
-                                                <a href="#"><?php print t('Update my Information');?></a>  |
+                                                <a href="<?php print t('content/update-information-global-contact-directory');?>"><?php print t('Update my information');?></a>  |
                                                 <span id="searchTriggerAdvanced"><?php print t('Advanced search');?></span> |
-                                                <a href="#"><?php print t('Additional Resources');?></a>
+                                                <a href="<?php print t('content/additional-phone-resources');?>"><?php print t('Additional resources');?></a>
                                         </div>
                                 </div>
                         </div>

@@ -1013,9 +1013,11 @@ th {
         text-decoration: none;
 }
 
+/*
 #searchTriggerAdvancedInSimpleModal {
         color: #003377;
 }
+*/
 
 #searchTriggerAdvanced:hover, #searchTriggerAdvanced:focus, #searchTriggerAdvanced:active  {
         text-decoration: underline;
@@ -1201,3 +1203,21 @@ p#user_login_footer {
 #user_login_form input.form-control {
 	width: inherit;
 }
+
+.departmental_where_image {
+	width: 100%;
+}
+
+#myModal table {
+	table-layout: auto;
+}
+
+div#searchTriggerAdvancedInSimple {
+	margin-top: 1.2em;
+}
+
+.locale-untranslated {
+	color: #fff; 
+	font-size: 0.781em;	
+}
+
