@@ -1205,3 +1205,7 @@ p#user_login_footer {
 .departmental_where_image {
 	width: 100%;
 }
+
+#myModal table {
+	table-layout: auto;
+}
