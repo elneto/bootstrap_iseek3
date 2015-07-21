@@ -599,6 +599,7 @@ if ($field_departmental_theme_value == "") {
 		                        <div class="col-md-12">
 		                                <h4><?php echo $node->field_departmental_where_label['und'][0]['value'] ; ?></h4>
 						<?php if (count($node->field_departmental_where_image)) { ?>
+<?php kpr($node->field_departmental_where_image); ?>
 							<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
 								<img src="<?php print image_style_url('large-article-image-style-16-9', $field_departmental_where_image[uri]); ?>" />
 		                                                <?//php print render($content['field_departmental_where_image']) ; ?>
