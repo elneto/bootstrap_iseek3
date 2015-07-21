@@ -602,7 +602,7 @@ if ($field_departmental_theme_value == "") {
 		                                <h4><?php echo $node->field_departmental_where_label['und'][0]['value'] ; ?></h4>
 						<?php if (count($node->field_departmental_where_image)) { ?>
 							<a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">
-								<img src="<?php print image_style_url('large-article-image-style-16-9', $field_departmental_where_image[uri]); ?>" />
+								<img src="<?php print image_style_url('large-article-image-style-16-9', $node->field_departmental_where_image['und'][0]['uri']); ?>" />
 		                                                <?//php print render($content['field_departmental_where_image']) ; ?>
 		                                        </a>
 							<div class="departmental_home_page_block_bottom"><a href="<?php echo $node->field_departmental_where_link['und'][0]['url'] ; ?>">Read more</a></div>	
