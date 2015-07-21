@@ -77,7 +77,7 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-//kpr($content);
+
 ?>
 
 <div class="row">
@@ -91,6 +91,11 @@
   <?php if ($display_submitted): ?>
     <div class="meta submitted slug">
       <?php print $user_picture; ?>
+      <?php 
+      $content['classified_category'][0]['#item']['attributes']['class'][] = 'zeekos-clearnone';
+      $content['field_ad_location'][0]['#item']['attributes']['class'][] = 'zeekos-clearnone';
+      kpr($content);
+      print render($content['classified_category']).' | '. render($content['field_ad_location']); ?>
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
