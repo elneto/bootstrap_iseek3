@@ -29,7 +29,7 @@
 ?>
 <div class="row archive-pad-bot">
   <div class="col-lg-12">
-    <div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> Staff stories and news <i class="fa fa-angle-double-right"></i></div>
+    <div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <?php print t('Staff stories and news'); ?> <i class="fa fa-angle-double-right"></i></div>
   </div>
 </div>
 <div class="<?php print $classes; ?>">
