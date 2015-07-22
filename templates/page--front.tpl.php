@@ -248,12 +248,12 @@ if ($language->language == "fr") {
           <div class="staff-box">
           <div class="row">
             <div class="col-md-6 bpad15 wborr">
-                <h4 class="tjo"><a href="https://www.unumoja.net">Umoja<?php // print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
+                <h4 class="tjo"><a href="https://inspira.un.org"><?php print t('Temporary Job Openings');?> <i class="fa fa-angle-double-right"></i></a>
                 <a data-toggle="collapse" data-target="#tjo-content-box" aria-expanded="true" aria-controls="tjo-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="tjo-content content-large-text collapse in" id="tjo-content-box">
                       	<?php // print render($recent_tjos); 
-				echo views_embed_view('news_centre_block_for_home_page','block_2');
+				echo views_embed_view('news_centre_block_for_home_page','block_3');
 			?>
                 </div>
 
