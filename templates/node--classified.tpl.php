@@ -77,8 +77,8 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-kpr($node);
-kpr($content);
+//kpr($node);
+//kpr($content);
 ?>
 
 <div class="row">
