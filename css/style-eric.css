@@ -1231,3 +1231,8 @@ div#searchTriggerAdvancedInSimple {
   	margin-bottom: 20px;
   	border-bottom: solid 1px #ddd;
 }
+
+.view-id-news_centre_block_for_home_page.view-display-id-page_1 .views-row a {
+	color: #333;
+}
+
