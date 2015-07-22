@@ -77,7 +77,8 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-//kpr($content);
+kpr($node);
+kpr($content);
 ?>
 
 <div class="row">
@@ -87,23 +88,45 @@
 </div>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
+  
+  <!-- The slug -->
   <?php if ($display_submitted): ?>
     <div class="meta submitted slug">
       <?php print $user_picture; ?>
+      <?php 
+      //kpr($content);
+      print t('Category: ').$node->classified_category['und'][0]['taxonomy_term']->name
+            .' | '. 
+            t('Location: ').$node->field_ad_location['und'][0]['taxonomy_term']->name;
+            ?>
+      <br>
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
 
+  <!-- The title -->
   <?php print render($title_prefix); ?>
           <h2 id="headline">
             <?php print $title; ?>
           </h2>
   <?php print render($title_suffix); ?>
-
+  
+  <!-- The image carousel -->
   <div class="row">
     <div class="col-lg-12">
       <?php print render($content['field_photo']); ?>
+    </div>
+  </div>  
+  <!-- The body text -->
+  <div class="row">
+    <div class="col-lg-8">
+      <?php print render($content['body']); ?>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-lg-4">
+      <!-- 4 columns of empty space here -->
     </div>
   </div>  
 
@@ -112,7 +135,7 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
+      //print render($content);
     ?>
   </div>
 
