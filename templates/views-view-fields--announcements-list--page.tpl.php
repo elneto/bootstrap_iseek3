@@ -56,7 +56,6 @@
 			<?php if (user_is_logged_in()): ?>
 			<?php print $fields['nid_1']->content; ?>
 			<?php else: ?>
-langauge2: 
 			<?php
 
 				global $language;	
