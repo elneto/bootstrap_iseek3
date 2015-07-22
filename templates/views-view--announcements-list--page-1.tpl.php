@@ -45,17 +45,17 @@ $arg = arg(1);
 <br>
 <div class="row">
   <div class="col-xs-12 col-md-12">
-    <h4 class="page-title">Filter by duty station</h4>
+    <h4 class="page-title"><?php print(t('Filter by duty station'));?></h4>
     <div class="dutyStationButtons">
-      <a href="<?php echo url('<front>').'events-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>">Addis Ababa</a>
-      <a href="<?php echo url('<front>').'events-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>">Bangkok</a>
-      <a href="<?php echo url('<front>').'events-list/62'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==62 or $arg=='beirut'){echo 'active';}?>">Beirut</a>
-      <a href="<?php echo url('<front>').'events-list/131'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==131 or $arg=='geneva'){echo 'active';}?>">Geneva</a>
-      <a href="<?php echo url('<front>').'events-list/63'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==63 or $arg=='nairobi'){echo 'active';}?>">Nairobi</a>
-      <a href="<?php echo url('<front>').'events-list/555'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>">New York</a>
-      <a href="<?php echo url('<front>').'events-list/64'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>">Santiago</a>
-      <a href="<?php echo url('<front>').'events-list/65'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>">Vienna</a>
-      <a href="<?php echo url('<front>').'events-list/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>">All</a>
+      <a href="<?php echo url('<front>').'/events-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>"><?php print(t('Addis Ababa'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>"><?php print(t('Bangkok'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/62'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==62 or $arg=='beirut'){echo 'active';}?>"><?php print(t('Beirut'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/131'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==131 or $arg=='geneva'){echo 'active';}?>"><?php print(t('Geneva'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/63'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==63 or $arg=='nairobi'){echo 'active';}?>"><?php print(t('Nairobi'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/555'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>"><?php print(t('New York'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/64'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>"><?php print(t('Santiago'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/65'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>"><?php print(t('Vienna'));?></a>
+      <a href="<?php echo url('<front>').'/events-list/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>"><?php print(t('All'));?></a>
     </div>
   </div>
 </div>
