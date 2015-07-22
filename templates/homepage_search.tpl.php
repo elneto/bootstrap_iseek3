@@ -9,12 +9,10 @@
                                         <label for="input-search-iseek"><?php print t('Find a colleague by name, department, and more');?></label>
                                 </div>
                                 <div class="col-lg-9 col-xs-8 search-rpad0">
-                                  <!-- <input type="text" name="find-colleague" class="search-input" id="input-find-colleague"> -->
 					<input class="search-input" name="query" type="text" id="searchSimpleInput">
                                 </div>
                                 <div class="col-lg-3 col-xs-4 search-lpad0">
 					<button id="searchTriggerSimple" type="button" class="search-button" data-toggle="modal" data-target="#myModal"><?php print t('Search');?></button>
-                                  	<!-- <button name="Search" class="search-button">Search</button> -->
                                 </div>
                         </div>
                         <div class="row">
@@ -34,7 +32,8 @@
                                         <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0">
-                                        <select id="select-search" class="search-input">
+                                        <!-- <select id="select-search" class="search-input"> -->
+					<select id="select-search-default" class="search-input">
                                                 <option>iSeek</option>
                                                 <option>ODS</option>
                                         </select>
