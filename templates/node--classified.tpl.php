@@ -158,9 +158,10 @@
 		$ad_author_info = user_load($node->uid);
 		$ad_author_email  = $ad_author_info->mail;
 	?>
+  <hr>
   <?php if (!user_is_logged_in()): ?>
   	<p class="classified_login_link">
-      If this is your listing <a href="/user/login?destination=<?php echo $node_url ?>"><strong>Login</strong></a> to change or unpublish it.
+      <?php print(t('If this is your listing !login_link to change or unpublish it.', array('!login_link' => l(t('Login'), "/user?destination=$node_url"))));?>
   	</p>
     <?php if (!($user->uid == $uid)): ?>
     <p><strong>Contact</strong> <a href="/user/<?php print $uid; ?>/contact?destination=<?php echo $node_url ?>"><?php print $name; ?></a> (<?php print $ad_author_email; ?>)</p>
@@ -199,8 +200,8 @@
       else: 
 			?>
 			
-        <p><strong>Contact</strong> <a href="/user/<?php print $uid; ?>/contact?destination=<?php echo $node_url ?>"><?php print $name; ?></a> (<?php print $ad_author_email; ?>)</p>
-        <p class="classified-add"><a href="/node/add/classified"><strong>Post an ad</strong></a></p>
+        <p><strong><?php print(t('Contact'));?></strong> <a href="/user/<?php print $uid; ?>/contact?destination=<?php echo $node_url ?>"><?php print $name; ?></a> (<?php print $ad_author_email; ?>)</p>
+        <p class="classified-add"><a href="/node/add/classified"><strong><?php print(t('Post an ad'));?></strong></a></p>
       <?php
       endif;
     endif; ?>
