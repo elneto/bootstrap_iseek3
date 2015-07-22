@@ -73,12 +73,6 @@
  * @ingroup themeable
  */
 
-global $language;
-
-$news_centre_url = "http://www.un.org/news/";
-if ($language->language == "fr") {
-	$news_centre_url = "http://www.un.org/french/newscentre/";
-}
 ?>
 
 <!-- begin common header -->
@@ -216,19 +210,13 @@ if ($language->language == "fr") {
         <div class="col-lg-8">
           <div class="row">
             <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;
-		<a href="<?php echo $news_centre_url; ?>">
-			<?php print t('UN in the news');?> <i class="fa fa-angle-double-right"></i>
+		<a href="https://www.unumoja.net">
+			<?php print t('Umoja');?> <i class="fa fa-angle-double-right"></i>
 		</a>
             <a data-toggle="collapse" data-target="#un-news-box" aria-expanded="true" aria-controls="un-news-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
             </div>
              <div class="un-news content-large-text collapse in" id="un-news-box"> 
-                <?php // print render($latest_news);
-			if ($language->language == "fr") {
-				echo views_embed_view('news_centre_block_for_home_page','block_1');
-			} else {
-				echo views_embed_view('news_centre_block_for_home_page','block');
-			}
-		?>
+                <?php echo views_embed_view('news_centre_block_for_home_page','block_2'); ?>
             </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>
