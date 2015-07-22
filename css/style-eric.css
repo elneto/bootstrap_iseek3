@@ -1221,10 +1221,6 @@ div#searchTriggerAdvancedInSimple {
 	font-size: 0.781em;	
 }
 
-.view-news-centre-block-for-home-page .views-field-title a {
-	font-weight: bold;
-}
-
 .view-id-news_centre_block_for_home_page.view-display-id-page_1 .views-row {
 	padding-bottom: 20px;
   	margin-top: 20px;
@@ -1232,7 +1228,8 @@ div#searchTriggerAdvancedInSimple {
   	border-bottom: solid 1px #ddd;
 }
 
-.view-id-news_centre_block_for_home_page.view-display-id-page_1 .views-row a {
+.view-id-news_centre_block_for_home_page.view-display-id-page_1 .views-row a, .view-id-news_centre_block_for_home_page.view-display-id-block_3 .views-row a {
+	font-weight: bold;
 	color: #333;
 }
 
