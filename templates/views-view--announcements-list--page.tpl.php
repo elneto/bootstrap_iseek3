@@ -39,7 +39,7 @@ $arg = arg(1);
 <br>
 <div class="row">
   <div class="col-xs-12 col-md-12">
-    <h4 class="page-title">Filter by duty station</h4>
+    <h4 class="page-title"><?php print(t('Filter by duty station'));?></h4>
     <div class="dutyStationButtons">
       <a href="<?php echo url('<front>').'/announcements-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>"><?php print(t('Addis Ababa'));?></a>
       <a href="<?php echo url('<front>').'/announcements-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>"><?php print(t('Bangkok'));?></a>
