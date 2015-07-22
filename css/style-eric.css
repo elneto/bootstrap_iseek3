@@ -1236,3 +1236,13 @@ div#searchTriggerAdvancedInSimple {
 .view-id-news_centre_block_for_home_page.view-display-id-page_1 .view-header {
 	margin-top: 20px;
 }
+
+#select-search-default {
+    color: #fff;
+    background-color: #5aabd7;
+}
+
+#select-search-default-container {
+    padding-bottom: 1px;
+    background-color: #5aabd7;
+}

@@ -31,7 +31,7 @@
                                 <div class="col-lg-7 col-md-7 col-xs-5 search-rpad0">
                                         <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
                                 </div>
-                                <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0">
+                                <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0" id="select-search-default-container">
                                         <!-- <select id="select-search" class="search-input"> -->
 					<select id="select-search-default" class="search-input">
                                                 <option>iSeek</option>
