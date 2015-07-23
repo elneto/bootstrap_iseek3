@@ -3,7 +3,7 @@ jQuery(document).ready(function () {
 		e.preventDefault();
                 e.stopPropagation();
 		jQuery('#toolkit-anchor').ScrollTo({
-    			duration: 1000,
+    			duration: 0,
     			easing: 'linear'
 		});
 	});
