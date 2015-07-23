@@ -101,7 +101,7 @@
             ?>
       <br>
       <?php 
-      print $classified_date.' | '.$submitted_by;
+      print format_date($node->created, 'custom', 'l, j F Y').' | '.t('Submitted by ').$node->name;
       ?>
     </div>
   <?php endif; ?>

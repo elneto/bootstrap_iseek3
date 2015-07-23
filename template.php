@@ -302,12 +302,7 @@ function iseek_custom_get_menu_children($name){
   $menu_children = array();
   foreach($children as $child) {
     $menu_children['menu-' . $child['link']['mlid']] = array('alter'=>TRUE, 'href'=>$child['link']['href'], 'title'=>$child['link']['title']);
-          //kpr($child);
-          //array_push($menu_children, $child['link']['link_title']);
-          //$menu_children[]
-          //$menu_children = $child['link']['link_title']; //push array, find better version
   }
-  //kpr($children); die;
   return $menu_children;
 }
 
@@ -371,21 +366,6 @@ function bootstrap_iseek3_preprocess_page(&$variables){
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-external-quicklinks"))));
   }
 
-
-
-/*  
-  $variables['menu_ktt'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-top')));
-  $variables['menu_ktb'] = theme('links__menu-toolkit---key-tools-top', array('links' => iseek_custom_get_menu_children('menu-toolkit---key-tools-bottom')));
-  $variables['menu_staff'] = theme('links__menu-toolkit---staff-development', array('links' => iseek_custom_get_menu_children('menu-toolkit---staff-development')));
-  $variables['menu_pay'] = theme('links__menu-toolkit---pay-benefits-and-', array('links' => iseek_custom_get_menu_children('menu-toolkit---pay-benefits-and-')));
-  $variables['menu_security'] = theme('links__menu-toolkit---security', array('links' => iseek_custom_get_menu_children('menu-toolkit---security')));
-  $variables['menu_travel'] = theme('links__menu-toolkit---travel', array('links' => iseek_custom_get_menu_children('menu-toolkit---travel')));
-  $variables['menu_health'] = theme('links__menu-toolkit---health-and-wellbe', array('links' => iseek_custom_get_menu_children('menu-toolkit---health-and-wellbe')));
-  $variables['menu_rules'] = theme('links__menu-toolkit---rules-and-regulat', array('links' => iseek_custom_get_menu_children('menu-toolkit---rules-and-regulat')));
-  $variables['menu_reference'] = theme('links__menu-toolkit---references-and-ma', array('links' => iseek_custom_get_menu_children('menu-toolkit---references-and-ma')));
-  $variables['menu_ethics'] = theme('links__menu-toolkit---ethics-and-intern', array('links' => iseek_custom_get_menu_children('menu-toolkit---ethics-and-intern')));
-  $variables['menu_finance'] = theme('links__menu-toolkit---finance-and-budge', array('links' => iseek_custom_get_menu_children('menu-toolkit---finance-and-budge')));
-*/
    $variables['menu_ktt'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-top", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_ktb'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---key-tools-bottom", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_staff'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---staff-development", array('min_depth' => 2, 'max_depth' => 2 )))));
@@ -433,22 +413,5 @@ function bootstrap_iseek3_preprocess_page(&$variables){
     $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
   }
   
-}
-
-//To format things to send to classified node
-function bootstrap_iseek3_preprocess_node(&$variables){
-  if ($variables['type'] == 'classified'){
-/*    kpr($variables);
-    kpr($variables['node']);*/
-    
-    $node = $variables['node'];
-
-    if ($node->language == "fr") {
-      setlocale(LC_TIME, "fr_FR");
-    } 
-
-    $variables['classified_date'] = format_date($node->created, 'custom', 'l, j F Y');
-    $variables['submitted_by'] = t('Submitted by ').$node->name;
-  }
 }
 
