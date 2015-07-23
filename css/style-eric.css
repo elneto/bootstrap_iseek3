@@ -1237,6 +1237,11 @@ div#searchTriggerAdvancedInSimple {
 	margin-top: 20px;
 }
 
+.view-forms2 #search_form {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 /*
 #select-search-default {
     color: #fff;
