@@ -1888,10 +1888,25 @@ ul.classifieds-listing {
   color: white;
 }
 
-.node-classified .iseek-like a, .node-classified #comments h2 {
-  font-size: 1em;
-  color: @menu-blue;
-}
+.node-classified, .node-announcements, .node-type-article{
+
+  & .iseek-like a, 
+  & #comments h2 {
+    font-size: 1em;
+    color: @menu-blue;
+  }
+
+  & .comment {
+    background-color: @spotlight-grey;
+    border: 1px solid @spotlight-grey;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 0;
+  }
+
+} 
+
 
 /*
 * Media queries not huge screens

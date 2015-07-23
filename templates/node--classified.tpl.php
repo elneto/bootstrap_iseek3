@@ -306,7 +306,7 @@
         </div><!-- slug -->
 
         </div><!-- content -->
-    </div>    
+    </div> <!-- End comments -->
 
   </div>
 </div>  
