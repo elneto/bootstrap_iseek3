@@ -438,8 +438,8 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 //To format things to send to classified node
 function bootstrap_iseek3_preprocess_node(&$variables){
   if ($variables['type'] == 'classified'){
-    kpr($variables);
-    kpr($variables['node']);
+/*    kpr($variables);
+    kpr($variables['node']);*/
     
     $node = $variables['node'];
 
