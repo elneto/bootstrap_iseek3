@@ -386,7 +386,7 @@ li.search-result {
 	padding: 15px;
 }
 
-button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#sitesearchTrigger {
+button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#sitesearchTrigger, .view-forms2 #search_form button {
   	background-color: #808080;
   	color: white;
   	border: 0;
