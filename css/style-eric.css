@@ -386,7 +386,7 @@ li.search-result {
 	padding: 15px;
 }
 
-button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#sitesearchTrigger {
+button#searchTriggerSimpleInModal, button#searchTriggerAdvancedInModal, button#sitesearchTrigger, .view-forms2 #search_form button {
   	background-color: #808080;
   	color: white;
   	border: 0;
@@ -1235,6 +1235,11 @@ div#searchTriggerAdvancedInSimple {
 
 .view-id-news_centre_block_for_home_page.view-display-id-page_1 .view-header {
 	margin-top: 20px;
+}
+
+.view-forms2 #search_form {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /*
