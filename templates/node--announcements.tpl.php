@@ -78,9 +78,6 @@
  * @see template_process()
  */
 
-
-
-
 ?>
 
 <div class="row">
@@ -120,6 +117,8 @@
 
 		</div>	
 	</div>	
+
+	
 
         <div class="row">
 	
@@ -168,7 +167,9 @@
 				<div class="content-body">
 
 					<?php print render($content['body']); ?>
-
+					<!-- The image carousel -->
+	      			<?php print render($content['field_an_optional_image']); ?>
+	   
 					<hr>
       
 
