@@ -100,7 +100,9 @@
             t('Location: ').$node->field_ad_location['und'][0]['taxonomy_term']->name;
             ?>
       <br>
-      <?php print $submitted; ?>
+      <?php 
+      print $classified_date.' | '.$submitted_by;
+      ?>
     </div>
   <?php endif; ?>
 
