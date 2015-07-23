@@ -435,3 +435,20 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   
 }
 
+//To format things to send to classified node
+function bootstrap_iseek3_preprocess_node(&$variables){
+  if ($variables['type'] == 'classified'){
+    kpr($variables);
+    kpr($variables['node']);
+    
+    $node = $variables['node'];
+
+    if ($node->language == "fr") {
+      setlocale(LC_TIME, "fr_FR");
+    } 
+
+    $variables['classified_date'] = format_date($node->created, 'custom', 'l, j F Y');
+    $variables['submitted_by'] = t('Submitted by ').$node->name;
+  }
+}
+
