@@ -1,0 +1,111 @@
+(*)is in Features
+
+******************************************
+VIEWS, BLOCKS, CONTENT, TYPES, ETC
+******************************************
+
+CONTENT TYPES
+
+(*)useful-tip (in singular) // review that all fields are there, add them if not
+add default image to useful tip
+(*)announcements //add optional image field (machine name: field_an_optional_image)
+	//configure style of optional image label hidden
+	//configure style of optional image like articles
+	//enable comments
+(*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0
+(*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style
+
+   //enable comments
+
+NODEQUEUE
+
+Add spotlight queue and disable the automatic view it builds…
+
+VIEWS
+
+(*)announcements-list //review that the argument works, maybe reimport
+replacing the optional image OR simply copying the edited view from the folder in my desktop
+(*)articles
+(*)Latest social media tip //check that the view is complete
+(*)Latest News
+(*)Latest Zeekoslist
+(*)useful_tips_collection
+(*)Recent TJOs
+(*)spotlight (latest view in Desktop drupal views)
+(*)Staff union block (remove more link)
+(*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive
+(weather / system_1) Add path of Martin’s images:
+iseekweather in /admin/config/user-interface/weather
+
+ALIAS
+8 duty stations for announcements
+announcements/555 -> announcements/newyork
+announcements/60 -> announcements/addisababa
+announcements/61 -> announcements/bangkok
+announcements/62 -> announcements/beirut
+announcements/131 -> announcements/geneva
+63 nairobi
+64 santiago
+65 vienna
+
+BLOCKS
+
+(*)Social Media Corner | machine name: social_media_corner_block_i3
+(*)DELETED About us block in footer | about_us_footer_block_i3
+(*)Zeekoslist Categories HTML (/classified), put the appropriate classes, and in order, saved in local and in desktop folder
+(*)Zeekoslist Policy Text: only classified and classified/all not classified*
+(*)Remove or deactivate Zeekoslist Post an Ad
+(*)Remove or deactivate Zeekoslist Login Prompt Top
+
+****************************
+Image styles
+****************************
+
+(*)articles-archive
+(*)spotlight
+
+For spotlight: add Manual Crop 375x211
+
+In Featured photo and Top Left corner, edit photo field to allow manual crop
+enable the include spotlight and enable the first 2 checkboxes, 
+limit the number of photos to 1, add the minimum and maximum sizes (copy from articles images or local) Max:1200x900 Minimum: 375x211 
+
+****************************
+In page—front.tpl.php
+****************************
+
+add the Submit content link page <?echo url(whatever-page);?>
+
+****************************
+MODULES to turn on
+****************************
+
+Features
+FE Block
+Turn on the ernesto views module
+Weather: Change setting: Number of forecast days to 1.
+
+**************
+ADMIN
+**************
+
+Set path to favicon, shortcut icon settings to: 
+sites/iseek.un.org/themes/bootstrap_iseek3/images/favicon.ico
+
+**************
+BUSINESS CARDS
+**************
+Change for iseek3
+
+bcards.css the top:30em to 35em
+
+business-cards-node-form.tpl.php //col-md-12 to 6 and rotateHorizontal and rotateVertical
+
+in templates/node—business_cards.tpl.php do only english redirection, copy from bootstrap_iseek
+
+**************
+TRANSLATIONS
+**************
+Currently there are no announcements/events for this duty station.
+Filter by duty station
+
