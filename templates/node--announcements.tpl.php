@@ -166,10 +166,10 @@
 
 				<div class="content-body">
 
-					<?php print render($content['body']); ?>
-					<!-- The image carousel -->
+					<!-- The image -->
 	      			<?php print render($content['field_an_optional_image']); ?>
-	   
+	      			<!-- The body -->
+					<?php print render($content['body']); ?>
 					<hr>
       
 
