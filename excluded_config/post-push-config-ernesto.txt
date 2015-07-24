@@ -24,13 +24,12 @@ Add spotlight queue and disable the automatic view it builds…
 VIEWS
 
 (*)announcements-list //review that the argument works, maybe reimport
-replacing the optional image OR simply copying the edited view from the folder in my desktop
+replacing the optional image OR simply copying the edited view from the folder in my desktop/github
 (*)articles
 (*)Latest social media tip //check that the view is complete
 (*)Latest News
 (*)Latest Zeekoslist
 (*)useful_tips_collection
-(*)Recent TJOs
 (*)spotlight (latest view in Desktop drupal views)
 (*)Staff union block (remove more link)
 (*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive

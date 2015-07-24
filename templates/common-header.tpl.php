@@ -101,7 +101,7 @@
                         </div><!-- /.navbar-collapse -->
                 </div>
                 <div class="col-md-2 visible-md visible-lg">
-                        <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo" width="145">
+                        <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo">
                 </div>
         </div>
 
