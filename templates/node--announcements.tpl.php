@@ -170,9 +170,9 @@
 	      			<?php print render($content['field_an_optional_image']); ?>
 	      			<!-- The body -->
 					<?php print render($content['body']); ?>
-					<hr>
-      
-
+		
+		<!-- For the comments: -->		
+		<hr>
           <?php if (flag_create_link('iseek_like', $node->nid)) { ?>
             <span id="iseek-likes"></span>
             <div class="iseek-like">
@@ -280,10 +280,10 @@
         </div><!-- content -->
     </div> <!-- End comments -->
 
-				</div>
+				
 
-			  </div><!-- content -->
-		</div>	  
+			  <!-- content -->
+			  
 		<!-- <div class="col-lg-2 col-md-12">
 	        <div class="row" id="mail_print_icon_row">
                 <div class="col-lg-12">
