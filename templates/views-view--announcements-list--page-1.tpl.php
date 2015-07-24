@@ -40,7 +40,7 @@ $iseek_url = url('', array('absolute'=>true));
 <br>
 <div class="row">
   <div class="col-lg-12">
-    <div class="page-title calendar-view-link"><a href="<?php echo $iseek_url.'calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
+    <div class="page-title calendar-view-link"><a href="<?php echo $iseek_url.'/calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
   </div>
 </div>
 <br>
