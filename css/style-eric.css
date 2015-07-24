@@ -1230,6 +1230,11 @@ div#caption-mi {
 	padding: 0.5em 1em;
 }
 
+.staffunion a, .classifieds a, .tjo a  {
+	font-family: Source Sans Pro,Helvetica,sans-serif;
+}
+
+
 /*
 #select-search-default {
     color: #fff;
