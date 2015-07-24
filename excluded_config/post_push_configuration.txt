@@ -1,0 +1,93 @@
+Prod to dev checklist
+
+1. admin/appearance/settings/bootstrap_iseek3
+
+a. Set Bootstrap iSeek3 theme as default and disable Bootstrap iSeek 
+
+b. Disable BootstrapCDN
+
+c. Change logo
+
+sites/iseek.un.org/themes/bootstrap_iseek3/images/iseek-logo.svg
+
+2. Clear cache (truncate tables in db)
+
+3. admin/structure/block
+
+Remove all blocks from Navigation (including css block for survey?)
+
+Add iSeek3 Main-Menu block to Navigation
+
+Remove title -> Configure block
+
+Make sure subnav parents How do i..., etc are Enabled
+
+4. Activate Features code blocks
+
+iseek3_eric_views_homepage	
+
+Does features overwrite existing views? Answer appears to be NO.
+Had to delete 
+
+5. Activate image style for article // dept?
+
+6. Views
+
+Delete view and reimport -- features module doesn't work
+
+departmental_page_in_og -- 
+staff_stories_and_news_main -- just change image style for "images" field and select only current language
+
+departmental_faq_in_og -- add font-awesome to rewritten results (<i class="fa fa-question"></i> )
+
+7. Department 
+
+content field labels
+associate bio image for "portrait" style
+
+8. Image style 
+
+Change manual crop style to admin/structure/types/manage/article/fields/field_images
+article: Change display image style to large-article-image-style-16-9
+
+9. Add "Calendar of events" date style/type
+
+10. Activate nodequeue module
+Create nodequeue name "Most popular"
+Change automatically view (nodequeue_3) on production by changing to unformatted list, adding Images, and setting Medium (square) style to the Images field
+
+
+11. Announcements block for home page needs to be exported
+
+12. Add "manual crop" to medium image style and add it to the manual crop section of articles.
+
+13. Add leading zero to events home page date format
+
+14. Add OG field permissions for department content type so that fields show show properly
+
+15. Modify home page views for language sensitivity
+staff stories and news submain
+
+16. Make "About us footer block" translatable and add french translation
+
+17. Make "Useful Tip" content type translatable and add french translation
+
+18. Change nodequeue_3 view so that it is language-aware
+
+19. Import new items into 
+
+20. Import weather module's weather.fr.po file
+
+21. Import forms2 view. Many changes. 
+
+22. Update display of Useful Tip content type
+
+23. Feeds consumption
+Turn on Aggregator module
+
+24. Import po files from Mac -- /users/web2/documents/iseek/po
+
+25. Global QuickLinks
+Import to remove all
+
+26. Add feeds from Umoja, Careers portal	
