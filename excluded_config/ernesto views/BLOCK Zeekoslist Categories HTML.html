@@ -1,0 +1,148 @@
+<?php
+$solr_url = "http://iseekd:F4Setruc8rUspenU@nyvm1482.stc.un.org:8983/solr/iseek_drupal/select?fq=bundle:classified&rows=0&wt=json&facet=true&facet.field=im_classified_category";
+  
+$request = drupal_http_request($solr_url);
+$headers['Content-Type'] = 'application/json';
+drupal_send_headers($headers);
+
+// decode result
+$decoded_search_results = json_decode($request->data);
+// print_r($decoded_search_results);
+
+// facets
+$facets = $decoded_search_results->{'facet_counts'}->{'facet_fields'}->{'im_classified_category'};
+
+$facet_iter = 0 ;
+
+global $facets_nonzero_hash;
+
+foreach ($facets as $facet) {
+	if ($facet_iter % 2 == 0) {
+		$facets_nonzero_hash[$facet] = $facets[($facet_iter + 1)];
+	}
+	$facet_iter++;
+}
+
+// print_r($facets_nonzero_hash) ;
+
+function returnClassifiedCounts($cat) {
+	global $facets_nonzero_hash;
+
+	if (isset($facets_nonzero_hash[$cat])) {
+		return "(" . $facets_nonzero_hash[$cat] . ")";
+	} else {
+		return "(0)";
+	}
+}
+
+?>
+
+<div class="view view-zeekolist-categories view-id-zeekolist_categories view-display-id-block view-dom-id-d628bfbcd9c65dd0fda09cb69d9ed622">
+<div class="row view-content">
+<div class="col-md-2 item-list footer-menu-items zeekoslist-menu-items">
+<h5 class="large-text underline"><a href="/classified/2899?loc=All">Housing <?php echo returnClassifiedCounts(2899) ?></a></h5>
+<ul class="classifieds"><li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2924?loc=All" title=" Rent">Rent <?php echo returnClassifiedCounts(2924) ?></a></span></div>
+</li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2889?loc=All" title=" For sale">For sale <?php echo returnClassifiedCounts(2889) ?></a></span></div>
+</li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2949?loc=All" title=" Wanted">Wanted <?php echo returnClassifiedCounts(2949) ?></a></span></div>
+</li>
+<li class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2929?loc=All" title=" Share">Share <?php echo returnClassifiedCounts(2929) ?></a></span></div>
+</li>
+<li class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2934?loc=All" title=" Temporary">Temporary <?php echo returnClassifiedCounts(2934) ?></a></span></div>
+</li>
+<li class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2944?loc=All" title=" International Properties">International Properties <?php echo returnClassifiedCounts(2944) ?></a></span></div>
+</li>
+<li class="views-row views-row-7 views-row-odd views-row-last">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2939?loc=All" title=" Vacation/Housing Swap">Vacation/Housing Swap <?php echo returnClassifiedCounts(2939) ?></a></span></div>
+</li>
+</ul></div>
+<div class="col-md-2 item-list footer-menu-items zeekoslist-menu-items">
+<h5 class="large-text underline"><a href="/classified/2904?loc=All">Services <?php echo returnClassifiedCounts(2904) ?></a></h5>
+<ul class="classifieds"><li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2964?loc=All" title=" Pets">Pets <?php echo returnClassifiedCounts(2964) ?></a></span></div>
+</li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2894?loc=All" title=" Wanted">Wanted <?php echo returnClassifiedCounts(2894) ?></a></span></div>
+</li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2979?loc=All" title=" Miscellaneous">Miscellaneous <?php echo returnClassifiedCounts(2979) ?></a></span></div>
+</li>
+<li class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2959?loc=All" title=" Household">Household <?php echo returnClassifiedCounts(2959) ?></a></span></div>
+</li>
+<li class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2974?loc=All" title=" Moving">Moving <?php echo returnClassifiedCounts(2974) ?></a></span></div>
+</li>
+<li class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2969?loc=All" title=" Travel">Travel <?php echo returnClassifiedCounts(2969) ?></a></span></div>
+</li>
+<li class="views-row views-row-7 views-row-odd views-row-last">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2954?loc=All" title=" Childcare">Childcare <?php echo returnClassifiedCounts(2954) ?></a></span></div>
+</li>
+</ul></div>
+<div class="col-md-2 item-list footer-menu-items zeekoslist-menu-items">
+<h5 class="large-text underline"><a href="/classified/2914?loc=All">For Sale <?php echo returnClassifiedCounts(2914) ?></a></h5>
+<ul class="classifieds"><li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3004?loc=All" title=" Vehicles">Vehicles <?php echo returnClassifiedCounts(3004) ?></a></span></div>
+</li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3014?loc=All" title=" Electronics">Electronics <?php echo returnClassifiedCounts(3014) ?></a></span></div>
+</li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3044?loc=All" title=" Appliances">Appliances <?php echo returnClassifiedCounts(3044) ?></a></span></div>
+</li>
+<li class="views-row views-row-4 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3029?loc=All" title=" Arts and Craft">Arts and Craft <?php echo returnClassifiedCounts(3029) ?></a></span></div>
+</li>
+<li class="views-row views-row-5 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3009?loc=All" title=" Furniture">Furniture <?php echo returnClassifiedCounts(3009) ?></a></span></div>
+</li>
+<li class="views-row views-row-6 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3019?loc=All" title=" Baby/Kid Stuff">Baby/Kid Stuff <?php echo returnClassifiedCounts(3019) ?></a></span></div>
+</li>
+<li class="views-row views-row-7 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3054?loc=All" title=" Wanted">Wanted <?php echo returnClassifiedCounts(3054) ?></a></span></div>
+</li>
+<li class="views-row views-row-8 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3049?loc=All" title=" Miscellaneous">Miscellaneous <?php echo returnClassifiedCounts(3049) ?></a></span></div>
+</li>
+<li class="views-row views-row-9 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3039?loc=All" title=" Sporting">Sporting <?php echo returnClassifiedCounts(3039) ?></a></span></div>
+</li>
+<li class="views-row views-row-10 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3024?loc=All" title=" Books/CDs/DVD">Books/CDs/DVD <?php echo returnClassifiedCounts(3024) ?></a></span></div>
+</li>
+<li class="views-row views-row-11 views-row-odd views-row-last">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3034?loc=All" title=" Musical Instruments">Musical Instruments <?php echo returnClassifiedCounts(3034) ?></a></span></div>
+</li>
+</ul></div>
+<div class="col-md-2 item-list footer-menu-items zeekoslist-menu-items">
+<h5 class="large-text underline"><a href="/classified/2909?loc=All">Community <?php echo returnClassifiedCounts(2909) ?></a></h5>
+<ul class="classifieds"><li class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2989?loc=All" title=" Lessons/Classes">Lessons/Classes <?php echo returnClassifiedCounts(2989) ?></a></span></div>
+</li>
+<li class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2999?loc=All" title=" Discounts">Discounts <?php echo returnClassifiedCounts(2999) ?></a></span></div>
+</li>
+<li class="views-row views-row-3 views-row-odd">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2984?loc=All" title=" Lost and Found">Lost and Found <?php echo returnClassifiedCounts(2984) ?></a></span></div>
+</li>
+<li class="views-row views-row-4 views-row-even views-row-last">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/2994?loc=All" title=" Car Pooling">Car Pooling <?php echo returnClassifiedCounts(2994) ?></a></span></div>
+</li>
+</ul></div>
+<div class="col-md-2 item-list footer-menu-items zeekoslist-menu-items">
+<h5 class="large-text underline"><a href="/classified/2919?loc=All">Meetups <?php echo returnClassifiedCounts(2919) ?></a></h5>
+<ul class="classifieds"><li class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="views-field views-field-name-2"><span class="field-content"><a href="/classified/3059?loc=All" title=" Miscellaneous">Miscellaneous <?php echo returnClassifiedCounts(3059) ?></a></span></div>
+</li>
+</ul></div>
+</div>
+</div>
