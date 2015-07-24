@@ -231,7 +231,7 @@
 					<!---------------------------->
 
 
-					<hr/>
+					<hr>
 			
 
 					<?php if (flag_create_link('iseek_like', $node->nid)) { ?>

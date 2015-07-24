@@ -1444,9 +1444,13 @@ img.weather-image{
   background-color: @search-grey;
 }
 
-.node-type-article .fa-2x,
-.node-classified .fa-2x{
-  font-size: 1.4em;
+.node-type-article,
+.node-article,
+.node-classified,
+ {
+  .fa-2x{
+    font-size: 1.4em;
+  }
 }
 
 /*
@@ -1887,6 +1891,26 @@ ul.classifieds-listing {
 .view-zeekoslist-category-breadcrumbs a {
   color: white;
 }
+
+.node-classified, .node-announcements, 
+.node-type-article, .node-global-announcements{
+  & .iseek-like a, 
+  & #comments h2 {
+    font-size: 1em;
+    color: @menu-blue;
+  }
+
+  & .comment {
+    background-color: @spotlight-grey;
+    border: 1px solid @spotlight-grey;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 0;
+  }
+
+} 
+
 
 /*
 * Media queries not huge screens

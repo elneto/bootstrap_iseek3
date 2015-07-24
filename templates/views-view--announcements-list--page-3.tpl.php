@@ -29,6 +29,7 @@
 
 //kpr('views-view has been called');
 $arg = arg(1);
+$iseek_url = url('', array('absolute'=>true));
 ?>
 
 <div class="row">
@@ -39,7 +40,7 @@ $arg = arg(1);
 <br>
 <div class="row">
   <div class="col-lg-12">
-    <div class="page-title calendar-view-link"><a href="<?php echo $GLOBALS['base_url'].'calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
+    <div class="page-title calendar-view-link"><a href="<?php echo $iseek_url.'calendar/'; ?>"><?php print t('Calendar view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
   </div>
 </div>
 <br>
@@ -47,16 +48,16 @@ $arg = arg(1);
   <div class="col-xs-12 col-md-12">
     <h4 class="page-title"><?php print(t('Filter by duty station'));?></h4>
     <div class="dutyStationButtons">
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>"><?php print(t('Addis Ababa'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>"><?php print(t('Bangkok'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/62'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==62 or $arg=='beirut'){echo 'active';}?>"><?php print(t('Beirut'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/131'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==131 or $arg=='geneva'){echo 'active';}?>"><?php print(t('Geneva'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/63'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==63 or $arg=='nairobi'){echo 'active';}?>"><?php print(t('Nairobi'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/555'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>"><?php print(t('New York'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/64'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>"><?php print(t('Santiago'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/65'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>"><?php print(t('Vienna'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/global'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg=='global'){echo 'active';}?>"><?php print(t('Global'));?></a>
-      <a href="<?php echo $GLOBALS['base_url'].'/events-list/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>"><?php print(t('All'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/60'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==60 or $arg=='addisababa'){echo 'active';}?>"><?php print(t('Addis Ababa'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/61'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==61 or $arg=='bangkok'){echo 'active';}?>"><?php print(t('Bangkok'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/62'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==62 or $arg=='beirut'){echo 'active';}?>"><?php print(t('Beirut'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/131'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==131 or $arg=='geneva'){echo 'active';}?>"><?php print(t('Geneva'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/63'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==63 or $arg=='nairobi'){echo 'active';}?>"><?php print(t('Nairobi'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/555'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==555 or $arg=='newyork'){echo 'active';}?>"><?php print(t('New York'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/64'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==64 or $arg=='santiago'){echo 'active';}?>"><?php print(t('Santiago'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/65'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==65 or $arg=='vienna'){echo 'active';}?>"><?php print(t('Vienna'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/global'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg=='global'){echo 'active';}?>"><?php print(t('Global'));?></a>
+      <a href="<?php echo $iseek_url.'/events-list/'; ?>" class="btn btn-default dutyStationBtn <?php if ($arg==''){echo 'active';}?>"><?php print(t('All'));?></a>
     </div>
   </div>
 </div>
