@@ -82,7 +82,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <?php print t('Announcements');?> <i class="fa fa-angle-double-right"></i></div>
+		<div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <a href="/announcements-list/"><?php print t('Announcements');?></a> <i class="fa fa-angle-double-right"></i></div>
 	</div>
 </div>
 
