@@ -99,23 +99,21 @@
 					} else {
 						echo utf8_encode(strftime('%A, %e %B %G', strtotime($node->field_actual_posting_date['und'][0]['value'])));
 					}
-				?>
-				|
-				<?php 
+
 					if (isset($node->field_location['und'][0]['tid'])) {
 					  $term_field_location = taxonomy_term_load($node->field_location['und'][0]['tid']);
 					  
 					  if (isset($term_field_location->name)) {
+						echo " | ";
 						echo $term_field_location->name; 
 					  } 
 					}
-				?> 
-				|
-				<?php 
+
 					if (isset($node->field_office['und'][0]['tid'])) {
 						$term_field_office = taxonomy_term_load($node->field_office['und'][0]['tid']);
 
 						if (isset($term_field_office->name)) {
+							echo " | ";
 							echo $term_field_office->name; 
 						} 
 					}	
