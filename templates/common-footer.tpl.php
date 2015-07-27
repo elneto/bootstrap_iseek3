@@ -1,5 +1,5 @@
 <!-- Staff Toolkit -->
-      
+    <div class="hidden-print">  
       <div class="row">
         <div class="col-lg-12">
           <div class="toolkit large-text" id="toolkit-anchor">&nbsp;<i class="fa fa-briefcase"></i>&nbsp;&nbsp;<?php echo t("Toolkit"); ?>
@@ -133,10 +133,10 @@
             </div>
         </div>
       </div>
-    </div>
     </div><!-- / main .container -->
+   
     <p>&nbsp;</p>
-    <footer class="blog-footer visible-xs">
+    <footer class="blog-footer visible-xs hidden-print">
       
         <a href="#top-bar">Back to top</a>
       

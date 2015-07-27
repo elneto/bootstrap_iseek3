@@ -70,4 +70,3 @@ ADMIN
 
 Set path to favicon, shortcut icon settings to: 
 sites/iseek.un.org/themes/bootstrap_iseek3/images/favicon.ico
-
