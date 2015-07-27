@@ -7,26 +7,26 @@ VIEWS, BLOCKS, CONTENT, TYPES, ETC
 CONTENT TYPES
 
 (*)useful-tip (in singular) // review that all fields are there, add them if not
-add default image to useful tip
+add default image to useful tip -- look on development for default image (twitter / un image)
 (*)announcements //add optional image field (machine name: field_an_optional_image)
-	//configure style of optional image label hidden
-	//configure style of optional image like articles
+	//configure style of optional image label hidden -- admin/structure/types/manage/announcements/display
+	//configure style of optional image like articles -- ibid: Image style: large-article-image-style-16-9
 	//enable comments
-(*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0
-(*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style
+(*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0  admin/structure/types/manage/top-left-corner/fields/field_display_title
+(*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style 
 
    //enable comments
 
 NODEQUEUE
 
 Add spotlight queue and disable the automatic view it builds…
+ERIC: Make sure nodequeues are sync with ids especially for homepage
 
-VIEWS
+VIEWS -- delete if on production and re-import from development
 
-(*)announcements-list //review that the argument works, maybe reimport
-replacing the optional image OR simply copying the edited view from the folder in my desktop/github
+(*)announcements-list
 (*)articles
-(*)Latest social media tip //check that the view is complete
+(*)Latest social media tip 
 (*)Latest Zeekoslist
 (*)useful_tips_collection
 (*)spotlight (latest view in Desktop drupal views)
@@ -37,10 +37,8 @@ iseekweather in /admin/config/user-interface/weather
 
 BLOCKS
 
-(*)Social Media Corner | machine name: social_media_corner_block_i3
-(*)DELETED About us block in footer | about_us_footer_block_i3
-(*)Zeekoslist Categories HTML (/classified), put the appropriate classes, and in order, saved in local and in desktop folder
-(*)Zeekoslist Policy Text: only classified and classified/all not classified*
+(*)Zeekoslist Categories HTML (/classified) -- copy from dev 
+(*)Zeekoslist Policy Text: only classified and classified/all not classified* -- copy from dev
 (*)Remove or deactivate Zeekoslist Post an Ad
 (*)Remove or deactivate Zeekoslist Login Prompt Top
 
@@ -58,18 +56,12 @@ enable the include spotlight and enable the first 2 checkboxes,
 limit the number of photos to 1, add the minimum and maximum sizes (copy from articles images or local) Max:1200x900 Minimum: 375x211 
 
 ****************************
-In page—front.tpl.php
-****************************
-
-add the Submit content link page <?echo url(whatever-page);?>
-
-****************************
 MODULES to turn on
 ****************************
 
-Features
-FE Block
-Turn on the ernesto views module
+Features -- leave off and remove from dev/prod
+FE Block -- leave off and remove from dev/prod
+Turn on the ernesto views module -- leave off and remove from dev/prod
 Weather: Change setting: Number of forecast days to 1.
 
 **************
@@ -78,22 +70,3 @@ ADMIN
 
 Set path to favicon, shortcut icon settings to: 
 sites/iseek.un.org/themes/bootstrap_iseek3/images/favicon.ico
-
-**************
-BUSINESS CARDS
-**************
-
-[OPTIONAL] in templates/node—business_cards.tpl.php do only english redirection, copy from bootstrap_iseek
-
-ALIAS (all this is optional…)
-8 duty stations for announcements
-announcements/555 -> announcements/newyork
-announcements/60 -> announcements/addisababa
-announcements/61 -> announcements/bangkok
-announcements/62 -> announcements/beirut
-announcements/131 -> announcements/geneva
-63 nairobi
-64 santiago
-65 vienna
-
-
