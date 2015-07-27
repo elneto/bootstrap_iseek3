@@ -1,11 +1,13 @@
-/*select#select-search{
+select#select-search{
   background: 0 0;
   border:0;
   border-bottom: 3px solid #5aabd7;
   color: white;
   border-radius: 0;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding-top: 0.2em;
   background-color: #5aabd7;
   padding-left: 6px;
-}*/
+}
