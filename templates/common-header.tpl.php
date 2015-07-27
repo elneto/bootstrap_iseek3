@@ -1,4 +1,4 @@
-<div id="top-bar">
+<div id="top-bar hidden-print">
         <div class="container">
                 <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-12 hidden-xs">
@@ -42,12 +42,12 @@
                                                 <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("iseek-logo.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="iseek logo" width="225"/>
                                         </a>
                                 </div>
-                                <div class="col-md-2 hidden-xs">
+                                <div class="col-md-2 hidden-xs hidden-print">
                                         <div id="banner-separation"></div>
                                 </div>
                         </div>
                 </div>
-                <div class="col-md-7 col-xs-6">
+                <div class="col-md-7 col-xs-6 hidden-print">
                         <div class="navbar-default" id="location-navbar">
                                 <ul class="nav navbar-nav">
                                         <li class="dropdown">
@@ -100,8 +100,8 @@
                                 </ul>
                         </div><!-- /.navbar-collapse -->
                 </div>
-                <div class="col-md-2 visible-md visible-lg">
-                        <a href="http://www.un.org/un70/<?php echo $language->language; ?>"><img id="logo-top-right" src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner hidden-print" alt="UN 70 logo"></a>
+                <div class="col-md-2 visible-md visible-lg hidden-print">
+                        <a href="http://www.un.org/un70/<?php echo $language->language; ?>"><img id="logo-top-right" src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg"); ?>" border="0" class="img-responsive img-logo-banner hidden-print" alt="UN 70 logo"></a>
                 </div>
         </div>
 
@@ -114,7 +114,7 @@
 	if (require_login_display_global()) {
 	?>
 
-        <div class="row" id="iseek-main-nav">
+        <div class="row hidden-print" id="iseek-main-nav">
 
                 <div class="col-sm-12">
 
