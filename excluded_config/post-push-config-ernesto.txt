@@ -82,13 +82,8 @@ sites/iseek.un.org/themes/bootstrap_iseek3/images/favicon.ico
 **************
 BUSINESS CARDS
 **************
-Change for iseek3
 
-bcards.css the top:30em to 35em
-
-business-cards-node-form.tpl.php //col-md-12 to 6 and rotateHorizontal and rotateVertical
-
-in templates/node—business_cards.tpl.php do only english redirection, copy from bootstrap_iseek
+[OPTIONAL] in templates/node—business_cards.tpl.php do only english redirection, copy from bootstrap_iseek
 
 ALIAS (all this is optional…)
 8 duty stations for announcements
