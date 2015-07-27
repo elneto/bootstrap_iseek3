@@ -443,6 +443,11 @@ div#location-navbar{
     }
   }
 
+img#logo-top-right{
+  max-height: 88px;
+  float: right;
+}
+
 /*
 * Main nav menu
 */
@@ -526,6 +531,8 @@ select#select-search{
   color: white;
   border-radius: 0;
   -webkit-appearance: none; //removes border radius
+  -moz-appearance: none;
+  appearance: none;
   padding-top: 0.2em;
   background: url(../images/trianglew10.png)no-repeat right @side-box-blue;
   background-position: 86% 60%;
@@ -629,7 +636,7 @@ div#calendar-box, div#announcements-box{
 }
 
 div#calendar-box {
-  max-height: @top-boxes-height;
+  height: @top-boxes-height;
   overflow-y: scroll;
 }
 
@@ -673,7 +680,7 @@ h3.top-boxes-margin{
 
 div#announcements-box {
   //max-height: @top-boxes-height;
-  max-height: 225px;
+  height: 225px;
   overflow-y: scroll;
 }
 
@@ -1567,7 +1574,7 @@ table {
   padding-left:2em;   
   padding-top:1em;    
   line-height: 1.8em;   
-  min-height: 280px;    
+  min-height: 310px;    
   & a{    
     color: black;   
   }   
@@ -1800,6 +1807,9 @@ table {
 #oneun a{   
   color:#4d4d4d;    
     
+}
+#oneun a.blue{
+  color:#337ab7;    
 }   
 #oneun a:hover{   
   color:#337ab7;    

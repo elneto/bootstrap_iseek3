@@ -80,6 +80,6 @@ $nextMonth = iseek_num_to_month(iseek_next_month($plugin->view->date_info->month
 
 <div class="row">
   <div class="col-lg-12 text-center calendar-legend">
-    <span id="legend-announcement"></span> <?php print t('Event'); ?> &nbsp;&nbsp;<span id="legend-holiday"></span> <?php print t('Holiday'); ?> &nbsp;&nbsp;<span id="legend-global"></span> <?php print t('Global event');?>
+    <span id="legend-announcement"></span> <?php print t('Local event'); ?> &nbsp;&nbsp;<span id="legend-holiday"></span> <?php print t('Holiday'); ?> &nbsp;&nbsp;<span id="legend-global"></span> <?php print t('Global event');?>
   </div>    
 </div>

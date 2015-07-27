@@ -326,3 +326,21 @@ msgstr "Aucune donnée"
 
 msgid "Filter by duty station"
 msgstr "Filtrer par lieu d'affectation"
+
+msgid "View calendar"
+msgstr "Voir le calendrier"
+
+msgid "View events list"
+msgstr "Voir la liste des événements"
+
+msgid "Local event"
+msgstr "Local"
+
+msgid "Holiday"
+msgstr "Jours fériés"
+
+msgid "Global event"
+msgstr "Mondial"
+
+msgid "http://www.un.org/un70/en"
+msgstr "http://www.un.org/un70/fr"
