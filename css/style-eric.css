@@ -1234,6 +1234,11 @@ div#caption-mi {
 	font-family: Source Sans Pro,Helvetica,sans-serif;
 }
 
+.toolkit.large-text a {
+	color: #ffffff;
+}
+
+
 
 /*
 #select-search-default {
