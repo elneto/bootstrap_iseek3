@@ -24,29 +24,16 @@ Add spotlight queue and disable the automatic view it builds…
 VIEWS
 
 (*)announcements-list //review that the argument works, maybe reimport
-replacing the optional image OR simply copying the edited view from the folder in my desktop
+replacing the optional image OR simply copying the edited view from the folder in my desktop/github
 (*)articles
 (*)Latest social media tip //check that the view is complete
-(*)Latest News
 (*)Latest Zeekoslist
 (*)useful_tips_collection
-(*)Recent TJOs
 (*)spotlight (latest view in Desktop drupal views)
 (*)Staff union block (remove more link)
 (*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive
 (weather / system_1) Add path of Martin’s images:
 iseekweather in /admin/config/user-interface/weather
-
-ALIAS
-8 duty stations for announcements
-announcements/555 -> announcements/newyork
-announcements/60 -> announcements/addisababa
-announcements/61 -> announcements/bangkok
-announcements/62 -> announcements/beirut
-announcements/131 -> announcements/geneva
-63 nairobi
-64 santiago
-65 vienna
 
 BLOCKS
 
@@ -103,9 +90,15 @@ business-cards-node-form.tpl.php //col-md-12 to 6 and rotateHorizontal and rotat
 
 in templates/node—business_cards.tpl.php do only english redirection, copy from bootstrap_iseek
 
-**************
-TRANSLATIONS
-**************
-Currently there are no announcements/events for this duty station.
-Filter by duty station
+ALIAS (all this is optional…)
+8 duty stations for announcements
+announcements/555 -> announcements/newyork
+announcements/60 -> announcements/addisababa
+announcements/61 -> announcements/bangkok
+announcements/62 -> announcements/beirut
+announcements/131 -> announcements/geneva
+63 nairobi
+64 santiago
+65 vienna
+
 

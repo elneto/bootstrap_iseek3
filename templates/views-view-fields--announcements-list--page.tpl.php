@@ -23,7 +23,7 @@
  *
  * @ingroup views_templates
  */
-// kpr($fields);
+
 ?>
 
 <div class="row">
@@ -41,7 +41,7 @@
 			</div>
 			<div class="slug-archive">
 				<?php if (isset($fields['field_announcement_event_date'])): print $fields['field_announcement_event_date']->content; ?> <span>|</span> <?php endif; ?>
-				<?php print $fields['og_group_ref']->content; ?>
+				<?php print t($fields['og_group_ref']->handler->original_value); ?>
 			</div>
 
 			<div class="archives-body">

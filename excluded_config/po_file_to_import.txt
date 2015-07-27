@@ -320,3 +320,9 @@ msgstr "Très neigeux"
 
 msgid "No data"
 msgstr "Aucune donnée"
+
+msgid "Currently there are no announcements/events for this duty station."
+msgstr "Aucune donnée"
+
+msgid "Filter by duty station"
+msgstr "Filtrer par lieu d'affectation"
