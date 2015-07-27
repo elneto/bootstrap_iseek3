@@ -155,7 +155,7 @@
 
         <!-- Urgent message -->
         <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 hidden-print">
                         <?php
                                 // eric: double-check if this is the correct view
                                 echo views_embed_view('urgent_message_with_domains');

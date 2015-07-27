@@ -134,7 +134,7 @@
         </div>
       </div>
     </div><!-- / main .container -->
-   
+  </div> 
     <p>&nbsp;</p>
     <footer class="blog-footer visible-xs hidden-print">
       
