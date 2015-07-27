@@ -378,12 +378,6 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
 
-
-  //put the path to the footer in the logo
-  $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
-  //blocks
-  $variables['about_us_block'] = iseek_custom_block('about_us_footer_block_i3', 'content'); 
-
   if (drupal_is_front_page()) //only in the homepage
   {
     //block views
