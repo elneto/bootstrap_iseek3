@@ -301,26 +301,30 @@ li.search-result {
 	color: #0071B9;	
 }
 
-.node-type-article .comment .links.list-inline {
+/* .node-type-article */
+.comment .links.list-inline {
 	text-align: right;
 }
 
-.node-type-article #comments .indented {
+/* .node-type-article */
+#comments .indented {
 	margin-left: 40px;
 }
 
-.node-type-article .indented .comment {
+/* .node-type-article */ 
+.indented .comment {
         background-color: #FFFFFF;
 	border: 1px solid #E3E3E3;	
 }
-.node-type-article .indented .comment .content .field-name-comment-body .field-item:before {
+/* .node-type-article */
+.indented .comment .content .field-name-comment-body .field-item:before {
         font-family: FontAwesome;
         margin-right: 5px;
         content: "\f064";
 }
 
-.node-type-article .comment .submitted {
-	/* text-align: right; */
+/* .node-type-article */ 
+.comment .submitted {
 	color: #808080;
 	margin-bottom: 10px;
 }

@@ -216,35 +216,6 @@
           ?>
           <div class="link-wrapper">
             <ul class="links inline">
-<!--
-              <li class="comment-comments first">
-                <a href="<?php print $node_url; ?>#comments"><?php if (isset($content['links']['#links']['comment-comments']['title'])) { print $content['links']['#links']['comment-comments']['title']; } ?></a>
-              </li>
-
-              <?php $flag = flag_get_flag('iseek_like');
-                if (($flag->get_count($nid)) > 0): ?>
-              <li>
-                <div class="iseek-like-teaser">
-                  <span><i class="fa fa-thumbs-up"></i>
-                  <span class="flag-wrapper flag-iseek-like">
-                      <?php print $flag->get_count($nid); ?>
-                  </span>
-                </div>
-              </li>
-              <?php endif; ?>
-
-              <?php
-              if (!(user_is_logged_in()) && !($teaser)) {
-                $login_label = array('en' => 'Log in to post comments and like <i class="fa fa-thumbs-up"></i>', 'fr' => 'Identifiez-vous pour poster des commentaires & <i class="fa fa-thumbs-up"></i>');
-                $login_path = array('en' => '/user/login', 'fr' => '/fr/user/login');
-              ?>
-              <li class="comment-add last">
-                <a href="<?php print $login_path[$node->language]; ?>?destination=<?php print $node_url; ?>#comment-form"><?php print $login_label[$node->language]; ?></a>
-              </li>
-              <?php
-              }
-              ?>
--->
               <?php // Login prompt
               if (!(user_is_logged_in()) && ($teaser)): ?>
               <li>
