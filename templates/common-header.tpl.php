@@ -103,7 +103,7 @@
                         </div><!-- /.navbar-collapse -->
                 </div>
                 <div class="col-md-2 visible-md visible-lg hidden-print">
-                        <a href="http://www.un.org/un70/<?php echo $language->language; ?>"><img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner hidden-print" alt="UN 70 logo"></a>
+                        <a href="http://www.un.org/un70/<?php echo $language->language; ?>"><img id="logo-top-right" src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg"); ?>" border="0" class="img-responsive img-logo-banner hidden-print" alt="UN 70 logo"></a>
                 </div>
         </div>
 
