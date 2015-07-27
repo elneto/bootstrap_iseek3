@@ -35,7 +35,7 @@
 <br>
 <div class="row">
   <div class="col-lg-12">
-    <div class="page-title calendar-view-link"><a href="<?php echo url('<front>').'events-list/'; ?>"><?php print t('List view'); ?> <i class="fa fa-angle-double-right"></i></a></div>
+    <div class="page-title calendar-view-link"><a href="<?php echo url('<front>').'/events-list/'; ?>"><?php print t('View events list'); ?> <i class="fa fa-angle-double-right"></i></a></div>
   </div>
 </div>
 <br>
