@@ -341,3 +341,6 @@ msgstr "Jours fériés"
 
 msgid "Global event"
 msgstr "Mondial"
+
+msgid "http://www.un.org/un70/en"
+msgstr "http://www.un.org/un70/fr"
