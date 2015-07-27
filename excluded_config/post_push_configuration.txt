@@ -90,4 +90,9 @@ Turn on Aggregator module
 25. Global QuickLinks
 Import to remove all
 
-26. Add feeds from Umoja, Careers portal	
+26. Add feeds from Umoja, Careers portal
+
+27. Announcement and global announcement 
+Turn on comments
+Disallow title
+Text processing = plain text	

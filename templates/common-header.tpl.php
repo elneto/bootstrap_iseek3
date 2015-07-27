@@ -101,7 +101,7 @@
                         </div><!-- /.navbar-collapse -->
                 </div>
                 <div class="col-md-2 visible-md visible-lg">
-                        <a href="<?php print t('http://www.un.org/un70/en');?>" target="_blank"><img id="logo-top-right" src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo"></a>
+                        <a href="http://www.un.org/un70/<?php echo $language->language; ?>"><img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/<?php echo t("un-70.svg") ?>" border="0" class="img-responsive img-logo-banner" alt="UN 70 logo"></a>
                 </div>
         </div>
 

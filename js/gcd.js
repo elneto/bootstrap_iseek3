@@ -137,7 +137,6 @@
                 checkedQ = checkedQ.replace(/\//g, ' ');
                 var solrSitesearchQueryUrl = solrSitesearchUrl + "/" + checkedQ + "/" + start + "/" + checkedSort + "/" + checkedSort_dir + "?fq=" + fq;
 
-console.log("solrSitesearchQueryUrl2: " + solrSitesearchQueryUrl);
 
                 jQuery.ajax({
                         url: solrSitesearchQueryUrl,
