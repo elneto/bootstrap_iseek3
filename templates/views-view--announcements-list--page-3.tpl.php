@@ -26,10 +26,8 @@
  *
  * @ingroup views_templates
  */
-
-//kpr('views-view has been called');
 $arg = arg(1);
-$iseek_url = url('', array('absolute'=>true));
+$iseek_url = rtrim(url('', array('absolute'=>true)), "/");
 ?>
 
 <div class="row">
