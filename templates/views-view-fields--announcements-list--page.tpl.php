@@ -23,7 +23,13 @@
  *
  * @ingroup views_templates
  */
+/*kpr($fields);
+kpr($fields['og_group_ref']);
+kpr($fields['og_group_ref']->handler->original_value);
+kpr(t($fields['og_group_ref']->handler->original_value));*/
 
+/*kpr($ds);
+kpr(t($ds));*/
 ?>
 
 <div class="row">
@@ -41,7 +47,19 @@
 			</div>
 			<div class="slug-archive">
 				<?php if (isset($fields['field_announcement_event_date'])): print $fields['field_announcement_event_date']->content; ?> <span>|</span> <?php endif; ?>
-				<?php print t($fields['og_group_ref']->handler->original_value); ?>
+				<?php
+				if ($fields['og_group_ref']->content){
+					$ds = trim($fields['og_group_ref']->content, $fields['og_group_ref']->wrapper_prefix);
+					$ds = trim($ds, $fields['og_group_ref']->wrapper_suffix);
+					$arr_ds = explode(',', $ds);
+					$list_ds = "";
+					foreach ($arr_ds as $duty) {
+						$list_ds .= t($duty) . ', ';
+					}
+					$list_ds = rtrim($list_ds, ", ");
+					print '<div class="slug-archive">' . $list_ds . '</div>';
+				}
+				?>
 			</div>
 
 			<div class="archives-body">
