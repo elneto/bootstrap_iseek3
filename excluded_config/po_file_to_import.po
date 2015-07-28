@@ -349,4 +349,4 @@ msgid "https://twitter.com/UN"
 msgstr "https://twitter.com/ONU_fr"
 
 msgid "Tweets by @UN"
-msgid "Tweets par @ONU_fr"
+msgstr "Tweets par @ONU_fr"
