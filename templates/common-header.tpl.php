@@ -1,7 +1,8 @@
+<div class="hidden-print">
 <div id="top-bar">
         <div class="container">
                 <div class="row">
-                    <div class="hidden-print">
+                   
                         <div class="col-lg-5 col-md-5 col-sm-12 hidden-xs">
                                 <img src="/sites/iseek.un.org/themes/bootstrap_iseek3/images/un-logo-top.png" border="0" id="un-top-logo" alt="United Nations logo"><a class="top-nav-item" href="<?php echo $GLOBALS['base_url']; ?>"><?php print t('Welcome to the United Nations Intranet'); ?></a>
                         </div>
