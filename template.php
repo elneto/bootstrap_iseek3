@@ -270,7 +270,6 @@ function iseek_custom_block($machine_name, $retrieve){
  */
 function iseek_custom_get_menu_title($name){
   
-
   $parameters = array(
     'min_depth' => 1,
   );
@@ -280,7 +279,6 @@ function iseek_custom_get_menu_title($name){
   $menu_title = "";
   //$menu_children = array();
   foreach($children as $child) {
-          //kpr($child);
           $menu_title = $child['link']['title'];
   }
   return $menu_title;
@@ -325,6 +323,10 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   $variables['menu_reference_title'] = iseek_custom_get_menu_title('menu-toolkit---references-and-ma');
   $variables['menu_ethics_title'] = iseek_custom_get_menu_title('menu-toolkit---ethics-and-intern');
   $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-toolkit---finance-and-budge');
+
+  kpr($variables['menu_ktb_title']);
+  kpr($variables['menu_staff_title']);
+
   //put the toolkit menu links in vars
   
   // switch depending on domain
