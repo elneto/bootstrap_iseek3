@@ -20,6 +20,9 @@ add default image to useful tip -- look on development for default image (twitte
 NODEQUEUE
 
 Add spotlight queue and disable the automatic view it builds…
+The nodequeue is called spotlight and is in 
+full list: https://iseek.dev.un.org/admin/structure/nodequeue
+spotlight queue: https://iseek.dev.un.org/admin/structure/nodequeue/6/edit
 ERIC: Make sure nodequeues are sync with ids especially for homepage
 
 VIEWS -- delete if on production and re-import from development
