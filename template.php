@@ -336,37 +336,4 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
 
-/*
-  if (drupal_is_front_page()) //only in the homepage
-  {
-    //block views
-    // $block = module_invoke('weather', 'block_view', 'system_1');
-    // $variables['weather'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'staff_union_block-block');
-    $variables['staff_union_block'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'recent_tjos-block');
-    $variables['recent_tjos'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
-    $variables['latest_zeekoslist'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'latest_news-block');
-    $variables['latest_news'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'spotlight-block_1');
-    $variables['spotlight'] = $block['content'];
-
-    // $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
-    //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
-
-    $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
-    $variables['useful_tips'] = $block['content'];
-
-    //menus
-    $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
-  }
-*/  
 }
-
