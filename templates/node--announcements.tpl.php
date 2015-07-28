@@ -255,14 +255,14 @@
 
 			  <!-- content -->
 			  
-		<!-- <div class="col-lg-2 col-md-12">
+		<div class="col-lg-2 col-md-12">
 	        <div class="row" id="mail_print_icon_row">
                 <div class="col-lg-12">
                     <i class="fa fa-envelope-o"></i>
-                    <i class="fa fa-print"></i>
+                    <a href="javascript:window.print();"><i class="fa fa-print"></i></a>
 		        </div>
 			</div>
-		</div>	 -->
+		</div>	 
 
 	</div>		  
 </div><!-- node -->
