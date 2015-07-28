@@ -292,7 +292,10 @@
 
 <!-- Time zone and weather -->
 <!-- We override weather.tpl.php in the templates folder -->
-<?php echo $weather; ?>
+<?php 
+$weather_block = module_invoke('weather', 'block_view', 'system_1');
+echo $weather_block['content'];
+?>
 <!-- Ends: Time zone and weather -->
 
 <!-- begin common footer -->
