@@ -336,7 +336,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
 
-
+/*
   if (drupal_is_front_page()) //only in the homepage
   {
     //block views
@@ -360,11 +360,13 @@ function bootstrap_iseek3_preprocess_page(&$variables){
 
     // $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
     //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
+
     $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
     $variables['useful_tips'] = $block['content'];
+
     //menus
     $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
   }
-  
+*/  
 }
 

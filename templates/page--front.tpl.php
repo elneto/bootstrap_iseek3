@@ -191,7 +191,7 @@
           <a data-toggle="collapse" data-target="#spotlight-box-content" aria-expanded="true" aria-controls="spotlight-box-content" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div class="row collapse in" id="spotlight-box-content">
-          	<?php print render($spotlight); ?>
+          	<?php echo views_embed_view('spotlight','block_1'); ?>
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@
               <div class="tip-content collapse in" id="tip-content-box">
               <!-- <img src="images/tweet-tip.png" class="img-responsive">
               <div class="content-large-text left">Latest Social Media Guidelines from the UN Social Media Team</div> -->
-              <?php print render($useful_tips); ?>
+              <?php echo views_embed_view('latest_social_media_tip','block'); ?>
               </div>
               <div class="bottom-side-box content-large-text"></div>
             </div>
@@ -240,9 +240,7 @@
                 <a data-toggle="collapse" data-target="#tjo-content-box" aria-expanded="true" aria-controls="tjo-content-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="tjo-content content-large-text collapse in" id="tjo-content-box">
-                      	<?php // print render($recent_tjos); 
-				echo views_embed_view('news_centre_block_for_home_page','block_3');
-			?>
+                      	<?php echo views_embed_view('news_centre_block_for_home_page','block_3'); ?>
                 </div>
 
             </div>
@@ -251,7 +249,7 @@
               <a data-toggle="collapse" data-target="#classifieds-box" aria-expanded="true" aria-controls="classifieds-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </h4>
                 <div class="classifieds-content content-large-text collapse in" id="classifieds-box">
-                    <?php print render($latest_zeekoslist); ?>
+                    <?php echo views_embed_view('latest_zeekoslist','block'); ?>
                 </div>
             </div>
           </div>
@@ -263,7 +261,7 @@
                 <a data-toggle="collapse" data-target="#staffu-box" aria-expanded="true" aria-controls="staffu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
                 </h4>
                 <div class="staffunion-content content-large-text collapse in" id="staffu-box">
-                    <?php print render($staff_union_block); ?>
+			<?php echo views_embed_view('staff_union_block','block'); ?>
                 </div>
             </div>
             <div class="col-md-6">
@@ -271,7 +269,8 @@
               <a data-toggle="collapse" data-target="#commu-box" aria-expanded="true" aria-controls="commu-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
               </h4>
                 <div class="community-content content-large-text collapse in" id="commu-box">
-                    <?php print $menu_community; ?>
+                    <?php // print $menu_community; ?>
+		    <?php print theme('links__menu-community', array('links' => menu_navigation_links('menu-community')))  ?>
                 </div>
             </div>
           </div>
