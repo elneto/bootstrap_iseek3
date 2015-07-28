@@ -236,27 +236,6 @@ function bootstrap_iseek_js_alter(&$js) {
 */
 
 /**
- * Gets menu title
- */
-function iseek_custom_get_menu_title($name){
-  
-
-  $parameters = array(
-    'min_depth' => 1,
-  );
-
-  $children = menu_build_tree($name, $parameters);
-
-  $menu_title = "";
-  //$menu_children = array();
-  foreach($children as $child) {
-          //kpr($child);
-          $menu_title = $child['link']['title'];
-  }
-  return $menu_title;
-}
-
-/**
  * Gets menu children
  */
 function iseek_custom_get_menu_children($name){
@@ -281,18 +260,6 @@ function iseek_custom_get_menu_children($name){
  */
 
 function bootstrap_iseek3_preprocess_page(&$variables){
-
-  $variables['menu_ktb_title'] = iseek_custom_get_menu_title('menu-toolkit---key-tools-bottom');
-  $variables['menu_staff_title'] = iseek_custom_get_menu_title('menu-toolkit---staff-development');
-  $variables['menu_pay_title'] = iseek_custom_get_menu_title('menu-toolkit---pay-benefits-and-');
-  $variables['menu_security_title'] = iseek_custom_get_menu_title('menu-toolkit---security');
-  $variables['menu_travel_title'] = iseek_custom_get_menu_title('menu-toolkit---travel');
-  $variables['menu_health_title'] = iseek_custom_get_menu_title('menu-toolkit---health-and-wellbe');
-  $variables['menu_rules_title'] = iseek_custom_get_menu_title('menu-toolkit---rules-and-regulat');
-  $variables['menu_reference_title'] = iseek_custom_get_menu_title('menu-toolkit---references-and-ma');
-  $variables['menu_ethics_title'] = iseek_custom_get_menu_title('menu-toolkit---ethics-and-intern');
-  $variables['menu_finance_title'] = iseek_custom_get_menu_title('menu-toolkit---finance-and-budge');
-  //put the toolkit menu links in vars
   
   // switch depending on domain
   // 555
@@ -336,35 +303,4 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
 
-
-  if (drupal_is_front_page()) //only in the homepage
-  {
-    //block views
-    // $block = module_invoke('weather', 'block_view', 'system_1');
-    // $variables['weather'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'staff_union_block-block');
-    $variables['staff_union_block'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'recent_tjos-block');
-    $variables['recent_tjos'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'latest_zeekoslist-block');
-    $variables['latest_zeekoslist'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'latest_news-block');
-    $variables['latest_news'] = $block['content'];
-
-    $block = module_invoke('views', 'block_view', 'spotlight-block_1');
-    $variables['spotlight'] = $block['content'];
-
-    // $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
-    //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
-    $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
-    $variables['useful_tips'] = $block['content'];
-    //menus
-    $variables['menu_community'] = theme('links__menu-community', array('links' => menu_navigation_links('menu-community')));
-  }
-  
 }
-

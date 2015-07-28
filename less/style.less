@@ -746,17 +746,24 @@ h3#spotlight-box{
 }
 
 div.spotlight-thumbnail{
-  color: @brand-bar-blue;
+  //color: @brand-bar-blue;
   overflow: hidden;
   & > a{
     padding: 0.2em 0.2em 0 0.4em;
-    display: block;
+    display: block; 
   }
 
-  & span.field-content {
-  padding-left: 0.3em;
+  & a{
+    color: @text-grey;
+    font-size: @content-large-text;
   }
-  
+
+  span.field-content a:before{ //adds camera to caption
+    font-family: FontAwesome;
+    content: "\f030\00a0";    
+    color: @search-grey;
+  }
+
   div#most-popular-title{
   padding: .1em .2em 0 .4em;
   font-size: @small-text;

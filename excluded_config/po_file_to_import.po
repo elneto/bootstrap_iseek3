@@ -342,5 +342,11 @@ msgstr "Jours fériés"
 msgid "Global event"
 msgstr "Mondial"
 
-msgid "http://www.un.org/un70/en"
-msgstr "http://www.un.org/un70/fr"
+msgid "590192526923063296"
+msgstr "626086162872954884"
+
+msgid "https://twitter.com/UN"
+msgstr "https://twitter.com/ONU_fr"
+
+msgid "Tweets by @UN"
+msgstr "Tweets par @ONU_fr"

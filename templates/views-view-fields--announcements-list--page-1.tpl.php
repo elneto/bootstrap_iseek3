@@ -31,7 +31,19 @@
 	<div class="single-event">
 		<div class="col-md-3">
 			<div class="corner-events">
-			<?php print t($fields['og_group_ref']->handler->original_value); ?>
+			<?php 
+			if ($fields['og_group_ref']->content){
+					$ds = trim($fields['og_group_ref']->content, $fields['og_group_ref']->wrapper_prefix);
+					$ds = trim($ds, $fields['og_group_ref']->wrapper_suffix);
+					$arr_ds = explode(',', $ds);
+					$list_ds = "";
+					foreach ($arr_ds as $duty) {
+						$list_ds .= t($duty) . ', ';
+					}
+					$list_ds = rtrim($list_ds, ", ");
+					print '<div class="slug-archive">' . $list_ds . '</div>';
+				}
+			?>
 			<?php print $fields['field_announcement_event_date']->content; ?>
 			</div>
 		</div>

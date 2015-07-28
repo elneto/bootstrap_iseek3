@@ -23,7 +23,7 @@
  *
  * @ingroup views_templates
  */
-//kpr($fields);
+
 ?>
 
 <div class="row">
@@ -31,7 +31,7 @@
 	<div class="single-event">
 		<div class="col-md-3">
 			<div class="corner-events">
-			<?php //print $fields['og_group_ref']->content; ?>
+			<?php print t('Global'); ?>
 			<?php print $fields['field_announcement_event_date']->content; ?>
 			</div>
 		</div>

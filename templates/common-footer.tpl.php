@@ -120,7 +120,7 @@
           </div>
         </div>
               <div class="about-us-xs visible-xs visible-sm">
-                <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.svg'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
+                <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.png'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
                 <p class="content-large-text">
                     <a href="">About us </a>
                 </p>
