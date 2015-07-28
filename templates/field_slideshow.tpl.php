@@ -53,7 +53,7 @@ if (!isset($pager_position)) {
 							$forward_block = preg_replace("/Email this page/", "<i class=\"fa fa-2x fa-envelope-o\"></i>", $forward_block);
 							echo $forward_block;
 						?>
-				 		<i class="fa fa-2x fa-print"></i>	 
+				 		<a href="javascript:window.print();"><i class="fa fa-2x fa-print"></i></a>	 
 					</div>
 				</div>
 
