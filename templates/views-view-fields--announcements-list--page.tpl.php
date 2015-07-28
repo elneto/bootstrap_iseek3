@@ -23,13 +23,7 @@
  *
  * @ingroup views_templates
  */
-/*kpr($fields);
-kpr($fields['og_group_ref']);
-kpr($fields['og_group_ref']->handler->original_value);
-kpr(t($fields['og_group_ref']->handler->original_value));*/
 
-/*kpr($ds);
-kpr(t($ds));*/
 ?>
 
 <div class="row">
