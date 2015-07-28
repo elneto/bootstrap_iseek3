@@ -281,8 +281,12 @@
           <a data-toggle="collapse" data-target="#socialmedia-box" aria-expanded="true" aria-controls="socialmedia-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
           </h3>
           <div class="twitter-border fluid collapse in" id="socialmedia-box">
-              <!-- <?php print render($social_media_corner); ?> -->
-		<p><a class="twitter-timeline" data-chrome="nofooter noborders" data-widget-id="590192526923063296" height="670" href="https://twitter.com/UN" width="100%">Tweets by @UN</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>	
+		      <a class="twitter-timeline" data-chrome="nofooter noborders" 
+          data-widget-id="<?php print t('590192526923063296');?>" height="670" 
+          href="<?php print t('https://twitter.com/UN');?>" 
+          width="100%">
+          <?php print t('Tweets by @UN');?></a> 
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>	
           </div>
         <div class="large-text social"> <a href="<?php print t('http://www.facebook.com/unitednations');?>" target="_blank"><i class="fa fa-facebook-square fa-2x facebook"></i></a> <a href="<?php print t('http://twitter.com/#!/un');?>"><i class="fa fa-twitter-square fa-2x twitter"></i></a> <a href="<?php print t('http://www.youtube.com/unitednations');?>"><i class="fa fa-youtube-square fa-2x youtube"></i></a> <a href="<?php print t('http://gplus.to/unitednations');?>"><i class="fa fa-google-plus-square fa-2x googleplus"></i></a> <a href="<?php print t('http://instagram.com/unitednations');?>"><i class="fa fa-instagram fa-2x instagram"></i></a> </div>
         </div>
