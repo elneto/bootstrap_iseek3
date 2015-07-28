@@ -235,36 +235,6 @@ function bootstrap_iseek_js_alter(&$js) {
 }
 */
 
-/*
-Gets the content of a block given its machine_name, this name can be set in the custom user block thanks to the module 
-Block Machine Name https://www.drupal.org/project/block_machine_name 
-now block_delta is independent of local, dev or PROD
-*/
-function iseek_custom_block($machine_name, $retrieve){
-
-  $result = db_query("SELECT bid FROM {fe_block_boxes} WHERE machine_name = :mn", array(':mn' => $machine_name));
-
-  if ($result) {
-    $row = $result->fetchAssoc();
-    if ($row['bid']){//this returns false if nothing was fetched
-
-      if($retrieve == 'title'){
-        $block = block_load('block', $row['bid']);
-        return t($block->title);
-      }
-      //else it returns the content
-      $block = module_invoke('block', 'block_view', $row['bid']); 
-      return t($block[$retrieve]); 
-    }
-    else{
-      return t('Block not found, please add its machine name');
-    }
-  }
-
-  return 'No result from query'; //this point should never be reached
-  
-}
-
 /**
  * Gets menu title
  */
@@ -312,9 +282,6 @@ function iseek_custom_get_menu_children($name){
 
 function bootstrap_iseek3_preprocess_page(&$variables){
 
-  //$variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-tookit---key-tools');
-  // $variables['menu_quicklinksNY_title'] = iseek_custom_get_menu_title('menu-quick-links---ny');
-  //$variables['menu_ktt_title'] = iseek_custom_get_menu_title('menu-key-tools-top');
   $variables['menu_ktb_title'] = iseek_custom_get_menu_title('menu-toolkit---key-tools-bottom');
   $variables['menu_staff_title'] = iseek_custom_get_menu_title('menu-toolkit---staff-development');
   $variables['menu_pay_title'] = iseek_custom_get_menu_title('menu-toolkit---pay-benefits-and-');
@@ -330,39 +297,30 @@ function bootstrap_iseek3_preprocess_page(&$variables){
   // switch depending on domain
   // 555
   if (require_login_display_local('newyork')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---ny', array('links' => menu_navigation_links('menu-quick-links---ny')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---ny"))));
   // 131
   } elseif (require_login_display_local('geneva')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-quick-links---gva', array('links' => menu_navigation_links('menu-quick-links---gva')));                  
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-quick-links---gva"))));
   // 60
   } elseif (require_login_display_local('addisababa')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-addis-ababa-quicklinks', array('links' => menu_navigation_links('menu-addis-ababa-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-addis-ababa-quicklinks"))));
   // 61
   } elseif (require_login_display_local('bangkok')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-bangkok-quicklinks', array('links' => menu_navigation_links('menu-bangkok-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-bangkok-quicklinks"))));
   // 62
   } elseif (require_login_display_local('beirut')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-beirut-quicklinks', array('links' => menu_navigation_links('menu-beirut-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-beirut-quicklinks"))));
   // 63
   } elseif (require_login_display_local('nairobi')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-nairobi-quicklinks', array('links' => menu_navigation_links('menu-nairobi-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-nairobi-quicklinks"))));
   // 64
   } elseif (require_login_display_local('santiago')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-santiago-quicklinks', array('links' => menu_navigation_links('menu-santiago-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-santiago-quicklinks"))));
   // 65
   } elseif (require_login_display_local('vienna')) {
-          // $variables['menu_quicklinks'] = theme('links__menu-vienna-quicklinks', array('links' => menu_navigation_links('menu-vienna-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-vienna-quicklinks"))));
   // external
   } else {
-          // $variables['menu_quicklinks'] = theme('links__menu-external-quicklinks', array('links' => menu_navigation_links('menu-external-quicklinks')));
           $variables['menu_quicklinks'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-external-quicklinks"))));
   }
 
@@ -378,11 +336,6 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
 
-
-  //put the path to the footer in the logo
-  $variables['path_logo_footer'] = '"/' . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/iseek-logo-white.png"';
-  //blocks
-  $variables['about_us_block'] = iseek_custom_block('about_us_footer_block_i3', 'content'); 
 
   if (drupal_is_front_page()) //only in the homepage
   {
