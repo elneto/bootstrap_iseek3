@@ -358,7 +358,7 @@ function bootstrap_iseek3_preprocess_page(&$variables){
     $block = module_invoke('views', 'block_view', 'spotlight-block_1');
     $variables['spotlight'] = $block['content'];
 
-    $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
+    // $variables['social_media_corner'] = iseek_custom_block('social_media_corner_block_i3', 'content');
     //http://iseek/admin/structure/block/manage/views/latest_social_media_tip-block/configure
     $block = module_invoke('views', 'block_view', 'latest_social_media_tip-block');
     $variables['useful_tips'] = $block['content'];
