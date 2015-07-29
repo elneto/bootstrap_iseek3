@@ -1,4 +1,3 @@
-(*)is in Features
 
 ******************************************
 VIEWS, BLOCKS, CONTENT, TYPES, ETC
@@ -19,11 +18,11 @@ add default image to useful tip -- look on development for default image (twitte
 
 NODEQUEUE
 
-Add spotlight queue and disable the automatic view it builds…
-in Types, add Featured photo and Top left corner
-The nodequeue is called spotlight and is in 
-full list: https://iseek.dev.un.org/admin/structure/nodequeue
-spotlight queue: https://iseek.dev.un.org/admin/structure/nodequeue/6/edit
+[DONE 07/29/15] Add spotlight queue and disable the automatic view it builds…
+[DONE 07/29/15] in Types, add Featured photo and Top left corner
+[DONE 07/29/15] The nodequeue is called spotlight and is in DEV spotlight queue: https://iseek.dev.un.org/admin/structure/nodequeue/6/edit
+[DONE 07/29/15] The nodequeue in PROD is in admin/structure/nodequeue/4/view/4 and I have added recent photographs to it so it does not start empty
+
 ERIC: Make sure nodequeues are sync with ids especially for homepage
 
 VIEWS -- delete if on production and re-import from development
@@ -63,8 +62,8 @@ limit the number of photos to 1, add the minimum and maximum sizes (copy from ar
 MODULES to configure
 ****************************
 
-Weather: Change setting: Number of forecast days to 1.
-Add City-Displays as in DEV
+[DONE 07/29/15] Weather: Change setting: Number of forecast days to 1.
+[DONE 07/29/15] Add City-Displays as in DEV
 
 **************
 ADMIN

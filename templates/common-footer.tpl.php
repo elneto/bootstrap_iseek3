@@ -56,7 +56,7 @@
                   <p><?php echo t("The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide."); ?></p>
                 </div>
                 <p class="content-large-text">
-                    <a href="mailto:iseek@un.org"><?php echo t("Contact us"); ?> <i class="fa fa-angle-double-right"></i></a>
+                    <a href="/contact"><?php echo t("Contact us"); ?> <i class="fa fa-angle-double-right"></i></a>
                 </p>
               
         </div>
@@ -122,13 +122,13 @@
               <div class="about-us-xs visible-xs visible-sm">
                 <img src="<?php echo "/" . drupal_get_path('theme', 'bootstrap_iseek3') . '/images/' . t('iseek-logo-white.png'); ?>" class="img-responsive" id="logo-footer" alt="iseek logo"/>
                 <p class="content-large-text">
-                    <a href="">About us </a>
+			<a href="<?php echo url("node/11537"); ?>"><?php echo t("About us"); ?> <i class="fa fa-angle-double-right"></i></a>
                 </p>
                 <div class="medium-text">
-                  <p>The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide.</p>
+                  <p><?php echo t("The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide."); ?></p>
                 </div>
                 <p class="content-large-text">
-                    <a href="">Contact us </a>
+                 	<a href="/contact"><?php echo t("Contact us"); ?> <i class="fa fa-angle-double-right"></i></a> 
                 </p>
             </div>
         </div>
