@@ -33,15 +33,13 @@ $results = ksd_solr_search_process_search (
 	jQuery(document).ready(function() {
 		var qs_href_query = jQuery.urlParam('query');
 		var qs_href_fq = jQuery.urlParam('fq');
-		if (qs_href_fq == 0) {
+		if (qs_href_fq == 0 && qs_href_query == 0) {
 			qs_href_fq = "";
+			qs_href_query = "";
+		} else {
+			jQuery("#sitesearchInput").val(qs_href_query);
+			submitSitesearch(qs_href_query, 0, qs_href_fq, "", "" );	
 		}
-
-console.log("qs_href_query: " + qs_href_query);
-console.log("qs_href_fq: " + qs_href_fq);
-
-		jQuery("#sitesearchInput").val(qs_href_query);
-		submitSitesearch(qs_href_query, 0, qs_href_fq, "", "" );	
 	});
 
 
