@@ -142,7 +142,7 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-			<?php print render($content['field_images']); ?>
+			<? //php print render($content['field_images']); ?>
 		</div>
 	</div>	
 
@@ -207,7 +207,7 @@
 						 } 
 						 else { // ((!(isset($content['field_video']))) and (!(isset($content['field_bright_cove_video_id'])))) { 
 							// commented out by eric 26 may due to vertically-placed pager
-							// print render($content['field_images']);
+							 print render($content['field_images']);
 						}
 						
 					?>
