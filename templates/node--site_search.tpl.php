@@ -37,6 +37,9 @@ $results = ksd_solr_search_process_search (
 			qs_href_fq = "";
 			qs_href_query = "";
 		} else {
+			if (qs_href_fq == 0) {
+				qs_href_fq = "";
+			}
 			jQuery("#sitesearchInput").val(qs_href_query);
 			submitSitesearch(qs_href_query, 0, qs_href_fq, "", "" );	
 		}
