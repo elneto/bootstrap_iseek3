@@ -142,7 +142,7 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-			<? //php print render($content['field_images']); ?>
+			<?php print render($content['field_images']); ?>
 		</div>
 	</div>	
 
@@ -160,73 +160,53 @@
 
 
 				<div class="content-body">
-					<?php // print render($content['field_image']); ?>
-					
-
-					<!-------------------HS added below------------------------>
-					<?php if (isset($content['field_video'])) { ?>
-						<div class="flex-video widescreen">
-							<?php print render($content['field_video']); ?>
-						</div>
-						<div class="video-caption">
-							<?php print($node->field_video_description['und'][0]['safe_value']); ?>
-						</div>
-					<?php 
-						}
-						
-						elseif (isset($content['field_bright_cove_video_id'])) { 
-							
-							?>
-							<div class="flex-video widescreen">
-							<div style="display:none">
-							</div>
-							<script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
-							<object id="myExperience" class="BrightcoveExperience">
-								<param name="bgcolor" value="#FFFFFF" />
-								<param name="secureConnections" value="true" />
-								<param name="secureHTMLConnections" value="true" />
-								<param name="width" value="100%" />
-								<param name="height" value="100%" />
-								<param name="playerID" value="4005339337001" />
-								<param name="playerKey" value="AQ~~,AAABPSuWdxE~,UHaNXUUB06VgvRTiG_GhQXXPhev1OX58" />
-								<param name="isVid" value="true" />
-								<param name="isUI" value="true" />
-								<param name="dynamicStreaming" value="true" />
-								<param name="wmode" value="transparent">
-								<param name="@videoPlayer" value="<?php print($node->field_bright_cove_video_id['und'][0]['safe_value']); ?>">
-								<param name="captionLang" value="en" />
-							</object>
-
-							<script type="text/javascript">brightcove.createExperiences();</script>
-							</div>
-							<div class="video-caption">
-								<?php print($node->field_video_description['und'][0]['safe_value']); ?>
-							</div>
-					<?php  
-						 	
-						 } 
-						 else { // ((!(isset($content['field_video']))) and (!(isset($content['field_bright_cove_video_id'])))) { 
-							// commented out by eric 26 may due to vertically-placed pager
-							 print render($content['field_images']);
-						}
-						
-					?>
-					<!---------------------------->
-					
 
 					<?php print render($content['body']); ?>
 					
 					
-					<!-------------------HS added below------------------------>
-					<?php 
-						if ((isset($content['field_video'])) or (isset($content['field_bright_cove_video_id']))) {
-							print render($content['field_images']);
-						}
+                                        <?php if (isset($content['field_video'])) { ?>
+                                                <div class="flex-video widescreen">
+                                                        <?php print render($content['field_video']); ?>
+                                                </div>
+                                                <div class="video-caption">
+                                                        <?php print($node->field_video_description['und'][0]['safe_value']); ?>
+                                                </div>
+                                        <?php
+                                               } elseif (isset($content['field_bright_cove_video_id'])) {
+
+                                                        ?>
+                                                        <div class="flex-video widescreen">
+                                                        <div style="display:none">
+                                                        </div>
+                                                        <script language="JavaScript" type="text/javascript" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+                                                        <object id="myExperience" class="BrightcoveExperience">
+                                                                <param name="bgcolor" value="#FFFFFF" />
+                                                                <param name="secureConnections" value="true" />
+                                                                <param name="secureHTMLConnections" value="true" />
+                                                                <param name="width" value="100%" />
+                                                                <param name="height" value="100%" />
+                                                                <param name="playerID" value="4005339337001" />
+                                                                <param name="playerKey" value="AQ~~,AAABPSuWdxE~,UHaNXUUB06VgvRTiG_GhQXXPhev1OX58" />
+                                                                <param name="isVid" value="true" />
+                                                                <param name="isUI" value="true" />
+                                                                <param name="dynamicStreaming" value="true" />
+                                                                <param name="wmode" value="transparent">
+                                                                <param name="@videoPlayer" value="<?php print($node->field_bright_cove_video_id['und'][0]['safe_value']); ?>">
+                                                                <param name="captionLang" value="en" />
+                                                        </object>
+
+                                                        <script type="text/javascript">brightcove.createExperiences();</script>
+                                                        </div>
+                                                        <div class="video-caption">
+                                                                <?php print($node->field_video_description['und'][0]['safe_value']); ?>
+                                                        </div>
+                                        <?php
+                                                }
+
 						if (isset($content['field_files'])){
 							print render($content['field_files']); 
 						}
 					?>		
-					<!---------------------------->
 
 
 					<!-- begin common comments -->
