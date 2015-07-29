@@ -89,7 +89,7 @@ if (require_login_display_global()) {
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="top-side-box"> <php echo t("Contact us"); ?></div>
+		<div class="top-side-box"> <?php echo t("Contact us"); ?></div>
 	</div>
 </div>
 
