@@ -78,11 +78,22 @@
  * @see template_process()
  */
 
+$event_bool = count($node->field_announcement_event_date);
+$my_href = '/announcements-list/';
+$my_title = t('Announcements');
+$my_icon = 'fa-list-ul';
+
+if ($event_bool){
+  $my_href = '/events-list/';
+  $my_title = t('Events');
+  $my_icon = 'fa-calendar';
+}
+
 ?>
 
 <div class="row">
 	<div class="col-lg-12">
-		<div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <a href="/announcements-list/"><?php print t('Announcements');?></a> <i class="fa fa-angle-double-right"></i></div>
+		<div class="toolkit large-text"><i class="fa <?php print $my_icon;?>"></i> <a href="<?php print $my_href;?>"><?php print $my_title;?></a> <i class="fa fa-angle-double-right"></i></div>
 	</div>
 </div>
 
@@ -122,7 +133,7 @@
 
         <div class="row">
 	
-		<?php if (count($node->field_announcement_event_date)) { ?>
+		<?php if ($event_bool) { ?>
 
 			<div class="col-lg-3 col-md-12">
 
@@ -177,14 +188,14 @@
 
 			  <!-- content -->
 			  
-		<!-- <div class="col-lg-2 col-md-12">
+		<div class="col-lg-2 col-md-12">
 	        <div class="row" id="mail_print_icon_row">
                 <div class="col-lg-12">
                     <i class="fa fa-envelope-o"></i>
-                    <i class="fa fa-print"></i>
+                    <a href="javascript:window.print();"><i class="fa fa-print"></i></a>
 		        </div>
 			</div>
-		</div>	 -->
+		</div>	 
 
 	</div>		  
 </div><!-- node -->
