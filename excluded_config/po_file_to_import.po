@@ -350,3 +350,6 @@ msgstr "https://twitter.com/ONU_fr"
 
 msgid "Tweets by @UN"
 msgstr "Tweets par @ONU_fr"
+
+msgid "Login"
+msgstr "Connexion"
