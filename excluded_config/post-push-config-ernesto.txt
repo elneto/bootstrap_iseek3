@@ -20,6 +20,7 @@ add default image to useful tip -- look on development for default image (twitte
 NODEQUEUE
 
 Add spotlight queue and disable the automatic view it builds…
+in Types, add Featured photo and Top left corner
 The nodequeue is called spotlight and is in 
 full list: https://iseek.dev.un.org/admin/structure/nodequeue
 spotlight queue: https://iseek.dev.un.org/admin/structure/nodequeue/6/edit
@@ -59,13 +60,11 @@ enable the include spotlight and enable the first 2 checkboxes,
 limit the number of photos to 1, add the minimum and maximum sizes (copy from articles images or local) Max:1200x900 Minimum: 375x211 
 
 ****************************
-MODULES to turn on
+MODULES to configure
 ****************************
 
-Features -- leave off and remove from dev/prod
-FE Block -- leave off and remove from dev/prod
-Turn on the ernesto views module -- leave off and remove from dev/prod
 Weather: Change setting: Number of forecast days to 1.
+Add City-Displays as in DEV
 
 **************
 ADMIN
