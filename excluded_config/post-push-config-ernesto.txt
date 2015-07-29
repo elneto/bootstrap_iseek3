@@ -63,8 +63,8 @@ limit the number of photos to 1, add the minimum and maximum sizes (copy from ar
 MODULES to configure
 ****************************
 
-Weather: Change setting: Number of forecast days to 1.
-Add City-Displays as in DEV
+[DONE 07/29/15] Weather: Change setting: Number of forecast days to 1.
+[DONE 07/29/15] Add City-Displays as in DEV
 
 **************
 ADMIN
