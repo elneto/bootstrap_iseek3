@@ -157,7 +157,7 @@
               <div class="col-md-4 lpad5">
             
   	      <div id="thumbnail-most-popular" class="main-thumbnail">
-                  <div id="most-popular-title"><?php print t('Most popular');?></div>
+                  <div id="most-popular-title"><?php print t('Most popular');?> -- nodequeue_3 block</div>
                   <?php
                           // uses nodequeue module
                           echo views_embed_view('nodequeue_3','block'); 
