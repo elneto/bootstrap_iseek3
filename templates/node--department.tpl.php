@@ -496,16 +496,15 @@ if ($field_departmental_theme_value == "") {
 				</div>	
 
 				<!-- highlights -->	
-                <div class="col-md-12">
-                    <h4>Highlights</h4>
+                		<div class="col-md-12">
+                    			<h4>Highlights</h4>
 					<div class="departmental_home_page_block_fixed_container">
 						<?php print views_embed_view('departmental_news_in_og', 'block', $node->nid); ?>
 						<?php print views_embed_view('departmental_news_in_office', 'block', $node->field_departmental_offices_for_f['und'][0]['tid'] ); ?>
 					</div>
-					<div class="departmental_home_page_block_bottom">Read more</div>	
-                </div>
+					<div class="departmental_home_page_block_bottom"><a href="news-archive/<?php echo $node->nid; ?>">Read more</a></div>	
 
-
+                		</div>
 			</div>		
 
 		</div>
@@ -588,13 +587,13 @@ if ($field_departmental_theme_value == "") {
 			</div>
 			<div class="col-md-4"  id="col1">
 				<div class="row">
-                    <div class="col-md-12">
-                        <h4>Highlights</h4>
+                    			<div class="col-md-12">
+                        			<h4>Highlights</h4>
 						<div class="departmental_home_page_block_fixed_container">
 							<?php print views_embed_view('departmental_news_in_og', 'block', $node->nid); ?>
 							<?php print views_embed_view('departmental_news_in_office', 'block', $node->field_departmental_offices_for_f['und'][0]['tid'] ); ?>
 						</div>
-						<div class="departmental_home_page_block_bottom">Read more</div>	
+						<div class="departmental_home_page_block_bottom"><a href="news-archive/<?php echo $node->nid; ?>">Read more</a></div>	
 		                        </div>
 		                </div>
 		                <div class="row">
