@@ -23,7 +23,7 @@
  *
  * @ingroup views_templates
  */
-print_r($fields);
+print_r(array_keys($fields));
 ?>
 <div class="row">
 	<?php if (isset($fields['field_image'])): ?>
