@@ -26,10 +26,12 @@
  *
  * @ingroup views_templates
  */
-?>
+
+$dept_node = node_load($view->args[0]);
+
 <div class="row archive-pad-bot">
   <div class="col-lg-12">
-    <div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> | News <i class="fa fa-angle-double-right"></i></div>
+    <div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <?php echo $dept_node->title; ?> | News <i class="fa fa-angle-double-right"></i></div>
   </div>
 </div>
 
