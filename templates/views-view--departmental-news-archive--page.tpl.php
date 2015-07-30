@@ -27,13 +27,65 @@
  * @ingroup views_templates
  */
 
-$dept_node = node_load($view->args[0]);
+$og_id = $view->args[0];
+$og_node = node_load($view->args[0]);
 
-<div class="row archive-pad-bot">
-  <div class="col-lg-12">
-    <div class="toolkit large-text"><i class="fa fa-newspaper-o"></i> <?php echo $dept_node->title; ?> | News <i class="fa fa-angle-double-right"></i></div>
-  </div>
+include('departmental_nodeload_and_menuload.inc');
+include('departmental_get_parents.inc');
+include('departmental_color_band.inc');
+?>
+
+<div class="row">
+        <div class="col-lg-12">
+                <div class="toolkit large-text">&nbsp;<?php echo $og_node->title; ?> | News</div>
+        </div>
+        <div class="col-lg-12">
+                <div class="dept-color-band" style="background-color:<?php echo $dept_color_band; ?>;"></div>
+        </div>
 </div>
+
+<div class="row departmentalSubmenu">
+        <div class="col-lg-12">
+                <ul class="departmentalSubmenu-nav">
+                        <li class="first expanded dropdown">
+                                <span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><i class="fa fa-link"></i> Quicklinks <span class="caret"></span></span>
+                                <?php print views_embed_view('departmental_page_in_og', 'block', $og_id); ?>
+                        </li>
+                        <li><span data-toggle="modal" data-target="#deptSiteMapModal"><i class="fa fa-list-alt"></i> Site map</span></li>
+                        <?php
+                                if ($menu_display_name) {
+                        ?>
+
+                                        <li class="expanded dropdown">
+                                                <span title="" data-target="#" class="dropdown-toggle nolink" data-toggle="dropdown"><i class="fa fa-sign-in"></i> <?php echo $menu_display_name ?> <span class="caret"></span></span>
+                                                <ul class="dropdown-menu">
+                                                        <?php
+                                                                foreach ($divisions_menu_array as $divisions_menu_array_item) {
+                                                                        echo "<li class=\"leaf\"><a href=\"/" . drupal_get_path_alias($divisions_menu_array_item['href']) . "\">" . $divisions_menu_array_item['title'] . "</a></li>";
+                                                                }
+                                                        ?>
+                                                </ul>
+                                        </li>
+                        <?php   } ?>
+
+                        <?php print views_embed_view('departmental_faq_in_og', 'block', $og_id); ?>
+                        <?php
+                                if (count($og_node->field_departmental_contact_us)) {
+                        ?>
+                                        <li><a href="<?php echo $og_node->field_departmental_contact_us['und'][0]['safe_value'] ?>"><i class="fa fa-envelope-o"></i> Contact us</a></li>
+                        <?php
+                                }
+                        ?>
+                </ul>
+        </div>
+</div>
+
+
+<?php include('departmental_site_map.inc'); ?>
+
+<?php include('departmental_breadcrumb.inc'); ?>
+
+
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>

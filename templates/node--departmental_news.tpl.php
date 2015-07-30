@@ -89,7 +89,7 @@ include('departmental_color_band.inc');
 
 <div class="row">
        	<div class="col-lg-12">
-      		<div class="toolkit large-text">&nbsp;<?php echo $og_node->title; ?> | News</div>
+      		<div class="toolkit large-text">&nbsp;<a href="news-archive/<?php echo $og_id?>"><?php echo $og_node->title; ?> | News <i class="fa fa-angle-double-right"></i></a></div>
 	</div>
 	<div class="col-lg-12">
                 <div class="dept-color-band" style="background-color:<?php echo $dept_color_band; ?>;"></div>
