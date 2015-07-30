@@ -166,7 +166,7 @@ include('departmental_color_band.inc');
 			<?php
 				if (count($node->field_departmental_contact_us)) {
 			?>	
-					<li><a href="<?php echo $node->field_departmental_contact_us['und'][0]['safe_value'] ?>"><i class="fa fa-phone-square"></i> Contact us</a></li>
+					<li><a href="<?php echo $node->field_departmental_contact_us['und'][0]['safe_value'] ?>"><i class="fa fa-envelope-o"></i> Contact us</a></li>
 			<?php
 				}
 			?>
