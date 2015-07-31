@@ -24,7 +24,11 @@
  * @ingroup views_templates
  */
 
-kpr($fields['field_article_page_link']);
-?>
+// kpr($fields['field_article_page_link']);
 
-<?php print $fields['title']->content; ?>
+if (strlen($fields['field_article_page_link']->content) > 0) {
+	print "<a href=\"" . $fields['field_article_page_link']->content . "\">" . $fields['title']->content . "</a>";	
+} else {
+	print $fields['title']->content;
+}
+?>
