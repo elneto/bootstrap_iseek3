@@ -117,6 +117,10 @@
               <div class="medium-text">
                 <?php print $menu_finance; ?>
             </div> 
+              <h5 class="content-large-text underline"><?php print t("ICT"); ?></h5>
+              <div class="medium-text">
+                <?php print $menu_ict; ?>
+            </div>
           </div>
         </div>
               <div class="about-us-xs visible-xs visible-sm">

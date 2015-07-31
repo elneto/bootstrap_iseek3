@@ -302,5 +302,6 @@ function bootstrap_iseek3_preprocess_page(&$variables){
    $variables['menu_reference'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---references-and-ma", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_ethics'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ethics-and-intern", array('min_depth' => 2, 'max_depth' => 2 )))));
    $variables['menu_finance'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---finance-and-budge", array('min_depth' => 2, 'max_depth' => 2 )))));
+   $variables['menu_ict'] = preg_replace('/"nav navbar-nav"/', '"links"', render(menu_tree_output(menu_build_tree("menu-toolkit---ict", array('min_depth' => 2, 'max_depth' => 2 )))));
 
 }
