@@ -56,7 +56,7 @@
                   <p><?php echo t("The United Nations Intranet, iSeek, was developed in 2005 to encourage knowledge-sharing throughout the UN system. Its mission statement is: One Intranet for one UN worldwide."); ?></p>
                 </div>
                 <p class="content-large-text">
-                    <a href="/contact"><?php echo t("Contact us"); ?> <i class="fa fa-angle-double-right"></i></a>
+                    <a href="<?php echo url("contact"); ?>"><?php echo t("Contact us"); ?> <i class="fa fa-angle-double-right"></i></a>
                 </p>
               
         </div>
