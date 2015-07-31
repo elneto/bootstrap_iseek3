@@ -95,7 +95,7 @@ if (require_login_display_global()) {
 
 
   <div class="row">
-
+	<br/>
 			<!-- center1 -->
 		
 			<div class="col-xs-12">
