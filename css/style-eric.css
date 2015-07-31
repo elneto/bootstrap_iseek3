@@ -21,7 +21,7 @@ form#user-login-form {
 	padding-left: 3px;
 }
 
-#user-login-form #edit-name, #user-login-form #edit-pass {
+#user-login-form #edit-name, #user-login-form #edit-name--2, #user-login-form #edit-pass {
  	// width: inherit;
 	width: 92px;
 	font-size: 10px;
