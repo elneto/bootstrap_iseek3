@@ -160,7 +160,7 @@
                   <div id="most-popular-title"><?php print t('Most popular');?></div>
                   <?php
                           // uses nodequeue module
-                          echo views_embed_view('nodequeue_3','block'); 
+                          echo views_embed_view('most_popular_block_for_home_page','block'); 
                   ?>
                 </div>
               </div>
