@@ -512,7 +512,7 @@ if ($field_departmental_theme_value == "") {
 
 			<!-- what we do -->	
             			<h4>What we do</h4>
-				<div class="departmental_home_page_resources_section">				
+				<div class="departmental_home_page_resources_section departmental_home_page_resources_section_<?php echo $field_departmental_theme_value; ?>">				
 					<?php echo $node->field_departmental_what_we_do['und'][0]['value'] ; ?>
 				</div>
 				<div class="departmental_home_page_block_bottom">
@@ -527,7 +527,7 @@ if ($field_departmental_theme_value == "") {
 
 			<!-- resources -->	
 					<h4>Resources</h4>
-					<div class="departmental_home_page_resources_section">	
+					<div class="departmental_home_page_resources_section departmental_home_page_resources_section_<?php echo $field_departmental_theme_value; ?>">	
 						<?php echo $node->field_departmental_resources['und'][0]['value'] ; ?>
 					</div>
 					<div class="departmental_home_page_block_bottom">
