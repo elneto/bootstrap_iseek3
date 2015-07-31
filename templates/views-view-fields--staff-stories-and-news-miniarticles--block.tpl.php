@@ -23,5 +23,8 @@
  *
  * @ingroup views_templates
  */
+
+kpr($fields['field_article_page_link']);
 ?>
+
 <?php print $fields['title']->content; ?>
