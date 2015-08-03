@@ -5,13 +5,13 @@ VIEWS, BLOCKS, CONTENT, TYPES, ETC
 
 CONTENT TYPES
 
-(*)useful-tip (in singular) // review that all fields are there, add them if not
-add default image to useful tip -- look on development for default image (twitter / un image)
-(*)announcements //add optional image field (machine name: field_an_optional_image)
-	//configure style of optional image label hidden -- admin/structure/types/manage/announcements/display
-	//configure style of optional image like articles -- ibid: Image style: large-article-image-style-16-9
-	//enable comments
-(*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0  admin/structure/types/manage/top-left-corner/fields/field_display_title
+[DONE 07/31/15 - EH] (*)useful-tip (in singular) // review that all fields are there, add them if not
+[DONE 07/31/15 - EH] add default image to useful tip -- look on development for default image (twitter / un image)
+[DONE 07/31/15 - EH] (*)announcements //add optional image field (machine name: field_an_optional_image)
+	[DONE 07/31/15 - EH] //configure style of optional image label hidden -- admin/structure/types/manage/announcements/display
+	[DONE 07/31/15 - EH] //configure style of optional image like articles -- ibid: Image style: large-article-image-style-16-9
+	[DONE 07/31/15 - EH] //enable comments
+[DONE 07/31/15 - EH] (*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0  admin/structure/types/manage/top-left-corner/fields/field_display_title
 (*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style 
 
    //enable comments
@@ -27,13 +27,13 @@ ERIC: Make sure nodequeues are sync with ids especially for homepage
 
 VIEWS -- delete if on production and re-import from development
 
-(*)announcements-list
-(*)articles
-(*)Latest social media tip 
-(*)Latest Zeekoslist
-(*)useful_tips_collection
-(*)spotlight (latest view in Desktop drupal views)
-(*)Staff union block (remove more link)
+[DONE 08/02/15] (*)announcements-list
+[DONE 08/02/15] (*)articles
+[DONE 08/02/15] (*)Latest social media tip 
+[DONE 08/02/15] (*)Latest Zeekoslist
+[DONE 08/02/15] (*)useful_tips_collection
+[DONE 08/02/15]  (*)spotlight (latest view in Desktop drupal views)
+[DONE 08/02/15] (*)Staff union block (remove more link)
 (*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive
 (weather / system_1) Add path of Martin’s images:
 iseekweather in /admin/config/user-interface/weather
@@ -49,10 +49,10 @@ BLOCKS
 Image styles
 ****************************
 
-(*)articles-archive
-(*)spotlight
+[DONE 07/31/15 - EH] (*)articles-archive
+[DONE 07/31/15 - EH] (*)spotlight
 
-For spotlight: add Manual Crop 375x211
+[DONE 07/31/15 - EH] For spotlight: add Manual Crop 375x211
 
 In Featured photo and Top Left corner, edit photo field to allow manual crop
 enable the include spotlight and enable the first 2 checkboxes, 
