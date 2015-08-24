@@ -342,7 +342,7 @@ li.search-result {
 #mail_print_icon_row i.fa-envelope-o {
 	margin-right: 30px;
 }
-#mail_print_icon_row .fa-2x {
+#mail_print_icon_row .fa-2x, #mail_print_icon_row .fa {
     font-size: 1.4em;
 }
 
