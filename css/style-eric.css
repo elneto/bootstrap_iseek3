@@ -342,11 +342,16 @@ li.search-result {
 #mail_print_icon_row i.fa-envelope-o {
 	margin-right: 30px;
 }
+#mail_print_icon_row .fa-2x {
+    font-size: 1.4em;
+}
 
 .modal-dialog button.close {
 	color: #666666;
 	font-size: 16px;
 	opacity: 0.8;
+
+
 	font-weight: normal;
 }
 
