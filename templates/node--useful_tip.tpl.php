@@ -143,11 +143,17 @@
 
 		</div>
 	  
-		<div class="col-lg-2 col-md-12">
+		<div class="col-lg-2 col-md-12 hidden-print">
 		        <div class="row" id="mail_print_icon_row">
 		                <div class="col-lg-12">
-		                        <i class="fa fa-envelope-o"></i>
-		                        <a href="javascript:window.print();"><i class="fa fa-print"></i></a>
+	                        <?php 
+	                        $addblock = module_invoke('forward', 'block_view', 'form');
+	                        $forward_block = render($addblock['content']); 
+	                        $forward_block = preg_replace("/forward_placeholder/", "<i class=\"fa fa-2x fa-envelope-o\"></i>", $forward_block);
+	                        $forward_block = preg_replace("/Email this page/", "<i class=\"fa fa-2x fa-envelope-o\"></i>", $forward_block);
+	                        echo $forward_block;
+	                    	?>
+	                        <a href="javascript:window.print();"><i class="fa fa-print"></i></a>
         		        </div>
         		</div>
 		</div>	
