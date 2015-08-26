@@ -2,6 +2,7 @@
             <a data-toggle="collapse" data-target="#search-box" aria-expanded="true" aria-controls="search-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>
             </h3>
             <div id="search-box" class="collapse in">
+        <a name="main-content" tabindex="-1"></a>
 		<div id="search-form">
                 <!-- <form id="search-form"> -->
                         <div class="row">
