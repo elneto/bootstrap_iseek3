@@ -445,6 +445,7 @@ if ($field_departmental_theme_value == "") {
 				</div>
 	        </div>
 	        <div class="col-md-6">
+	        		<a name="main-content" tabindex="-1"></a>
 	                <h2>About us <?php // print render($content['field_departmental_about_us_labe']); ?></h2>
 	                <div class="dept_about_us_body"><?php print render($content['field_departmental_about_us_body']); ?></div>
 			<div>
