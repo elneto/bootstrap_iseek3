@@ -123,9 +123,9 @@
 					echo $node->field_author_name['und'][0]['safe_value'];
 				} ?> 
 			</div>
-
+				
+			  <a name="main-content" tabindex="-1"></a>
 			  <?php print render($title_prefix); ?>
-			  	<a name="main-content" tabindex="-1"></a>
 			    <h2 id="headline">
 			      <?php print $title; ?>
 			    </h2>

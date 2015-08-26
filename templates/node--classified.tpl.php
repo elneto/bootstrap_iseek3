@@ -105,6 +105,7 @@
   <?php endif; ?>
 
   <!-- The title -->
+  <a name="main-content" tabindex="-1"></a>
   <?php print render($title_prefix); ?>
           <h2 id="headline">
             <?php print $title; ?>
