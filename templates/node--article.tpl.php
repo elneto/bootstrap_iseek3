@@ -125,6 +125,7 @@
 			</div>
 
 			  <?php print render($title_prefix); ?>
+			  	<a name="main-content" tabindex="-1"></a>
 			    <h2 id="headline">
 			      <?php print $title; ?>
 			    </h2>
