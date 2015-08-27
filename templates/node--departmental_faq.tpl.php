@@ -139,6 +139,7 @@ include('departmental_color_band.inc');
 
 <div class="row">
 	<div class="col-sm-12" id="departmental_faq_toc">
+		<a name="main-content" tabindex="-1"></a>
 		<h2>FAQ</h2>
 
 <?php
