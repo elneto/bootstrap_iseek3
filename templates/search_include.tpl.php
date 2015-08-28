@@ -33,23 +33,23 @@ $iseekAdvSearchFieldsHelpText = array(
 	  <div class="modal-dialog modal-lg">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<i class="fa fa-search"></i> Search
+			<i class="fa fa-search"></i> <?php print t('Search'); ?>
 		  </div>
 		  <div class="modal-post-header">
-			<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">&times;</span></button>
-			<h2 class="modal-title" id="myModalLabel">United Nations Global Contact Directory</h2>
+			<button type="button" class="close" data-dismiss="modal"><?php print t('Close'); ?><span aria-hidden="true">&times;</span></button>
+			<h2 class="modal-title" id="myModalLabel"><?php print t('United Nations Global Contact Directory'); ?></h2>
 			<div class="row">
 				<div class="col-sm-7"> 
 					<div class="input-group">
 						<input class="form-control" name="query" type="text" id="searchSimpleInputInModal">
 						<span class="input-group-btn">
-							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary">Search</button> 
+							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary"><?php print t('Search'); ?></button> 
 						</span>
 					</div>
 					<div class="wildcard checkbox"></div>
 				</div>
 				<div class="col-sm-5"> 
-					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal">Advanced search</span> <i class="fa fa-angle-double-right"></i></div>
+					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal"><?php print t('Advanced search'); ?></span> <i class="fa fa-angle-double-right"></i></div>
 				</div>
 			</div>	
 			<h5 class="narrow_by_duty_station_text"></h5>
@@ -78,9 +78,9 @@ $iseekAdvSearchFieldsHelpText = array(
 		  </div>
 		  <div class="modal-footer">
 			<!-- <button type="button" class="btn btn-default" id="searchTriggerAdvancedInSimpleModal">Advanced search</button> -->
-			<a href="/content/update-information-global-contact-directory">Update my information</a> 
+			<a href="/content/update-information-global-contact-directory"><?php print t('Update my information'); ?></a> 
 			|
-			<a href="/content/additional-phone-resources">Additional resources</a>
+			<a href="/content/additional-phone-resources"><?php print t('Additional resources'); ?></a>
 			<!-- <button type="button" class="btn btn-default"><a href="/content/update-information-global-contact-directory">Update my information</a></button>
 			<button type="button" class="btn btn-default"><a href="/content/additional-phone-resources">Additional resources</a></button> -->
 			<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
