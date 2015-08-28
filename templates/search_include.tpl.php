@@ -52,12 +52,12 @@ $iseekAdvSearchFieldsHelpText = array(
 					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal"><?php print t('Advanced search'); ?></span> <i class="fa fa-angle-double-right"></i></div>
 				</div>
 			</div>	
-			<h5 class="narrow_by_duty_station_text">&nbsp;</h5>
+			<h5 class="narrow_by_duty_station_text"><span class="screen-reader-only">Narrow by duty station</span></h5>
 			<div class="dutyStationButtons"></div>
 		  </div>
 		  <div class="modal-body">
 
-			<h3 class="gcd_results">&nbsp;</h3>
+			<h3 class="gcd_results"><span class="screen-reader-only">Search results</span></h3>
 
 			<div class="table-responsive">	
 				<table class="table table-striped">
@@ -163,12 +163,12 @@ $iseekAdvSearchFieldsHelpText = array(
 			</div>
 			<div class="wildcard checkbox"></div>
 -->
-			<h5 class="narrow_by_duty_station_text">&nbsp;</h5>
+			<h5 class="narrow_by_duty_station_text"><span class="screen-reader-only">Narrow by duty station</span></h5>
 			<div class="dutyStationButtons"></div>
 		  </div>
 		  <div class="modal-body">
 
-			<h3 class="gcd_results">&nbsp;</h3>
+			<h3 class="gcd_results"><span class="screen-reader-only">Search results</span></h3>
 
 			<div class="table-responsive">	
 				<table class="table table-striped">
