@@ -41,7 +41,7 @@ $iseekAdvSearchFieldsHelpText = array(
 			<div class="row">
 				<div class="col-sm-7"> 
 					<div class="input-group">
-						<input class="form-control" name="query" type="text" id="searchSimpleInputInModal">
+						<input class="form-control" name="query" type="text" id="searchSimpleInputInModal" aria-label="<?php print t('Search for a colleague');?>">
 						<span class="input-group-btn">
 							<button id="searchTriggerSimpleInModal" type="button" class="btn btn-primary"><?php print t('Search'); ?></button> 
 						</span>
@@ -52,12 +52,12 @@ $iseekAdvSearchFieldsHelpText = array(
 					<div id="searchTriggerAdvancedInSimple"><span id="searchTriggerAdvancedInSimpleModal"><?php print t('Advanced search'); ?></span> <i class="fa fa-angle-double-right"></i></div>
 				</div>
 			</div>	
-			<h5 class="narrow_by_duty_station_text"></h5>
+			<h5 class="narrow_by_duty_station_text">&nbsp;</h5>
 			<div class="dutyStationButtons"></div>
 		  </div>
 		  <div class="modal-body">
 
-			<h3 class="gcd_results"></h3>
+			<h3 class="gcd_results">&nbsp;</h3>
 
 			<div class="table-responsive">	
 				<table class="table table-striped">
@@ -108,14 +108,14 @@ $iseekAdvSearchFieldsHelpText = array(
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['lastName']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldlastName" name="lastName"  placeholder="Last name" />
+						<input class="form-control" type="text" id="advFieldlastName" name="lastName"  placeholder="<?php print t('Last name');?>" aria-label="<?php print t('Last name');?>"/>
 					</div>	
 					<label class="col-sm-2 control-label">
 						<?php print t('First name'); ?>
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['firstName']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldfirstName" name="firstName"  placeholder="First name" />
+						<input class="form-control" type="text" id="advFieldfirstName" name="firstName"  placeholder="<?php print t('First name');?>" aria-label="<?php print t('First name');?>"/>
 					</div>	
 					<div class="col-sm-2">
 						<div class="wildcard checkbox"></div>
@@ -126,14 +126,14 @@ $iseekAdvSearchFieldsHelpText = array(
 						<?php print t('E-mail'); ?>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldemail" name="email"  placeholder="E-mail" />
+						<input class="form-control" type="text" id="advFieldemail" name="email"  placeholder="<?php print t('E-mail');?>" aria-label="<?php print t('E-mail');?>"/>
 					</div>	
 					<label class="col-sm-2 control-label">
 						<?php print t('Phone'); ?>
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['phoneDisplay1']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldphoneDisplay1" name="phoneDisplay1"  placeholder="Phone" />
+						<input class="form-control" type="text" id="advFieldphoneDisplay1" name="phoneDisplay1"  placeholder="<?php print t('Phone');?>" aria-label="<?php print t('Phone');?>"/>
 					</div>	
 				</div>
 				<div class="form-group">
@@ -141,16 +141,16 @@ $iseekAdvSearchFieldsHelpText = array(
 						<?php print t('Org unit'); ?>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldorganizationalUnit" name="organizationalUnit"  placeholder="Org unit" />
+						<input class="form-control" type="text" id="advFieldorganizationalUnit" name="organizationalUnit"  placeholder="<?php print t('Org unit');?>" aria-label="<?php print t('Org unit');?>"/>
 					</div>	
 					<label class="col-sm-2 control-label">
 						<?php print t('Room'); ?>
 					</label>
 					<div class="col-sm-3">
-						<input class="form-control" type="text" id="advFieldroom" name="room"  placeholder="Room" />
+						<input class="form-control" type="text" id="advFieldroom" name="room"  placeholder="<?php print t('Room');?>" aria-label="<?php print t('Room');?>"/>
 					</div>	
 					<div class="col-sm-2">
-						<button id="searchTriggerAdvancedInModal" type="button" class="btn btn-primary">Search </button> 
+						<button id="searchTriggerAdvancedInModal" type="button" class="btn btn-primary"><?php print t('Search');?> </button> 
 					</div>	
 				</div>
 						
@@ -163,12 +163,12 @@ $iseekAdvSearchFieldsHelpText = array(
 			</div>
 			<div class="wildcard checkbox"></div>
 -->
-			<h5 class="narrow_by_duty_station_text"></h5>
+			<h5 class="narrow_by_duty_station_text">&nbsp;</h5>
 			<div class="dutyStationButtons"></div>
 		  </div>
 		  <div class="modal-body">
 
-			<h3 class="gcd_results"></h3>
+			<h3 class="gcd_results">&nbsp;</h3>
 
 			<div class="table-responsive">	
 				<table class="table table-striped">
