@@ -94,24 +94,24 @@ $iseekAdvSearchFieldsHelpText = array(
 	  <div class="modal-dialog modal-lg">
 		<div class="modal-content">
                   <div class="modal-header">
-                        <i class="fa fa-search"></i> Advanced Search
+                        <i class="fa fa-search"></i> <?php print t('Advanced Search'); ?>
                   </div>
                   <div class="modal-post-header">
-			<button type="button" class="close" data-dismiss="modal">Close <span aria-hidden="true">&times;</span></button>
-			<h2 class="modal-title" id="myModalLabel">United Nations Global Contact Directory</h2>
+			<button type="button" class="close" data-dismiss="modal"><?php print t('Close'); ?> <span aria-hidden="true">&times;</span></button>
+			<h2 class="modal-title" id="myModalLabel"><?php print t('United Nations Global Contact Directory'); ?></h2>
 
 			<div class="form-horizontal">			
 			
 				<div class="form-group">
 					<label class="col-sm-2 control-label">
-						Last name
+						<?php print t('Last name'); ?>
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['lastName']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
 						<input class="form-control" type="text" id="advFieldlastName" name="lastName"  placeholder="Last name" />
 					</div>	
 					<label class="col-sm-2 control-label">
-						First name
+						<?php print t('First name'); ?>
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['firstName']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
@@ -123,13 +123,13 @@ $iseekAdvSearchFieldsHelpText = array(
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">
-						E-mail
+						<?php print t('E-mail'); ?>
 					</label>
 					<div class="col-sm-3">
 						<input class="form-control" type="text" id="advFieldemail" name="email"  placeholder="E-mail" />
 					</div>	
 					<label class="col-sm-2 control-label">
-						Phone
+						<?php print t('Phone'); ?>
 						<i class="fa fa-info-circle" rel="tooltip" title="<?php echo $iseekAdvSearchFieldsHelpText['phoneDisplay1']; ?>"></i>
 					</label>
 					<div class="col-sm-3">
@@ -138,13 +138,13 @@ $iseekAdvSearchFieldsHelpText = array(
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">
-						Org unit
+						<?php print t('Org unit'); ?>
 					</label>
 					<div class="col-sm-3">
 						<input class="form-control" type="text" id="advFieldorganizationalUnit" name="organizationalUnit"  placeholder="Org unit" />
 					</div>	
 					<label class="col-sm-2 control-label">
-						Room
+						<?php print t('Room'); ?>
 					</label>
 					<div class="col-sm-3">
 						<input class="form-control" type="text" id="advFieldroom" name="room"  placeholder="Room" />
@@ -188,9 +188,9 @@ $iseekAdvSearchFieldsHelpText = array(
 
 		  </div>
 		  <div class="modal-footer">
-                        <a href="/content/update-information-global-contact-directory">Update my information</a>
+                        <a href="/content/update-information-global-contact-directory"><?php print t('Update my information'); ?></a>
                         |
-                        <a href="/content/additional-phone-resources">Additional resources</a>
+                        <a href="/content/additional-phone-resources"><?php print t('Additional resources'); ?></a>
 		  </div>
 		</div>
 	  </div>
