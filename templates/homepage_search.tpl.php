@@ -7,7 +7,7 @@
                 <!-- <form id="search-form"> -->
                         <div class="row">
                                 <div class="col-xs-12">
-                                        <label for="input-search-iseek"><?php print t('Find a colleague by name, department, and more');?></label>
+                                        <label for="searchSimpleInput"><?php print t('Find a colleague by name, department, and more');?></label>
                                 </div>
                                 <div class="col-lg-9 col-xs-8 search-rpad0">
 					<input class="search-input" name="query" type="text" id="searchSimpleInput">
@@ -33,7 +33,7 @@
                                         <input type="text" name="search-intranet" class="search-input" id="input-search-iseek">
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-xs-3 search-lpad0 search-rpad0" id="select-search-default-container">
-                                        <select id="select-search" class="search-input"> 
+                                        <select id="select-search" class="search-input" aria-label="<?php print t('Search in iSeek or in ODS');?>"> 
                                                 <option>iSeek</option>
                                                 <option>ODS</option>
                                         </select>
