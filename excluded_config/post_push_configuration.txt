@@ -2,97 +2,85 @@ Prod to dev checklist
 
 1. admin/appearance/settings/bootstrap_iseek3
 
-a. Set Bootstrap iSeek3 theme as default and disable Bootstrap iSeek 
+[DONE 08-03-2015] a. Set Bootstrap iSeek3 theme as default and disable Bootstrap iSeek 
 
-b. Disable BootstrapCDN
+[DONE 08-03-2015] b. Disable BootstrapCDN
 
 c. Change logo
 
-sites/iseek.un.org/themes/bootstrap_iseek3/images/iseek-logo.svg
+[DONE 08-03-2015] sites/iseek.un.org/themes/bootstrap_iseek3/images/iseek-logo.svg
 
 2. Clear cache (truncate tables in db)
 
 3. admin/structure/block
 
-Remove all blocks from Navigation (including css block for survey?)
+[DONE 08-03-2015] Remove all blocks from Navigation (including css block for survey?)
 
-Add iSeek3 Main-Menu block to Navigation
+[DONE 08-03-2015] Add iSeek3 Main-Menu block to Navigation
 
-Remove title -> Configure block
+[DONE 08-03-2015] Remove title -> Configure block
 
-Make sure subnav parents How do i..., etc are Enabled
+[DONE 08-03-2015] Make sure subnav parents How do i..., etc are Enabled
 
-4. Activate Features code blocks
+[DONE 08-03-2015] 5. Activate image style for article // dept?
 
-iseek3_eric_views_homepage	
+[DONE 08-03-2015] 6. Views
 
-Does features overwrite existing views? Answer appears to be NO.
-Had to delete 
+[DONE 08-03-2015] Delete view and reimport -- features module doesn't work
 
-5. Activate image style for article // dept?
+[DONE 08-03-2015] departmental_page_in_og -- 
+[DONE 08-03-2015] staff_stories_and_news_main -- just change image style for "images" field and select only current language
+[DONE 08-03-2015] departmental_faq_in_og -- add font-awesome to rewritten results (<i class="fa fa-question"></i> )
 
-6. Views
+[DONE 08-03-2015] 7. Department 
 
-Delete view and reimport -- features module doesn't work
+[DONE 08-03-2015] content field labels
+[DONE 08-03-2015] associate bio image for "portrait" style
 
-departmental_page_in_og -- 
-staff_stories_and_news_main -- just change image style for "images" field and select only current language
+[DONE 08-03-2015] 8. Image style 
 
-departmental_faq_in_og -- add font-awesome to rewritten results (<i class="fa fa-question"></i> )
-
-7. Department 
-
-content field labels
-associate bio image for "portrait" style
-
-8. Image style 
-
-Change manual crop style to admin/structure/types/manage/article/fields/field_images
-article: Change display image style to large-article-image-style-16-9
+[DONE 08-03-2015] Change manual crop style to admin/structure/types/manage/article/fields/field_images
+[DONE 08-03-2015] article: Change display image style to large-article-image-style-16-9
 
 9. Add "Calendar of events" date style/type
 
-10. Activate nodequeue module
-Create nodequeue name "Most popular"
+[DONE 08-03-2015] 10. Activate nodequeue module
+[DONE 08-03-2015] Create nodequeue name "Most popular"
 Change automatically view (nodequeue_3) on production by changing to unformatted list, adding Images, and setting Medium (square) style to the Images field
 
 
-11. Announcements block for home page needs to be exported
+[DONE 08-03-2015] 11. Announcements block for home page needs to be exported
 
-12. Add "manual crop" to medium image style and add it to the manual crop section of articles.
+[DONE 08-03-2015] 12. Add "manual crop" to medium image style and add it to the manual crop section of articles.
 
-13. Add leading zero to events home page date format
+[DONE 08-03-2015] 13. Add leading zero to events home page date format
 
-14. Add OG field permissions for department content type so that fields show show properly
+[DONE 08-03-2015] 14. Add OG field permissions for department content type so that fields show show properly
 
-15. Modify home page views for language sensitivity
-staff stories and news submain
+[DONE 08-03-2015] 15. Modify home page views for language sensitivity
+[DONE 08-03-2015] staff stories and news submain
 
-16. Make "About us footer block" translatable and add french translation
+[DONE 08-03-2015] 17. Make "Useful Tip" content type translatable and add french translation
 
-17. Make "Useful Tip" content type translatable and add french translation
+[DONE 08-03-2015 -- not necessary] 18. Change nodequeue_3 view so that it is language-aware
 
-18. Change nodequeue_3 view so that it is language-aware
+[DONE 08-03-2015] 20. Import weather module's weather.fr.po file
 
-19. Import new items into 
+[DONE 08-03-2015] 21. Import forms2 view. Many changes. 
 
-20. Import weather module's weather.fr.po file
+[DONE 08-03-2015] 22. Update display of Useful Tip content type
 
-21. Import forms2 view. Many changes. 
+[DONE 08-03-2015] 23. Feeds consumption
+[DONE 08-03-2015] Turn on Aggregator module
 
-22. Update display of Useful Tip content type
+[DONE 08-03-2015] 24. Import po files from Mac -- /users/web2/documents/iseek/po
 
-23. Feeds consumption
-Turn on Aggregator module
+[DONE 08-03-2015] 25. Global QuickLinks
+[DONE 08-03-2015]  Import to remove all
 
-24. Import po files from Mac -- /users/web2/documents/iseek/po
+[DONE 08-03-2015] 26. Add feeds from Umoja, Careers portal
 
-25. Global QuickLinks
-Import to remove all
-
-26. Add feeds from Umoja, Careers portal
-
-27. Announcement and global announcement 
-Turn on comments
-Disallow title
-Text processing = plain text	
+[DONE 08-03-2015] 27. Announcement and global announcement 
+[DONE 08-03-2015] Turn on comments
+[DONE 08-03-2015] Disallow title
+[DONE 08-03-2015] Text processing = plain text	

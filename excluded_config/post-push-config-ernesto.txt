@@ -12,7 +12,7 @@ CONTENT TYPES
 	[DONE 07/31/15 - EH] //configure style of optional image like articles -- ibid: Image style: large-article-image-style-16-9
 	[DONE 07/31/15 - EH] //enable comments
 [DONE 07/31/15 - EH] (*)top-left-corner On value, explicitly set to 1 and Off explicitly to 0  admin/structure/types/manage/top-left-corner/fields/field_display_title
-(*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style 
+[DONE] (*)classified: field_photo change manual crop style to include as article, medium and large-article-image-style 
 
    //enable comments
 
@@ -34,16 +34,16 @@ VIEWS -- delete if on production and re-import from development
 [DONE 08/02/15] (*)useful_tips_collection
 [DONE 08/02/15]  (*)spotlight (latest view in Desktop drupal views)
 [DONE 08/02/15] (*)Staff union block (remove more link)
-(*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive
-(weather / system_1) Add path of Martin’s images:
-iseekweather in /admin/config/user-interface/weather
+[DONE] (*)Modify Zeekoslist (zeekoslist) to change style of ad photo to articles-archive
+[DONE] (weather / system_1) Add path of Martin’s images:
+[DONE] iseekweather in /admin/config/user-interface/weather
 
 BLOCKS
 
-(*)Zeekoslist Categories HTML (/classified) -- copy from dev 
-(*)Zeekoslist Policy Text: only classified and classified/all not classified* -- copy from dev
-(*)Remove or deactivate Zeekoslist Post an Ad
-(*)Remove or deactivate Zeekoslist Login Prompt Top
+[DONE] (*)Zeekoslist Categories HTML (/classified) -- copy from dev 
+[DONE] (*)Zeekoslist Policy Text: only classified and classified/all not classified* -- copy from dev
+[DONE] (*)Remove or deactivate Zeekoslist Post an Ad
+[DONE] (*)Remove or deactivate Zeekoslist Login Prompt Top
 
 ****************************
 Image styles
@@ -54,7 +54,7 @@ Image styles
 
 [DONE 07/31/15 - EH] For spotlight: add Manual Crop 375x211
 
-In Featured photo and Top Left corner, edit photo field to allow manual crop
+[DONE] In Featured photo and Top Left corner, edit photo field to allow manual crop
 enable the include spotlight and enable the first 2 checkboxes, 
 limit the number of photos to 1, add the minimum and maximum sizes (copy from articles images or local) Max:1200x900 Minimum: 375x211 
 

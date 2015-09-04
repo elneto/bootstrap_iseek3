@@ -210,7 +210,7 @@
         <div class="col-lg-8">
           <div class="row">
             <div class="col-md-6"><div class="top-side-box large-text">&nbsp;<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;
-		<a href="https://www.unumoja.net">
+		<a href="/">
 			<?php print t('Umoja');?> <i class="fa fa-angle-double-right"></i>
 		</a>
             <a data-toggle="collapse" data-target="#un-news-box" aria-expanded="true" aria-controls="un-news-box" class="visible-xs collapser"><i class="fa fa-angle-down"></i></a>  
