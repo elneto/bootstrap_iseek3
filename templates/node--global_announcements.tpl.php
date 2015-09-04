@@ -177,6 +177,9 @@ if ($event_bool){
 
 				<div class="content-body">
 
+					<!-- The image -->
+	                                <?php print render($content['field_an_optional_image']); ?>
+
 					<?php print render($content['body']); ?>
 
 					<!-- begin common comments -->
