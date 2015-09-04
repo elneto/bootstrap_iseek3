@@ -500,10 +500,11 @@ div#search-box{
   .gray-border-box;
   & label{
     color: @statement-grey;
+    font-weight: normal;
   }
 }
 
-label[for='input-search-iseek']{
+label[for='searchSimpleInput'], label[for='input-search-iseek']{
   padding-top: 0.8em;
   font-weight: normal;
 }
@@ -1972,6 +1973,20 @@ ul.classifieds-listing {
  .border-radiuses(15px,15px,15px,15px);
  text-align: center;
 }
+
+/*
+* Screen reader only
+*/
+
+.screen-reader-only{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
 /*
 * Media queries not huge screens
 */

@@ -342,11 +342,16 @@ li.search-result {
 #mail_print_icon_row i.fa-envelope-o {
 	margin-right: 30px;
 }
+#mail_print_icon_row .fa-2x, #mail_print_icon_row .fa {
+    font-size: 1.4em;
+}
 
 .modal-dialog button.close {
 	color: #666666;
 	font-size: 16px;
 	opacity: 0.8;
+
+
 	font-weight: normal;
 }
 
@@ -1246,7 +1251,36 @@ div#caption-mi {
 	color: #ffffff;
 }
 
+/* CSS for iSeek3 block */
 
+#departmental_home_page_blocks #col1 {
+display: block;
+}
+.view-sg-award-submissions thead a {
+color: #fff;
+}
+.view-sg-award-submissions .table>thead>tr>th.active {
+background-color: #266DB6;
+}
+.view-sg-award-submissions .table>tbody>tr>td.active {
+background-color: #fff;
+}
+body.domain-iseek-external-un-org #location-navbar {
+display:none;
+}
+div#container-main-image{
+margin-top:0;
+}
+.arrow-right {
+    margin-top: .2em;
+}
+div#low-statement{
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+#departmental_home_page_blocks li{
+    padding-right: 1em;
+}
 
 /*
 #select-search-default {

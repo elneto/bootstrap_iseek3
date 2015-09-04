@@ -84,6 +84,7 @@
 
   <?php print $user_picture; ?>
 
+  <a name="main-content" tabindex="-1"></a>
   <?php print render($title_prefix); ?>
   <?php // if (!$page): ?>
     <div class="toolkit large-text"><?php print $title_attributes; ?><?php print $title; ?></div>
